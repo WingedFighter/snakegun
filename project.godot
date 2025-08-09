@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="snakegun"
+run/main_scene="uid://d2dkwwowswngd"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [rendering]
 
