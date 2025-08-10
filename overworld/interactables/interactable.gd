@@ -6,7 +6,6 @@ func _ready() -> void:
 	body_exited.connect(on_body_exited)
 
 func on_body_entered(body: Node2D) -> void:
-	print(body)
 	if body is Player25D:
 		body.hud.last_interactable = self
 
