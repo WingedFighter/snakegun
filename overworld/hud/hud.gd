@@ -26,6 +26,6 @@ func _input(event: InputEvent) -> void:
 
 func on_conversation_end(node: Node):
 	is_interacting = false
-	if node is TalkManager:
-		node.conversation_end.disconnect(on_conversation_end)
+	if node is Interactable:
+		node.get_node("TalkManager").conversation_end.disconnect(on_conversation_end)
 	interact_end.emit()
