@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bg2joonqnel4i"]
+
+[ext_resource type="Texture2D" uid="uid://bukeco2v8n28u" path="res://textures/DownNeutral.png" id="1_01n4k"]
+[ext_resource type="Script" uid="uid://c50ehat1xdcrh" path="res://platformer/components/player.gd" id="1_rew8g"]
+[ext_resource type="Script" uid="uid://ycdu37llg6b7" path="res://platformer/components/health_component.gd" id="2_556y6"]
+[ext_resource type="Script" uid="uid://dd5gtwobywwhi" path="res://platformer/components/velocity_component.gd" id="3_b14dm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5smi"]
+size = Vector2(54.195, 87.175)
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("velocity_component")]
+collision_layer = 3
+collision_mask = 2
+platform_floor_layers = 4294967042
+script = ExtResource("1_rew8g")
+velocity_component = NodePath("VelocityComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_a5smi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_01n4k")
+
+[node name="HealthComponent" type="Node2D" parent="."]
+script = ExtResource("2_556y6")
+maxHealth = 100.0
+
+[node name="VelocityComponent" type="Node2D" parent="."]
+script = ExtResource("3_b14dm")
+
+[node name="Camera2D" type="Camera2D" parent="."]

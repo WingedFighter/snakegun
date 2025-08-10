@@ -1,8 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://528a1cmoc4tt"]
+[gd_scene load_steps=4 format=3 uid="uid://528a1cmoc4tt"]
+
+[ext_resource type="PackedScene" uid="uid://bg2joonqnel4i" path="res://platformer/components/player.tscn" id="1_ncwiu"]
+[ext_resource type="Texture2D" uid="uid://bukeco2v8n28u" path="res://textures/DownNeutral.png" id="2_m13pl"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_a5smi"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5smi"]
 
 [node name="World" type="Node2D"]
 
@@ -14,15 +15,16 @@
 
 [node name="Platforms" type="Node2D" parent="."]
 
-[node name="WorldBoundry" type="Area2D" parent="Platforms"]
-position = Vector2(0, 640)
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms"]
+collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/WorldBoundry"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D"]
+position = Vector2(0, 640)
 shape = SubResource("WorldBoundaryShape2D_a5smi")
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Player" parent="." instance=ExtResource("1_ncwiu")]
+collision_layer = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("RectangleShape2D_a5smi")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
+[node name="DownNeutral" type="Sprite2D" parent="."]
+position = Vector2(316, 595)
+texture = ExtResource("2_m13pl")
