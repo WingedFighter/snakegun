@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pwpcrbaqqoco"
-path="res://.godot/imported/shop.png-445a8c50509ff1233c50d789387dad93.ctex"
+uid="uid://bvjpa80mujnsg"
+path="res://.godot/imported/1Side.png-2e276fca06934a1ae1a2c387d3be5ec3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://overworld_maps/tilemaps/shop.png"
-dest_files=["res://.godot/imported/shop.png-445a8c50509ff1233c50d789387dad93.ctex"]
+source_file="res://overworld/player/sprite_sheets/right/1Side.png"
+dest_files=["res://.godot/imported/1Side.png-2e276fca06934a1ae1a2c387d3be5ec3.ctex"]
 
 [params]
 

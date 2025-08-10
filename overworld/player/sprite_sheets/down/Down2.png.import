@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fft1xr80j4wo"
-path="res://.godot/imported/outdooritems.png-1fc869199da03334b8f43dc3c2c2e571.ctex"
+uid="uid://bwww03t0gyn5s"
+path="res://.godot/imported/Down2.png-04bee6f43b9aae2c56f364c44e21dd6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://overworld_maps/tilemaps/outdooritems.png"
-dest_files=["res://.godot/imported/outdooritems.png-1fc869199da03334b8f43dc3c2c2e571.ctex"]
+source_file="res://overworld/player/sprite_sheets/down/Down2.png"
+dest_files=["res://.godot/imported/Down2.png-04bee6f43b9aae2c56f364c44e21dd6f.ctex"]
 
 [params]
 

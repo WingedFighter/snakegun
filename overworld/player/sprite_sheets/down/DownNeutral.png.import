@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfvxl2i8bxhb0"
-path="res://.godot/imported/trafficlights.png-5cd243dfb8b4e3cc0599515ebb66d996.ctex"
+uid="uid://w0eijil61d11"
+path="res://.godot/imported/DownNeutral.png-22fe52a59ce389b3d3209382ef719a90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://overworld_maps/tilemaps/trafficlights.png"
-dest_files=["res://.godot/imported/trafficlights.png-5cd243dfb8b4e3cc0599515ebb66d996.ctex"]
+source_file="res://overworld/player/sprite_sheets/down/DownNeutral.png"
+dest_files=["res://.godot/imported/DownNeutral.png-22fe52a59ce389b3d3209382ef719a90.ctex"]
 
 [params]
 
