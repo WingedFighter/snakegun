@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://i1oxad12j3rx"]
+
+[ext_resource type="Script" uid="uid://d0kxi1tiv0ymy" path="res://overworld/hud/hud.gd" id="1_6clc2"]
+[ext_resource type="Script" uid="uid://d3odcg3txco6e" path="res://addons/letstalkaboutit/nodes/talk_display/talk_display.gd" id="2_xm7ip"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6clc2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TalkDisplay" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_xm7ip")
+metadata/_custom_type_script = "uid://d3odcg3txco6e"

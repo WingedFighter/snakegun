@@ -1,7 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://c8gr5wrb6dvjt"]
+[gd_scene load_steps=25 format=3 uid="uid://c8gr5wrb6dvjt"]
 
 [ext_resource type="Texture2D" uid="uid://w0eijil61d11" path="res://overworld/player/sprite_sheets/down/DownNeutral.png" id="1_eqgo5"]
-[ext_resource type="Script" uid="uid://cdnik1c5uy1nx" path="res://overworld/player/player_2d.gd" id="1_mu2yp"]
+[ext_resource type="Script" uid="uid://cdnik1c5uy1nx" path="res://overworld/player/player25d.gd" id="1_mu2yp"]
 [ext_resource type="Texture2D" uid="uid://q5svsyedjyv7" path="res://overworld/player/sprite_sheets/left/SideNeutral.png" id="2_mu2yp"]
 [ext_resource type="Texture2D" uid="uid://bsg1xxd4u0kda" path="res://overworld/player/sprite_sheets/right/Neutralside.png" id="3_imgag"]
 [ext_resource type="Texture2D" uid="uid://dgaltql2exkm0" path="res://overworld/player/sprite_sheets/up/UPneutral.png" id="4_id36e"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dqahm6kdxdshx" path="res://overworld/player/sprite_sheets/up/UP2.png" id="18_7b7lh"]
 [ext_resource type="Texture2D" uid="uid://caagpowyo47ig" path="res://overworld/player/sprite_sheets/up/UP3.png" id="19_vtlim"]
 [ext_resource type="Texture2D" uid="uid://cbnenymlxloqe" path="res://overworld/player/sprite_sheets/up/UP4.png" id="20_rmj83"]
+[ext_resource type="PackedScene" uid="uid://i1oxad12j3rx" path="res://overworld/hud/hud.tscn" id="22_i1fnb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bnbyf"]
 animations = [{
@@ -128,9 +129,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqgo5"]
 size = Vector2(23, 22)
 
-[node name="Player2D" type="CharacterBody2D"]
+[node name="Player25D" type="CharacterBody2D"]
 y_sort_enabled = true
-collision_mask = 3
+collision_mask = 17
 script = ExtResource("1_mu2yp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -145,3 +146,5 @@ zoom = Vector2(2, 2)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -13)
 shape = SubResource("RectangleShape2D_eqgo5")
+
+[node name="HUD" parent="." instance=ExtResource("22_i1fnb")]

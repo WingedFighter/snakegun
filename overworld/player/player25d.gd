@@ -1,9 +1,10 @@
 extends CharacterBody2D
-
+class_name Player25D
 
 @export var speed := 15000.0
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var hud: Control = $HUD
 
 func _physics_process(delta: float) -> void:
 	var horizontal = Input.get_axis("move_left", "move_right")
