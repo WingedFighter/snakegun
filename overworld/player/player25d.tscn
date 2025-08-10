@@ -1,74 +1,90 @@
-[gd_scene load_steps=25 format=3 uid="uid://c8gr5wrb6dvjt"]
+[gd_scene load_steps=29 format=3 uid="uid://c8gr5wrb6dvjt"]
 
-[ext_resource type="Texture2D" uid="uid://w0eijil61d11" path="res://overworld/player/sprite_sheets/down/DownNeutral.png" id="1_eqgo5"]
 [ext_resource type="Script" uid="uid://cdnik1c5uy1nx" path="res://overworld/player/player25d.gd" id="1_mu2yp"]
-[ext_resource type="Texture2D" uid="uid://q5svsyedjyv7" path="res://overworld/player/sprite_sheets/left/SideNeutral.png" id="2_mu2yp"]
-[ext_resource type="Texture2D" uid="uid://bsg1xxd4u0kda" path="res://overworld/player/sprite_sheets/right/Neutralside.png" id="3_imgag"]
-[ext_resource type="Texture2D" uid="uid://dgaltql2exkm0" path="res://overworld/player/sprite_sheets/up/UPneutral.png" id="4_id36e"]
-[ext_resource type="Texture2D" uid="uid://ch2mx47235rca" path="res://overworld/player/sprite_sheets/down/Down1.png" id="5_f5nxd"]
-[ext_resource type="Texture2D" uid="uid://bwww03t0gyn5s" path="res://overworld/player/sprite_sheets/down/Down2.png" id="6_wd7fm"]
-[ext_resource type="Texture2D" uid="uid://ivpjike31iek" path="res://overworld/player/sprite_sheets/down/Down3.png" id="7_y3ssx"]
-[ext_resource type="Texture2D" uid="uid://kksnwe54kkcw" path="res://overworld/player/sprite_sheets/down/Down4.png" id="8_yw3tq"]
-[ext_resource type="Texture2D" uid="uid://c8nf1mwfj2ixf" path="res://overworld/player/sprite_sheets/left/Side1.png" id="9_f7lgi"]
-[ext_resource type="Texture2D" uid="uid://bqkqxjdrncrxx" path="res://overworld/player/sprite_sheets/left/Side2.png" id="10_djf72"]
-[ext_resource type="Texture2D" uid="uid://dfgyrkj0hvb8q" path="res://overworld/player/sprite_sheets/left/Side3.png" id="11_omsdi"]
-[ext_resource type="Texture2D" uid="uid://2qkjrvlqmp8h" path="res://overworld/player/sprite_sheets/left/Side4.png" id="12_wulda"]
-[ext_resource type="Texture2D" uid="uid://bvjpa80mujnsg" path="res://overworld/player/sprite_sheets/right/1Side.png" id="13_c5y3g"]
-[ext_resource type="Texture2D" uid="uid://65di0kcmx46j" path="res://overworld/player/sprite_sheets/right/2side.png" id="14_dog5l"]
-[ext_resource type="Texture2D" uid="uid://uu4cyld2mfy1" path="res://overworld/player/sprite_sheets/right/3side.png" id="15_p05l6"]
-[ext_resource type="Texture2D" uid="uid://7b01no3bad7q" path="res://overworld/player/sprite_sheets/right/4side.png" id="16_cea3f"]
-[ext_resource type="Texture2D" uid="uid://cgjyckewyooua" path="res://overworld/player/sprite_sheets/up/UP1.png" id="17_sjtjm"]
-[ext_resource type="Texture2D" uid="uid://dqahm6kdxdshx" path="res://overworld/player/sprite_sheets/up/UP2.png" id="18_7b7lh"]
-[ext_resource type="Texture2D" uid="uid://caagpowyo47ig" path="res://overworld/player/sprite_sheets/up/UP3.png" id="19_vtlim"]
-[ext_resource type="Texture2D" uid="uid://cbnenymlxloqe" path="res://overworld/player/sprite_sheets/up/UP4.png" id="20_rmj83"]
+[ext_resource type="Texture2D" uid="uid://b6ppd1413fbju" path="res://overworld/player/sprite_sheets/down/mcfrontwalk1.png" id="2_0c41b"]
+[ext_resource type="Texture2D" uid="uid://bcsot87r8nmex" path="res://overworld/player/sprite_sheets/down/idlefront/idlefront1.png" id="2_ltp4c"]
+[ext_resource type="Texture2D" uid="uid://dr1stogy8jigp" path="res://overworld/player/sprite_sheets/down/mcfrontwalk2.png" id="3_7ei8e"]
+[ext_resource type="Texture2D" uid="uid://dsfmrylc33oli" path="res://overworld/player/sprite_sheets/down/idlefront/idlefront2.png" id="3_vtd4d"]
+[ext_resource type="Texture2D" uid="uid://c422467kmvlpn" path="res://overworld/player/sprite_sheets/left/sideidle/mcsideidle.png" id="4_ltp4c"]
+[ext_resource type="Texture2D" uid="uid://bpq6ru5qog5s6" path="res://overworld/player/sprite_sheets/down/mcfrontwalk3.png" id="4_n63iq"]
+[ext_resource type="Texture2D" uid="uid://dlbe15m75yglu" path="res://overworld/player/sprite_sheets/down/mcfrontwalk4.png" id="5_prdvw"]
+[ext_resource type="Texture2D" uid="uid://dufux3brc3jn0" path="res://overworld/player/sprite_sheets/left/sideidle/mcsideidle2.png" id="5_vtd4d"]
+[ext_resource type="Texture2D" uid="uid://m4gt71yvxm3m" path="res://overworld/player/sprite_sheets/right/sideidle/mcsideidle.png" id="6_8nyem"]
+[ext_resource type="Texture2D" uid="uid://c122dl77ofsg6" path="res://overworld/player/sprite_sheets/right/sideidle/mcsideidle2.png" id="7_b70p5"]
+[ext_resource type="Texture2D" uid="uid://cgj0s7ka5slnb" path="res://overworld/player/sprite_sheets/up/idleback/mcidleback1.png" id="8_fpi0y"]
+[ext_resource type="Texture2D" uid="uid://fjq04mx6h2lq" path="res://overworld/player/sprite_sheets/up/idleback/idleback2.png" id="9_xg0yc"]
+[ext_resource type="Texture2D" uid="uid://cxsyba613irc1" path="res://overworld/player/sprite_sheets/left/mcsidewalk1.png" id="14_06iyq"]
+[ext_resource type="Texture2D" uid="uid://dlsmm7an7y3p4" path="res://overworld/player/sprite_sheets/left/mcsidewalk2.png" id="15_0rxd2"]
+[ext_resource type="Texture2D" uid="uid://q3af3nhu5t7y" path="res://overworld/player/sprite_sheets/left/mcsidewalk3.png" id="16_i1fnb"]
+[ext_resource type="Texture2D" uid="uid://bpcosgpxh8cun" path="res://overworld/player/sprite_sheets/left/mcsidewalk4.png" id="17_ltp4c"]
+[ext_resource type="Texture2D" uid="uid://c7sjtyy3o7cls" path="res://overworld/player/sprite_sheets/right/mcsidewalk1.png" id="18_i1fnb"]
+[ext_resource type="Texture2D" uid="uid://c73nl0icarm82" path="res://overworld/player/sprite_sheets/right/mcsidewalk2.png" id="19_ltp4c"]
+[ext_resource type="Texture2D" uid="uid://by2pc4opba1po" path="res://overworld/player/sprite_sheets/right/mcsidewalk3.png" id="20_vtd4d"]
+[ext_resource type="Texture2D" uid="uid://crhk2bs2420fy" path="res://overworld/player/sprite_sheets/right/mcsidewalk4.png" id="21_0c41b"]
+[ext_resource type="Texture2D" uid="uid://dm8qocdolaaji" path="res://overworld/player/sprite_sheets/up/mcbackwalk1.png" id="22_7ei8e"]
 [ext_resource type="PackedScene" uid="uid://i1oxad12j3rx" path="res://overworld/hud/hud.tscn" id="22_i1fnb"]
+[ext_resource type="Texture2D" uid="uid://ce2vi3fnjt3yc" path="res://overworld/player/sprite_sheets/up/mcbackwalk2.png" id="23_n63iq"]
+[ext_resource type="Texture2D" uid="uid://clupr6jq0faj5" path="res://overworld/player/sprite_sheets/up/mcbackwalk3.png" id="24_prdvw"]
+[ext_resource type="Texture2D" uid="uid://c0hcioybvmp6i" path="res://overworld/player/sprite_sheets/up/mcbackwalk4.png" id="25_hbfuq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bnbyf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_eqgo5")
+"texture": ExtResource("2_ltp4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vtd4d")
 }],
 "loop": true,
 "name": &"idle_down",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_mu2yp")
+"texture": ExtResource("4_ltp4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vtd4d")
 }],
 "loop": true,
 "name": &"idle_left",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_imgag")
+"texture": ExtResource("6_8nyem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_b70p5")
 }],
 "loop": true,
 "name": &"idle_right",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_id36e")
+"texture": ExtResource("8_fpi0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xg0yc")
 }],
 "loop": true,
 "name": &"idle_up",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_f5nxd")
+"texture": ExtResource("2_0c41b")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_wd7fm")
+"texture": ExtResource("3_7ei8e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_y3ssx")
+"texture": ExtResource("4_n63iq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_yw3tq")
+"texture": ExtResource("5_prdvw")
 }],
 "loop": true,
 "name": &"move_down",
@@ -76,16 +92,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_f7lgi")
+"texture": ExtResource("14_06iyq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_djf72")
+"texture": ExtResource("15_0rxd2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_omsdi")
+"texture": ExtResource("16_i1fnb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_wulda")
+"texture": ExtResource("17_ltp4c")
 }],
 "loop": true,
 "name": &"move_left",
@@ -93,16 +109,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("13_c5y3g")
+"texture": ExtResource("18_i1fnb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_dog5l")
+"texture": ExtResource("19_ltp4c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_p05l6")
+"texture": ExtResource("20_vtd4d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_cea3f")
+"texture": ExtResource("21_0c41b")
 }],
 "loop": true,
 "name": &"move_right",
@@ -110,16 +126,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("17_sjtjm")
+"texture": ExtResource("22_7ei8e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_7b7lh")
+"texture": ExtResource("23_n63iq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_vtlim")
+"texture": ExtResource("24_prdvw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_rmj83")
+"texture": ExtResource("25_hbfuq")
 }],
 "loop": true,
 "name": &"move_up",
@@ -127,7 +143,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqgo5"]
-size = Vector2(23, 22)
+size = Vector2(27, 18)
 
 [node name="Player25D" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -135,8 +151,7 @@ collision_mask = 17
 script = ExtResource("1_mu2yp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -24)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.08, 0.08)
 sprite_frames = SubResource("SpriteFrames_bnbyf")
 animation = &"idle_down"
 
@@ -144,7 +159,7 @@ animation = &"idle_down"
 zoom = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -13)
+position = Vector2(0.5, 9)
 shape = SubResource("RectangleShape2D_eqgo5")
 
 [node name="HUD" parent="." instance=ExtResource("22_i1fnb")]

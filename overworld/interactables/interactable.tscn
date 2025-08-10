@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://k12lfk6na5pl"]
 
 [ext_resource type="Script" uid="uid://p22yx7tik2ob" path="res://overworld/interactables/interactable.gd" id="1_q4c1c"]
-[ext_resource type="Script" uid="uid://c8guy8np50e08" path="res://addons/letstalkaboutit/nodes/talk_manager.gd" id="2_x2kfg"]
-[ext_resource type="Script" uid="uid://72wi2f18oqev" path="res://addons/letstalkaboutit/nodes/talk_character.gd" id="3_3klu3"]
-[ext_resource type="Script" uid="uid://cvl0y2bpl7wa1" path="res://addons/letstalkaboutit/ingame_data/talk_state.gd" id="3_fajrq"]
+[ext_resource type="Script" uid="uid://bf6lv5qgapf0o" path="res://addons/letstalkaboutit/nodes/talk_manager.gd" id="2_x2kfg"]
+[ext_resource type="Script" uid="uid://b2flwfdlosxw" path="res://addons/letstalkaboutit/nodes/talk_character.gd" id="3_3klu3"]
+[ext_resource type="Script" uid="uid://upqqxnjkjdmj" path="res://addons/letstalkaboutit/ingame_data/talk_state.gd" id="3_fajrq"]
 [ext_resource type="Texture2D" uid="uid://vrn6ghq1sxhf" path="res://overworld/interactables/default.png" id="5_fajrq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q4c1c"]
@@ -24,9 +24,7 @@ shape = SubResource("RectangleShape2D_q4c1c")
 [node name="TalkManager" type="Node" parent="."]
 script = ExtResource("2_x2kfg")
 talk_state = SubResource("Resource_xvnnp")
-metadata/_custom_type_script = "uid://c8guy8np50e08"
 
 [node name="TalkCharacter" type="Node" parent="."]
 script = ExtResource("3_3klu3")
 character_base_panel = ExtResource("5_fajrq")
-metadata/_custom_type_script = "uid://72wi2f18oqev"

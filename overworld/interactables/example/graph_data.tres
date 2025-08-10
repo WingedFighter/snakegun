@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="GraphData" load_steps=7 format=3 uid="uid://ba7m6alx4877r"]
+
+[ext_resource type="Script" uid="uid://hvf8qm27oqm5" path="res://addons/letstalkaboutit/graph_data/node_data.gd" id="1_f6w64"]
+[ext_resource type="Script" uid="uid://bhbyqwjh1ms64" path="res://addons/letstalkaboutit/graph_data/graph_data.gd" id="1_o0nq6"]
+
+[sub_resource type="Resource" id="Resource_f6w64"]
+script = ExtResource("1_f6w64")
+name = "TalkStart"
+type = "TalkStart"
+position_offset = Vector2(584, 208)
+data = {
+&"id": "StartExample",
+&"next_id": "TalkBasic"
+}
+
+[sub_resource type="Resource" id="Resource_mt08c"]
+script = ExtResource("1_f6w64")
+name = "TalkBasic"
+type = "TalkBasic"
+position_offset = Vector2(832, 221)
+data = {
+&"id": "TalkBasic",
+&"message_list": Array[String](["TalkMessage"]),
+&"next_id": "TalkEnd"
+}
+
+[sub_resource type="Resource" id="Resource_eskfi"]
+script = ExtResource("1_f6w64")
+name = "TalkEnd"
+type = "TalkEnd"
+position_offset = Vector2(1080, 220)
+data = {
+&"id": "TalkEnd",
+&"next_start": "StartExample"
+}
+
+[sub_resource type="Resource" id="Resource_2t7iv"]
+script = ExtResource("1_f6w64")
+name = "TalkMessage"
+type = "TalkMessage"
+position_offset = Vector2(560, 320)
+data = {
+&"background": "none",
+&"character_id": "Default",
+&"id": "TalkMessage",
+&"line_id": "-1",
+&"lines": Array[String](["This is an example conversation", "", ""]),
+&"overlay": "none"
+}
+
+[resource]
+script = ExtResource("1_o0nq6")
+connections = Array[Dictionary]([{
+"from_node": &"TalkStart",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkEnd",
+"to_port": 0
+}])
+nodes = [SubResource("Resource_f6w64"), SubResource("Resource_mt08c"), SubResource("Resource_eskfi"), SubResource("Resource_2t7iv")]

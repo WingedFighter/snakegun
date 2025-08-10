@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://i1oxad12j3rx"]
 
 [ext_resource type="Script" uid="uid://d0kxi1tiv0ymy" path="res://overworld/hud/hud.gd" id="1_6clc2"]
-[ext_resource type="Script" uid="uid://d3odcg3txco6e" path="res://addons/letstalkaboutit/nodes/talk_display/talk_display.gd" id="2_xm7ip"]
+[ext_resource type="Script" uid="uid://b26s6m7u8aqwf" path="res://addons/letstalkaboutit/nodes/talk_display/talk_display.gd" id="2_xm7ip"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3

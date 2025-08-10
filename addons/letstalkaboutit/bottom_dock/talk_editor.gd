@@ -240,9 +240,10 @@ func init_graph(graph_data: GraphData) -> void:
             "TalkMessage":
                 g_node.set_line_id(node.data.line_id)
                 g_node.set_character_id(node.data.character_id)
-                g_node.set_expression(node.data.expression)
                 g_node.line_resource = TalkLinesResource.new()
+                g_node.set_overlay(node.data.overlay)
                 g_node.set_lines(node.data.lines)
+                g_node.set_background(node.data.background)
             "TalkChoice":
                 for choice in node.data.choice_list:
                     g_node.add_new_choice(choice)
@@ -253,6 +254,8 @@ func init_graph(graph_data: GraphData) -> void:
             "TalkSetFlag":
                 g_node.set_flag_name(node.data.flag_name)
                 g_node.set_flag_value(node.data.flag_value)
+            "TalkEnd":
+                g_node.set_next_start(node.data.next_start)
         $TalkGraph.add_child(g_node, true)
     for node in graph_data.nodes:
         var g_node = get_graph_element_from_name(node.name)
@@ -301,8 +304,9 @@ func save_graph_data(nodes: Array, connections: Array) -> void:
                     node_data.data.id = node.id
                     node_data.data.line_id = node.line_id
                     node_data.data.character_id = node.character_id
-                    node_data.data.expression = node.expression
+                    node_data.data.overlay = node.overlay
                     node_data.data.lines = node.line_resource.lines
+                    node_data.data.background = node.background
                 "TalkChoice":
                     node_data.data.id = node.id
                     node_data.data.choice_list = node.choice_list
@@ -323,6 +327,7 @@ func save_graph_data(nodes: Array, connections: Array) -> void:
                     node_data.data.next_id = node.next_id
                 "TalkEnd":
                     node_data.data.id = node.id
+                    node_data.data.next_start = node.next_start
             node_data.position_offset = node.position_offset
             # node data
             n_graph_data.nodes.append(node_data)

@@ -3,11 +3,14 @@ class_name HUD25D
 
 @onready var talk_display := $CanvasLayer/TalkDisplay
 
+signal interact_start
+signal interact_end
+
 var last_interactable: Node
-var interacting: bool = false
+var is_interacting: bool = false
 
 func _input(event: InputEvent) -> void:
-	if interacting:
+	if is_interacting:
 		if talk_display.can_transition:
 			if event.is_action_pressed("interact"):
 				talk_display.interaction(last_interactable)
@@ -17,4 +20,12 @@ func _input(event: InputEvent) -> void:
 	elif event.is_action_pressed("interact") && last_interactable is Interactable:
 		if talk_display.can_interact(last_interactable):
 			talk_display.interaction(last_interactable)
-			interacting = true
+			last_interactable.get_node("TalkManager").conversation_end.connect(on_conversation_end)
+			interact_start.emit()
+			is_interacting = true
+
+func on_conversation_end(node: Node):
+	is_interacting = false
+	if node is TalkManager:
+		node.conversation_end.disconnect(on_conversation_end)
+	interact_end.emit()
