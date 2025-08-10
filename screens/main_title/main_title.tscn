@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2dkwwowswngd"]
+[gd_scene load_steps=3 format=3 uid="uid://d2dkwwowswngd"]
 
 [ext_resource type="Script" uid="uid://m2kxwjfremb8" path="res://screens/main_title/main_title.gd" id="1_1mt6c"]
+[ext_resource type="Texture2D" uid="uid://dsl3byg27wiav" path="res://screens/main_title/title.png" id="2_u1s1t"]
 
 [node name="MainTitle" type="Control"]
 layout_mode = 3
@@ -13,25 +14,24 @@ script = ExtResource("1_1mt6c")
 new_game_scene = "uid://cal30tmntd5bg"
 continue_game_scene = "uid://cal30tmntd5bg"
 
-[node name="BackgroundTexture" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TitleLabel" type="Label" parent="."]
+[node name="BackgroundColor" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -51.5
-offset_top = -11.5
-offset_right = 51.5
-offset_bottom = 11.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Working Title"
+color = Color(0.905882, 0.776471, 1, 1)
+
+[node name="TitleTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_u1s1t")
+expand_mode = 3
 
 [node name="NewGameButton" type="Button" parent="."]
 layout_mode = 1
@@ -40,10 +40,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -46.5
-offset_top = 19.0
-offset_right = 46.5
-offset_bottom = 50.0
+offset_left = -119.0
+offset_top = 265.0
+offset_right = -26.0
+offset_bottom = 296.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "New Game"
@@ -55,10 +55,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -39.5
-offset_top = 56.0
-offset_right = 39.5
-offset_bottom = 87.0
+offset_left = 30.0
+offset_top = 265.0
+offset_right = 109.0
+offset_bottom = 296.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Continue"
@@ -70,10 +70,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -35.0
-offset_top = 95.0
-offset_right = 35.0
-offset_bottom = 126.0
+offset_left = 157.0
+offset_top = 265.0
+offset_right = 227.0
+offset_bottom = 296.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Settings"
@@ -85,10 +85,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -21.0
-offset_top = 134.0
-offset_right = 21.0
-offset_bottom = 165.0
+offset_left = 257.0
+offset_top = 265.0
+offset_right = 299.0
+offset_bottom = 296.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Quit"
