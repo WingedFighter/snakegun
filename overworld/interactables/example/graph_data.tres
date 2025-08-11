@@ -41,7 +41,7 @@ type = "TalkMessage"
 position_offset = Vector2(560, 320)
 data = {
 &"background": "none",
-&"character_id": "Default",
+&"character_id": "default",
 &"id": "TalkMessage",
 &"line_id": "-1",
 &"lines": Array[String](["This is an example conversation", "", ""]),
