@@ -136,6 +136,5 @@ text = "EXIT"
 [node name="KeybindingPanel" parent="." instance=ExtResource("5_2yjlk")]
 visible = false
 layout_mode = 1
-script = null
 
 [connection signal="value_changed" from="Panel/MarginContainer/TabContainer/ItemList/VBoxContainer/MusicSFX/HSlider" to="." method="_on_h_slider_value_changed"]

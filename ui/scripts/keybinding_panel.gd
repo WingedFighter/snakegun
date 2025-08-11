@@ -12,11 +12,8 @@ var input_actions: Array
 var button_to_change: TextureButton
 
 func _ready() -> void:
-	print("here")
 	close_button.pressed.connect(on_close_pressed)
 	var temp_actions = InputMap.get_actions()
-	print(temp_actions)
-	print(input_actions)
 	for action in temp_actions:
 		if action_skip_list.has(action):
 			continue
@@ -129,8 +126,8 @@ func input_hbox(input_name: StringName) -> TextureButton:
 			var keycode = event.as_text_physical_keycode().to_lower()
 			if keycode == "up" || keycode == "down" || keycode == "left" || keycode == "right":
 				keycode = "arrow_" + keycode
-			var filename_normal = "res://ui/icons/keyboard_mouse_icons/keyboard_" + keycode + ".png"
-			var filename_pressed = "res://ui/icons/keyboard_mouse_icons/keyboard_" + keycode + "_outline.png"
+			var filename_normal = "res://ui/icons/keyboard_mouse/keyboard_" + keycode + ".png"
+			var filename_pressed = "res://ui/icons/keyboard_mouse/keyboard_" + keycode + "_outline.png"
 			button.texture_normal = load(filename_normal)
 			button.texture_pressed = load(filename_pressed)
 		elif event is InputEventMouseButton:
@@ -138,23 +135,23 @@ func input_hbox(input_name: StringName) -> TextureButton:
 			var filename_pressed
 			match event.button_index:
 				1:
-					filename_normal = "res://ui/icons/keyboard_mouse_icons/mouse_left.png"
-					filename_pressed = "res://ui/icons/keyboard_mouse_icons/mouse_left_outline.png"
+					filename_normal = "res://ui/icons/keyboard_mouse/mouse_left.png"
+					filename_pressed = "res://ui/icons/keyboard_mouse/mouse_left_outline.png"
 				2:
-					filename_normal = "res://ui/icons/keyboard_mouse_icons/mouse_right.png"
-					filename_pressed = "res://ui/icons/keyboard_mouse_icons/mouse_right_outline.png"
+					filename_normal = "res://ui/icons/keyboard_mouse/mouse_right.png"
+					filename_pressed = "res://ui/icons/keyboard_mouse/mouse_right_outline.png"
 				4:
-					filename_normal = "res://ui/icons/keyboard_mouse_icons/mouse_scroll_up.png"
-					filename_pressed = "res://ui/icons/keyboard_mouse_icons/mouse_left_outline.png"
+					filename_normal = "res://ui/icons/keyboard_mouse/mouse_scroll_up.png"
+					filename_pressed = "res://ui/icons/keyboard_mouse/mouse_left_outline.png"
 				5:
-					filename_normal = "res://ui/icons/keyboard_mouse_icons/mouse_scroll_down.png"
-					filename_pressed = "res://ui/icons/keyboard_mouse_icons/mouse_left_outline.png"
+					filename_normal = "res://ui/icons/keyboard_mouse/mouse_scroll_down.png"
+					filename_pressed = "res://ui/icons/keyboard_mouse/mouse_left_outline.png"
 			button.texture_normal = load(filename_normal)
 			button.texture_pressed = load(filename_pressed)
 		else:
-			button.texture_normal = load("res://ui/icons/keyboard_mouse_icons/generic_button_square.png")
-			button.texture_pressed = load("res://ui/icons/keyboard_mouse_icons/generic_button_square_outline.png")
+			button.texture_normal = load("res://ui/icons/keyboard_mouse/generic_button_square.png")
+			button.texture_pressed = load("res://ui/icons/keyboard_mouse/generic_button_square_outline.png")
 	else:
-		button.texture_normal = load("res://ui/icons/keyboard_mouse_icons/generic_button_square.png")
-		button.texture_pressed = load("res://ui/icons/keyboard_mouse_icons/generic_button_square_outline.png")
+		button.texture_normal = load("res://ui/icons/keyboard_mouse/generic_button_square.png")
+		button.texture_pressed = load("res://ui/icons/keyboard_mouse/generic_button_square_outline.png")
 	return button
