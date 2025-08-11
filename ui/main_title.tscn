@@ -640,7 +640,15 @@ script = ExtResource("1_2di8j")
 new_game_scene = "uid://cal30tmntd5bg"
 continue_game_scene = "uid://cal30tmntd5bg"
 
-[node name="BackgroundLayer" type="TextureRect" parent="."]
+[node name="Layers" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundLayer" type="TextureRect" parent="Layers"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -650,28 +658,28 @@ grow_vertical = 2
 texture = ExtResource("2_e4y57")
 expand_mode = 3
 
-[node name="MahouLayer" type="AnimatedSprite2D" parent="."]
+[node name="MahouLayer" type="AnimatedSprite2D" parent="Layers"]
 position = Vector2(249, 342)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_wvol4")
 autoplay = "default"
 frame_progress = 0.0601719
 
-[node name="GradientLayer" type="TextureRect" parent="."]
+[node name="GradientLayer" type="TextureRect" parent="Layers"]
 layout_mode = 1
 offset_right = 1920.0
 offset_bottom = 1080.0
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("53_bd37r")
 
-[node name="TitleLayer" type="AnimatedSprite2D" parent="."]
+[node name="TitleLayer" type="AnimatedSprite2D" parent="Layers"]
 position = Vector2(804, 221)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_v3swh")
 autoplay = "default"
 frame_progress = 0.224165
 
-[node name="GunLayer" type="AnimatedSprite2D" parent="."]
+[node name="GunLayer" type="AnimatedSprite2D" parent="Layers"]
 position = Vector2(634, 39)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_gwe1v")
