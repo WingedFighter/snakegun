@@ -3,10 +3,10 @@ extends Control
 @export_file("*.tscn") var new_game_scene: String
 @export_file("*.tscn") var continue_game_scene: String
 
-@onready var new_game_button: Button = $NewGameButton
-@onready var continue_button: Button = $ContinueButton
-@onready var settings_button: Button = $SettingsButton
-@onready var quit_button: Button = $QuitButton
+@onready var new_game_button: TextureButton = $NewGameButton
+@onready var continue_button: TextureButton = $ContinueButton
+@onready var settings_button: TextureButton = $SettingsButton
+@onready var quit_button: TextureButton = $QuitButton
 @onready var escape_menu: Control = $EscapeMenu
 
 func _physics_process(_delta: float) -> void:

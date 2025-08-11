@@ -1,4 +1,4 @@
-[gd_scene load_steps=158 format=3 uid="uid://d2dkwwowswngd"]
+[gd_scene load_steps=162 format=3 uid="uid://d2dkwwowswngd"]
 
 [ext_resource type="Script" uid="uid://m2kxwjfremb8" path="res://ui/scripts/main_title.gd" id="1_2di8j"]
 [ext_resource type="Texture2D" uid="uid://b4t58ds3yim5h" path="res://ui/images/main_title/Layer1/LAYER1.png" id="2_e4y57"]
@@ -154,6 +154,10 @@
 [ext_resource type="Texture2D" uid="uid://bxhy7vqrvtqgn" path="res://ui/images/main_title/Layer5/Symbol 60048.png" id="151_p4id5"]
 [ext_resource type="Texture2D" uid="uid://bx4rkyciggfq1" path="res://ui/images/main_title/Layer5/Symbol 60049.png" id="152_h6c3p"]
 [ext_resource type="Texture2D" uid="uid://c076ymuj77ufd" path="res://ui/images/main_title/Layer5/Symbol 60050.png" id="153_2703e"]
+[ext_resource type="Texture2D" uid="uid://dhonlcni7xun0" path="res://ui/images/main_title/buttons/new_game.png" id="154_nynva"]
+[ext_resource type="Texture2D" uid="uid://2uyryfxjwmip" path="res://ui/images/main_title/buttons/continue.png" id="155_lxr7a"]
+[ext_resource type="Texture2D" uid="uid://dkngig5mxgqsw" path="res://ui/images/main_title/buttons/settings.png" id="156_sn30l"]
+[ext_resource type="Texture2D" uid="uid://dv10flfh6b5wu" path="res://ui/images/main_title/buttons/quit.png" id="157_82iiy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wvol4"]
 animations = [{
@@ -686,65 +690,69 @@ sprite_frames = SubResource("SpriteFrames_gwe1v")
 autoplay = "default"
 frame_progress = 0.650085
 
-[node name="NewGameButton" type="Button" parent="."]
+[node name="NewGameButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -119.0
-offset_top = 265.0
-offset_right = -26.0
-offset_bottom = 296.0
+offset_left = -286.0
+offset_top = 196.0
+offset_right = 354.0
+offset_bottom = 557.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "New Game"
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("154_nynva")
 
-[node name="ContinueButton" type="Button" parent="."]
+[node name="ContinueButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 30.0
-offset_top = 265.0
-offset_right = 109.0
-offset_bottom = 296.0
+offset_left = -76.0
+offset_top = 196.0
+offset_right = 564.0
+offset_bottom = 550.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Continue"
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("155_lxr7a")
 
-[node name="SettingsButton" type="Button" parent="."]
+[node name="SettingsButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 157.0
-offset_top = 265.0
-offset_right = 227.0
-offset_bottom = 296.0
+offset_left = 134.0
+offset_top = 196.0
+offset_right = 774.0
+offset_bottom = 553.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Settings"
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("156_sn30l")
 
-[node name="QuitButton" type="Button" parent="."]
+[node name="QuitButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 257.0
-offset_top = 265.0
-offset_right = 299.0
-offset_bottom = 296.0
+offset_left = 344.0
+offset_top = 196.0
+offset_right = 984.0
+offset_bottom = 551.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Quit"
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("157_82iiy")
 
 [node name="EscapeMenu" parent="." instance=ExtResource("3_e4y57")]
 visible = false
