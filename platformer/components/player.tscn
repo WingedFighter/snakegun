@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://bg2joonqnel4i"]
+[gd_scene load_steps=8 format=3 uid="uid://bg2joonqnel4i"]
 
 [ext_resource type="Texture2D" uid="uid://bukeco2v8n28u" path="res://textures/DownNeutral.png" id="1_01n4k"]
 [ext_resource type="Script" uid="uid://c50ehat1xdcrh" path="res://platformer/components/player.gd" id="1_rew8g"]
 [ext_resource type="Script" uid="uid://ycdu37llg6b7" path="res://platformer/components/health_component.gd" id="2_556y6"]
 [ext_resource type="Script" uid="uid://dd5gtwobywwhi" path="res://platformer/components/velocity_component.gd" id="3_b14dm"]
+[ext_resource type="Script" uid="uid://ensmpcy8hg41" path="res://platformer/components/hurtbox_component.gd" id="5_hb14i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a5smi"]
 size = Vector2(54.195, 87.175)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rew8g"]
+size = Vector2(22.64, 72.055)
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("velocity_component")]
 collision_layer = 3
@@ -29,3 +33,15 @@ maxHealth = 100.0
 script = ExtResource("3_b14dm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="HurtboxComponent" type="Area2D" parent="." node_paths=PackedStringArray("healthComponent", "iframe_timer")]
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("5_hb14i")
+healthComponent = NodePath("../HealthComponent")
+iframe_timer = NodePath("../IFrameTimer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent"]
+shape = SubResource("RectangleShape2D_rew8g")
+
+[node name="IFrameTimer" type="Timer" parent="."]
