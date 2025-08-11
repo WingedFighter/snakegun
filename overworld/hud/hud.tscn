@@ -20,4 +20,3 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_xm7ip")
-metadata/_custom_type_script = "uid://d3odcg3txco6e"

@@ -47,15 +47,15 @@ tile_set = ExtResource("1_vv2g6")
 
 [node name="Interactables" type="Node2D" parent="."]
 
-[node name="Interactable" parent="Interactables" instance=ExtResource("2_1y8e8")]
+[node name="Tree0" parent="Interactables" instance=ExtResource("2_1y8e8")]
 position = Vector2(271, 362)
 
-[node name="CollisionShape2D" parent="Interactables/Interactable" index="0"]
+[node name="CollisionShape2D" parent="Interactables/Tree0" index="0"]
 position = Vector2(1, 1)
 
-[node name="TalkManager" parent="Interactables/Interactable" index="1"]
+[node name="TalkManager" parent="Interactables/Tree0" index="1"]
 graph_data_save_location = "res://overworld/interactables/example/graph_data.tres"
 talk_state_save_location = "res://overworld/interactables/example/talk_state.tres"
 talk_state = SubResource("Resource_ivl6u")
 
-[editable path="Interactables/Interactable"]
+[editable path="Interactables/Tree0"]
