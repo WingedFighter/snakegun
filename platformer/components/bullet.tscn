@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw5538w636pwu"]
+
+[ext_resource type="Script" uid="uid://erhswdty6ddb" path="res://platformer/components/bullet.gd" id="1_pf7ck"]
+[ext_resource type="Texture2D" uid="uid://ddjl7k41fvoty" path="res://textures/bullet.png" id="2_y5g05"]
+[ext_resource type="PackedScene" uid="uid://grt1adc2f8b8" path="res://platformer/components/hitbox_component.tscn" id="3_p6jd1"]
+
+[node name="Bullet" type="CharacterBody2D"]
+script = ExtResource("1_pf7ck")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_y5g05")
+
+[node name="HitboxComponent" parent="." instance=ExtResource("3_p6jd1")]

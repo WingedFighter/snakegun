@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxgmgcp48vsmr"]
+
+[ext_resource type="Script" uid="uid://ensmpcy8hg41" path="res://platformer/components/hurtbox_component.gd" id="1_xq5xh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rew8g"]
+size = Vector2(22.64, 72.055)
+
+[node name="HurtboxComponent" type="Area2D" node_paths=PackedStringArray("healthComponent", "iframe_timer")]
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("1_xq5xh")
+healthComponent = NodePath("")
+iframe_timer = NodePath("")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rew8g")

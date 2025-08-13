@@ -11,10 +11,6 @@ func _ready() -> void:
 	area_entered.connect(take_damage)
 	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func take_damage(damage: float) -> void:
 	# Iframes are an optional component, cannot be damaged when there is no iframe timer associated.
 	if iframe_timer != null:

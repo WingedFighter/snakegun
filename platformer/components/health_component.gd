@@ -1,7 +1,7 @@
 class_name HealthComponent
 extends Node2D
 
-@export var maxHealth: float
+@export var maxHealth: float = 100.0
 var currentHealth: float
 
 signal health_depleted

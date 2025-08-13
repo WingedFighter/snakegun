@@ -2,22 +2,20 @@
 
 [ext_resource type="Texture2D" uid="uid://bukeco2v8n28u" path="res://textures/DownNeutral.png" id="1_01n4k"]
 [ext_resource type="Script" uid="uid://c50ehat1xdcrh" path="res://platformer/components/player.gd" id="1_rew8g"]
-[ext_resource type="Script" uid="uid://ycdu37llg6b7" path="res://platformer/components/health_component.gd" id="2_556y6"]
-[ext_resource type="Script" uid="uid://dd5gtwobywwhi" path="res://platformer/components/velocity_component.gd" id="3_b14dm"]
-[ext_resource type="Script" uid="uid://ensmpcy8hg41" path="res://platformer/components/hurtbox_component.gd" id="5_hb14i"]
+[ext_resource type="PackedScene" uid="uid://bp5asil6iy16" path="res://platformer/components/health_component.tscn" id="3_g4g1j"]
+[ext_resource type="PackedScene" uid="uid://mae6d6fy7gli" path="res://platformer/components/velocity_component.tscn" id="4_hi5te"]
+[ext_resource type="PackedScene" uid="uid://dxgmgcp48vsmr" path="res://platformer/components/hurtbox_component.tscn" id="5_nrufp"]
+[ext_resource type="PackedScene" uid="uid://dos4xkw66fpq3" path="res://platformer/components/shoot_component.tscn" id="6_8ynxd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a5smi"]
 size = Vector2(54.195, 87.175)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rew8g"]
-size = Vector2(22.64, 72.055)
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("velocity_component")]
 collision_layer = 3
 collision_mask = 2
 platform_floor_layers = 4294967042
 script = ExtResource("1_rew8g")
-velocity_component = NodePath("VelocityComponent")
+velocity_component = NodePath("")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_a5smi")
@@ -25,23 +23,15 @@ shape = SubResource("RectangleShape2D_a5smi")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_01n4k")
 
-[node name="HealthComponent" type="Node2D" parent="."]
-script = ExtResource("2_556y6")
-maxHealth = 100.0
+[node name="HealthComponent" parent="." instance=ExtResource("3_g4g1j")]
 
-[node name="VelocityComponent" type="Node2D" parent="."]
-script = ExtResource("3_b14dm")
+[node name="VelocityComponent" parent="." instance=ExtResource("4_hi5te")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="HurtboxComponent" type="Area2D" parent="." node_paths=PackedStringArray("healthComponent", "iframe_timer")]
-collision_layer = 4
-collision_mask = 8
-script = ExtResource("5_hb14i")
-healthComponent = NodePath("../HealthComponent")
-iframe_timer = NodePath("../IFrameTimer")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent"]
-shape = SubResource("RectangleShape2D_rew8g")
+[node name="HurtboxComponent" parent="." instance=ExtResource("5_nrufp")]
 
 [node name="IFrameTimer" type="Timer" parent="."]
+
+[node name="ShootComponent" parent="." instance=ExtResource("6_8ynxd")]
+damage = null

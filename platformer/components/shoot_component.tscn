@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dos4xkw66fpq3"]
+
+[ext_resource type="Script" uid="uid://cmmawwu1uxr8h" path="res://platformer/components/shoot_component.gd" id="1_esnjv"]
+
+[node name="ShootComponent" type="Node2D"]
+script = ExtResource("1_esnjv")

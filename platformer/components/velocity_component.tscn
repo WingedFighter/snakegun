@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://mae6d6fy7gli"]
+
+[ext_resource type="Script" uid="uid://dd5gtwobywwhi" path="res://platformer/components/velocity_component.gd" id="1_susyp"]
+
+[node name="VelocityComponent" type="Node2D"]
+script = ExtResource("1_susyp")

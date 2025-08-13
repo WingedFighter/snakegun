@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp5asil6iy16"]
+
+[ext_resource type="Script" uid="uid://ycdu37llg6b7" path="res://platformer/components/health_component.gd" id="1_ddgir"]
+
+[node name="HealthComponent" type="Node2D"]
+script = ExtResource("1_ddgir")
