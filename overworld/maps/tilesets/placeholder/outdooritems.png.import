@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b026g0ndknv2c"
-path="res://.godot/imported/ground.png-00e1e842f0c87549744186820d2df351.ctex"
+uid="uid://fft1xr80j4wo"
+path="res://.godot/imported/outdooritems.png-1dbd839b3c09c20e4c7962b778451330.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://overworld/maps/outside_0/ground.png"
-dest_files=["res://.godot/imported/ground.png-00e1e842f0c87549744186820d2df351.ctex"]
+source_file="res://overworld/maps/tilesets/placeholder/outdooritems.png"
+dest_files=["res://.godot/imported/outdooritems.png-1dbd839b3c09c20e4c7962b778451330.ctex"]
 
 [params]
 

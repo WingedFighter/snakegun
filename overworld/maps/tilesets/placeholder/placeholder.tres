@@ -1,11 +1,11 @@
 [gd_resource type="TileSet" load_steps=14 format=3 uid="uid://b33wpsqls6ar0"]
 
-[ext_resource type="Texture2D" uid="uid://fft1xr80j4wo" path="res://overworld/maps/tilemaps/placeholder/outdooritems.png" id="1_4fhxr"]
-[ext_resource type="Texture2D" uid="uid://b8fepxii0xlle" path="res://overworld/maps/tilemaps/placeholder/cars.png" id="2_k635l"]
-[ext_resource type="Texture2D" uid="uid://dgssfbovokpxl" path="res://overworld/maps/tilemaps/placeholder/buildings.png" id="3_c1w6k"]
-[ext_resource type="Texture2D" uid="uid://pwpcrbaqqoco" path="res://overworld/maps/tilemaps/placeholder/shop.png" id="4_7dr07"]
-[ext_resource type="Texture2D" uid="uid://d1x1drm3e7ikr" path="res://overworld/maps/tilemaps/placeholder/shrub.png" id="5_tiqa5"]
-[ext_resource type="Texture2D" uid="uid://cfvxl2i8bxhb0" path="res://overworld/maps/tilemaps/placeholder/trafficlights.png" id="6_brb8l"]
+[ext_resource type="Texture2D" uid="uid://fft1xr80j4wo" path="res://overworld/maps/tilesets/placeholder/outdooritems.png" id="1_4fhxr"]
+[ext_resource type="Texture2D" uid="uid://b8fepxii0xlle" path="res://overworld/maps/tilesets/placeholder/cars.png" id="2_k635l"]
+[ext_resource type="Texture2D" uid="uid://dgssfbovokpxl" path="res://overworld/maps/tilesets/placeholder/buildings.png" id="3_c1w6k"]
+[ext_resource type="Texture2D" uid="uid://pwpcrbaqqoco" path="res://overworld/maps/tilesets/placeholder/shop.png" id="4_7dr07"]
+[ext_resource type="Texture2D" uid="uid://d1x1drm3e7ikr" path="res://overworld/maps/tilesets/placeholder/shrub.png" id="5_tiqa5"]
+[ext_resource type="Texture2D" uid="uid://cfvxl2i8bxhb0" path="res://overworld/maps/tilesets/placeholder/trafficlights.png" id="6_brb8l"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_4fhxr"]
 tile_data = PackedInt32Array(65536, 3276800, 16, 131072, 3276800, 17, 196608, 3276800, 18, 1, 3342336, 15, 65537, 3342336, 16, 131073, 3342336, 17, 196609, 3342336, 18, 327681, 3342336, 20, 393217, 3342336, 21, 458753, 3342336, 22, 2, 3407872, 15, 65538, 3407872, 16, 131074, 3407872, 17, 196610, 3407872, 18, 262146, 3407872, 19, 327682, 3407872, 20, 393218, 3407872, 21, 458754, 3407872, 22, 3, 3473408, 15, 65539, 3473408, 16, 131075, 3473408, 17, 196611, 3473408, 18, 262147, 3473408, 19, 327683, 3473408, 20, 393219, 3473408, 21, 458755, 3473408, 22, 4, 3538944, 15, 65540, 3538944, 16, 131076, 3538944, 17, 196612, 3538944, 18, 327684, 3538944, 20, 393220, 3538944, 21, 458756, 3538944, 22, 65541, 3604480, 16, 131077, 3604480, 17, 196613, 3604480, 18)

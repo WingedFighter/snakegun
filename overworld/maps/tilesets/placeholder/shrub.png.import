@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgssfbovokpxl"
-path="res://.godot/imported/buildings.png-321a8467480a50a66e75199d264ca502.ctex"
+uid="uid://d1x1drm3e7ikr"
+path="res://.godot/imported/shrub.png-2991cff7b9b359956eec7f794709d8af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://overworld/maps/tilemaps/placeholder/buildings.png"
-dest_files=["res://.godot/imported/buildings.png-321a8467480a50a66e75199d264ca502.ctex"]
+source_file="res://overworld/maps/tilesets/placeholder/shrub.png"
+dest_files=["res://.godot/imported/shrub.png-2991cff7b9b359956eec7f794709d8af.ctex"]
 
 [params]
 

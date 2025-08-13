@@ -11,11 +11,7 @@ extends Control
 @onready var keybindings_panel: Control = $KeybindingPanel
 
 @export var resolutions: Dictionary = {
-	"640x360": Vector2(640, 360),
-	"1280x720": Vector2(1280, 720),
-	"1920x1080": Vector2(1920, 1080),
-	"2560x1440": Vector2(2560,1440),
-	"3840x2160": Vector2(3840, 2160)
+	"1152x648": Vector2(640, 360)
 }
 
 @export var music_bus: int

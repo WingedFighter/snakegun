@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://cal30tmntd5bg"]
 
-[ext_resource type="TileSet" uid="uid://b33wpsqls6ar0" path="res://overworld/maps/tilemaps/placeholder/placeholder.tres" id="1_vv2g6"]
+[ext_resource type="TileSet" uid="uid://b33wpsqls6ar0" path="res://overworld/maps/tilesets/placeholder/placeholder.tres" id="1_vv2g6"]
 [ext_resource type="PackedScene" uid="uid://k12lfk6na5pl" path="res://overworld/interactables/interactable.tscn" id="2_1y8e8"]
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/player/player25d.tscn" id="2_noum8"]
 [ext_resource type="Script" uid="uid://upqqxnjkjdmj" path="res://addons/letstalkaboutit/ingame_data/talk_state.gd" id="4_jm1as"]
