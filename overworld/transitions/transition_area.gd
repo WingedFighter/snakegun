@@ -10,4 +10,7 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player25D:
-		get_tree().change_scene_to_file(transition_scene)
+		call_deferred("change_scene", transition_scene)
+
+func change_scene(target_scene: String) -> void:
+	get_tree().change_scene_to_file(target_scene)

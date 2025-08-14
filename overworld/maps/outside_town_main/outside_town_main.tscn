@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://cohqlrcb47uj4"]
+[gd_scene load_steps=7 format=4 uid="uid://cohqlrcb47uj4"]
 
 [ext_resource type="Texture2D" uid="uid://b026g0ndknv2c" path="res://overworld/maps/outside_town_main/ground_main.png" id="1_dwtre"]
 [ext_resource type="TileSet" uid="uid://c6cu6yj2kvibq" path="res://overworld/maps/tilesets/outside_tileset.tres" id="2_gcnva"]
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/player/player25d.tscn" id="3_uqdsc"]
 [ext_resource type="PackedScene" uid="uid://cddigtumyuaal" path="res://overworld/transitions/transition_area.tscn" id="4_gcnva"]
+[ext_resource type="PackedScene" uid="uid://co63qkxatewwp" path="res://overworld/transitions/spawner.tscn" id="5_uqdsc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwtre"]
 size = Vector2(649, 20)
@@ -26,6 +27,7 @@ tile_set = ExtResource("2_gcnva")
 y_sort_origin = 64
 
 [node name="Player25D" parent="YSortable" instance=ExtResource("3_uqdsc")]
+unique_name_in_owner = true
 
 [node name="BoundaryTop" type="TileMapLayer" parent="YSortable"]
 y_sort_enabled = true
@@ -53,5 +55,17 @@ shape = SubResource("RectangleShape2D_dwtre")
 [node name="Transitions" type="Node2D" parent="."]
 
 [node name="Top" parent="Transitions" instance=ExtResource("4_gcnva")]
-position = Vector2(-7, -317)
+position = Vector2(-3, -321)
 transition_scene = "uid://ctcc7wn73x4lr"
+
+[node name="Spawner" parent="." instance=ExtResource("5_uqdsc")]
+spawns = Dictionary[String, NodePath]({
+"MainTitle": NodePath("MainTitle"),
+"OutsideTownSchool": NodePath("OutsideTownSchool")
+})
+
+[node name="MainTitle" type="Marker2D" parent="Spawner"]
+position = Vector2(-55, -30)
+
+[node name="OutsideTownSchool" type="Marker2D" parent="Spawner"]
+position = Vector2(-45, -286)

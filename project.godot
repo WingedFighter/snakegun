@@ -15,6 +15,10 @@ run/main_scene="uid://d2dkwwowswngd"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="uid://bcsot87r8nmex"
 
+[autoload]
+
+SceneManager="*res://global/SceneManager.gd"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/letstalkaboutit/plugin.cfg")
