@@ -1,10 +1,10 @@
-[gd_scene load_steps=12 format=4 uid="uid://ctcc7wn73x4lr"]
+[gd_scene load_steps=13 format=4 uid="uid://ctcc7wn73x4lr"]
 
 [ext_resource type="Texture2D" uid="uid://03ska3ft42ol" path="res://overworld/maps/outside_town_school/ground_school.png" id="1_t0226"]
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/player/player25d.tscn" id="2_smj6a"]
 [ext_resource type="TileSet" uid="uid://c6cu6yj2kvibq" path="res://overworld/maps/tilesets/outside_tileset.tres" id="3_t0226"]
-[ext_resource type="PackedScene" uid="uid://cddigtumyuaal" path="res://overworld/transitions/transition_area.tscn" id="4_nrcqd"]
-[ext_resource type="PackedScene" uid="uid://co63qkxatewwp" path="res://overworld/transitions/spawner.tscn" id="5_y1udv"]
+[ext_resource type="PackedScene" uid="uid://cddigtumyuaal" path="res://overworld/interactables/transition/transition.tscn" id="4_nrcqd"]
+[ext_resource type="PackedScene" uid="uid://co63qkxatewwp" path="res://overworld/maps/spawner/spawner.tscn" id="5_y1udv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t0226"]
 size = Vector2(322, 20)
@@ -23,6 +23,9 @@ size = Vector2(24, 107)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgagr"]
 size = Vector2(488, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_viara"]
+size = Vector2(486, 20)
 
 [node name="OutsideTownSchool" type="Node2D"]
 
@@ -110,6 +113,11 @@ shape = SubResource("RectangleShape2D_sgagr")
 [node name="Bottom" parent="Transitions" instance=ExtResource("4_nrcqd")]
 position = Vector2(-25, 323)
 transition_scene = "uid://cohqlrcb47uj4"
+immediate = true
+
+[node name="CollisionShape2D" parent="Transitions/Bottom" index="0"]
+position = Vector2(6, 0)
+shape = SubResource("RectangleShape2D_viara")
 
 [node name="Spawner" parent="." instance=ExtResource("5_y1udv")]
 spawns = Dictionary[String, NodePath]({
@@ -122,3 +130,5 @@ position = Vector2(-36, 23)
 
 [node name="OutsideTownMain" type="Marker2D" parent="Spawner"]
 position = Vector2(-27, 276)
+
+[editable path="Transitions/Bottom"]

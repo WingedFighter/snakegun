@@ -1,13 +1,17 @@
-[gd_scene load_steps=7 format=4 uid="uid://cohqlrcb47uj4"]
+[gd_scene load_steps=9 format=4 uid="uid://cohqlrcb47uj4"]
 
 [ext_resource type="Texture2D" uid="uid://b026g0ndknv2c" path="res://overworld/maps/outside_town_main/ground_main.png" id="1_dwtre"]
 [ext_resource type="TileSet" uid="uid://c6cu6yj2kvibq" path="res://overworld/maps/tilesets/outside_tileset.tres" id="2_gcnva"]
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/player/player25d.tscn" id="3_uqdsc"]
-[ext_resource type="PackedScene" uid="uid://cddigtumyuaal" path="res://overworld/transitions/transition_area.tscn" id="4_gcnva"]
-[ext_resource type="PackedScene" uid="uid://co63qkxatewwp" path="res://overworld/transitions/spawner.tscn" id="5_uqdsc"]
+[ext_resource type="PackedScene" uid="uid://cddigtumyuaal" path="res://overworld/interactables/transition/transition.tscn" id="4_gcnva"]
+[ext_resource type="PackedScene" uid="uid://co63qkxatewwp" path="res://overworld/maps/spawner/spawner.tscn" id="5_uqdsc"]
+[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="6_vhww8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwtre"]
 size = Vector2(649, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhww8"]
+size = Vector2(631, 20)
 
 [node name="OutsideTownMain" type="Node2D"]
 
@@ -57,6 +61,15 @@ shape = SubResource("RectangleShape2D_dwtre")
 [node name="Top" parent="Transitions" instance=ExtResource("4_gcnva")]
 position = Vector2(-3, -321)
 transition_scene = "uid://ctcc7wn73x4lr"
+immediate = true
+
+[node name="CollisionShape2D" parent="Transitions/Top" index="0"]
+position = Vector2(-13.5, 0)
+shape = SubResource("RectangleShape2D_vhww8")
+
+[node name="Title" parent="Transitions" instance=ExtResource("4_gcnva")]
+position = Vector2(424, -22)
+transition_scene = "uid://d2dkwwowswngd"
 
 [node name="Spawner" parent="." instance=ExtResource("5_uqdsc")]
 spawns = Dictionary[String, NodePath]({
@@ -69,3 +82,27 @@ position = Vector2(-55, -30)
 
 [node name="OutsideTownSchool" type="Marker2D" parent="Spawner"]
 position = Vector2(-45, -286)
+
+[node name="Conversations" type="Node2D" parent="."]
+
+[node name="Test" parent="Conversations" instance=ExtResource("6_vhww8")]
+
+[node name="TalkManager" parent="Conversations/Test" index="0"]
+graph_data_save_location = "res://overworld/maps/outside_town_main/conversations/test/graph_data.tres"
+talk_state_save_location = "res://overworld/maps/outside_town_main/conversations/test/talk_state.tres"
+
+[node name="CollisionShape2D" parent="Conversations/Test" index="2"]
+position = Vector2(-378, -108)
+
+[node name="example" parent="Conversations" instance=ExtResource("6_vhww8")]
+
+[node name="TalkManager" parent="Conversations/example" index="0"]
+graph_data_save_location = "res://overworld/maps/outside_town_main/conversations/example/graph_data.tres"
+talk_state_save_location = "res://overworld/maps/outside_town_main/conversations/example/talk_state.tres"
+
+[node name="CollisionShape2D" parent="Conversations/example" index="2"]
+position = Vector2(234, -146)
+
+[editable path="Transitions/Top"]
+[editable path="Conversations/Test"]
+[editable path="Conversations/example"]

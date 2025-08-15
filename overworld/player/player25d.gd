@@ -5,6 +5,7 @@ class_name Player25D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hud: Control = $HUD
+@onready var bubble: Sprite2D = $Bubble
 
 var is_paused: bool = false
 
@@ -23,6 +24,8 @@ func _physics_process(delta: float) -> void:
 		velocity = delta * movement * speed
 	else:
 		velocity = Vector2.ZERO
+	
+	bubble.visible = hud.is_valid_interactable()
 
 	move_and_slide()
 	update_animations(movement)

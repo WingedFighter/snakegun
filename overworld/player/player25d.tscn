@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://c8gr5wrb6dvjt"]
+[gd_scene load_steps=30 format=3 uid="uid://c8gr5wrb6dvjt"]
 
 [ext_resource type="Script" uid="uid://cdnik1c5uy1nx" path="res://overworld/player/player25d.gd" id="1_mu2yp"]
 [ext_resource type="Texture2D" uid="uid://b6ppd1413fbju" path="res://overworld/player/sprite_sheets/down/mcfrontwalk1.png" id="2_0c41b"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://ce2vi3fnjt3yc" path="res://overworld/player/sprite_sheets/up/mcbackwalk2.png" id="23_n63iq"]
 [ext_resource type="Texture2D" uid="uid://clupr6jq0faj5" path="res://overworld/player/sprite_sheets/up/mcbackwalk3.png" id="24_prdvw"]
 [ext_resource type="Texture2D" uid="uid://c0hcioybvmp6i" path="res://overworld/player/sprite_sheets/up/mcbackwalk4.png" id="25_hbfuq"]
+[ext_resource type="Texture2D" uid="uid://dugadsyrm4wj" path="res://overworld/player/sprite_sheets/talk/ConvoBubble.png" id="27_n63iq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bnbyf"]
 animations = [{
@@ -163,3 +164,10 @@ position = Vector2(0.5, 9)
 shape = SubResource("RectangleShape2D_eqgo5")
 
 [node name="HUD" parent="." instance=ExtResource("22_i1fnb")]
+
+[node name="Bubble" type="Sprite2D" parent="."]
+visible = false
+z_index = 100
+position = Vector2(0, -27)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("27_n63iq")

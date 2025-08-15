@@ -1,0 +1,65 @@
+[gd_resource type="Resource" script_class="GraphData" load_steps=6 format=3 uid="uid://gw5wfgrri2c4"]
+
+[ext_resource type="Script" uid="uid://hvf8qm27oqm5" path="res://addons/letstalkaboutit/graph_data/node_data.gd" id="1_ych5k"]
+[ext_resource type="Script" uid="uid://bhbyqwjh1ms64" path="res://addons/letstalkaboutit/graph_data/graph_data.gd" id="1_yfycb"]
+
+[sub_resource type="Resource" id="Resource_ych5k"]
+script = ExtResource("1_ych5k")
+name = "TalkStart"
+type = "TalkStart"
+position_offset = Vector2(320, 160)
+data = {
+&"id": "Start",
+&"next_id": "TalkChoice"
+}
+
+[sub_resource type="Resource" id="Resource_7i1ki"]
+script = ExtResource("1_ych5k")
+name = "TalkChoice"
+type = "TalkChoice"
+position_offset = Vector2(620, 140)
+data = {
+&"choice_list": Array[String](["6556", "8087"]),
+&"id": "TalkChoice",
+&"line_list": {
+"6556": "Oh god why grant us choic",
+"8087": "If it doesn't matter"
+},
+&"next_id_list": {
+"6556": "TalkEnd",
+"8087": "TalkEnd"
+}
+}
+
+[sub_resource type="Resource" id="Resource_uue5l"]
+script = ExtResource("1_ych5k")
+name = "TalkEnd"
+type = "TalkEnd"
+position_offset = Vector2(900, 140)
+data = {
+&"id": "TalkEnd",
+&"next_start": "Start"
+}
+
+[resource]
+script = ExtResource("1_yfycb")
+connections = Array[Dictionary]([{
+"from_node": &"TalkStart",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkChoice",
+"to_port": 0
+}, {
+"from_node": &"TalkChoice",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkEnd",
+"to_port": 0
+}, {
+"from_node": &"TalkChoice",
+"from_port": 1,
+"keep_alive": false,
+"to_node": &"TalkEnd",
+"to_port": 0
+}])
+nodes = [SubResource("Resource_ych5k"), SubResource("Resource_7i1ki"), SubResource("Resource_uue5l")]

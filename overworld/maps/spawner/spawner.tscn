@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://co63qkxatewwp"]
 
-[ext_resource type="Script" uid="uid://c2kths3x8ls2v" path="res://overworld/maps/outside_town_main/spawner.gd" id="1_74knx"]
+[ext_resource type="Script" uid="uid://c2kths3x8ls2v" path="res://overworld/maps/spawner/spawner.gd" id="1_74knx"]
 
 [node name="Spawner" type="Node2D"]
 script = ExtResource("1_74knx")

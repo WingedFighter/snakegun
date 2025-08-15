@@ -17,7 +17,9 @@ func _input(event: InputEvent) -> void:
 		else:
 			if !talk_display.is_choosing && event.is_action_pressed("interact"):
 				talk_display.interaction(talk_display.current_interactable)
-	elif event.is_action_pressed("interact") && last_interactable is Interactable:
+	elif event.is_action_pressed("interact") && last_interactable is Transition:
+		last_interactable.interact()
+	elif event.is_action_pressed("interact") && last_interactable is Conversation:
 		if talk_display.can_interact(last_interactable):
 			talk_display.interaction(last_interactable)
 			last_interactable.get_node("TalkManager").conversation_end.connect(on_conversation_end)
@@ -26,6 +28,11 @@ func _input(event: InputEvent) -> void:
 
 func on_conversation_end(node: Node):
 	is_interacting = false
-	if node is Interactable:
+	if node is Conversation:
 		node.get_node("TalkManager").conversation_end.disconnect(on_conversation_end)
 	interact_end.emit()
+
+func is_valid_interactable() -> bool:
+	if last_interactable is Interactable && !is_interacting:
+		return true
+	return false
