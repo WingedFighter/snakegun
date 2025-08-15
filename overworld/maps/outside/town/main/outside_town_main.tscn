@@ -56,23 +56,9 @@ collision_layer = 16
 position = Vector2(-5.5, -325)
 shape = SubResource("RectangleShape2D_dwtre")
 
-[node name="Transitions" type="Node2D" parent="."]
-
-[node name="Top" parent="Transitions" instance=ExtResource("4_gcnva")]
-position = Vector2(-3, -321)
-transition_scene = "uid://ctcc7wn73x4lr"
-immediate = true
-
-[node name="CollisionShape2D" parent="Transitions/Top" index="0"]
-position = Vector2(-13.5, 0)
-shape = SubResource("RectangleShape2D_vhww8")
-
-[node name="Title" parent="Transitions" instance=ExtResource("4_gcnva")]
-position = Vector2(424, -22)
-transition_scene = "uid://d2dkwwowswngd"
-
 [node name="Spawner" parent="." instance=ExtResource("5_uqdsc")]
 spawns = Dictionary[String, NodePath]({
+"InsideHeroRoom": NodePath("InsideHeroRoom"),
 "MainTitle": NodePath("MainTitle"),
 "OutsideTownSchool": NodePath("OutsideTownSchool")
 })
@@ -82,6 +68,9 @@ position = Vector2(-55, -30)
 
 [node name="OutsideTownSchool" type="Marker2D" parent="Spawner"]
 position = Vector2(-45, -286)
+
+[node name="InsideHeroRoom" type="Marker2D" parent="Spawner"]
+position = Vector2(425, -1)
 
 [node name="Conversations" type="Node2D" parent="."]
 
@@ -103,6 +92,23 @@ talk_state_save_location = "res://overworld/maps/outside_town_main/conversations
 [node name="CollisionShape2D" parent="Conversations/example" index="2"]
 position = Vector2(234, -146)
 
-[editable path="Transitions/Top"]
+[node name="Interactables" type="Node2D" parent="."]
+
+[node name="Transitions" type="Node2D" parent="Interactables"]
+
+[node name="OutsideTownSchool" parent="Interactables/Transitions" instance=ExtResource("4_gcnva")]
+position = Vector2(-3, -321)
+transition_scene = "uid://ctcc7wn73x4lr"
+immediate = true
+
+[node name="CollisionShape2D" parent="Interactables/Transitions/OutsideTownSchool" index="0"]
+position = Vector2(-13.5, 0)
+shape = SubResource("RectangleShape2D_vhww8")
+
+[node name="InsideHeroRoom" parent="Interactables/Transitions" instance=ExtResource("4_gcnva")]
+position = Vector2(425, -21)
+transition_scene = "uid://bs4sw7h58f7b1"
+
 [editable path="Conversations/Test"]
 [editable path="Conversations/example"]
+[editable path="Interactables/Transitions/OutsideTownSchool"]
