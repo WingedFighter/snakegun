@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b026g0ndknv2c"
-path="res://.godot/imported/ground_main.png-1f2b6d725f75517b929f427cd935359c.ctex"
+uid="uid://03ska3ft42ol"
+path="res://.godot/imported/ground_school.png-4491c4f3b249116e57e3c812d2980a19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://overworld/maps/outside_town_main/ground_main.png"
-dest_files=["res://.godot/imported/ground_main.png-1f2b6d725f75517b929f427cd935359c.ctex"]
+source_file="res://overworld/maps/outside/town/school/ground_school.png"
+dest_files=["res://.godot/imported/ground_school.png-4491c4f3b249116e57e3c812d2980a19.ctex"]
 
 [params]
 

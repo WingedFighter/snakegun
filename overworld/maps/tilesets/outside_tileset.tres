@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" load_steps=9 format=3 uid="uid://c6cu6yj2kvibq"]
 
-[ext_resource type="Texture2D" uid="uid://bgba6dmhdb46y" path="res://overworld/maps/outside_town_main/houses_main.png" id="1_vd6hd"]
-[ext_resource type="Texture2D" uid="uid://7qdbdbl5rtim" path="res://overworld/maps/outside_town_main/boundary_main.png" id="2_vd6hd"]
-[ext_resource type="Texture2D" uid="uid://dxx2f3fxhm4oa" path="res://overworld/maps/outside_town_school/houses_school.png" id="3_yq2mv"]
-[ext_resource type="Texture2D" uid="uid://c6tq63tfj4so8" path="res://overworld/maps/outside_town_school/boundary_school.png" id="4_ibvqa"]
+[ext_resource type="Texture2D" uid="uid://bgba6dmhdb46y" path="res://overworld/maps/outside/town/main/houses_main.png" id="1_vd6hd"]
+[ext_resource type="Texture2D" uid="uid://7qdbdbl5rtim" path="res://overworld/maps/outside/town/main/boundary_main.png" id="2_vd6hd"]
+[ext_resource type="Texture2D" uid="uid://dxx2f3fxhm4oa" path="res://overworld/maps/outside/town/school/houses_school.png" id="3_yq2mv"]
+[ext_resource type="Texture2D" uid="uid://c6tq63tfj4so8" path="res://overworld/maps/outside/town/school/boundary_school.png" id="4_ibvqa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mb44b"]
 texture = ExtResource("1_vd6hd")

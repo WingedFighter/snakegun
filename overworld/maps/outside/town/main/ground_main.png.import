@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7qdbdbl5rtim"
-path="res://.godot/imported/boundary_main.png-9baeea1fb457ae568b8d48bb5cecc6b8.ctex"
+uid="uid://b026g0ndknv2c"
+path="res://.godot/imported/ground_main.png-ab198df2e0c0fed3fd4e0fd5202c7dd2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://overworld/maps/outside_town_main/boundary_main.png"
-dest_files=["res://.godot/imported/boundary_main.png-9baeea1fb457ae568b8d48bb5cecc6b8.ctex"]
+source_file="res://overworld/maps/outside/town/main/ground_main.png"
+dest_files=["res://.godot/imported/ground_main.png-ab198df2e0c0fed3fd4e0fd5202c7dd2.ctex"]
 
 [params]
 
