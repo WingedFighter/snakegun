@@ -12,6 +12,7 @@ func _ready() -> void:
 	pass
 
 func take_damage(damage: float) -> void:
+	print_debug("taking damage", damage)
 	# Iframes are an optional component, cannot be damaged when there is no iframe timer associated.
 	if iframe_timer != null:
 		if iframe_timer.is_stopped():

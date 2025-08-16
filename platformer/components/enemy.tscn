@@ -1,0 +1,166 @@
+[gd_scene load_steps=36 format=3 uid="uid://bixfuhp4yjqfb"]
+
+[ext_resource type="Texture2D" uid="uid://die8mu7mduklf" path="res://platformer/textures/enemies/Fox/fox0001.png" id="1_qcy2m"]
+[ext_resource type="Texture2D" uid="uid://bnlehr5fn0new" path="res://platformer/textures/enemies/Fox/fox0002.png" id="2_766iq"]
+[ext_resource type="Texture2D" uid="uid://bx55hg555reys" path="res://platformer/textures/enemies/Fox/fox0003.png" id="3_862uu"]
+[ext_resource type="Texture2D" uid="uid://b13qmbknyxm3a" path="res://platformer/textures/enemies/Fox/fox0004.png" id="4_61lwv"]
+[ext_resource type="Texture2D" uid="uid://bs8nrnkfvh8jv" path="res://platformer/textures/enemies/Fox/fox0005.png" id="5_qr6uf"]
+[ext_resource type="Texture2D" uid="uid://c60dj3rcitl7d" path="res://platformer/textures/enemies/Fox/fox0006.png" id="6_q14sh"]
+[ext_resource type="Texture2D" uid="uid://bywqacvwyamw8" path="res://platformer/textures/enemies/Fox/fox0007.png" id="7_gojrg"]
+[ext_resource type="Texture2D" uid="uid://buhw2mlkd0yaq" path="res://platformer/textures/enemies/Fox/fox0008.png" id="8_pryup"]
+[ext_resource type="Texture2D" uid="uid://c43f0wxhao0vo" path="res://platformer/textures/enemies/Fox/fox0009.png" id="9_hcbqa"]
+[ext_resource type="Texture2D" uid="uid://orc4jw34jk32" path="res://platformer/textures/enemies/Fox/fox0010.png" id="10_hsas0"]
+[ext_resource type="Texture2D" uid="uid://d0phdww0iudnc" path="res://platformer/textures/enemies/Fox/fox0011.png" id="11_i5meq"]
+[ext_resource type="Texture2D" uid="uid://bea23jcxuhdfl" path="res://platformer/textures/enemies/Fox/fox0012.png" id="12_cehuh"]
+[ext_resource type="Texture2D" uid="uid://248hsd5ildnj" path="res://platformer/textures/enemies/Fox/fox0013.png" id="13_vrxmk"]
+[ext_resource type="Texture2D" uid="uid://cjomop5c7h47k" path="res://platformer/textures/enemies/Fox/fox0014.png" id="14_0065l"]
+[ext_resource type="Texture2D" uid="uid://cxik8b7ahqrlj" path="res://platformer/textures/enemies/Fox/fox0015.png" id="15_4ebis"]
+[ext_resource type="Texture2D" uid="uid://db80q4vo2bapn" path="res://platformer/textures/enemies/Fox/fox0016.png" id="16_b5a4a"]
+[ext_resource type="Texture2D" uid="uid://d3st6iyj74los" path="res://platformer/textures/enemies/Fox/fox0017.png" id="17_746ar"]
+[ext_resource type="Texture2D" uid="uid://cxmeer2yj0nqw" path="res://platformer/textures/enemies/Fox/fox0018.png" id="18_dlo1c"]
+[ext_resource type="Texture2D" uid="uid://ctt4aqgl75l2x" path="res://platformer/textures/enemies/Fox/fox0019.png" id="19_l5ri5"]
+[ext_resource type="Texture2D" uid="uid://cg2b18htcpmxb" path="res://platformer/textures/enemies/Fox/fox0020.png" id="20_fygs0"]
+[ext_resource type="Texture2D" uid="uid://d3kyqmoekt5uy" path="res://platformer/textures/enemies/Fox/fox0021.png" id="21_y4uha"]
+[ext_resource type="Texture2D" uid="uid://dll3sv0u8vvdh" path="res://platformer/textures/enemies/Fox/fox0022.png" id="22_diuxs"]
+[ext_resource type="Texture2D" uid="uid://scf2v3h5kjk6" path="res://platformer/textures/enemies/Fox/fox0023.png" id="23_i2l5y"]
+[ext_resource type="Texture2D" uid="uid://bvu2gkd0ntkst" path="res://platformer/textures/enemies/Fox/fox0024.png" id="24_018lj"]
+[ext_resource type="Texture2D" uid="uid://bdcembp8q8obo" path="res://platformer/textures/enemies/Fox/fox0025.png" id="25_35xfu"]
+[ext_resource type="Texture2D" uid="uid://bxjicx745w52v" path="res://platformer/textures/enemies/Fox/fox0026.png" id="26_7jy54"]
+[ext_resource type="Texture2D" uid="uid://mwpu6hq8448c" path="res://platformer/textures/enemies/Fox/fox0027.png" id="27_fvh4w"]
+[ext_resource type="Texture2D" uid="uid://bswfl1148mcje" path="res://platformer/textures/enemies/Fox/fox0028.png" id="28_yeem7"]
+[ext_resource type="Texture2D" uid="uid://bi7g0uuhwvvkb" path="res://platformer/textures/enemies/Fox/fox0029.png" id="29_bmbew"]
+[ext_resource type="Texture2D" uid="uid://q5vcav12iac4" path="res://platformer/textures/enemies/Fox/fox0030.png" id="30_r70sg"]
+[ext_resource type="PackedScene" uid="uid://bp5asil6iy16" path="res://platformer/components/health_component.tscn" id="31_61lwv"]
+[ext_resource type="PackedScene" uid="uid://dxgmgcp48vsmr" path="res://platformer/components/hurtbox_component.tscn" id="32_qr6uf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqkkh"]
+size = Vector2(142, 149)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gfn5b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qcy2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_766iq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_862uu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_61lwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qr6uf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q14sh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gojrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pryup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hcbqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hsas0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_i5meq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cehuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vrxmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0065l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4ebis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_b5a4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_746ar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_dlo1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_l5ri5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_fygs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_y4uha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_diuxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_i2l5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_018lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_35xfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_7jy54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_fvh4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_yeem7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_bmbew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_r70sg")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_862uu"]
+size = Vector2(140.146, 151)
+
+[node name="Node2D" type="CharacterBody2D"]
+collision_layer = 32
+collision_mask = 2
+platform_floor_layers = 4294967042
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-43, 12.5)
+shape = SubResource("RectangleShape2D_uqkkh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_gfn5b")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.0805434
+
+[node name="HealthComponent" parent="." instance=ExtResource("31_61lwv")]
+maxHealth = 3.0
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("healthComponent") instance=ExtResource("32_qr6uf")]
+healthComponent = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" parent="HurtboxComponent" index="0"]
+position = Vector2(-43.0731, 12.5)
+shape = SubResource("RectangleShape2D_862uu")
+
+[editable path="HurtboxComponent"]

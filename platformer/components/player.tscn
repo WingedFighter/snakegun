@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bg2joonqnel4i"]
 
 [ext_resource type="Script" uid="uid://c50ehat1xdcrh" path="res://platformer/components/player.gd" id="1_rew8g"]
-[ext_resource type="Texture2D" uid="uid://ddh7vacuukyws" path="res://textures/player.png" id="2_g4g1j"]
+[ext_resource type="Texture2D" uid="uid://ddh7vacuukyws" path="res://platformer/textures/player.png" id="2_g4g1j"]
 [ext_resource type="PackedScene" uid="uid://bp5asil6iy16" path="res://platformer/components/health_component.tscn" id="3_g4g1j"]
 [ext_resource type="PackedScene" uid="uid://mae6d6fy7gli" path="res://platformer/components/velocity_component.tscn" id="4_hi5te"]
 [ext_resource type="PackedScene" uid="uid://dxgmgcp48vsmr" path="res://platformer/components/hurtbox_component.tscn" id="5_nrufp"]
@@ -10,11 +10,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a5smi"]
 size = Vector2(54.195, 96.5875)
 
-[node name="Player" type="CharacterBody2D"]
-collision_layer = 3
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("shoot_component")]
+collision_layer = 2
 collision_mask = 2
 platform_floor_layers = 4294967042
 script = ExtResource("1_rew8g")
+shoot_component = NodePath("ShootComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4.70625)
@@ -40,7 +41,7 @@ iframe_timer = NodePath("../IFrameTimer")
 [node name="IFrameTimer" type="Timer" parent="."]
 
 [node name="ShootComponent" parent="." instance=ExtResource("6_8ynxd")]
-damage = null
+position = Vector2(39.41, -6.41)
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 

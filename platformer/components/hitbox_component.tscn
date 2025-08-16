@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://grt1adc2f8b8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_28b2y"]
-size = Vector2(185.06, 114.44)
+size = Vector2(42, 21)
 
 [node name="HitboxComponent" type="Area2D"]
 collision_layer = 8
