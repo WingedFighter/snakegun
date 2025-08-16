@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c8gr5wrb6dvjt"]
+[gd_scene load_steps=43 format=3 uid="uid://c8gr5wrb6dvjt"]
 
 [ext_resource type="Script" uid="uid://cdnik1c5uy1nx" path="res://overworld/player/player25d.gd" id="1_mu2yp"]
 [ext_resource type="Texture2D" uid="uid://b6ppd1413fbju" path="res://overworld/player/sprite_sheets/down/mcfrontwalk1.png" id="2_0c41b"]
@@ -22,11 +22,23 @@
 [ext_resource type="Texture2D" uid="uid://by2pc4opba1po" path="res://overworld/player/sprite_sheets/right/mcsidewalk3.png" id="20_vtd4d"]
 [ext_resource type="Texture2D" uid="uid://crhk2bs2420fy" path="res://overworld/player/sprite_sheets/right/mcsidewalk4.png" id="21_0c41b"]
 [ext_resource type="Texture2D" uid="uid://dm8qocdolaaji" path="res://overworld/player/sprite_sheets/up/mcbackwalk1.png" id="22_7ei8e"]
-[ext_resource type="PackedScene" uid="uid://i1oxad12j3rx" path="res://overworld/hud/hud.tscn" id="22_i1fnb"]
+[ext_resource type="PackedScene" uid="uid://i1oxad12j3rx" path="res://ui/hud/hud.tscn" id="22_i1fnb"]
 [ext_resource type="Texture2D" uid="uid://ce2vi3fnjt3yc" path="res://overworld/player/sprite_sheets/up/mcbackwalk2.png" id="23_n63iq"]
 [ext_resource type="Texture2D" uid="uid://clupr6jq0faj5" path="res://overworld/player/sprite_sheets/up/mcbackwalk3.png" id="24_prdvw"]
 [ext_resource type="Texture2D" uid="uid://c0hcioybvmp6i" path="res://overworld/player/sprite_sheets/up/mcbackwalk4.png" id="25_hbfuq"]
-[ext_resource type="Texture2D" uid="uid://dugadsyrm4wj" path="res://overworld/player/sprite_sheets/talk/ConvoBubble.png" id="27_n63iq"]
+[ext_resource type="Texture2D" uid="uid://dyfar7652kt8" path="res://overworld/player/sprite_sheets/interact_bubble/star0001.png" id="26_yb82g"]
+[ext_resource type="Texture2D" uid="uid://bra83nllnitc7" path="res://overworld/player/sprite_sheets/interact_bubble/star0002.png" id="27_xhca6"]
+[ext_resource type="Texture2D" uid="uid://ch7jklun5xemr" path="res://overworld/player/sprite_sheets/interact_bubble/star0003.png" id="28_w1o1u"]
+[ext_resource type="Texture2D" uid="uid://dft1702ehovyu" path="res://overworld/player/sprite_sheets/interact_bubble/star0004.png" id="29_wsb1p"]
+[ext_resource type="Texture2D" uid="uid://cwue1bnfwt5t6" path="res://overworld/player/sprite_sheets/interact_bubble/star0005.png" id="30_f1qnl"]
+[ext_resource type="Texture2D" uid="uid://u5cf24dius7" path="res://overworld/player/sprite_sheets/interact_bubble/star0006.png" id="31_axc0j"]
+[ext_resource type="Texture2D" uid="uid://d11ag8kmovkgr" path="res://overworld/player/sprite_sheets/interact_bubble/star0007.png" id="32_kovh0"]
+[ext_resource type="Texture2D" uid="uid://o7fc2tgejmn2" path="res://overworld/player/sprite_sheets/interact_bubble/star0008.png" id="33_hiird"]
+[ext_resource type="Texture2D" uid="uid://c4onju221ryap" path="res://overworld/player/sprite_sheets/interact_bubble/star0009.png" id="34_66b2c"]
+[ext_resource type="Texture2D" uid="uid://ba75nvyito8bf" path="res://overworld/player/sprite_sheets/interact_bubble/star0010.png" id="35_3yfse"]
+[ext_resource type="Texture2D" uid="uid://oou0j5uyfguf" path="res://overworld/player/sprite_sheets/interact_bubble/star0011.png" id="36_in8j7"]
+[ext_resource type="Texture2D" uid="uid://cdqpapds6qbf2" path="res://overworld/player/sprite_sheets/interact_bubble/star0012.png" id="37_xvj1o"]
+[ext_resource type="Texture2D" uid="uid://whs10wkyk6l6" path="res://overworld/player/sprite_sheets/interact_bubble/star0013.png" id="38_o8jkt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bnbyf"]
 animations = [{
@@ -146,6 +158,53 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqgo5"]
 size = Vector2(27, 18)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_sf862"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_yb82g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_xhca6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_w1o1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wsb1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_f1qnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_axc0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_kovh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_hiird")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_66b2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_3yfse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_in8j7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_xvj1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_o8jkt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
 [node name="Player25D" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_mask = 17
@@ -163,11 +222,13 @@ zoom = Vector2(2, 2)
 position = Vector2(0.5, 9)
 shape = SubResource("RectangleShape2D_eqgo5")
 
-[node name="HUD" parent="." instance=ExtResource("22_i1fnb")]
-
-[node name="Bubble" type="Sprite2D" parent="."]
+[node name="Bubble" type="AnimatedSprite2D" parent="."]
 visible = false
 z_index = 100
-position = Vector2(0, -27)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("27_n63iq")
+position = Vector2(0, -30)
+scale = Vector2(0.08, 0.08)
+sprite_frames = SubResource("SpriteFrames_sf862")
+autoplay = "default"
+frame_progress = 0.770321
+
+[node name="HUD" parent="." instance=ExtResource("22_i1fnb")]

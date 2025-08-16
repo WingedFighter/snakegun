@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://i1oxad12j3rx"]
+
+[ext_resource type="Script" uid="uid://d0kxi1tiv0ymy" path="res://ui/hud/hud.gd" id="1_6clc2"]
+[ext_resource type="Script" uid="uid://b26s6m7u8aqwf" path="res://addons/letstalkaboutit/nodes/talk_display/talk_display.gd" id="2_xm7ip"]
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="3_w75iv"]
+[ext_resource type="PackedScene" uid="uid://d0p1m5y8ns6w6" path="res://ui/escape_menu/escape_menu.tscn" id="3_xm7ip"]
+[ext_resource type="Texture2D" uid="uid://bcyxkyu2bq2ea" path="res://ui/hud/talkboxNAMEBOXlayer1.png" id="4_imuuq"]
+[ext_resource type="Theme" uid="uid://dco2jdji7lli5" path="res://ui/themes/shoujo_ui_border.tres" id="4_kwc50"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6clc2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TalkDisplay" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("border_texture")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_xm7ip")
+textbox_theme = ExtResource("3_w75iv")
+namebox_theme = ExtResource("4_kwc50")
+border_texture = NodePath("../TextureRect")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+visible = false
+offset_left = -23.0
+offset_top = 354.0
+offset_right = 1711.0
+offset_bottom = 797.0
+scale = Vector2(0.675, 0.63)
+texture = ExtResource("4_imuuq")
+
+[node name="EscapeMenu" parent="CanvasLayer" instance=ExtResource("3_xm7ip")]
+visible = false

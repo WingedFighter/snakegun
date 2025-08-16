@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://hvf8qm27oqm5" path="res://addons/letstalkaboutit/graph_data/node_data.gd" id="1_ych5k"]
 [ext_resource type="Script" uid="uid://bhbyqwjh1ms64" path="res://addons/letstalkaboutit/graph_data/graph_data.gd" id="1_yfycb"]
 
-[sub_resource type="Resource" id="Resource_ych5k"]
+[sub_resource type="Resource" id="Resource_lffcn"]
 script = ExtResource("1_ych5k")
 name = "TalkStart"
 type = "TalkStart"
@@ -13,7 +13,7 @@ data = {
 &"next_id": "TalkChoice"
 }
 
-[sub_resource type="Resource" id="Resource_7i1ki"]
+[sub_resource type="Resource" id="Resource_7xoji"]
 script = ExtResource("1_ych5k")
 name = "TalkChoice"
 type = "TalkChoice"
@@ -31,7 +31,7 @@ data = {
 }
 }
 
-[sub_resource type="Resource" id="Resource_uue5l"]
+[sub_resource type="Resource" id="Resource_7utm6"]
 script = ExtResource("1_ych5k")
 name = "TalkEnd"
 type = "TalkEnd"
@@ -62,4 +62,4 @@ connections = Array[Dictionary]([{
 "to_node": &"TalkEnd",
 "to_port": 0
 }])
-nodes = [SubResource("Resource_ych5k"), SubResource("Resource_7i1ki"), SubResource("Resource_uue5l")]
+nodes = [SubResource("Resource_lffcn"), SubResource("Resource_7xoji"), SubResource("Resource_7utm6")]

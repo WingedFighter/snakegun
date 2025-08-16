@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://cohqlrcb47uj4"]
+[gd_scene load_steps=11 format=4 uid="uid://cohqlrcb47uj4"]
 
 [ext_resource type="Texture2D" uid="uid://b026g0ndknv2c" path="res://overworld/maps/outside/town/main/ground_main.png" id="1_dwtre"]
 [ext_resource type="TileSet" uid="uid://c6cu6yj2kvibq" path="res://overworld/maps/tilesets/outside_tileset.tres" id="2_gcnva"]
@@ -12,6 +12,12 @@ size = Vector2(649, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhww8"]
 size = Vector2(631, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_20i8i"]
+size = Vector2(42, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrrko"]
+size = Vector2(32, 20)
 
 [node name="OutsideTownMain" type="Node2D"]
 
@@ -105,6 +111,31 @@ shape = SubResource("RectangleShape2D_vhww8")
 position = Vector2(425, -21)
 transition_scene = "uid://bs4sw7h58f7b1"
 
+[node name="Conversations" type="Node2D" parent="Interactables"]
+
+[node name="Example" parent="Interactables/Conversations" instance=ExtResource("6_vhww8")]
+position = Vector2(149, 227)
+
+[node name="TalkManager" parent="Interactables/Conversations/Example" index="0"]
+graph_data_save_location = "res://overworld/maps/outside/town/main/conversations/example/graph_data.tres"
+talk_state_save_location = "res://overworld/maps/outside/town/main/conversations/example/talk_state.tres"
+
+[node name="CollisionShape2D" parent="Interactables/Conversations/Example" index="2"]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_20i8i")
+
+[node name="Test" parent="Interactables/Conversations" instance=ExtResource("6_vhww8")]
+
+[node name="TalkManager" parent="Interactables/Conversations/Test" index="0"]
+graph_data_save_location = "res://overworld/maps/outside/town/main/conversations/test/graph_data.tres"
+talk_state_save_location = "res://overworld/maps/outside/town/main/conversations/test/talk_state.tres"
+
+[node name="CollisionShape2D" parent="Interactables/Conversations/Test" index="2"]
+position = Vector2(-177, 222)
+shape = SubResource("RectangleShape2D_vrrko")
+
 [editable path="Conversations/Test"]
 [editable path="Conversations/example"]
 [editable path="Interactables/Transitions/OutsideTownSchool"]
+[editable path="Interactables/Conversations/Example"]
+[editable path="Interactables/Conversations/Test"]

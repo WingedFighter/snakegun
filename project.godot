@@ -24,6 +24,10 @@ SaveManager="*res://global/save_manager.gd"
 
 enabled=PackedStringArray("res://addons/letstalkaboutit/plugin.cfg")
 
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+
 [input]
 
 move_left={

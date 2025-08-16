@@ -3,7 +3,9 @@ class_name TalkDisplay
 
 @export_range(0.01, 0.1) var text_speed: float = .05
 @export_range(0.01, 0.1) var skip_buffer: float = .05
-@export var default_theme: Theme = preload("res://addons/letstalkaboutit/nodes/talk_display/default_ui.tres")
+@export var textbox_theme: Theme = preload("res://addons/letstalkaboutit/nodes/talk_display/default_ui.tres")
+@export var namebox_theme: Theme = preload("res://addons/letstalkaboutit/nodes/talk_display/default_ui.tres")
+@export var border_texture: TextureRect
 @export var default_font: Font = preload("res://addons/letstalkaboutit/nodes/talk_display/fonts/Kenney Future Square.ttf")
 @export var default_texture: CompressedTexture2D = preload("res://addons/letstalkaboutit/nodes/talk_display/portraits/outerframe.png")
 
@@ -43,6 +45,11 @@ func create_background_texture() -> TextureRect:
 	var b_texture := TextureRect.new()
 	add_child(b_texture)
 
+	if border_texture:
+		var dup = border_texture.duplicate()
+		b_texture.add_child(dup)
+		dup.z_index = 50
+
 	b_texture.name = "BackgroundTexture"
 	b_texture.set_anchors_and_offsets_preset(LayoutPreset.PRESET_FULL_RECT)
 	b_texture.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -71,7 +78,8 @@ func create_name_container() -> PanelContainer:
 	add_child(n_container)
 
 	n_container.name = "NameContainer"
-	n_container.set_theme(default_theme)
+	n_container.z_index = 100
+	n_container.set_theme(namebox_theme)
 	n_container.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 	var n_vbox := VBoxContainer.new()
@@ -80,8 +88,15 @@ func create_name_container() -> PanelContainer:
 	n_vbox.name = "VBoxContainer"
 	n_vbox.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
+	var n_margin := MarginContainer.new()
+	n_vbox.add_child(n_margin)
+
+	n_margin.name = "MarginContainer"
+	n_margin.add_theme_constant_override("margin_left", 64)
+	n_margin.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
 	var n_label := Label.new()
-	n_vbox.add_child(n_label)
+	n_margin.add_child(n_label)
 
 	n_label.name = "NameLabel"
 	n_label.text = "Default Name"
@@ -91,13 +106,6 @@ func create_name_container() -> PanelContainer:
 	n_label.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	n_label.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
 	n_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
-
-	var n_margin := MarginContainer.new()
-	n_vbox.add_child(n_margin)
-
-	n_margin.add_theme_constant_override("margin_bottom", 16)
-	n_margin.mouse_filter = Control.MOUSE_FILTER_IGNORE
-
 	return n_container
 
 func create_talk_container() -> PanelContainer:
@@ -132,15 +140,17 @@ func create_talk_container() -> PanelContainer:
 	t_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	t_container.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	t_container.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	t_container.set_theme(default_theme)
+	t_container.set_theme(textbox_theme)
 
 	var t_margins := MarginContainer.new()
 	t_container.add_child(t_margins)
 
 	t_margins.name = "TalkMargins"
 	t_margins.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	t_margins.add_theme_constant_override("margin_left", 6)
-	t_margins.add_theme_constant_override("margin_bottom", 4)
+	t_margins.add_theme_constant_override("margin_left", 24)
+	t_margins.add_theme_constant_override("margin_bottom", 24)
+	t_margins.add_theme_constant_override("margin_top", 24)
+	t_margins.add_theme_constant_override("margin_righ", 24)
 
 	var t_interior := HBoxContainer.new()
 	t_margins.add_child(t_interior)
@@ -196,11 +206,15 @@ func show_basic_talk() -> void:
 	screen_margins.visible = true
 	name_container.visible = true
 	background_texture.visible = true
+	if background_texture.has_node("TextureRect"):
+		background_texture.get_node("TextureRect").visible = true
 
 func hide_basic_talk() -> void:
 	screen_margins.visible = false
 	name_container.visible = false
 	background_texture.visible = false
+	if background_texture.has_node("TextureRect"):
+		background_texture.get_node("TextureRect").visible = false
 
 func get_basic_talk_visibility() -> bool:
 	return screen_margins.visible && name_container.visible
@@ -232,7 +246,7 @@ func get_talk_manager(i_node: Node) -> TalkManager:
 	return null
 
 func set_name_label(name_text: String) -> void:
-	name_container.get_node("VBoxContainer/NameLabel").text = name_text
+	name_container.get_node("VBoxContainer/MarginContainer/NameLabel").text = name_text
 
 func set_talk_texture(texture: Texture2D) -> void:
 	if texture:
@@ -394,7 +408,7 @@ func add_choice(choice_text: String, next_id: String, talk_manager: TalkManager)
 	var button_to_add = Button.new()
 	choices_container.add_child(button_to_add)
 	button_to_add.add_to_group("TalkChoiceButtons")
-	button_to_add.set_theme(default_theme)
+	button_to_add.set_theme(textbox_theme)
 	button_to_add.add_theme_font_size_override("font_size", 48)
 	button_to_add.set_text(choice_text)
 	button_to_add.pressed.connect(handle_choice.bind(next_id, talk_manager))

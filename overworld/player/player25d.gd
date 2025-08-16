@@ -5,7 +5,7 @@ class_name Player25D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hud: Control = $HUD
-@onready var bubble: Sprite2D = $Bubble
+@onready var bubble: AnimatedSprite2D = $Bubble
 
 var is_paused: bool = false
 
