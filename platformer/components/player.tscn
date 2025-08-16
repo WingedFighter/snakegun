@@ -1,37 +1,47 @@
 [gd_scene load_steps=8 format=3 uid="uid://bg2joonqnel4i"]
 
-[ext_resource type="Texture2D" uid="uid://bukeco2v8n28u" path="res://textures/DownNeutral.png" id="1_01n4k"]
 [ext_resource type="Script" uid="uid://c50ehat1xdcrh" path="res://platformer/components/player.gd" id="1_rew8g"]
+[ext_resource type="Texture2D" uid="uid://ddh7vacuukyws" path="res://textures/player.png" id="2_g4g1j"]
 [ext_resource type="PackedScene" uid="uid://bp5asil6iy16" path="res://platformer/components/health_component.tscn" id="3_g4g1j"]
 [ext_resource type="PackedScene" uid="uid://mae6d6fy7gli" path="res://platformer/components/velocity_component.tscn" id="4_hi5te"]
 [ext_resource type="PackedScene" uid="uid://dxgmgcp48vsmr" path="res://platformer/components/hurtbox_component.tscn" id="5_nrufp"]
 [ext_resource type="PackedScene" uid="uid://dos4xkw66fpq3" path="res://platformer/components/shoot_component.tscn" id="6_8ynxd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a5smi"]
-size = Vector2(54.195, 87.175)
+size = Vector2(54.195, 96.5875)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("velocity_component")]
+[node name="Player" type="CharacterBody2D"]
 collision_layer = 3
 collision_mask = 2
 platform_floor_layers = 4294967042
 script = ExtResource("1_rew8g")
-velocity_component = NodePath("")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.70625)
 shape = SubResource("RectangleShape2D_a5smi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_01n4k")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_g4g1j")
 
 [node name="HealthComponent" parent="." instance=ExtResource("3_g4g1j")]
 
 [node name="VelocityComponent" parent="." instance=ExtResource("4_hi5te")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -580
+limit_top = -780
+limit_bottom = 320
 
-[node name="HurtboxComponent" parent="." instance=ExtResource("5_nrufp")]
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("healthComponent", "iframe_timer") instance=ExtResource("5_nrufp")]
+healthComponent = NodePath("../HealthComponent")
+iframe_timer = NodePath("../IFrameTimer")
 
 [node name="IFrameTimer" type="Timer" parent="."]
 
 [node name="ShootComponent" parent="." instance=ExtResource("6_8ynxd")]
 damage = null
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
