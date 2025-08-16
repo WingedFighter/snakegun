@@ -18,3 +18,9 @@ func get_previous_scene() -> String:
 	if len(scene_history) > 1:
 		return scene_history[1]
 	return ""
+
+func get_current_scene() -> String:
+	push_new_scene()
+	if len(scene_history) > 0:
+		return scene_history[0]
+	return ""

@@ -62,7 +62,7 @@ func on_resolution_item_selected(index) -> void:
 
 func open() -> void:
 	visible = true
-	get_tree().paused = true
+	# get_tree().paused = true
 
 func close() -> void:
 	on_close_pressed()
@@ -83,15 +83,15 @@ func on_return_pressed() -> void:
 	get_tree().change_scene_to_file(main_menu_scene)
 
 func on_save_pressed() -> void:
-	pass
+	SaveManager.save()
 
 func on_close_pressed() -> void:
 	visible = false
 	keybindings_panel.visible = false
-	get_tree().paused = false
+	# get_tree().paused = false
 
 func on_exit_pressed() -> void:
-	get_tree().paused = false
+	# get_tree().paused = false
 	get_tree().quit()
 
 func _on_h_slider_value_changed(_value: float) -> void:

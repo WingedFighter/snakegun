@@ -110,12 +110,8 @@ shape = SubResource("RectangleShape2D_sgagr")
 
 [node name="Spawner" parent="." instance=ExtResource("5_y1udv")]
 spawns = Dictionary[String, NodePath]({
-"MainTitle": NodePath("MainTitle"),
 "OutsideTownMain": NodePath("OutsideTownMain")
 })
-
-[node name="MainTitle" type="Marker2D" parent="Spawner"]
-position = Vector2(-36, 23)
 
 [node name="OutsideTownMain" type="Marker2D" parent="Spawner"]
 position = Vector2(-27, 276)

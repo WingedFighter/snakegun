@@ -24,7 +24,8 @@ func new_game() -> void:
 	get_tree().change_scene_to_file(new_game_scene)
 
 func continue_game() -> void:
-	get_tree().change_scene_to_file(continue_game_scene)
+	if SaveManager.load_data():
+		get_tree().change_scene_to_file(SaveManager.save_data.save_scene)
 
 func settings() -> void:
 	escape_menu.open()

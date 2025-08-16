@@ -59,12 +59,8 @@ shape = SubResource("RectangleShape2D_dwtre")
 [node name="Spawner" parent="." instance=ExtResource("5_uqdsc")]
 spawns = Dictionary[String, NodePath]({
 "InsideHeroRoom": NodePath("InsideHeroRoom"),
-"MainTitle": NodePath("MainTitle"),
 "OutsideTownSchool": NodePath("OutsideTownSchool")
 })
-
-[node name="MainTitle" type="Marker2D" parent="Spawner"]
-position = Vector2(-55, -30)
 
 [node name="OutsideTownSchool" type="Marker2D" parent="Spawner"]
 position = Vector2(-45, -286)

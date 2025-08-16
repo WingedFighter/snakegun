@@ -54,25 +54,25 @@ func _input(event: InputEvent) -> void:
 			var button = input_hbox(new_action)
 			button.pressed.connect(on_button_press.bind(button))
 
-# func load_data() -> void:
-# 	for child in input_list.get_children():
-# 		child.queue_free()
-# 	for action in input_actions:
-# 		var current_event = InputMap.action_get_events(action)
-# 		var new_event = TransitionHandler.get_keybinding(action)
-# 		var compared = compare_events(current_event, new_event)
-# 		if new_event == null:
-# 			TransitionHandler.save_keybinding(action, current_event[0])
-# 		elif new_event is InputEventKey && !compared:
-# 			InputMap.action_erase_event(action, current_event[0])
-# 			InputMap.action_add_event(action, new_event)
-# 			TransitionHandler.save_keybinding(action, new_event)
-# 		elif new_event is InputEventMouseButton && !compared:
-# 			InputMap.action_erase_event(action, current_event[0])
-# 			InputMap.action_add_event(action, new_event)
-# 			TransitionHandler.save_keybinding(action, new_event)
-# 		var button = input_hbox(action)
-# 		button.pressed.connect(on_button_press.bind(button))
+func load_data() -> void:
+	for child in input_list.get_children():
+		child.queue_free()
+	for action in input_actions:
+		var current_event = InputMap.action_get_events(action)
+		var new_event = SaveManager.get_keybinding(action)
+		var compared = compare_events(current_event, new_event)
+		if new_event == null:
+			SaveManager.save_keybinding(action, current_event[0])
+		elif new_event is InputEventKey && !compared:
+			InputMap.action_erase_event(action, current_event[0])
+			InputMap.action_add_event(action, new_event)
+			SaveManager.save_keybinding(action, new_event)
+		elif new_event is InputEventMouseButton && !compared:
+			InputMap.action_erase_event(action, current_event[0])
+			InputMap.action_add_event(action, new_event)
+			SaveManager.save_keybinding(action, new_event)
+		var button = input_hbox(action)
+		button.pressed.connect(on_button_press.bind(button))
 
 func compare_events(event_1, event_2) -> bool:
 	if event_1 == null || event_2 == null:
