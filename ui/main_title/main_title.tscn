@@ -641,8 +641,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_paq7s")
-new_game_scene = "uid://bs4sw7h58f7b1"
-continue_game_scene = "uid://cohqlrcb47uj4"
 
 [node name="Layers" type="Control" parent="."]
 layout_mode = 1

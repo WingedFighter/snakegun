@@ -12,7 +12,7 @@ func load_data() -> bool:
 	return false
 
 func save() -> void:
-	save_data.save_scene = get_tree().current_scene.scene_file_path
+	save_data.save_scene = get_tree().current_scene.name
 	var player = get_tree().current_scene.get_node("%Player25D")
 	if player:
 		save_data.player_pos = player.position

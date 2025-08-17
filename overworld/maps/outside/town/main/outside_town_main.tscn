@@ -80,7 +80,7 @@ position = Vector2(425, -1)
 
 [node name="OutsideTownSchool" parent="Interactables/Transitions" instance=ExtResource("4_gcnva")]
 position = Vector2(-3, -321)
-transition_scene = "uid://ctcc7wn73x4lr"
+to_scene = "OutsideTownSchool"
 immediate = true
 
 [node name="CollisionShape2D" parent="Interactables/Transitions/OutsideTownSchool" index="0"]
@@ -89,7 +89,7 @@ shape = SubResource("RectangleShape2D_vhww8")
 
 [node name="InsideHeroRoom" parent="Interactables/Transitions" instance=ExtResource("4_gcnva")]
 position = Vector2(425, -21)
-transition_scene = "uid://bs4sw7h58f7b1"
+to_scene = "InsideHeroRoom"
 
 [node name="Conversations" type="Node2D" parent="Interactables"]
 

@@ -15,7 +15,7 @@ extends Control
 }
 
 @export var music_bus: int
-@export var main_menu_scene: String = "res://ui/main_title.tscn"
+@export var main_menu_scene: String = "MainTitle"
 
 @export var main_menu: bool
 
@@ -80,7 +80,7 @@ func on_fullscreen_pressed(toggled_on: bool) -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 func on_return_pressed() -> void:
-	get_tree().change_scene_to_file(main_menu_scene)
+	SceneManager.change_scene(main_menu_scene)
 
 func on_save_pressed() -> void:
 	SaveManager.save()

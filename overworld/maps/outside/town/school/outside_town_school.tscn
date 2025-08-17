@@ -24,7 +24,7 @@ size = Vector2(24, 107)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgagr"]
 size = Vector2(488, 19)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_viara"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iahc7"]
 size = Vector2(486, 20)
 
 [node name="OutsideTownSchool" type="Node2D"]
@@ -122,11 +122,11 @@ position = Vector2(-27, 276)
 
 [node name="Bottom" parent="Interactables/Transitions" instance=ExtResource("4_nrcqd")]
 position = Vector2(-25, 323)
-transition_scene = "uid://cohqlrcb47uj4"
+to_scene = "OutsideTownMain"
 immediate = true
 
 [node name="CollisionShape2D" parent="Interactables/Transitions/Bottom" index="0"]
 position = Vector2(6, 0)
-shape = SubResource("RectangleShape2D_viara")
+shape = SubResource("RectangleShape2D_iahc7")
 
 [editable path="Interactables/Transitions/Bottom"]

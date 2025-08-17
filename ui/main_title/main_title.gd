@@ -1,7 +1,7 @@
 extends Control
 
-@export_file("*.tscn") var new_game_scene: String
-@export_file("*.tscn") var continue_game_scene: String
+@export var new_game_scene: String = "InsideHeroRoom"
+@export var continue_game_scene: String = "InsideHereRoom"
 
 @onready var new_game_button: TextureButton = $NewGameButton
 @onready var continue_button: TextureButton = $ContinueButton
@@ -21,11 +21,11 @@ func _physics_process(_delta: float) -> void:
 	set_physics_process(false)
 
 func new_game() -> void:
-	get_tree().change_scene_to_file(new_game_scene)
+	SceneManager.change_scene(new_game_scene)
 
 func continue_game() -> void:
 	if SaveManager.load_data():
-		get_tree().change_scene_to_file(SaveManager.save_data.save_scene)
+		SceneManager.change_scene(SaveManager.save_data.save_scene)
 
 func settings() -> void:
 	escape_menu.open()

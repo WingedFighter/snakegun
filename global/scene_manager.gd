@@ -1,5 +1,12 @@
 extends Node
 
+var scene_dictionary: Dictionary[String, PackedScene] = {
+	"MainTitle": preload("res://ui/main_title/main_title.tscn"),
+	"OutsideTownMain": preload("res://overworld/maps/outside/town/main/outside_town_main.tscn"),
+	"OutsideTownSchool": preload("res://overworld/maps/outside/town/school/outside_town_school.tscn"),
+	"InsideHeroRoom": preload("res://overworld/maps/inside/inside_hero_room.tscn")
+}
+
 var scene_history: Array[String] = []
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,3 +31,6 @@ func get_current_scene() -> String:
 	if len(scene_history) > 0:
 		return scene_history[0]
 	return ""
+
+func change_scene(scene: String) -> int:
+	return get_tree().change_scene_to_packed(scene_dictionary[scene])

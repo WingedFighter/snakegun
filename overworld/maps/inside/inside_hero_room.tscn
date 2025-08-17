@@ -76,7 +76,7 @@ shape = SubResource("RectangleShape2D_m11ro")
 [node name="Transitions" type="Node2D" parent="Interactables"]
 
 [node name="OutsideTownMain" parent="Interactables/Transitions" instance=ExtResource("3_7grtv")]
-transition_scene = "uid://cohqlrcb47uj4"
+to_scene = "OutsideTownMain"
 
 [node name="CollisionShape2D" parent="Interactables/Transitions/OutsideTownMain" index="0"]
 position = Vector2(0, -84)
