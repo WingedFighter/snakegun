@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="snakegun"
-run/main_scene="uid://d2dkwwowswngd"
+run/main_scene="uid://ivwweyt1wudo"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/show_image=false
 config/icon="uid://bcsot87r8nmex"
 
 [autoload]

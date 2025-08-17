@@ -1,11 +1,6 @@
 extends Node
 
-var scene_dictionary: Dictionary[String, PackedScene] = {
-	"MainTitle": preload("res://ui/main_title/main_title.tscn"),
-	"OutsideTownMain": preload("res://overworld/maps/outside/town/main/outside_town_main.tscn"),
-	"OutsideTownSchool": preload("res://overworld/maps/outside/town/school/outside_town_school.tscn"),
-	"InsideHeroRoom": preload("res://overworld/maps/inside/inside_hero_room.tscn")
-}
+var scene_dictionary: Dictionary[String, PackedScene]
 
 var scene_history: Array[String] = []
 
