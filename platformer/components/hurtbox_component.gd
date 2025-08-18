@@ -11,12 +11,12 @@ func _ready() -> void:
 	area_entered.connect(take_damage)
 	pass
 
-func take_damage(damage: float) -> void:
-	print_debug("taking damage", damage)
+func take_damage(area: Area2D) -> void:
+	var bullet: Bullet = area.get_parent()
 	# Iframes are an optional component, cannot be damaged when there is no iframe timer associated.
 	if iframe_timer != null:
 		if iframe_timer.is_stopped():
-			healthComponent.hurt(damage)
+			healthComponent.hurt(bullet.damage)
 			iframe_timer.start(iframe_time)
 	else:
-		healthComponent.hurt(damage)
+		healthComponent.hurt(bullet.damage)

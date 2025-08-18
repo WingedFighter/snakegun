@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var velocity_component: VelocityComponent
 @export var shoot_component: ShootComponent
+@export var health_component: HealthComponent
+@onready var sprite: Sprite2D = $Sprite2D
 
 @export var horizontal_speed: float = 300
 @export var vertical_speed: float = 10
@@ -9,6 +11,9 @@ extends CharacterBody2D
 @export var gravity: float = 980.0
 @export var jump_speed: float = -1000
 var facing: Vector2 = Vector2(1, 0)
+
+func _ready() -> void:
+	health_component.health_depleted.connect(hurt)
 
 func _physics_process(delta: float) -> void:
 	# Handle jump.
@@ -20,6 +25,8 @@ func _physics_process(delta: float) -> void:
 	velocity.x = Input.get_axis("move_left", "move_right")
 	if (velocity.x != 0):
 		facing.x = velocity.x
+		sprite.flip_h = facing.x == -1
+		shoot_component.transform.x = transform.x * facing.x
 	velocity.x *= horizontal_speed
 	
 	if !is_on_floor() and gravity != 0.0:
@@ -32,3 +39,6 @@ func _physics_process(delta: float) -> void:
 		shoot_component.fire(facing * 1000, 1)
 
 	move_and_slide()
+
+func hurt() -> void:
+	print_debug("player hurt")

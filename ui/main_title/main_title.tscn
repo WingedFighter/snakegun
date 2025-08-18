@@ -665,7 +665,8 @@ position = Vector2(246, 342)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_wvol4")
 autoplay = "default"
-frame_progress = 0.0601719
+frame = 26
+frame_progress = 0.653108
 
 [node name="GradientLayer" type="TextureRect" parent="Layers"]
 layout_mode = 1

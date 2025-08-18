@@ -1,7 +1,9 @@
-[gd_scene load_steps=36 format=3 uid="uid://bixfuhp4yjqfb"]
+[gd_scene load_steps=38 format=3 uid="uid://bixfuhp4yjqfb"]
 
 [ext_resource type="Texture2D" uid="uid://die8mu7mduklf" path="res://platformer/textures/enemies/Fox/fox0001.png" id="1_qcy2m"]
+[ext_resource type="Script" uid="uid://cf0p50mofqoaq" path="res://platformer/components/enemy.gd" id="1_qr6uf"]
 [ext_resource type="Texture2D" uid="uid://bnlehr5fn0new" path="res://platformer/textures/enemies/Fox/fox0002.png" id="2_766iq"]
+[ext_resource type="PackedScene" uid="uid://cx8omu8t2w3i1" path="res://platformer/components/hitflash_component.tscn" id="3_61lwv"]
 [ext_resource type="Texture2D" uid="uid://bx55hg555reys" path="res://platformer/textures/enemies/Fox/fox0003.png" id="3_862uu"]
 [ext_resource type="Texture2D" uid="uid://b13qmbknyxm3a" path="res://platformer/textures/enemies/Fox/fox0004.png" id="4_61lwv"]
 [ext_resource type="Texture2D" uid="uid://bs8nrnkfvh8jv" path="res://platformer/textures/enemies/Fox/fox0005.png" id="5_qr6uf"]
@@ -36,7 +38,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqkkh"]
 size = Vector2(142, 149)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_gfn5b"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_862uu"]
+size = Vector2(140.146, 151)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qr6uf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -134,27 +139,19 @@ animations = [{
 "speed": 30.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_862uu"]
-size = Vector2(140.146, 151)
-
-[node name="Node2D" type="CharacterBody2D"]
+[node name="Node2D" type="CharacterBody2D" node_paths=PackedStringArray("health_component")]
 collision_layer = 32
 collision_mask = 2
 platform_floor_layers = 4294967042
+script = ExtResource("1_qr6uf")
+health_component = NodePath("HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-43, 12.5)
 shape = SubResource("RectangleShape2D_uqkkh")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_gfn5b")
-animation = &"walk"
-autoplay = "walk"
-frame_progress = 0.0805434
-
 [node name="HealthComponent" parent="." instance=ExtResource("31_61lwv")]
-maxHealth = 3.0
+max_health = 3.0
 
 [node name="HurtboxComponent" parent="." node_paths=PackedStringArray("healthComponent") instance=ExtResource("32_qr6uf")]
 healthComponent = NodePath("../HealthComponent")
@@ -162,5 +159,14 @@ healthComponent = NodePath("../HealthComponent")
 [node name="CollisionShape2D" parent="HurtboxComponent" index="0"]
 position = Vector2(-43.0731, 12.5)
 shape = SubResource("RectangleShape2D_862uu")
+
+[node name="HitflashComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_61lwv")]
+health_component = NodePath("../HealthComponent")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HitflashComponent"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_qr6uf")
+animation = &"walk"
+autoplay = "walk"
 
 [editable path="HurtboxComponent"]

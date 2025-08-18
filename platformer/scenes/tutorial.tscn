@@ -184,6 +184,7 @@ texture = ExtResource("1_italu")
 
 [node name="Level1" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.4, 0.4)
+scroll_offset = Vector2(0, 300)
 
 [node name="Sprite2D" type="Sprite2D" parent="Level1"]
 z_index = -100
@@ -200,6 +201,7 @@ texture = ExtResource("3_xxcd8")
 
 [node name="Level3" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.6, 0.6)
+scroll_offset = Vector2(0, -350)
 
 [node name="Sprite2D" type="Sprite2D" parent="Level3"]
 z_index = -100
@@ -208,6 +210,7 @@ texture = ExtResource("4_jtg2b")
 
 [node name="Level4" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.7, 0.7)
+scroll_offset = Vector2(0, 350)
 
 [node name="Sprite2D" type="Sprite2D" parent="Level4"]
 z_index = -100
@@ -246,4 +249,4 @@ position = Vector2(-582.784, -329.945)
 position = Vector2(1381.04, 286.117)
 
 [node name="Node2D" parent="." instance=ExtResource("9_italu")]
-position = Vector2(283.001, 189.864)
+position = Vector2(282, 180)
