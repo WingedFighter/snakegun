@@ -6,7 +6,14 @@ extends CanvasLayer
 	"MainTitle": "res://ui/main_title/main_title.tscn",
 	"OutsideTownMain": "res://overworld/maps/outside/town/main/outside_town_main.tscn",
 	"OutsideTownSchool": "res://overworld/maps/outside/town/school/outside_town_school.tscn",
-	"InsideHeroRoom": "res://overworld/maps/inside/inside_hero_room.tscn"
+	"InsideHeroRoom": "res://overworld/maps/inside/inside_hero_room.tscn",
+	"Intro0": "res://overworld/cutscenes/intro/intro_0.tscn",
+	"Intro1": "res://overworld/cutscenes/intro/intro_1.tscn",
+	"Intro2": "res://overworld/cutscenes/intro/intro_2.tscn",
+	"Intro3": "res://overworld/cutscenes/intro/intro_3.tscn",
+	"Intro4": "res://overworld/cutscenes/intro/intro_4.tscn",
+	"Intro5": "res://overworld/cutscenes/intro/intro_5.tscn",
+	"Intro6": "res://overworld/cutscenes/intro/intro_6.tscn",
 }
 
 # Called when the node enters the scene tree for the first time.

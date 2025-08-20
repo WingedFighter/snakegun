@@ -1,6 +1,6 @@
 extends Control
 
-@export var new_game_scene: String = "InsideHeroRoom"
+@export var new_game_scene: String = "Intro0"
 @export var continue_game_scene: String = "InsideHereRoom"
 
 @onready var new_game_button: TextureButton = $NewGameButton

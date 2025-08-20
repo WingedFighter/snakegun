@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3bb5e70iiixj"]
+
+[ext_resource type="Texture2D" uid="uid://cwt13uyx8ucxi" path="res://overworld/cutscenes/intro/intro_2_4.png" id="1_4w8g3"]
+[ext_resource type="Script" uid="uid://ctsl2is20sk7y" path="res://overworld/cutscenes/intro/intro_4.gd" id="1_oq0gl"]
+
+[node name="Intro4" type="Node2D"]
+script = ExtResource("1_oq0gl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_4w8g3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(226, -41)
+zoom = Vector2(2, 2)

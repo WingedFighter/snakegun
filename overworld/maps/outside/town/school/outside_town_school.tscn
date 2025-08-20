@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=4 uid="uid://ctcc7wn73x4lr"]
 
 [ext_resource type="Texture2D" uid="uid://03ska3ft42ol" path="res://overworld/maps/outside/town/school/ground_school.png" id="1_t0226"]
-[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/player/player25d.tscn" id="2_smj6a"]
+[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_smj6a"]
 [ext_resource type="TileSet" uid="uid://c6cu6yj2kvibq" path="res://overworld/maps/tilesets/outside_tileset.tres" id="3_t0226"]
 [ext_resource type="PackedScene" uid="uid://cddigtumyuaal" path="res://overworld/interactables/transition/transition.tscn" id="4_nrcqd"]
 [ext_resource type="PackedScene" uid="uid://co63qkxatewwp" path="res://overworld/maps/spawner/spawner.tscn" id="5_y1udv"]

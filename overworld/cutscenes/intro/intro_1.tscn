@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://dl0v3hvxcddqo"]
+
+[ext_resource type="Texture2D" uid="uid://bsl0h4l0scqfd" path="res://overworld/cutscenes/intro/intro_1.png" id="1_ewy2s"]
+[ext_resource type="Script" uid="uid://bre2n875plemi" path="res://overworld/cutscenes/intro/intro_1.gd" id="1_ph0jl"]
+
+[sub_resource type="Animation" id="Animation_ewy2s"]
+resource_name = "default"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ph0jl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ph0jl"]
+_data = {
+&"RESET": SubResource("Animation_ph0jl"),
+&"default": SubResource("Animation_ewy2s")
+}
+
+[node name="Intro1" type="Node2D"]
+script = ExtResource("1_ph0jl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -608.0
+offset_top = -351.0
+offset_right = -568.0
+offset_bottom = -311.0
+scale = Vector2(30.0912, 17.7914)
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3, 207)
+texture = ExtResource("1_ewy2s")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ph0jl")
+}
+autoplay = "default"

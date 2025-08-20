@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cjbgort6s7vho" path="res://overworld/maps/inside/ground_main.png" id="1_uq21d"]
 [ext_resource type="TileSet" uid="uid://kkfgqr5eircu" path="res://overworld/maps/tilesets/inside_tileset.tres" id="2_7grtv"]
-[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/player/player25d.tscn" id="2_jqtw0"]
+[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_jqtw0"]
 [ext_resource type="PackedScene" uid="uid://cddigtumyuaal" path="res://overworld/interactables/transition/transition.tscn" id="3_7grtv"]
 [ext_resource type="PackedScene" uid="uid://co63qkxatewwp" path="res://overworld/maps/spawner/spawner.tscn" id="4_f7ndo"]
 

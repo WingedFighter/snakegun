@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk11f7h6ejwpk"]
+
+[ext_resource type="Script" uid="uid://b2flwfdlosxw" path="res://addons/letstalkaboutit/nodes/talk_character.gd" id="1_8svfu"]
+[ext_resource type="Texture2D" uid="uid://djgyr0gd4sqa4" path="res://overworld/characters/narrator/transparent.png" id="2_uo4wb"]
+
+[node name="Narrator" type="Node2D"]
+
+[node name="TalkCharacter" type="Node" parent="."]
+script = ExtResource("1_8svfu")
+character_id = "narrator"
+character_name = ""
+character_base_panel = ExtResource("2_uo4wb")
+metadata/_custom_type_script = "uid://b2flwfdlosxw"
