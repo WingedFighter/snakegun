@@ -6,11 +6,11 @@ extends CharacterBody2D
 @export var animation_tree: AnimationTree
 @onready var sprite: Sprite2D = $Sprite2D
 
-@export var horizontal_speed: float = 300
+@export var horizontal_speed: float = 100
 @export var vertical_speed: float = 10
 @export var max_velocity: float = 1000
 @export var gravity: float = 980.0
-@export var jump_speed: float = -1000
+@export var jump_speed: float = -500
 var facing: Vector2 = Vector2(1, 0)
 var jumping: bool = false
 var falling: bool = false

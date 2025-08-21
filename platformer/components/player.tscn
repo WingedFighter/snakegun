@@ -82,8 +82,8 @@
 [ext_resource type="Texture2D" uid="uid://b1n085makjrxx" path="res://platformer/textures/mc/noarm/walk/walk9.png" id="80_fn1ab"]
 [ext_resource type="Texture2D" uid="uid://c8awr7aorurtq" path="res://platformer/textures/mc/noarm/walk/walk10.png" id="81_u6y2j"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5smi"]
-size = Vector2(54.195, 96.5875)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lm5jp"]
+size = Vector2(44.315, 100.43)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ax3sl"]
 animation = &"fall_left"
@@ -1283,6 +1283,8 @@ _data = {
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("shoot_component", "health_component", "animation_tree")]
 collision_layer = 2
 collision_mask = 2
+floor_stop_on_slope = false
+floor_max_angle = 0.872665
 platform_floor_layers = 4294967042
 script = ExtResource("1_rew8g")
 shoot_component = NodePath("ShootComponent")
@@ -1291,7 +1293,7 @@ animation_tree = NodePath("AnimationTree")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4.70625)
-shape = SubResource("RectangleShape2D_a5smi")
+shape = SubResource("RectangleShape2D_lm5jp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
