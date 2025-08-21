@@ -175,12 +175,14 @@ sources/0 = SubResource("TileSetAtlasSource_2ksu1")
 
 [node name="World" type="Node2D"]
 
-[node name="Level0" type="Parallax2D" parent="."]
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = -128
 
-[node name="Sprite2D" type="Sprite2D" parent="Level0"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer2"]
 z_index = -100
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_italu")
+centered = false
 
 [node name="Level1" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.4, 0.4)

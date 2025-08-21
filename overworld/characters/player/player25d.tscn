@@ -214,6 +214,7 @@ script = ExtResource("1_mu2yp")
 scale = Vector2(0.08, 0.08)
 sprite_frames = SubResource("SpriteFrames_bnbyf")
 animation = &"idle_down"
+frame_progress = 0.990244
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
