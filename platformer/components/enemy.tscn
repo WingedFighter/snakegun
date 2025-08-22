@@ -1,5 +1,6 @@
-[gd_scene load_steps=38 format=3 uid="uid://bixfuhp4yjqfb"]
+[gd_scene load_steps=41 format=3 uid="uid://bixfuhp4yjqfb"]
 
+[ext_resource type="Script" uid="uid://cf0p50mofqoaq" path="res://platformer/components/enemy.gd" id="1_gojrg"]
 [ext_resource type="Texture2D" uid="uid://die8mu7mduklf" path="res://platformer/textures/enemies/Fox/fox0001.png" id="1_qcy2m"]
 [ext_resource type="Texture2D" uid="uid://bnlehr5fn0new" path="res://platformer/textures/enemies/Fox/fox0002.png" id="2_766iq"]
 [ext_resource type="PackedScene" uid="uid://cx8omu8t2w3i1" path="res://platformer/components/hitflash_component.tscn" id="3_61lwv"]
@@ -33,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://q5vcav12iac4" path="res://platformer/textures/enemies/Fox/fox0030.png" id="30_r70sg"]
 [ext_resource type="PackedScene" uid="uid://bp5asil6iy16" path="res://platformer/components/health_component.tscn" id="31_61lwv"]
 [ext_resource type="PackedScene" uid="uid://dxgmgcp48vsmr" path="res://platformer/components/hurtbox_component.tscn" id="32_qr6uf"]
+[ext_resource type="PackedScene" uid="uid://grt1adc2f8b8" path="res://platformer/components/hitbox_component.tscn" id="35_gojrg"]
 [ext_resource type="PackedScene" uid="uid://b5pauup6q8vi8" path="res://platformer/components/death_component.tscn" id="35_q14sh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqkkh"]
@@ -139,10 +141,15 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pryup"]
+size = Vector2(130.715, 132.335)
+
 [node name="Node2D" type="CharacterBody2D"]
 collision_layer = 32
 collision_mask = 2
 platform_floor_layers = 4294967042
+script = ExtResource("1_gojrg")
+hitbox_source_layer = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-43, 12.5)
@@ -171,4 +178,11 @@ autoplay = "walk"
 to_delete = NodePath("..")
 health_component = NodePath("../HealthComponent")
 
+[node name="HitboxComponent" parent="." instance=ExtResource("35_gojrg")]
+
+[node name="CollisionShape2D" parent="HitboxComponent" index="0"]
+position = Vector2(-42.825, 15.775)
+shape = SubResource("RectangleShape2D_pryup")
+
 [editable path="HurtboxComponent"]
+[editable path="HitboxComponent"]

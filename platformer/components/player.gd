@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var shoot_component: ShootComponent
 @export var health_component: HealthComponent
 @export var animation_tree: AnimationTree
-@onready var sprite: Sprite2D = $Sprite2D
+@export var arm: AnimatedSprite2D
 
 @export var horizontal_speed: float = 100
 @export var vertical_speed: float = 10
@@ -14,9 +14,12 @@ extends CharacterBody2D
 var facing: Vector2 = Vector2(1, 0)
 var jumping: bool = false
 var falling: bool = false
+var gun_level: int = 1
+# Player hitbox source is 1 for filtering, since hurt/hitboxes are shared between objects
+@export var hitbox_source_layer: int = 0
 
 func _ready() -> void:
-	health_component.health_depleted.connect(hurt)
+	health_component.health_lost.connect(hurt)
 	animation_tree.set("parameters/Walk/blend_position", 1)
 	animation_tree.set("parameters/Idle/blend_position", 1)
 	animation_tree.set("parameters/Jump/blend_position", 1)
@@ -49,6 +52,7 @@ func _physics_process(delta: float) -> void:
 	clamp(velocity.y, -max_velocity, max_velocity)
 	
 	if Input.is_action_just_pressed("normal_fire"):
+		arm.play('level' + str(gun_level) + 'shoot')
 		shoot_component.fire(facing * 1000, 1)
 
 	jumping = !is_on_floor()
@@ -57,4 +61,4 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func hurt() -> void:
-	print_debug("player hurt")
+	print_debug("player hurt", health_component.current_health)

@@ -1,10 +1,5 @@
+class_name Enemy
 extends CharacterBody2D
 
-@export var health_component: HealthComponent
-
-func _ready() -> void:
-	health_component.health_depleted.connect(die)
-
-func die() -> void:
-	print_debug("dude focken died")
-	pass
+@export var hitbox_source_layer: int = 0
+var damage: float = 1
