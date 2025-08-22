@@ -8,6 +8,7 @@ class_name TalkDisplay
 @export var border_texture: TextureRect
 @export var default_font: Font = preload("res://addons/letstalkaboutit/nodes/talk_display/fonts/Kenney Future Square.ttf")
 @export var default_texture: CompressedTexture2D = preload("res://addons/letstalkaboutit/nodes/talk_display/portraits/outerframe.png")
+@export var override_font_color: Color = Color.WHITE
 
 var choices_container: VBoxContainer
 var name_container: PanelContainer
@@ -103,6 +104,7 @@ func create_name_container() -> PanelContainer:
 	n_label.label_settings = LabelSettings.new()
 	n_label.label_settings.font = default_font
 	n_label.label_settings.font_size = 16
+	n_label.label_settings.font_color = override_font_color
 	n_label.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	n_label.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
 	n_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -173,6 +175,7 @@ func create_talk_container() -> PanelContainer:
 	t_label.label_settings = LabelSettings.new()
 	t_label.label_settings.font = default_font
 	t_label.label_settings.font_size = 32
+	t_label.label_settings.font_color = override_font_color
 	t_label.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	t_label.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
 	t_label.mouse_filter = Control.MOUSE_FILTER_IGNORE

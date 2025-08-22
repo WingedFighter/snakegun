@@ -1,19 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhehv4nki3dv3"]
+[gd_scene load_steps=7 format=3 uid="uid://bhehv4nki3dv3"]
 
-[ext_resource type="Script" uid="uid://bf6lv5qgapf0o" path="res://addons/letstalkaboutit/nodes/talk_manager.gd" id="1_yy6qu"]
-[ext_resource type="Script" uid="uid://upqqxnjkjdmj" path="res://addons/letstalkaboutit/ingame_data/talk_state.gd" id="2_k2a28"]
-
-[sub_resource type="Resource" id="Resource_1nbon"]
-script = ExtResource("2_k2a28")
-current_talk = ""
-flags = {}
-metadata/_custom_type_script = "uid://upqqxnjkjdmj"
+[ext_resource type="Texture2D" uid="uid://bbbwdd4kyqrgl" path="res://overworld/cutscenes/intro/intro_6.png" id="1_2ptq2"]
+[ext_resource type="Script" uid="uid://dh546p8ghdq85" path="res://overworld/cutscenes/intro/intro_6.gd" id="1_to18j"]
+[ext_resource type="Texture2D" uid="uid://dy5oglmapwog8" path="res://overworld/cutscenes/intro/intro_6(2).png" id="2_mtnol"]
+[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="5_2ptq2"]
+[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="5_to18j"]
+[ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="6_mtnol"]
 
 [node name="Intro6" type="Node2D"]
+script = ExtResource("1_to18j")
 
-[node name="TalkManager" type="Node" parent="."]
-script = ExtResource("1_yy6qu")
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_2ptq2")
+
+[node name="Objects" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_mtnol")
+
+[node name="Player25D" parent="." instance=ExtResource("5_to18j")]
+
+[node name="Conversation" parent="." instance=ExtResource("5_2ptq2")]
+
+[node name="TalkManager" parent="Conversation" index="0"]
 graph_data_save_location = "res://overworld/cutscenes/intro/graph_data.tres"
 talk_state_save_location = "res://overworld/cutscenes/intro/talk_state.tres"
-talk_state = SubResource("Resource_1nbon")
-metadata/_custom_type_script = "uid://bf6lv5qgapf0o"
+
+[node name="Snek" parent="." instance=ExtResource("6_mtnol")]
+
+[editable path="Conversation"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://c8gr5wrb6dvjt"]
+[gd_scene load_steps=46 format=3 uid="uid://c8gr5wrb6dvjt"]
 
 [ext_resource type="Script" uid="uid://cdnik1c5uy1nx" path="res://overworld/characters/player/player25d.gd" id="1_mu2yp"]
 [ext_resource type="Texture2D" uid="uid://b6ppd1413fbju" path="res://overworld/characters/player/sprites/down/mcfrontwalk1.png" id="2_0c41b"]
@@ -39,6 +39,9 @@
 [ext_resource type="Texture2D" uid="uid://oou0j5uyfguf" path="res://overworld/characters/player/sprites/interact/star0011.png" id="36_in8j7"]
 [ext_resource type="Texture2D" uid="uid://cdqpapds6qbf2" path="res://overworld/characters/player/sprites/interact/star0012.png" id="37_xvj1o"]
 [ext_resource type="Texture2D" uid="uid://whs10wkyk6l6" path="res://overworld/characters/player/sprites/interact/star0013.png" id="38_o8jkt"]
+[ext_resource type="Script" uid="uid://b2flwfdlosxw" path="res://addons/letstalkaboutit/nodes/talk_character.gd" id="40_ykttd"]
+[ext_resource type="Texture2D" uid="uid://50eirk6fhlat" path="res://overworld/characters/player/sprites/talk/normal/neutral.png" id="41_kp0ao"]
+[ext_resource type="Texture2D" uid="uid://s2faxpl5ie7t" path="res://overworld/characters/player/sprites/talk/magic/neutral.png" id="42_4mf73"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bnbyf"]
 animations = [{
@@ -232,3 +235,17 @@ autoplay = "default"
 frame_progress = 0.770321
 
 [node name="HUD" parent="." instance=ExtResource("22_i1fnb")]
+
+[node name="NormalCharacter" type="Node" parent="."]
+script = ExtResource("40_ykttd")
+character_id = "player_normal"
+character_name = "Adeline"
+character_base_panel = ExtResource("41_kp0ao")
+metadata/_custom_type_script = "uid://b2flwfdlosxw"
+
+[node name="MagicCharacter" type="Node" parent="."]
+script = ExtResource("40_ykttd")
+character_id = "player_magic"
+character_name = "Frufru"
+character_base_panel = ExtResource("42_4mf73")
+metadata/_custom_type_script = "uid://b2flwfdlosxw"

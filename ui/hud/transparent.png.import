@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djgyr0gd4sqa4"
-path="res://.godot/imported/transparent.png-7d3c8cecb6c25f6a47e0aaff97f4889f.ctex"
+uid="uid://bpwp3vgg287p6"
+path="res://.godot/imported/transparent.png-0197ea90a995e38b40cfbea9d81ed5cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://overworld/characters/narrator/transparent.png"
-dest_files=["res://.godot/imported/transparent.png-7d3c8cecb6c25f6a47e0aaff97f4889f.ctex"]
+source_file="res://ui/hud/transparent.png"
+dest_files=["res://.godot/imported/transparent.png-0197ea90a995e38b40cfbea9d81ed5cc.ctex"]
 
 [params]
 

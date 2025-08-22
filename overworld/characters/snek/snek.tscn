@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://5bjuhtbtuiuc"]
+
+[ext_resource type="Script" uid="uid://b2flwfdlosxw" path="res://addons/letstalkaboutit/nodes/talk_character.gd" id="1_ii2ta"]
+[ext_resource type="Texture2D" uid="uid://bfjwb0oo7y3x3" path="res://overworld/characters/snek/neutral.png" id="2_chwsf"]
+
+[node name="Snek" type="Node2D"]
+
+[node name="TalkCharacter" type="Node" parent="."]
+script = ExtResource("1_ii2ta")
+character_id = "snek"
+character_name = "Hebi-chan"
+character_base_panel = ExtResource("2_chwsf")
+metadata/_custom_type_script = "uid://b2flwfdlosxw"
