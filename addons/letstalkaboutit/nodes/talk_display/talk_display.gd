@@ -9,12 +9,17 @@ class_name TalkDisplay
 @export var default_font: Font = preload("res://addons/letstalkaboutit/nodes/talk_display/fonts/Kenney Future Square.ttf")
 @export var default_texture: CompressedTexture2D = preload("res://addons/letstalkaboutit/nodes/talk_display/portraits/outerframe.png")
 @export var override_font_color: Color = Color.WHITE
+@export var display_type: DISPLAY_TYPE = DISPLAY_TYPE.IN_PANEL
+@export var background_color: Color = Color.WHITE
+
+enum DISPLAY_TYPE {IN_PANEL, ABOVE_PANEL}
 
 var choices_container: VBoxContainer
 var name_container: PanelContainer
 var talk_container: PanelContainer
 var screen_margins: MarginContainer
 var background_texture: TextureRect
+var background_rect: ColorRect
 var text_animation_player: AnimationPlayer
 
 var can_transition: bool = true
@@ -35,12 +40,27 @@ func _ready() -> void:
 	talk_container = create_talk_container()
 	screen_margins = get_screen_margins()
 	background_texture = create_background_texture()
+	background_rect = create_background_color()
 	text_animation_player = AnimationPlayer.new()
 	add_child(text_animation_player)
 	hide_basic_talk()
 
 func _process(_delta: float) -> void:
 	set_name_container_position()
+
+func create_background_color() -> ColorRect:
+	var b_color := ColorRect.new()
+	add_child(b_color)
+
+	b_color.name = "BackgroundColor"
+	b_color.set_anchors_and_offsets_preset(LayoutPreset.PRESET_FULL_RECT)
+	b_color.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	b_color.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	b_color.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	b_color.z_index = -1
+	b_color.color = background_color
+
+	return b_color
 
 func create_background_texture() -> TextureRect:
 	var b_texture := TextureRect.new()
@@ -93,11 +113,19 @@ func create_name_container() -> PanelContainer:
 	n_vbox.add_child(n_margin)
 
 	n_margin.name = "MarginContainer"
-	n_margin.add_theme_constant_override("margin_left", 64)
+	n_margin.add_theme_constant_override("margin_left", 12)
+	n_margin.add_theme_constant_override("margin_right", 12)
 	n_margin.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
+	var n_center = CenterContainer.new()
+	n_margin.add_child(n_center)
+
+	n_center.name = "CenterContainer"
+	n_center.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	n_center.size_flags_vertical = Control.SIZE_EXPAND_FILL
+
 	var n_label := Label.new()
-	n_margin.add_child(n_label)
+	n_center.add_child(n_label)
 
 	n_label.name = "NameLabel"
 	n_label.text = "Default Name"
@@ -125,11 +153,13 @@ func create_talk_container() -> PanelContainer:
 	var main_container := VBoxContainer.new()
 	s_margin.add_child(main_container)
 
+	main_container.name = "MainContainer"
 	main_container.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
-	var spacer := Control.new()
+	var spacer := HBoxContainer.new()
 	main_container.add_child(spacer)
 	
+	spacer.name = "Spacer"
 	spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	spacer.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	spacer.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -160,12 +190,39 @@ func create_talk_container() -> PanelContainer:
 	t_interior.name = "TalkInteriorContainer"
 	t_interior.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
-	var t_texture := TextureRect.new()
-	t_interior.add_child(t_texture)
+	if display_type == DISPLAY_TYPE.IN_PANEL:
+		var t_texture := TextureRect.new()
+		t_interior.add_child(t_texture)
 
-	t_texture.name = "TalkTexture"
-	t_texture.texture = default_texture
-	t_texture.expand_mode = TextureRect.EXPAND_FIT_WIDTH
+		t_texture.name = "TalkTexture"
+		t_texture.texture = default_texture
+		t_texture.expand_mode = TextureRect.EXPAND_FIT_WIDTH
+	elif display_type == DISPLAY_TYPE.ABOVE_PANEL:
+		var inner_left_spacer := HBoxContainer.new()
+		spacer.add_child(inner_left_spacer)
+		
+		inner_left_spacer.name = "SpacerLeft"
+		inner_left_spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		inner_left_spacer.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		inner_left_spacer.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		inner_left_spacer.size_flags_stretch_ratio = 0.15
+
+		var t_texture := TextureRect.new()
+		spacer.add_child(t_texture)
+
+		t_texture.name = "TalkTexture"
+		t_texture.texture = default_texture
+		t_texture.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
+		t_texture.flip_h = true
+
+		var inner_right_spacer := HBoxContainer.new()
+		spacer.add_child(inner_right_spacer)
+		
+		inner_right_spacer.name = "SpacerLeft"
+		inner_right_spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		inner_right_spacer.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		inner_right_spacer.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		inner_right_spacer.size_flags_stretch_ratio = 4.0
 
 	var t_label := Label.new()
 	t_interior.add_child(t_label)
@@ -249,11 +306,14 @@ func get_talk_manager(i_node: Node) -> TalkManager:
 	return null
 
 func set_name_label(name_text: String) -> void:
-	name_container.get_node("VBoxContainer/MarginContainer/NameLabel").text = name_text
+	name_container.get_node("VBoxContainer/MarginContainer/CenterContainer/NameLabel").text = name_text
 
 func set_talk_texture(texture: Texture2D) -> void:
 	if texture:
-		talk_container.get_node("TalkMargins/TalkInteriorContainer/TalkTexture").texture = texture
+		if display_type == DISPLAY_TYPE.IN_PANEL:
+			talk_container.get_node("TalkMargins/TalkInteriorContainer/TalkTexture").texture = texture
+		elif display_type == DISPLAY_TYPE.ABOVE_PANEL:
+			screen_margins.get_node("MainContainer/Spacer/TalkTexture").texture = texture
 
 func set_text_animation(talk_text: Array) -> void:
 	destroy_text_animation()
