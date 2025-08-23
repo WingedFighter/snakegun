@@ -6,6 +6,9 @@ extends Node2D
 
 var start_time: int = 0
 
+func _ready() -> void:
+	AudioManager.stop_music()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if start_time == 0:
