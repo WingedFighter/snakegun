@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=4 uid="uid://bs4sw7h58f7b1"]
+[gd_scene load_steps=12 format=4 uid="uid://bs4sw7h58f7b1"]
 
+[ext_resource type="Script" uid="uid://blodgncbscjaj" path="res://overworld/maps/inside/inside_hero_room.gd" id="1_7grtv"]
 [ext_resource type="Texture2D" uid="uid://cjbgort6s7vho" path="res://overworld/maps/inside/ground_main.png" id="1_uq21d"]
 [ext_resource type="TileSet" uid="uid://kkfgqr5eircu" path="res://overworld/maps/tilesets/inside_tileset.tres" id="2_7grtv"]
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_jqtw0"]
@@ -22,6 +23,7 @@ size = Vector2(500, 20)
 size = Vector2(38, 20)
 
 [node name="InsideHeroRoom" type="Node2D"]
+script = ExtResource("1_7grtv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -1155.0

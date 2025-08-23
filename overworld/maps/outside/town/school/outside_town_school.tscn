@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=4 uid="uid://ctcc7wn73x4lr"]
+[gd_scene load_steps=14 format=4 uid="uid://ctcc7wn73x4lr"]
 
+[ext_resource type="Script" uid="uid://b8erqrc8tfkh6" path="res://overworld/maps/outside/town/school/outside_town_school.gd" id="1_ru344"]
 [ext_resource type="Texture2D" uid="uid://03ska3ft42ol" path="res://overworld/maps/outside/town/school/ground_school.png" id="1_t0226"]
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_smj6a"]
 [ext_resource type="TileSet" uid="uid://c6cu6yj2kvibq" path="res://overworld/maps/tilesets/outside_tileset.tres" id="3_t0226"]
@@ -28,6 +29,7 @@ size = Vector2(488, 19)
 size = Vector2(486, 20)
 
 [node name="OutsideTownSchool" type="Node2D"]
+script = ExtResource("1_ru344")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)

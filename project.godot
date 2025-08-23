@@ -21,6 +21,7 @@ config/icon="uid://bcsot87r8nmex"
 SceneManager="*res://global/scene_manager.gd"
 SaveManager="*res://global/save_manager.gd"
 LoadingScreen="*res://global/loading_screen/loading_screen.gd"
+AudioManager="*res://global/audio/audio_manager.gd"
 
 [editor_plugins]
 

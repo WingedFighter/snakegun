@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=4 uid="uid://cohqlrcb47uj4"]
+[gd_scene load_steps=12 format=4 uid="uid://cohqlrcb47uj4"]
 
 [ext_resource type="Texture2D" uid="uid://b026g0ndknv2c" path="res://overworld/maps/outside/town/main/ground_main.png" id="1_dwtre"]
+[ext_resource type="Script" uid="uid://cbc0e7a0rt4mi" path="res://overworld/maps/outside/town/main/outside_town_main.gd" id="1_vrrko"]
 [ext_resource type="TileSet" uid="uid://c6cu6yj2kvibq" path="res://overworld/maps/tilesets/outside_tileset.tres" id="2_gcnva"]
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="3_uqdsc"]
 [ext_resource type="PackedScene" uid="uid://cddigtumyuaal" path="res://overworld/interactables/transition/transition.tscn" id="4_gcnva"]
@@ -20,6 +21,7 @@ size = Vector2(42, 20)
 size = Vector2(32, 20)
 
 [node name="OutsideTownMain" type="Node2D"]
+script = ExtResource("1_vrrko")
 
 [node name="BaseLayer" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)

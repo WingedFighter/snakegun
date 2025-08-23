@@ -9,6 +9,9 @@ extends Control
 @onready var quit_button: TextureButton = $QuitButton
 @onready var escape_menu: Control = $EscapeMenu
 
+func _ready() -> void:
+	AudioManager.play_music("FinalBossReal")
+
 func _physics_process(_delta: float) -> void:
 	new_game_button.pressed.connect(new_game)
 	continue_button.pressed.connect(continue_game)

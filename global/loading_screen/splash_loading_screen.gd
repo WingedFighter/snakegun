@@ -13,24 +13,47 @@ extends CanvasLayer
 	"Intro3": "res://overworld/cutscenes/intro/intro_3.tscn",
 	"Intro4": "res://overworld/cutscenes/intro/intro_4.tscn",
 	"Intro5": "res://overworld/cutscenes/intro/intro_5.tscn",
-	"Intro6": "res://overworld/cutscenes/intro/intro_6.tscn",
+	"Intro6": "res://overworld/cutscenes/intro/intro_6.tscn"
+}
+
+@export var music_dictionary: Dictionary[String, String] = {
+	"Boss1": "res://global/audio/background_music/Boss1.wav",
+	"Boss2": "res://global/audio/background_music/Boss2.wav",
+	"FinalBossReal": "res://global/audio/background_music/FinalBossReal.wav",
+	"SomewhereInIdaho": "res://global/audio/background_music/SomewhereInIdaho.wav"
 }
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for key in scene_dictionary:
-		ResourceLoader.load_threaded_request(scene_dictionary[key], "", ResourceLoader.CACHE_MODE_REPLACE_DEEP)
+	start_loading_dictionary(scene_dictionary)
+	start_loading_dictionary(music_dictionary)
 
 func _process(_delta: float) -> void:
+	if !get_dictionary_progress(scene_dictionary):
+		return
+	if !get_dictionary_progress(music_dictionary):
+		return
+	var temp_scene_dict: Dictionary[String, PackedScene] = {}
 	for key in scene_dictionary:
-		var status := ResourceLoader.load_threaded_get_status(scene_dictionary[key])
+		temp_scene_dict[key] = ResourceLoader.load_threaded_get(scene_dictionary[key])
+	var temp_music_dict: Dictionary[String, AudioStream] = {}
+	for key in music_dictionary:
+		temp_music_dict[key] = ResourceLoader.load_threaded_get(music_dictionary[key])
+	SceneManager.scene_dictionary = temp_scene_dict
+	AudioManager.music_dictionary = temp_music_dict
+	SceneManager.change_scene(to_scene)
+
+func start_loading_dictionary(dict: Dictionary) -> void:
+	for key in dict:
+		ResourceLoader.load_threaded_request(dict[key], "", ResourceLoader.CACHE_MODE_REPLACE_DEEP)
+
+func get_dictionary_progress(dict: Dictionary) -> bool:
+	for key in dict:
+		var status := ResourceLoader.load_threaded_get_status(dict[key])
 		if status != ResourceLoader.THREAD_LOAD_IN_PROGRESS:
 			if status != ResourceLoader.THREAD_LOAD_LOADED:
 				print("Error loading resource: ", key, " with error code ", status)
+				get_tree().quit()
 		else:
-			return
-	var final_scene_dictionary: Dictionary[String, PackedScene] = {}
-	for key in scene_dictionary:
-		final_scene_dictionary[key] = ResourceLoader.load_threaded_get(scene_dictionary[key])
-	SceneManager.scene_dictionary = final_scene_dictionary
-	SceneManager.change_scene(to_scene)
+			return false
+	return true
