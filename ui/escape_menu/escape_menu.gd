@@ -99,7 +99,6 @@ func on_exit_pressed() -> void:
 	get_tree().quit()
 
 func set_volume(bus_index: int, volume: float) -> void:
-	print(linear_to_db(volume))
 	AudioServer.set_bus_volume_db(bus_index, linear_to_db(volume))
 
 func on_h_slider_value_changed(value: float) -> void:
