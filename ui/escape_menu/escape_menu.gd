@@ -3,6 +3,7 @@ extends Control
 @onready var resolution_button: OptionButton = $Panel/MarginContainer/TabContainer/ItemList/VBoxContainer/Resolution/OptionButton
 @onready var fullscreen_button: CheckBox = $Panel/MarginContainer/TabContainer/ItemList/VBoxContainer/Fullscreen/CheckBox
 @onready var keybindings_button: Button = $Panel/MarginContainer/TabContainer/ItemList/VBoxContainer/KeybindingsButton
+@onready var music_slider: HSlider = $Panel/MarginContainer/TabContainer/ItemList/VBoxContainer/MusicSFX/HSlider
 @onready var save_button: Button = $Panel/MarginContainer/TabContainer/ItemList/VBoxContainer/SaveButton
 @onready var return_button: Button = $Panel/MarginContainer/TabContainer/ItemList/VBoxContainer/ReturnButton
 @onready var close_button: Button = $Panel/MarginContainer/TabContainer/ItemList/VBoxContainer/CloseButton
@@ -14,21 +15,24 @@ extends Control
 	"1152x648": Vector2(640, 360)
 }
 
-@export var music_bus: int
 @export var main_menu_scene: String = "MainTitle"
 
 @export var main_menu: bool
 
 var default_resolution = "1280x720"
+var music_bus: int
 
 func _ready() -> void:
+	music_bus = AudioServer.get_bus_index("Music")
 	visible = false
 	add_resolutions()
 	find_and_set_current_window_size()
 	set_to_fullscreen_state()
+	on_h_slider_value_changed(music_slider.value)
 
 	fullscreen_button.toggled.connect(on_fullscreen_pressed)
 	resolution_button.item_selected.connect(on_resolution_item_selected)
+	music_slider.value_changed.connect(on_h_slider_value_changed)
 	keybindings_button.pressed.connect(on_keybindings_pressed)
 	save_button.pressed.connect(on_save_pressed)
 	return_button.pressed.connect(on_return_pressed)
@@ -94,5 +98,9 @@ func on_exit_pressed() -> void:
 	# get_tree().paused = false
 	get_tree().quit()
 
-func _on_h_slider_value_changed(_value: float) -> void:
-	pass
+func set_volume(bus_index: int, volume: float) -> void:
+	print(linear_to_db(volume))
+	AudioServer.set_bus_volume_db(bus_index, linear_to_db(volume))
+
+func on_h_slider_value_changed(value: float) -> void:
+	set_volume(music_bus, value)
