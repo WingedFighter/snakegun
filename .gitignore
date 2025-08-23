@@ -3,7 +3,3 @@
 /android/
 .vscode/
 build/
-
-# Don't commit root level default graph_data/talk_state
-graph_data.tres
-talk_state.tres
