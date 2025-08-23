@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3bb5e70iiixj"]
+[gd_scene load_steps=4 format=3 uid="uid://c3bb5e70iiixj"]
 
 [ext_resource type="Texture2D" uid="uid://cwt13uyx8ucxi" path="res://overworld/cutscenes/intro/intro_2_4.png" id="1_4w8g3"]
 [ext_resource type="Script" uid="uid://ctsl2is20sk7y" path="res://overworld/cutscenes/intro/intro_4.gd" id="1_oq0gl"]
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="3_afi5q"]
 
 [node name="Intro4" type="Node2D"]
 script = ExtResource("1_oq0gl")
@@ -13,3 +14,12 @@ texture = ExtResource("1_4w8g3")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(226, -41)
 zoom = Vector2(2, 2)
+
+[node name="SkipButton" type="Button" parent="Camera2D"]
+visible = false
+offset_left = -275.0
+offset_top = 102.0
+offset_right = -173.282
+offset_bottom = 149.316
+theme = ExtResource("3_afi5q")
+text = "SKIP"

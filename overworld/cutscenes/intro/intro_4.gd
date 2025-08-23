@@ -1,10 +1,20 @@
 extends Node2D
 
 @onready var camera: Camera2D = $Camera2D
+@onready var skip_button: Button = $Camera2D/SkipButton
 
 @export var change_scene: String = "Intro5"
+@export var final_skip: String = "InsideHeroRoom"
 
 var start_time: int = 0
+
+func _input(event: InputEvent) -> void:
+	if event.is_action("interact"):
+		if !skip_button.visible:
+			skip_button.visible = true
+
+func _ready() -> void:
+	skip_button.pressed.connect(on_skip_pressed)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -16,3 +26,6 @@ func _process(delta: float) -> void:
 	else:
 		camera.position = camera.position + Vector2(50, 0) * delta
 		camera.zoom = camera.zoom + Vector2(1.0, 1.0) * delta
+
+func on_skip_pressed() -> void:
+	SceneManager.change_scene(final_skip)

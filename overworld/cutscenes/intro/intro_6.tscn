@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhehv4nki3dv3"]
+[gd_scene load_steps=8 format=3 uid="uid://bhehv4nki3dv3"]
 
 [ext_resource type="Texture2D" uid="uid://bbbwdd4kyqrgl" path="res://overworld/cutscenes/intro/intro_6.png" id="1_2ptq2"]
 [ext_resource type="Script" uid="uid://dh546p8ghdq85" path="res://overworld/cutscenes/intro/intro_6.gd" id="1_to18j"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="5_2ptq2"]
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="5_to18j"]
 [ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="6_mtnol"]
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="7_to18j"]
 
 [node name="Intro6" type="Node2D"]
 script = ExtResource("1_to18j")
@@ -34,5 +35,14 @@ graph_data_save_location = "res://overworld/cutscenes/intro/graph_data.tres"
 talk_state_save_location = "res://overworld/cutscenes/intro/talk_state.tres"
 
 [node name="Snek" parent="." instance=ExtResource("6_mtnol")]
+
+[node name="SkipButton" type="Button" parent="."]
+visible = false
+offset_left = 176.0
+offset_top = -155.0
+offset_right = 277.718
+offset_bottom = -107.684
+theme = ExtResource("7_to18j")
+text = "SKIP"
 
 [editable path="Conversation"]
