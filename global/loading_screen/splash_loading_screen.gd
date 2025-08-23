@@ -36,11 +36,17 @@ func _process(_delta: float) -> void:
 	var temp_scene_dict: Dictionary[String, PackedScene] = {}
 	for key in scene_dictionary:
 		temp_scene_dict[key] = ResourceLoader.load_threaded_get(scene_dictionary[key])
-	var temp_music_dict: Dictionary[String, AudioStream] = {}
+	var temp_music_dict: Dictionary[String, AudioStreamWAV] = {}
 	for key in music_dictionary:
 		temp_music_dict[key] = ResourceLoader.load_threaded_get(music_dictionary[key])
 	SceneManager.scene_dictionary = temp_scene_dict
 	AudioManager.music_dictionary = temp_music_dict
+
+	for key in AudioManager.music_dictionary:
+		AudioManager.music_dictionary[key].loop_mode = AudioStreamWAV.LoopMode.LOOP_FORWARD
+		AudioManager.music_dictionary[key].loop_end = int(AudioManager.music_dictionary[key].mix_rate * AudioManager.music_dictionary[key].get_length())
+		
+
 	SceneManager.change_scene(to_scene)
 
 func start_loading_dictionary(dict: Dictionary) -> void:

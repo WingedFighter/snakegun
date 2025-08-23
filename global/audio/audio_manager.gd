@@ -1,21 +1,16 @@
 extends Node2D
 
-var audio_manager_scene: PackedScene = preload("res://global/audio/audio_manager.tscn")
 var stopped: bool = false
 
-var music_dictionary: Dictionary[String, AudioStream]
+var music_dictionary: Dictionary[String, AudioStreamWAV]
 var background_music: AudioStreamPlayer
 var current_track: String
 
 func _ready() -> void:
-	var audio_scene = audio_manager_scene.instantiate()
-	add_child(audio_scene)
+	background_music = AudioStreamPlayer.new()
+	add_child(background_music)
 
-	background_music = audio_scene.get_node("BackgroundMusic")
-
-func _process(_delta: float) -> void:
-	if background_music && !stopped && !background_music.playing:
-		background_music.play(0.0)
+	background_music.bus = "Music"
 
 func play_music(song: String) -> void:
 	if background_music && current_track != song:
@@ -26,6 +21,7 @@ func play_music(song: String) -> void:
 
 func stop_music() -> void:
 	if background_music:
+		print("here")
 		stopped = true
 		background_music.stop()
 
