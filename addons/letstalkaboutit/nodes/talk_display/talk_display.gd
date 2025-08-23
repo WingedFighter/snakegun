@@ -266,6 +266,8 @@ func show_basic_talk() -> void:
 	screen_margins.visible = true
 	name_container.visible = true
 	background_texture.visible = true
+	if display_type == DISPLAY_TYPE.ABOVE_PANEL:
+		background_rect.visible = true
 	if background_texture.has_node("TextureRect"):
 		background_texture.get_node("TextureRect").visible = true
 
@@ -273,6 +275,8 @@ func hide_basic_talk() -> void:
 	screen_margins.visible = false
 	name_container.visible = false
 	background_texture.visible = false
+	if display_type == DISPLAY_TYPE.ABOVE_PANEL:
+		background_rect.visible = false
 	if background_texture.has_node("TextureRect"):
 		background_texture.get_node("TextureRect").visible = false
 
