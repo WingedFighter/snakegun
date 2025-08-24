@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://i1oxad12j3rx"]
+[gd_scene load_steps=10 format=3 uid="uid://i1oxad12j3rx"]
 
 [ext_resource type="Script" uid="uid://d0kxi1tiv0ymy" path="res://ui/hud/hud.gd" id="1_6clc2"]
 [ext_resource type="Script" uid="uid://b26s6m7u8aqwf" path="res://addons/letstalkaboutit/nodes/talk_display/talk_display.gd" id="2_xm7ip"]
@@ -8,6 +8,7 @@
 [ext_resource type="Theme" uid="uid://dco2jdji7lli5" path="res://ui/themes/shoujo_ui_border.tres" id="4_kwc50"]
 [ext_resource type="FontFile" uid="uid://cljs8cw1c07pr" path="res://ui/fonts/Exo2-ExtraBoldItalic.ttf" id="5_gfles"]
 [ext_resource type="Texture2D" uid="uid://bpwp3vgg287p6" path="res://ui/hud/transparent.png" id="6_gfles"]
+[ext_resource type="PackedScene" uid="uid://dbf2uwkyivwoi" path="res://ui/quest_list/quest_list.tscn" id="9_aixkq"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -46,3 +47,5 @@ texture = ExtResource("4_imuuq")
 
 [node name="EscapeMenu" parent="CanvasLayer" instance=ExtResource("3_xm7ip")]
 visible = false
+
+[node name="QuestList" parent="CanvasLayer" instance=ExtResource("9_aixkq")]

@@ -9,5 +9,4 @@ func _ready() -> void:
 	AudioManager.play_music(background_music)
 
 	if SceneManager.get_previous_scene().contains("Intro"):
-		print("here")
 		first_time.visible = true

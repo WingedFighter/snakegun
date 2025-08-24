@@ -219,6 +219,7 @@ animations = [{
 }]
 
 [node name="LoadingScreen" type="CanvasLayer"]
+layer = 128
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(576, 323)
