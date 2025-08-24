@@ -23,12 +23,13 @@ var default_resolution = "1280x720"
 var music_bus: int
 
 func _ready() -> void:
+	SaveManager.load_data()
+
 	music_bus = AudioServer.get_bus_index("Music")
 	visible = false
 	add_resolutions()
 	find_and_set_current_window_size()
 	set_to_fullscreen_state()
-	on_h_slider_value_changed(music_slider.value)
 
 	fullscreen_button.toggled.connect(on_fullscreen_pressed)
 	resolution_button.item_selected.connect(on_resolution_item_selected)
@@ -38,6 +39,9 @@ func _ready() -> void:
 	return_button.pressed.connect(on_return_pressed)
 	close_button.pressed.connect(on_close_pressed)
 	exit_button.pressed.connect(on_exit_pressed)
+
+	
+	music_slider.value = SaveManager.save_data.volume_slider
 	
 	if main_menu:
 		save_button.visible = false

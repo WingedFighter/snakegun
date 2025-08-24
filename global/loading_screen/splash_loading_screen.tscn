@@ -231,7 +231,6 @@ texture = ExtResource("1_886t2")
 position = Vector2(576, 261)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_ahbms")
-autoplay = "default"
 frame_progress = 0.433605
 
 [node name="Text" type="AnimatedSprite2D" parent="."]

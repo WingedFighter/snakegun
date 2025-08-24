@@ -12,10 +12,13 @@ func load_data() -> bool:
 	return false
 
 func save() -> void:
+	if get_tree().current_scene.name == "MainTitle":
+		return
 	save_data.save_scene = get_tree().current_scene.name
 	var player = get_tree().current_scene.get_node("%Player25D")
 	if player:
 		save_data.player_pos = player.position
+	save_data.volume_slider = AudioServer.get_bus_volume_linear(AudioServer.get_bus_index("Music"))
 	ResourceSaver.save(save_data, save_data.save_location)
 
 func save_keybinding(action: StringName, event: InputEvent) -> void:

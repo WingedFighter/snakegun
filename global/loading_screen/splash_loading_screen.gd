@@ -20,19 +20,38 @@ extends CanvasLayer
 	"Boss1": "res://global/audio/background_music/Boss1.wav",
 	"Boss2": "res://global/audio/background_music/Boss2.wav",
 	"FinalBossReal": "res://global/audio/background_music/FinalBossReal.wav",
-	"SomewhereInIdaho": "res://global/audio/background_music/SomewhereInIdaho.wav"
+	"SomewhereInIdaho": "res://global/audio/background_music/SomewhereInIdaho.wav",
+	"SchoolDay": "res://global/audio/background_music/SchoolDay.wav"
 }
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	start_loading_dictionary(scene_dictionary)
-	start_loading_dictionary(music_dictionary)
+const SECOND: float = 1000.0
 
-func _process(_delta: float) -> void:
+var first_frame: bool = true
+var total: float = 0.0
+
+func _ready() -> void:
+	$Snake.play("default")
+	$Text.play("default")
+
+func _process(delta: float) -> void:
+	total += delta * SECOND
+	if total < SECOND:
+		return
+	elif first_frame:
+		call_deferred("start_loading_dictionary", scene_dictionary)
+		call_deferred("start_loading_dictionary", music_dictionary)
+		first_frame = false
+		return
+	else:
+		total = 0
+
 	if !get_dictionary_progress(scene_dictionary):
 		return
 	if !get_dictionary_progress(music_dictionary):
 		return
+	call_deferred("load_threaded")
+
+func load_threaded() -> void:
 	var temp_scene_dict: Dictionary[String, PackedScene] = {}
 	for key in scene_dictionary:
 		temp_scene_dict[key] = ResourceLoader.load_threaded_get(scene_dictionary[key])
@@ -43,9 +62,8 @@ func _process(_delta: float) -> void:
 	AudioManager.music_dictionary = temp_music_dict
 
 	for key in AudioManager.music_dictionary:
-		AudioManager.music_dictionary[key].loop_mode = AudioStreamWAV.LoopMode.LOOP_FORWARD
+		AudioManager.music_dictionary[key].loop_mode = AudioStreamWAV.LOOP_FORWARD
 		AudioManager.music_dictionary[key].loop_end = int(AudioManager.music_dictionary[key].mix_rate * AudioManager.music_dictionary[key].get_length())
-		
 
 	SceneManager.change_scene(to_scene)
 
@@ -59,7 +77,8 @@ func get_dictionary_progress(dict: Dictionary) -> bool:
 		if status != ResourceLoader.THREAD_LOAD_IN_PROGRESS:
 			if status != ResourceLoader.THREAD_LOAD_LOADED:
 				print("Error loading resource: ", key, " with error code ", status)
-				get_tree().quit()
+				get_tree().paused = true
+				# get_tree().quit()
 		else:
 			return false
 	return true
