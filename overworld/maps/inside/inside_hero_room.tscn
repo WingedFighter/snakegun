@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bs4sw7h58f7b1"]
+[gd_scene load_steps=18 format=4 uid="uid://bs4sw7h58f7b1"]
 
 [ext_resource type="Script" uid="uid://blodgncbscjaj" path="res://overworld/maps/inside/inside_hero_room.gd" id="1_7grtv"]
 [ext_resource type="Texture2D" uid="uid://cjbgort6s7vho" path="res://overworld/maps/inside/ground_main.png" id="1_uq21d"]
@@ -6,6 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_jqtw0"]
 [ext_resource type="PackedScene" uid="uid://cddigtumyuaal" path="res://overworld/interactables/transition/transition.tscn" id="3_7grtv"]
 [ext_resource type="PackedScene" uid="uid://co63qkxatewwp" path="res://overworld/maps/spawner/spawner.tscn" id="4_f7ndo"]
+[ext_resource type="Texture2D" uid="uid://d0x417t2wi0kk" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_w.png" id="7_t0qw7"]
+[ext_resource type="Texture2D" uid="uid://bdq5r637yk3lb" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_a.png" id="8_8dyel"]
+[ext_resource type="Texture2D" uid="uid://2d2x7qr5s4m2" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_s.png" id="9_j1ijo"]
+[ext_resource type="Texture2D" uid="uid://c22dl84us3w7c" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_d.png" id="10_mvkbf"]
+[ext_resource type="Texture2D" uid="uid://b5xjw0x03omq1" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_e.png" id="11_kpscl"]
+[ext_resource type="Texture2D" uid="uid://4ncgt7sfwxic" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_escape.png" id="12_8dyel"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hj8x8"]
 size = Vector2(20, 290)
@@ -101,5 +107,60 @@ spawns = Dictionary[String, NodePath]({
 position = Vector2(0, -69)
 
 [node name="MainTitle" type="Marker2D" parent="Spawner"]
+
+[node name="FirstTimePlaying" type="Control" parent="."]
+visible = false
+z_index = 500
+layout_mode = 3
+anchors_preset = 0
+
+[node name="W" type="TextureRect" parent="FirstTimePlaying"]
+offset_left = -16.0
+offset_top = 30.0
+offset_right = 48.0
+offset_bottom = 94.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_t0qw7")
+
+[node name="A" type="TextureRect" parent="FirstTimePlaying"]
+offset_left = -42.0
+offset_top = 56.0
+offset_right = 22.0
+offset_bottom = 120.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_8dyel")
+
+[node name="S" type="TextureRect" parent="FirstTimePlaying"]
+offset_left = -16.0
+offset_top = 56.0
+offset_right = 48.0
+offset_bottom = 120.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_j1ijo")
+
+[node name="D" type="TextureRect" parent="FirstTimePlaying"]
+offset_left = 10.0
+offset_top = 56.0
+offset_right = 74.0
+offset_bottom = 120.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_mvkbf")
+
+[node name="E" type="TextureRect" parent="FirstTimePlaying"]
+offset_left = 21.0
+offset_top = -94.0
+offset_right = 85.0
+offset_bottom = -30.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_kpscl")
+
+[node name="TextureRect" type="TextureRect" parent="FirstTimePlaying"]
+layout_mode = 0
+offset_left = -126.0
+offset_top = -17.0
+offset_right = -62.0
+offset_bottom = 47.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_8dyel")
 
 [editable path="Interactables/Transitions/OutsideTownMain"]

@@ -21,7 +21,6 @@ func play_music(song: String) -> void:
 
 func stop_music() -> void:
 	if background_music:
-		print("here")
 		stopped = true
 		background_music.stop()
 
