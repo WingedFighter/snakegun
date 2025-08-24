@@ -10,3 +10,4 @@ func _ready() -> void:
 
 	if SceneManager.get_previous_scene().contains("Intro"):
 		first_time.visible = true
+		Quests.add_quest({"name": "First Steps", "contents": "Go to school"})

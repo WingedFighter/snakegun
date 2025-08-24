@@ -1,6 +1,6 @@
 extends Node2D
 
-var load_screen: PackedScene = preload("res://global/loading_screen/loading_screen.tscn")
+var load_screen: PackedScene = load("res://global/loading_screen/loading_screen.tscn")
 var load_screen_ref: CanvasLayer
 
 func _ready() -> void:
