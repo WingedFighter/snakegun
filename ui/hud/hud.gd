@@ -9,9 +9,10 @@ signal interact_end
 
 var last_interactable: Node
 var is_interacting: bool = false
+var is_paused: bool = false
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact"):
+	if !is_paused && event.is_action_pressed("interact"):
 		if is_interacting:
 			if talk_display.can_transition:
 				talk_display.interaction(last_interactable)
@@ -31,6 +32,12 @@ func _input(event: InputEvent) -> void:
 			escape_menu.open()
 		else:
 			escape_menu.close()
+
+func pause() -> void:
+	is_paused = true
+
+func unpause() -> void:
+	is_paused = false
 
 func on_conversation_end(node: Node):
 	is_interacting = false

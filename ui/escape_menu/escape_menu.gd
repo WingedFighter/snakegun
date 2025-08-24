@@ -40,7 +40,6 @@ func _ready() -> void:
 	close_button.pressed.connect(on_close_pressed)
 	exit_button.pressed.connect(on_exit_pressed)
 
-	
 	music_slider.value = SaveManager.save_data.volume_slider
 	
 	if main_menu:
@@ -70,7 +69,7 @@ func on_resolution_item_selected(index) -> void:
 
 func open() -> void:
 	visible = true
-	# get_tree().paused = true
+	pause_if_player()
 
 func close() -> void:
 	on_close_pressed()
@@ -96,14 +95,23 @@ func on_save_pressed() -> void:
 func on_close_pressed() -> void:
 	visible = false
 	keybindings_panel.visible = false
-	# get_tree().paused = false
+	unpause_if_player()
 
 func on_exit_pressed() -> void:
-	# get_tree().paused = false
+	unpause_if_player()
 	get_tree().quit()
 
 func set_volume(bus_index: int, volume: float) -> void:
 	AudioServer.set_bus_volume_db(bus_index, linear_to_db(volume))
+	SaveManager.save_volume(volume)
 
 func on_h_slider_value_changed(value: float) -> void:
 	set_volume(music_bus, value)
+
+func pause_if_player() -> void:
+	if get_tree().current_scene.find_child("Player25D"):
+		get_tree().current_scene.find_child("Player25D").escape_pause()
+
+func unpause_if_player() -> void:
+	if get_tree().current_scene.find_child("Player25D"):
+		get_tree().current_scene.find_child("Player25D").escape_unpause()

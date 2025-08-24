@@ -8,6 +8,7 @@ class_name Player25D
 @onready var bubble: AnimatedSprite2D = $Bubble
 
 var is_paused: bool = false
+var is_escape_pause: bool = false
 
 func _ready() -> void:
 	hud.interact_start.connect(pause)
@@ -19,7 +20,7 @@ func _physics_process(delta: float) -> void:
 
 	var movement = Vector2.ZERO
 
-	if !is_paused:
+	if !is_paused && !is_escape_pause:
 		movement = Vector2(horizontal, vertical)
 		velocity = delta * movement * speed
 	else:
@@ -59,3 +60,11 @@ func pause() -> void:
 
 func resume() -> void:
 	is_paused = false
+
+func escape_pause() -> void:
+	is_escape_pause = true
+	hud.pause()
+
+func escape_unpause() -> void:
+	is_escape_pause = false
+	hud.unpause()

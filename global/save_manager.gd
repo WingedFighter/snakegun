@@ -18,8 +18,11 @@ func save() -> void:
 	var player = get_tree().current_scene.get_node("%Player25D")
 	if player:
 		save_data.player_pos = player.position
-	save_data.volume_slider = AudioServer.get_bus_volume_linear(AudioServer.get_bus_index("Music"))
+		save_data.quests_list = Quests.list
 	ResourceSaver.save(save_data, save_data.save_location)
+
+func save_volume(volume: float) -> void:
+	save_data.volume_slider = volume
 
 func save_keybinding(action: StringName, event: InputEvent) -> void:
 	save_data.keybindings[action] = event
