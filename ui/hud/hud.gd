@@ -47,5 +47,10 @@ func on_conversation_end(node: Node):
 
 func is_valid_interactable() -> bool:
 	if last_interactable is Interactable && !is_interacting:
+		if last_interactable is Transition && last_interactable.conditional:
+			if State.flags.has(last_interactable.condition) && State.flags[last_interactable.condition]:
+				return true
+			else:
+				return false
 		return true
 	return false

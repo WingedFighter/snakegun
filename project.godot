@@ -23,6 +23,7 @@ SaveManager="*res://global/save_manager.gd"
 LoadingScreen="*res://global/loading_screen/loading_screen.gd"
 AudioManager="*res://global/audio/audio_manager.gd"
 Quests="*res://global/quests.gd"
+State="*res://global/state.gd"
 
 [editor_plugins]
 

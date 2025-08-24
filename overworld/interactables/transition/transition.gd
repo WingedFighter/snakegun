@@ -3,6 +3,8 @@ class_name Transition
 
 @export var to_scene: String = "MainTitle"
 @export var immediate: bool = false
+@export var conditional: bool = false
+@export var condition: String = "none"
 
 func _ready() -> void:
 	body_entered.connect(on_body_entered)
@@ -11,13 +13,21 @@ func _ready() -> void:
 		body_entered.connect(immediate_transition)
 
 func immediate_transition(body: Node2D) -> void:
-	if body is Player25D:
+	if conditional:
+		if body is Player25D && body.flags.has(condition) && body.flags[condition]:
+			body.hud.last_interactable = self
+			call_deferred("change_scene")
+	elif !conditional && body is Player25D:
 		body.hud.last_interactable = self
 		call_deferred("change_scene")
 
 func interact() -> void:
-	LoadingScreen.start_load()
-	call_deferred("change_scene")
+	if conditional && State.flags.has(condition) && State.flags[condition]:
+		LoadingScreen.start_load()
+		call_deferred("change_scene")
+	elif !conditional:
+		LoadingScreen.start_load()
+		call_deferred("change_scene")
 
 func change_scene() -> void:
 	SceneManager.change_scene(to_scene)

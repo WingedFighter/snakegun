@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://ctcc7wn73x4lr"]
+[gd_scene load_steps=15 format=4 uid="uid://ctcc7wn73x4lr"]
 
 [ext_resource type="Script" uid="uid://b8erqrc8tfkh6" path="res://overworld/maps/outside/town/school/outside_town_school.gd" id="1_ru344"]
 [ext_resource type="Texture2D" uid="uid://03ska3ft42ol" path="res://overworld/maps/outside/town/school/ground_school.png" id="1_t0226"]
@@ -26,7 +26,10 @@ size = Vector2(24, 107)
 size = Vector2(488, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iahc7"]
-size = Vector2(486, 20)
+size = Vector2(486, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ru344"]
+size = Vector2(290, 20)
 
 [node name="OutsideTownSchool" type="Node2D"]
 script = ExtResource("1_ru344")
@@ -128,7 +131,17 @@ to_scene = "OutsideTownMain"
 immediate = true
 
 [node name="CollisionShape2D" parent="Interactables/Transitions/Bottom" index="0"]
-position = Vector2(6, 0)
+position = Vector2(6, -6.5)
 shape = SubResource("RectangleShape2D_iahc7")
 
+[node name="Transition" parent="Interactables/Transitions" instance=ExtResource("4_nrcqd")]
+position = Vector2(-35, -243)
+conditional = true
+condition = "first_steps"
+
+[node name="CollisionShape2D" parent="Interactables/Transitions/Transition" index="0"]
+position = Vector2(-5, 0)
+shape = SubResource("RectangleShape2D_ru344")
+
 [editable path="Interactables/Transitions/Bottom"]
+[editable path="Interactables/Transitions/Transition"]

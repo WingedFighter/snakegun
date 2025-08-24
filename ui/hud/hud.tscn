@@ -45,7 +45,7 @@ offset_bottom = 797.0
 scale = Vector2(0.675, 0.63)
 texture = ExtResource("4_imuuq")
 
+[node name="QuestList" parent="CanvasLayer" instance=ExtResource("9_aixkq")]
+
 [node name="EscapeMenu" parent="CanvasLayer" instance=ExtResource("3_xm7ip")]
 visible = false
-
-[node name="QuestList" parent="CanvasLayer" instance=ExtResource("9_aixkq")]

@@ -11,6 +11,7 @@ extends Control
 
 func _ready() -> void:
 	AudioManager.play_music("FinalBossReal")
+	LoadingScreen.stop_load()
 
 func _physics_process(_delta: float) -> void:
 	new_game_button.pressed.connect(new_game)
