@@ -21,11 +21,20 @@ func _input(event: InputEvent) -> void:
 		elif last_interactable is Transition:
 			last_interactable.interact()
 		elif last_interactable is Conversation:
-			if talk_display.can_interact(last_interactable):
-				talk_display.interaction(last_interactable)
-				last_interactable.get_node("TalkManager").conversation_end.connect(on_conversation_end)
-				interact_start.emit()
-				is_interacting = true
+			if !last_interactable.conditional:
+				if talk_display.can_interact(last_interactable):
+					talk_display.interaction(last_interactable)
+					last_interactable.get_node("TalkManager").conversation_end.connect(on_conversation_end)
+					interact_start.emit()
+					is_interacting = true
+			else:
+				var flag = last_interactable.condition
+				if State.flags.has(flag) && State.flags[flag]:
+					if talk_display.can_interact(last_interactable):
+						talk_display.interaction(last_interactable)
+						last_interactable.get_node("TalkManager").conversation_end.connect(on_conversation_end)
+						interact_start.emit()
+						is_interacting = true
 	
 	if event.is_action_pressed("open_menu"):
 		if !escape_menu.visible:
@@ -47,10 +56,9 @@ func on_conversation_end(node: Node):
 
 func is_valid_interactable() -> bool:
 	if last_interactable is Interactable && !is_interacting:
-		if last_interactable is Transition && last_interactable.conditional:
+		if last_interactable.conditional:
 			if State.flags.has(last_interactable.condition) && State.flags[last_interactable.condition]:
 				return true
 			else:
 				return false
-		return true
 	return false

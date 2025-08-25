@@ -8,6 +8,7 @@ func _ready() -> void:
 func load_data() -> bool:
 	if ResourceLoader.exists(save_data.save_location):
 		save_data = load(save_data.save_location)
+		State.flags = save_data.state_flags
 		return true
 	return false
 
@@ -19,6 +20,7 @@ func save() -> void:
 	if player:
 		save_data.player_pos = player.position
 		save_data.quests_list = Quests.list
+		save_data.state_flags = State.flags
 	ResourceSaver.save(save_data, save_data.save_location)
 
 func save_volume(volume: float) -> void:

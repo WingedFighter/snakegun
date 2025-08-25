@@ -25,6 +25,11 @@ func _process(_delta: float) -> void:
 
 		for quest in Quests.list:
 			display_quest(quest)
+		
+		if State.flags.has("in_cutscene") && State.flags['in_cutscene']:
+			visible = false
+		elif State.flags.has("in_cutscene"):
+			visible = true
 
 func delete_quests() -> void:
 	for child in v_box.get_children():

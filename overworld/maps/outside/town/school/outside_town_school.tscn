@@ -136,6 +136,7 @@ shape = SubResource("RectangleShape2D_iahc7")
 
 [node name="Transition" parent="Interactables/Transitions" instance=ExtResource("4_nrcqd")]
 position = Vector2(-35, -243)
+to_scene = "FirstSchool1"
 conditional = true
 condition = "first_steps"
 
