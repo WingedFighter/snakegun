@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb3t6nm8lfxb4"]
+
+[ext_resource type="Script" uid="uid://b2flwfdlosxw" path="res://addons/letstalkaboutit/nodes/talk_character.gd" id="1_2y20f"]
+[ext_resource type="Texture2D" uid="uid://kuyls1dq7xa5" path="res://overworld/characters/teacher/neutral.png" id="2_my1jw"]
+
+[node name="Teacher" type="Node2D"]
+
+[node name="TalkCharacter" type="Node" parent="."]
+script = ExtResource("1_2y20f")
+character_id = "teacher"
+character_name = "Teacher"
+character_base_panel = ExtResource("2_my1jw")
+metadata/_custom_type_script = "uid://b2flwfdlosxw"

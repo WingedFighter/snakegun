@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0ap8du2c15jq"]
+
+[ext_resource type="Script" uid="uid://b2flwfdlosxw" path="res://addons/letstalkaboutit/nodes/talk_character.gd" id="1_owwj4"]
+[ext_resource type="Texture2D" uid="uid://cdjk6kynhf36x" path="res://overworld/characters/leah/neutral.png" id="2_7y3e5"]
+
+[node name="Leah" type="Node2D"]
+
+[node name="TalkCharacter" type="Node" parent="."]
+script = ExtResource("1_owwj4")
+character_id = "leah"
+character_name = "Leah"
+character_base_panel = ExtResource("2_7y3e5")
+metadata/_custom_type_script = "uid://b2flwfdlosxw"

@@ -3,8 +3,6 @@ class_name Transition
 
 @export var to_scene: String = "MainTitle"
 @export var immediate: bool = false
-@export var conditional: bool = false
-@export var condition: String = "none"
 
 func _ready() -> void:
 	body_entered.connect(on_body_entered)

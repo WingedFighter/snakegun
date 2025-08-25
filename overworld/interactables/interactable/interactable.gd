@@ -1,6 +1,9 @@
 extends Area2D
 class_name Interactable
 
+@export var conditional: bool = false
+@export var condition: String = "none"
+
 func _ready() -> void:
 	body_entered.connect(on_body_entered)
 	body_exited.connect(on_body_exited)

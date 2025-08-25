@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vrn6ghq1sxhf"
-path="res://.godot/imported/default.png-8a6503a12a30205ce24302562ddb7da8.ctex"
+uid="uid://kuyls1dq7xa5"
+path="res://.godot/imported/neutral.png-eff96e17626257b0f0e441860224fc33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://overworld/interactables/conversation/default.png"
-dest_files=["res://.godot/imported/default.png-8a6503a12a30205ce24302562ddb7da8.ctex"]
+source_file="res://overworld/characters/teacher/neutral.png"
+dest_files=["res://.godot/imported/neutral.png-eff96e17626257b0f0e441860224fc33.ctex"]
 
 [params]
 

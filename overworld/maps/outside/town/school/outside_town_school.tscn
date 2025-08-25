@@ -115,11 +115,15 @@ shape = SubResource("RectangleShape2D_sgagr")
 
 [node name="Spawner" parent="." instance=ExtResource("5_y1udv")]
 spawns = Dictionary[String, NodePath]({
+"FirstSchool2": NodePath("FirstSchool2"),
 "OutsideTownMain": NodePath("OutsideTownMain")
 })
 
 [node name="OutsideTownMain" type="Marker2D" parent="Spawner"]
 position = Vector2(-27, 276)
+
+[node name="FirstSchool2" type="Marker2D" parent="Spawner"]
+position = Vector2(-38, -204)
 
 [node name="Interactables" type="Node2D" parent="."]
 
@@ -134,15 +138,15 @@ immediate = true
 position = Vector2(6, -6.5)
 shape = SubResource("RectangleShape2D_iahc7")
 
-[node name="Transition" parent="Interactables/Transitions" instance=ExtResource("4_nrcqd")]
+[node name="FirstSchool1" parent="Interactables/Transitions" instance=ExtResource("4_nrcqd")]
 position = Vector2(-35, -243)
 to_scene = "FirstSchool1"
 conditional = true
 condition = "first_steps"
 
-[node name="CollisionShape2D" parent="Interactables/Transitions/Transition" index="0"]
+[node name="CollisionShape2D" parent="Interactables/Transitions/FirstSchool1" index="0"]
 position = Vector2(-5, 0)
 shape = SubResource("RectangleShape2D_ru344")
 
 [editable path="Interactables/Transitions/Bottom"]
-[editable path="Interactables/Transitions/Transition"]
+[editable path="Interactables/Transitions/FirstSchool1"]

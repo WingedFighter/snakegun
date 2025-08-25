@@ -61,4 +61,6 @@ func is_valid_interactable() -> bool:
 				return true
 			else:
 				return false
+		else:
+			return true
 	return false

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://djniptanm3f68"]
+
+[ext_resource type="Script" uid="uid://b2flwfdlosxw" path="res://addons/letstalkaboutit/nodes/talk_character.gd" id="1_eml2i"]
+[ext_resource type="Texture2D" uid="uid://c1elnsufoay5i" path="res://overworld/characters/barb/neutral.png" id="2_myku8"]
+
+[node name="Barb" type="Node2D"]
+
+[node name="TalkCharacter" type="Node" parent="."]
+script = ExtResource("1_eml2i")
+character_id = "barb"
+character_name = "Barb"
+character_base_panel = ExtResource("2_myku8")
+metadata/_custom_type_script = "uid://b2flwfdlosxw"

@@ -14,7 +14,8 @@ extends CanvasLayer
 	"Intro4": "res://overworld/cutscenes/intro/intro_4.tscn",
 	"Intro5": "res://overworld/cutscenes/intro/intro_5.tscn",
 	"Intro6": "res://overworld/cutscenes/intro/intro_6.tscn",
-	"FirstSchool1": "res://overworld/cutscenes/first_steps/first_school_1.tscn"
+	"FirstSchool1": "res://overworld/cutscenes/first_steps/first_school_1.tscn",
+	"FirstSchool2": "res://overworld/cutscenes/first_steps/first_school_2.tscn"
 }
 
 @export var music_dictionary: Dictionary[String, String] = {

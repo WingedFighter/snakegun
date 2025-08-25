@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://cqvdq4ebd2o6c"]
+
+[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="1_fa4d1"]
+[ext_resource type="Script" uid="uid://c1il010v7ebge" path="res://overworld/cutscenes/first_steps/first_school_2.gd" id="1_jmako"]
+[ext_resource type="Texture2D" uid="uid://dxigokcyxb82k" path="res://overworld/maps/outside/town/school/lunch.png" id="1_p7i70"]
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="3_8ge1y"]
+[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="3_w4tpx"]
+[ext_resource type="PackedScene" uid="uid://b0ap8du2c15jq" path="res://overworld/characters/leah/leah.tscn" id="5_his4x"]
+[ext_resource type="PackedScene" uid="uid://djniptanm3f68" path="res://overworld/characters/barb/barb.tscn" id="6_8ge1y"]
+[ext_resource type="PackedScene" uid="uid://dcd5kkwk0ydij" path="res://overworld/characters/sarah/sarah.tscn" id="7_x2u3b"]
+
+[node name="FirstSchool2" type="Node2D"]
+script = ExtResource("1_jmako")
+
+[node name="Player25D" parent="." instance=ExtResource("1_fa4d1")]
+unique_name_in_owner = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_p7i70")
+
+[node name="Conversation" parent="." instance=ExtResource("3_w4tpx")]
+conditional = true
+condition = "start_conversation"
+
+[node name="TalkManager" parent="Conversation" index="0"]
+talk_state_save_location = "res://overworld/cutscenes/first_steps/talk_state2.tres"
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="Leah" parent="Characters" instance=ExtResource("5_his4x")]
+
+[node name="Barb" parent="Characters" instance=ExtResource("6_8ge1y")]
+
+[node name="Sarah" parent="Characters" instance=ExtResource("7_x2u3b")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="SkipButton" type="Button" parent="CanvasLayer"]
+offset_left = 945.0
+offset_top = 18.0
+offset_right = 1037.72
+offset_bottom = 65.3165
+scale = Vector2(2, 2)
+theme = ExtResource("3_8ge1y")
+text = "Skip"
+
+[editable path="Conversation"]
