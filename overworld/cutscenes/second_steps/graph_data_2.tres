@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GraphData" load_steps=2 format=3 uid="uid://dkfk3nqx1vnu0"]
+
+[ext_resource type="Script" uid="uid://bhbyqwjh1ms64" path="res://addons/letstalkaboutit/graph_data/graph_data.gd" id="1_r0oa1"]
+
+[resource]
+script = ExtResource("1_r0oa1")
+connections = Array[Dictionary]([])
+nodes = []

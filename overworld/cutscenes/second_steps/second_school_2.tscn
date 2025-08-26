@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://0mu8dsmlasv5"]
+
+[ext_resource type="Script" uid="uid://degeod3rfbuxd" path="res://overworld/cutscenes/second_steps/second_school_2.gd" id="1_erlf1"]
+[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_gnqag"]
+[ext_resource type="Texture2D" uid="uid://dxigokcyxb82k" path="res://overworld/maps/outside/town/school/lunch.png" id="3_y2sg4"]
+[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="4_t6wad"]
+[ext_resource type="PackedScene" uid="uid://b0ap8du2c15jq" path="res://overworld/characters/leah/leah.tscn" id="5_6lduf"]
+[ext_resource type="PackedScene" uid="uid://djniptanm3f68" path="res://overworld/characters/barb/barb.tscn" id="6_i0hg3"]
+[ext_resource type="PackedScene" uid="uid://dcd5kkwk0ydij" path="res://overworld/characters/sarah/sarah.tscn" id="7_exfpi"]
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="8_yl4tb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3yreb"]
+
+[node name="SecondSchool2" type="Node2D"]
+script = ExtResource("1_erlf1")
+
+[node name="Player25D" parent="." instance=ExtResource("2_gnqag")]
+unique_name_in_owner = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_y2sg4")
+
+[node name="Conversation" parent="." instance=ExtResource("4_t6wad")]
+conditional = true
+condition = "start_conversation"
+
+[node name="TalkManager" parent="Conversation" index="0"]
+graph_data_save_location = "res://overworld/cutscenes/second_steps/graph_data_2.tres"
+talk_state_save_location = "res://overworld/cutscenes/second_steps/talk_state_2.tres"
+
+[node name="CollisionShape2D" parent="Conversation" index="2"]
+shape = SubResource("RectangleShape2D_3yreb")
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="Leah" parent="Characters" instance=ExtResource("5_6lduf")]
+
+[node name="Barb" parent="Characters" instance=ExtResource("6_i0hg3")]
+
+[node name="Sarah" parent="Characters" instance=ExtResource("7_exfpi")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="SkipButton" type="Button" parent="CanvasLayer"]
+offset_left = 945.0
+offset_top = 18.0
+offset_right = 1037.72
+offset_bottom = 65.3165
+scale = Vector2(2, 2)
+theme = ExtResource("8_yl4tb")
+text = "Skip"
+
+[editable path="Conversation"]

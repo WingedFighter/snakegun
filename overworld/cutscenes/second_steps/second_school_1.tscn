@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://5tfwt54grspb"]
+
+[ext_resource type="Script" uid="uid://brutbyerimle0" path="res://overworld/cutscenes/second_steps/second_school_1.gd" id="1_36ym0"]
+[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_ehuxc"]
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="3_ojaum"]
+[ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="4_speme"]
+[ext_resource type="Texture2D" uid="uid://6agfqpargst6" path="res://overworld/maps/outside/town/school/classroom.png" id="5_jms6u"]
+[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="6_y1fd6"]
+[ext_resource type="PackedScene" uid="uid://cb3t6nm8lfxb4" path="res://overworld/characters/teacher/teacher.tscn" id="7_idxua"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehuxc"]
+size = Vector2(498.5, 363.5)
+
+[node name="FirstSchool1" type="Node2D"]
+script = ExtResource("1_36ym0")
+
+[node name="Player25D" parent="." instance=ExtResource("2_ehuxc")]
+unique_name_in_owner = true
+position = Vector2(-44, -187)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player25D"]
+layer = 50
+
+[node name="SkipButton" type="Button" parent="Player25D/CanvasLayer"]
+visible = false
+z_index = 128
+offset_left = 946.0
+offset_top = 25.0
+offset_right = 1038.72
+offset_bottom = 72.3165
+scale = Vector2(2, 2)
+theme = ExtResource("3_ojaum")
+text = "Skip"
+
+[node name="Snek" parent="." instance=ExtResource("4_speme")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_jms6u")
+
+[node name="Conversation" parent="." instance=ExtResource("6_y1fd6")]
+position = Vector2(-201, 264)
+conditional = true
+condition = "start_conversation"
+
+[node name="TalkManager" parent="Conversation" index="0"]
+graph_data_save_location = "res://overworld/cutscenes/second_steps/graph_data.tres"
+talk_state_save_location = "res://overworld/cutscenes/second_steps/talk_state.tres"
+
+[node name="CollisionShape2D" parent="Conversation" index="2"]
+position = Vector2(193.75, -15.25)
+shape = SubResource("RectangleShape2D_ehuxc")
+
+[node name="Teacher" parent="." instance=ExtResource("7_idxua")]
+
+[editable path="Conversation"]

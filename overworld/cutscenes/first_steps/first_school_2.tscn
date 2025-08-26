@@ -24,7 +24,8 @@ conditional = true
 condition = "start_conversation"
 
 [node name="TalkManager" parent="Conversation" index="0"]
-talk_state_save_location = "res://overworld/cutscenes/first_steps/talk_state2.tres"
+graph_data_save_location = "res://overworld/cutscenes/first_steps/graph_data_2.tres"
+talk_state_save_location = "res://overworld/cutscenes/first_steps/talk_state_2.tres"
 
 [node name="Characters" type="Node" parent="."]
 
