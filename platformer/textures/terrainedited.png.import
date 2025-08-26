@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7xwfimsp0dga"
-path="res://.godot/imported/bunnyenemy.png-487b9c253fbeda0f11f093136de731e4.ctex"
+uid="uid://cxaa3tjpg315b"
+path="res://.godot/imported/terrainedited.png-49c356aa8bbe5c242393654da7e66418.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://platformer/textures/enemies/bunny/bunnyenemy.png"
-dest_files=["res://.godot/imported/bunnyenemy.png-487b9c253fbeda0f11f093136de731e4.ctex"]
+source_file="res://platformer/textures/terrainedited.png"
+dest_files=["res://.godot/imported/terrainedited.png-49c356aa8bbe5c242393654da7e66418.ctex"]
 
 [params]
 

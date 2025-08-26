@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dh47qy4uc6e1c" path="res://platformer/textures/level1/trees/layer2.png" id="3_ra64a"]
 [ext_resource type="Texture2D" uid="uid://y7kdqut4elao" path="res://platformer/textures/level1/trees/layer3.png" id="4_po1n7"]
 [ext_resource type="Texture2D" uid="uid://c3455kuw7kc8l" path="res://platformer/textures/level1/trees/layer4.png" id="5_1lpes"]
-[ext_resource type="Texture2D" uid="uid://bhthn71e2xpcf" path="res://platformer/textures/terrain.png" id="6_118nu"]
+[ext_resource type="Texture2D" uid="uid://l4gc7f5i7mbi" path="res://platformer/textures/terrain.png" id="6_118nu"]
 [ext_resource type="PackedScene" uid="uid://bg2joonqnel4i" path="res://platformer/components/player.tscn" id="7_dxx3a"]
 [ext_resource type="Texture2D" uid="uid://b1setxi4372f8" path="res://platformer/textures/level1/trees/layer5.png" id="8_07jbh"]
 [ext_resource type="PackedScene" uid="uid://bixfuhp4yjqfb" path="res://platformer/components/enemy.tscn" id="9_x6kaj"]
