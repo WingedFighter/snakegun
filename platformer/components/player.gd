@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var health_component: HealthComponent
 @export var animation_tree: AnimationTree
 @export var arm: AnimatedSprite2D
-
+@export var water_collider: Area2D
 @export var horizontal_speed: float = 100
 @export var vertical_speed: float = 10
 @export var max_velocity: float = 1000
@@ -25,6 +25,8 @@ func _ready() -> void:
 	animation_tree.set("parameters/Jump/blend_position", 1)
 	animation_tree.set("parameters/Fall/blend_position", 1)
 	animation_tree.set("parameters/Dash/blend_position", 1)
+	water_collider.area_entered.connect(enter_water)
+	water_collider.area_exited.connect(exit_water)
 
 func _physics_process(delta: float) -> void:
 	# Handle jump.
@@ -62,3 +64,9 @@ func _physics_process(delta: float) -> void:
 
 func hurt() -> void:
 	print_debug("player hurt", health_component.current_health)
+
+func enter_water() -> void:
+	gravity = 100.0
+
+func exit_water() -> void:
+	gravity = 980.0

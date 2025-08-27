@@ -89,6 +89,7 @@ open_menu={
 2d_physics/layer_4="Hitbox"
 2d_physics/layer_5="OverworldTerrain"
 2d_physics/layer_6="EnemyMovement"
+2d_physics/layer_7="Water"
 
 [rendering]
 

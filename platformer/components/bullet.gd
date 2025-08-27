@@ -13,3 +13,6 @@ func _ready():
 func _physics_process(_delta: float) -> void:
 	velocity = v
 	move_and_slide()
+	
+	if position.x < -1000 or position.x > 10000:
+		queue_free()
