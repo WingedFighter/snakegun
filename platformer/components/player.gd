@@ -15,6 +15,7 @@ var facing: Vector2 = Vector2(1, 0)
 var jumping: bool = false
 var falling: bool = false
 var gun_level: int = 1
+var water: bool = false
 # Player hitbox source is 1 for filtering, since hurt/hitboxes are shared between objects
 @export var hitbox_source_layer: int = 0
 
@@ -30,7 +31,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and (is_on_floor() or water):
 		velocity.y = jump_speed
 
 	# Get the input direction and handle the movement/deceleration.
@@ -67,6 +68,8 @@ func hurt() -> void:
 
 func enter_water() -> void:
 	gravity = 100.0
+	water = true
 
 func exit_water() -> void:
 	gravity = 980.0
+	water = false
