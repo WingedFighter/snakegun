@@ -1,6 +1,6 @@
 extends Control
 
-@export var to_scene: String = "SecondSchool1"
+@export var to_scene: String = "OutsideTownSchool"
 
 @onready var video: VideoStreamPlayer = $VideoStreamPlayer
 @onready var skip_button: Button = $CanvasLayer/SkipButton
