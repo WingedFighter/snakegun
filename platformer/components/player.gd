@@ -15,6 +15,7 @@ var facing: Vector2 = Vector2(1, 0)
 var jumping: bool = false
 var falling: bool = false
 var gun_level: int = 1
+var force_dampening: float = 1.0
 var water: bool = false
 # Player hitbox source is 1 for filtering, since hurt/hitboxes are shared between objects
 @export var hitbox_source_layer: int = 0
@@ -60,6 +61,8 @@ func _physics_process(delta: float) -> void:
 
 	jumping = !is_on_floor()
 	falling = !is_on_floor() && velocity.y > 0
+	
+	velocity *= force_dampening
 
 	move_and_slide()
 
@@ -67,9 +70,9 @@ func hurt() -> void:
 	print_debug("player hurt", health_component.current_health)
 
 func enter_water() -> void:
-	gravity = 100.0
+	force_dampening = 0.1
 	water = true
 
 func exit_water() -> void:
-	gravity = 980.0
+	force_dampening = 1.0
 	water = false
