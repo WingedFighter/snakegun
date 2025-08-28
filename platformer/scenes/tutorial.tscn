@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://528a1cmoc4tt"]
+[gd_scene load_steps=18 format=4 uid="uid://528a1cmoc4tt"]
 
 [ext_resource type="Texture2D" uid="uid://cdhpgece3nv3d" path="res://platformer/textures/level1/trees/layer0.png" id="1_italu"]
 [ext_resource type="PackedScene" uid="uid://bg2joonqnel4i" path="res://platformer/components/player.tscn" id="1_ncwiu"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://l4gc7f5i7mbi" path="res://platformer/textures/terrain.png" id="6_italu"]
 [ext_resource type="Texture2D" uid="uid://b1setxi4372f8" path="res://platformer/textures/level1/trees/layer5.png" id="8_ww0kq"]
 [ext_resource type="PackedScene" uid="uid://bixfuhp4yjqfb" path="res://platformer/components/enemy.tscn" id="9_italu"]
+[ext_resource type="PackedScene" uid="uid://cwgke4uunwn6l" path="res://platformer/components/hud.tscn" id="10_2ksu1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_a5smi"]
 
@@ -633,7 +634,7 @@ pattern_1 = SubResource("TileMapPattern_xxcd8")
 pattern_2 = SubResource("TileMapPattern_jtg2b")
 pattern_3 = SubResource("TileMapPattern_2ksu1")
 
-[node name="World" type="Node2D"]
+[node name="Tutorial" type="Node2D"]
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 layer = -128
@@ -734,6 +735,11 @@ position = Vector2(-30, -159.236)
 [node name="marker2" parent="bird1/MoveComponent" index="1"]
 position = Vector2(-30, 6.369)
 
+[node name="HUD" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("10_2ksu1")]
+health_component = NodePath("../Player/HealthComponent")
+
+[editable path="Player"]
+[editable path="Player/HurtboxComponent"]
 [editable path="fox1"]
 [editable path="fox1/HurtboxComponent"]
 [editable path="fox1/HitboxComponent"]

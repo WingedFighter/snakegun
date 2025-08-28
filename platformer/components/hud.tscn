@@ -1,0 +1,117 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwgke4uunwn6l"]
+
+[ext_resource type="Script" uid="uid://b6wuiaaxfnfnx" path="res://platformer/components/hud.gd" id="1_esfj8"]
+[ext_resource type="Texture2D" uid="uid://b2dcxta4v8sos" path="res://platformer/textures/ui/health.png" id="1_rjy54"]
+
+[node name="HUD" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_esfj8")
+
+[node name="Health Container" type="HBoxContainer" parent="."]
+offset_right = 540.0
+offset_bottom = 64.0
+
+[node name="Heart" type="TextureRect" parent="Health Container"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart2" type="TextureRect" parent="Health Container"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart3" type="TextureRect" parent="Health Container"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart4" type="TextureRect" parent="Health Container"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart5" type="TextureRect" parent="Health Container"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart6" type="TextureRect" parent="Health Container"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart7" type="TextureRect" parent="Health Container"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart8" type="TextureRect" parent="Health Container"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart9" type="TextureRect" parent="Health Container"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart10" type="TextureRect" parent="Health Container"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Health Container2" type="HBoxContainer" parent="."]
+offset_top = 64.0
+offset_right = 676.0
+offset_bottom = 128.0
+
+[node name="Heart" type="TextureRect" parent="Health Container2"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart2" type="TextureRect" parent="Health Container2"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart3" type="TextureRect" parent="Health Container2"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart4" type="TextureRect" parent="Health Container2"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart5" type="TextureRect" parent="Health Container2"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart6" type="TextureRect" parent="Health Container2"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart7" type="TextureRect" parent="Health Container2"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart8" type="TextureRect" parent="Health Container2"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart9" type="TextureRect" parent="Health Container2"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1
+
+[node name="Heart10" type="TextureRect" parent="Health Container2"]
+layout_mode = 2
+texture = ExtResource("1_rjy54")
+stretch_mode = 1

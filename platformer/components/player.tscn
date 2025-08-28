@@ -1299,6 +1299,7 @@ position = Vector2(0, 4.70625)
 shape = SubResource("RectangleShape2D_lm5jp")
 
 [node name="HealthComponent" parent="." instance=ExtResource("3_g4g1j")]
+max_health = 20.0
 
 [node name="VelocityComponent" parent="." instance=ExtResource("4_hi5te")]
 
