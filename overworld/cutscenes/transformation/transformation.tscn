@@ -1,3 +1,78 @@
-[gd_scene format=3 uid="uid://dilfncwgas7wr"]
+[gd_scene load_steps=6 format=3 uid="uid://dilfncwgas7wr"]
 
-[node name="Transformation" type="Node2D"]
+[ext_resource type="Script" uid="uid://nmntfxv56gjt" path="res://overworld/cutscenes/transformation/transformation.gd" id="1_e0yu0"]
+[ext_resource type="Shader" uid="uid://dbx6cwhduxkab" path="res://overworld/cutscenes/transformation/vhs.gdshader" id="2_oxs7d"]
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="3_e21jb"]
+[ext_resource type="VideoStream" uid="uid://dow3t3j036g72" path="res://overworld/cutscenes/transformation/magic.ogv" id="3_oxs7d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oxs7d"]
+shader = ExtResource("2_oxs7d")
+shader_parameter/overlay = false
+shader_parameter/scanlines_opacity = 0.4
+shader_parameter/scanlines_width = 0.25
+shader_parameter/grille_opacity = 0.3
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 15.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.05
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/aberration = 0.03
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.01
+shader_parameter/clip_warp = true
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
+[node name="Transformation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e0yu0")
+to_scene = "OutsideTownSchool"
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 128.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+stream = ExtResource("3_oxs7d")
+autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_oxs7d")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="SkipButton" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 945.0
+offset_top = 18.0
+offset_right = 1037.72
+offset_bottom = 65.3165
+scale = Vector2(2, 2)
+theme = ExtResource("3_e21jb")
+text = "Skip"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580, 326)

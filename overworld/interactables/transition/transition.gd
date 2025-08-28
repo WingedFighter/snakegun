@@ -12,7 +12,7 @@ func _ready() -> void:
 
 func immediate_transition(body: Node2D) -> void:
 	if conditional:
-		if body is Player25D && body.flags.has(condition) && body.flags[condition]:
+		if body is Player25D && State.flags.has(condition) && State.flags[condition]:
 			body.hud.last_interactable = self
 			call_deferred("change_scene")
 	elif !conditional && body is Player25D:

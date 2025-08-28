@@ -151,17 +151,17 @@ condition = "first_steps"
 position = Vector2(-5, 0)
 shape = SubResource("RectangleShape2D_ru344")
 
-[node name="Transition" parent="Interactables/Transitions" instance=ExtResource("4_nrcqd")]
+[node name="Transformation" parent="Interactables/Transitions" instance=ExtResource("4_nrcqd")]
 monitorable = false
-to_scene = "ShoujoTransformation"
+to_scene = "Transformation"
 immediate = true
 conditional = true
 condition = "magical_gurl"
 
-[node name="CollisionShape2D" parent="Interactables/Transitions/Transition" index="0"]
+[node name="CollisionShape2D" parent="Interactables/Transitions/Transformation" index="0"]
 position = Vector2(-570, 36.5)
 shape = SubResource("RectangleShape2D_1evcv")
 
 [editable path="Interactables/Transitions/Bottom"]
 [editable path="Interactables/Transitions/FirstSchool1"]
-[editable path="Interactables/Transitions/Transition"]
+[editable path="Interactables/Transitions/Transformation"]

@@ -26,6 +26,7 @@ condition = "start_conversation"
 [node name="TalkManager" parent="Conversation" index="0"]
 graph_data_save_location = "res://overworld/cutscenes/first_steps/graph_data_2.tres"
 talk_state_save_location = "res://overworld/cutscenes/first_steps/talk_state_2.tres"
+talk_state = null
 
 [node name="Characters" type="Node" parent="."]
 

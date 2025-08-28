@@ -18,11 +18,6 @@ func _ready() -> void:
 	player.is_paused = true
 	skip_button.pressed.connect(end_cutscene)
 
-func _input(event: InputEvent) -> void:
-	if event.is_action("interact"):
-		if !skip_button.visible:
-			skip_button.visible = true
-
 func _process(delta: float) -> void:
 	if player.position.y < 260.0:
 		player.position.y += VELOCITY * delta

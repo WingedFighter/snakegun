@@ -12,3 +12,8 @@ func _ready() -> void:
 		first_time.visible = true
 		Quests.add_quest({"name": "First Steps", "contents": "Go to school"})
 		State.flags['first_steps'] = true
+	
+	if State.flags.has("transformation"):
+		Quests.complete_quest("Night Night")
+		Quests.add_quest({"name": "Second Steps", "contents": "Go to school"})
+		State.flags['second_steps'] = true

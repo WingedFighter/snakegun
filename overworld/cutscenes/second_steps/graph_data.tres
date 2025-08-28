@@ -5,16 +5,6 @@
 
 [sub_resource type="Resource" id="Resource_vyci2"]
 script = ExtResource("1_vyci2")
-name = "TalkStart"
-type = "TalkStart"
-position_offset = Vector2(852.5, 299)
-data = {
-&"id": "Start",
-&"next_id": "TalkBasic"
-}
-
-[sub_resource type="Resource" id="Resource_bv3pe"]
-script = ExtResource("1_vyci2")
 name = "TalkBasic"
 type = "TalkBasic"
 position_offset = Vector2(1080, 300)
@@ -24,7 +14,7 @@ data = {
 &"next_id": "TalkBasic2"
 }
 
-[sub_resource type="Resource" id="Resource_2l0ku"]
+[sub_resource type="Resource" id="Resource_bv3pe"]
 script = ExtResource("1_vyci2")
 name = "TalkBasic3"
 type = "TalkBasic"
@@ -35,7 +25,7 @@ data = {
 &"next_id": "TalkBasic4"
 }
 
-[sub_resource type="Resource" id="Resource_pdoc1"]
+[sub_resource type="Resource" id="Resource_2l0ku"]
 script = ExtResource("1_vyci2")
 name = "TalkBasic7"
 type = "TalkBasic"
@@ -46,7 +36,7 @@ data = {
 &"next_id": "TalkEnd"
 }
 
-[sub_resource type="Resource" id="Resource_52u77"]
+[sub_resource type="Resource" id="Resource_pdoc1"]
 script = ExtResource("1_vyci2")
 name = "TalkEnd"
 type = "TalkEnd"
@@ -56,7 +46,7 @@ data = {
 &"next_start": "Start"
 }
 
-[sub_resource type="Resource" id="Resource_twe4g"]
+[sub_resource type="Resource" id="Resource_52u77"]
 script = ExtResource("1_vyci2")
 name = "TalkBasic5"
 type = "TalkBasic"
@@ -67,21 +57,7 @@ data = {
 &"next_id": "TalkBasic6"
 }
 
-[sub_resource type="Resource" id="Resource_kxrt8"]
-script = ExtResource("1_vyci2")
-name = "TalkMessage"
-type = "TalkMessage"
-position_offset = Vector2(820, 520)
-data = {
-&"background": "none",
-&"character_id": "snek",
-&"id": "TalkMessage",
-&"line_id": "-1",
-&"lines": Array[String](["So after school today,", "we need to go to the abandoned garbage dump", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_phf5m"]
+[sub_resource type="Resource" id="Resource_twe4g"]
 script = ExtResource("1_vyci2")
 name = "TalkBasic2"
 type = "TalkBasic"
@@ -92,63 +68,7 @@ data = {
 &"next_id": "TalkBasic3"
 }
 
-[sub_resource type="Resource" id="Resource_d30ne"]
-script = ExtResource("1_vyci2")
-name = "TalkMessage2"
-type = "TalkMessage"
-position_offset = Vector2(1080, 520)
-data = {
-&"background": "none",
-&"character_id": "player_normal",
-&"id": "TalkMessage2",
-&"line_id": "-1",
-&"lines": Array[String](["Why?", "She said she wouldn't be there so don't look for her there.", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_jmvsm"]
-script = ExtResource("1_vyci2")
-name = "TalkMessage3"
-type = "TalkMessage"
-position_offset = Vector2(1080, 700)
-data = {
-&"background": "none",
-&"character_id": "player_normal",
-&"id": "TalkMessage3",
-&"line_id": "-1",
-&"lines": Array[String](["It was bery nice of her to tell us that straight up.", "We won't waste any time there!", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_oio25"]
-script = ExtResource("1_vyci2")
-name = "TalkMessage4"
-type = "TalkMessage"
-position_offset = Vector2(1340, 520)
-data = {
-&"background": "none",
-&"character_id": "snek",
-&"id": "TalkMessage4",
-&"line_id": "-1",
-&"lines": Array[String](["...", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_qsyoe"]
-script = ExtResource("1_vyci2")
-name = "TalkMessage5"
-type = "TalkMessage"
-position_offset = Vector2(1340, 700)
-data = {
-&"background": "none",
-&"character_id": "snek",
-&"id": "TalkMessage5",
-&"line_id": "-1",
-&"lines": Array[String](["I want to know how your brain works and why your are they way you are.", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_slfhp"]
+[sub_resource type="Resource" id="Resource_kxrt8"]
 script = ExtResource("1_vyci2")
 name = "TalkBasic4"
 type = "TalkBasic"
@@ -159,7 +79,7 @@ data = {
 &"next_id": "TalkBasic5"
 }
 
-[sub_resource type="Resource" id="Resource_k0cip"]
+[sub_resource type="Resource" id="Resource_phf5m"]
 script = ExtResource("1_vyci2")
 name = "TalkMessage6"
 type = "TalkMessage"
@@ -173,7 +93,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_0vegq"]
+[sub_resource type="Resource" id="Resource_d30ne"]
 script = ExtResource("1_vyci2")
 name = "TalkMessage7"
 type = "TalkMessage"
@@ -187,7 +107,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_l2uli"]
+[sub_resource type="Resource" id="Resource_jmvsm"]
 script = ExtResource("1_vyci2")
 name = "TalkMessage8"
 type = "TalkMessage"
@@ -201,7 +121,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_dmy1w"]
+[sub_resource type="Resource" id="Resource_oio25"]
 script = ExtResource("1_vyci2")
 name = "TalkBasic6"
 type = "TalkBasic"
@@ -212,7 +132,7 @@ data = {
 &"next_id": "TalkBasic7"
 }
 
-[sub_resource type="Resource" id="Resource_7y3c3"]
+[sub_resource type="Resource" id="Resource_qsyoe"]
 script = ExtResource("1_vyci2")
 name = "TalkMessage9"
 type = "TalkMessage"
@@ -226,15 +146,89 @@ data = {
 &"overlay": "none"
 }
 
+[sub_resource type="Resource" id="Resource_slfhp"]
+script = ExtResource("1_vyci2")
+name = "TalkStart"
+type = "TalkStart"
+position_offset = Vector2(720, 300)
+data = {
+&"id": "Start",
+&"next_id": "TalkBasic"
+}
+
+[sub_resource type="Resource" id="Resource_k0cip"]
+script = ExtResource("1_vyci2")
+name = "TalkMessage"
+type = "TalkMessage"
+position_offset = Vector2(820, 520)
+data = {
+&"background": "none",
+&"character_id": "snek",
+&"id": "TalkMessage",
+&"line_id": "-1",
+&"lines": Array[String](["So after school today,", "we need to go to the abandoned garbage dump", ""]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_0vegq"]
+script = ExtResource("1_vyci2")
+name = "TalkMessage2"
+type = "TalkMessage"
+position_offset = Vector2(1080, 520)
+data = {
+&"background": "none",
+&"character_id": "player_normal",
+&"id": "TalkMessage2",
+&"line_id": "-1",
+&"lines": Array[String](["Why?", "She said she wouldn't be there so don't look for her there.", ""]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_l2uli"]
+script = ExtResource("1_vyci2")
+name = "TalkMessage3"
+type = "TalkMessage"
+position_offset = Vector2(1080, 700)
+data = {
+&"background": "none",
+&"character_id": "player_normal",
+&"id": "TalkMessage3",
+&"line_id": "-1",
+&"lines": Array[String](["It was very nice of her to tell us that straight up.", "We won't waste any time there!", ""]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_dmy1w"]
+script = ExtResource("1_vyci2")
+name = "TalkMessage4"
+type = "TalkMessage"
+position_offset = Vector2(1340, 520)
+data = {
+&"background": "none",
+&"character_id": "snek",
+&"id": "TalkMessage4",
+&"line_id": "-1",
+&"lines": Array[String](["...", "", ""]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_7y3c3"]
+script = ExtResource("1_vyci2")
+name = "TalkMessage5"
+type = "TalkMessage"
+position_offset = Vector2(1340, 700)
+data = {
+&"background": "none",
+&"character_id": "snek",
+&"id": "TalkMessage5",
+&"line_id": "-1",
+&"lines": Array[String](["I want to know how your brain works", "and why you are the way you are.", ""]),
+&"overlay": "none"
+}
+
 [resource]
 script = ExtResource("1_dj8fi")
 connections = Array[Dictionary]([{
-"from_node": &"TalkStart",
-"from_port": 0,
-"keep_alive": false,
-"to_node": &"TalkBasic",
-"to_port": 0
-}, {
 "from_node": &"TalkBasic",
 "from_port": 0,
 "keep_alive": false,
@@ -330,5 +324,11 @@ connections = Array[Dictionary]([{
 "keep_alive": false,
 "to_node": &"TalkBasic7",
 "to_port": 1
+}, {
+"from_node": &"TalkStart",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 0
 }])
 nodes = [SubResource("Resource_vyci2"), SubResource("Resource_bv3pe"), SubResource("Resource_2l0ku"), SubResource("Resource_pdoc1"), SubResource("Resource_52u77"), SubResource("Resource_twe4g"), SubResource("Resource_kxrt8"), SubResource("Resource_phf5m"), SubResource("Resource_d30ne"), SubResource("Resource_jmvsm"), SubResource("Resource_oio25"), SubResource("Resource_qsyoe"), SubResource("Resource_slfhp"), SubResource("Resource_k0cip"), SubResource("Resource_0vegq"), SubResource("Resource_l2uli"), SubResource("Resource_dmy1w"), SubResource("Resource_7y3c3")]

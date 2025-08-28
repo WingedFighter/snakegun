@@ -28,6 +28,7 @@ condition = "start_conversation"
 [node name="TalkManager" parent="Conversation" index="0"]
 graph_data_save_location = "res://overworld/cutscenes/second_steps/graph_data_2.tres"
 talk_state_save_location = "res://overworld/cutscenes/second_steps/talk_state_2.tres"
+talk_state = null
 
 [node name="CollisionShape2D" parent="Conversation" index="2"]
 shape = SubResource("RectangleShape2D_3yreb")
