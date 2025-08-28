@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0n2c0jfd1nos"]
+
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="1_tu4a2"]
+[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_nytcb"]
+[ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="3_u10ju"]
+[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="4_8fwu5"]
+
+[node name="PostTutorial" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="SkipButton" type="Button" parent="CanvasLayer"]
+z_index = 128
+offset_left = 946.0
+offset_top = 25.0
+offset_right = 1038.72
+offset_bottom = 72.3165
+scale = Vector2(2, 2)
+theme = ExtResource("1_tu4a2")
+text = "Skip"
+metadata/_edit_use_anchors_ = true
+
+[node name="Player25D" parent="." instance=ExtResource("2_nytcb")]
+unique_name_in_owner = true
+position = Vector2(-267, 61)
+
+[node name="Snek" parent="." instance=ExtResource("3_u10ju")]
+
+[node name="Conversation" parent="." instance=ExtResource("4_8fwu5")]
+
+[node name="TalkManager" parent="Conversation" index="0"]
+graph_data_save_location = "res://overworld/cutscenes/post_tutorial/graph_data.tres"
+talk_state_save_location = "res://overworld/cutscenes/post_tutorial/talk_state.tres"
+talk_state = null
+
+[node name="CollisionShape2D" parent="Conversation" index="2"]
+position = Vector2(-267, 69)
+
+[editable path="Conversation"]

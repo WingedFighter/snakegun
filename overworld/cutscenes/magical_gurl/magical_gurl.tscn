@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsijv5uekpyif"]
+
+[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="1_fm0vi"]
+[ext_resource type="Script" uid="uid://b85lwcepiofuu" path="res://overworld/cutscenes/magical_gurl/magical_gurl.gd" id="1_qfh82"]
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="2_gktam"]
+[ext_resource type="Texture2D" uid="uid://ip0eqmts283a" path="res://overworld/cutscenes/magical_gurl/forest.png" id="2_ms6g2"]
+[ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="4_qfh82"]
+[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="5_yllw5"]
+
+[node name="MagicalGurl" type="Node2D"]
+script = ExtResource("1_qfh82")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="SkipButton" type="Button" parent="CanvasLayer"]
+z_index = 128
+offset_left = 946.0
+offset_top = 25.0
+offset_right = 1038.72
+offset_bottom = 72.3165
+scale = Vector2(2, 2)
+theme = ExtResource("2_gktam")
+text = "Skip"
+
+[node name="Player25D" parent="." instance=ExtResource("1_fm0vi")]
+unique_name_in_owner = true
+position = Vector2(-267, 61)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-212, 30)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ms6g2")
+
+[node name="Snek" parent="." instance=ExtResource("4_qfh82")]
+
+[node name="Conversation" parent="." instance=ExtResource("5_yllw5")]
+position = Vector2(-268, 70)
+
+[node name="TalkManager" parent="Conversation" index="0"]
+graph_data_save_location = "res://overworld/cutscenes/magical_gurl/graph_data.tres"
+talk_state_save_location = "res://overworld/cutscenes/magical_gurl/talk_state.tres"
+talk_state = null
+
+[editable path="Conversation"]

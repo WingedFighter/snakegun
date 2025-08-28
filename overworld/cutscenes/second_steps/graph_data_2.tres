@@ -898,7 +898,7 @@ data = {
 
 [resource]
 script = ExtResource("1_r0oa1")
-connections = [{
+connections = Array[Dictionary]([{
 "from_node": &"TalkMessage",
 "from_port": 0,
 "keep_alive": false,
@@ -1318,5 +1318,5 @@ connections = [{
 "keep_alive": false,
 "to_node": &"TalkBasic",
 "to_port": 0
-}]
+}])
 nodes = [SubResource("Resource_tsysr"), SubResource("Resource_m8dmd"), SubResource("Resource_yu20w"), SubResource("Resource_3jkpy"), SubResource("Resource_6pw5a"), SubResource("Resource_xs0d3"), SubResource("Resource_1bjph"), SubResource("Resource_alltd"), SubResource("Resource_u413i"), SubResource("Resource_ae3oe"), SubResource("Resource_i3ln1"), SubResource("Resource_ye8od"), SubResource("Resource_e5goc"), SubResource("Resource_jyrql"), SubResource("Resource_dt7hc"), SubResource("Resource_eykck"), SubResource("Resource_71b0e"), SubResource("Resource_fuqf8"), SubResource("Resource_elyb8"), SubResource("Resource_bxfgg"), SubResource("Resource_nxjip"), SubResource("Resource_mi4ms"), SubResource("Resource_n4qrj"), SubResource("Resource_m3nl1"), SubResource("Resource_7t7vh"), SubResource("Resource_xu8sx"), SubResource("Resource_typ3n"), SubResource("Resource_h5r0x"), SubResource("Resource_585y2"), SubResource("Resource_te6yh"), SubResource("Resource_3csj0"), SubResource("Resource_mrjmh"), SubResource("Resource_1jpqa"), SubResource("Resource_qffkb"), SubResource("Resource_5bsw5"), SubResource("Resource_iysdg"), SubResource("Resource_lckke"), SubResource("Resource_xvqem"), SubResource("Resource_kybnt"), SubResource("Resource_8r7x0"), SubResource("Resource_hrw7j"), SubResource("Resource_nblrc"), SubResource("Resource_d7037"), SubResource("Resource_dil80"), SubResource("Resource_7u53c"), SubResource("Resource_jiebs"), SubResource("Resource_nlw27"), SubResource("Resource_8quou"), SubResource("Resource_ulwbm"), SubResource("Resource_wp1di"), SubResource("Resource_nyng0"), SubResource("Resource_812g4"), SubResource("Resource_e3pwk"), SubResource("Resource_l3qbq"), SubResource("Resource_iib76"), SubResource("Resource_q4swy"), SubResource("Resource_vjmsg"), SubResource("Resource_e6nw4"), SubResource("Resource_7xdyi"), SubResource("Resource_rwkuk"), SubResource("Resource_nuddj"), SubResource("Resource_7ufiv"), SubResource("Resource_ewcqg"), SubResource("Resource_mharc"), SubResource("Resource_yr3nj"), SubResource("Resource_7cn1o"), SubResource("Resource_y3krs"), SubResource("Resource_2322g"), SubResource("Resource_f6eqc"), SubResource("Resource_qftl4"), SubResource("Resource_cm746")]

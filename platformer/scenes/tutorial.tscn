@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://l4gc7f5i7mbi" path="res://platformer/textures/terrain.png" id="6_italu"]
 [ext_resource type="Texture2D" uid="uid://b1setxi4372f8" path="res://platformer/textures/level1/trees/layer5.png" id="8_ww0kq"]
 [ext_resource type="PackedScene" uid="uid://bixfuhp4yjqfb" path="res://platformer/components/enemy.tscn" id="9_italu"]
-[ext_resource type="PackedScene" path="res://platformer/components/hud.tscn" id="10_2ksu1"]
+[ext_resource type="PackedScene" uid="uid://cwgke4uunwn6l" path="res://platformer/components/hud.tscn" id="10_2ksu1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_a5smi"]
 
@@ -715,6 +715,7 @@ position = Vector2(-582.784, -329.945)
 position = Vector2(1381.04, 286.117)
 
 [node name="fox1" parent="." instance=ExtResource("9_italu")]
+visible = false
 position = Vector2(-199, -131.89)
 scale = Vector2(0.785, 0.785)
 
@@ -725,6 +726,7 @@ position = Vector2(-161, -1)
 position = Vector2(98, 6)
 
 [node name="bird1" parent="." instance=ExtResource("9_italu")]
+visible = false
 position = Vector2(405, -194)
 scale = Vector2(0.785, 0.785)
 enemy_type = "bird"
@@ -736,6 +738,7 @@ position = Vector2(-30, -159.236)
 position = Vector2(-30, 6.369)
 
 [node name="HUD" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("10_2ksu1")]
+visible = false
 health_component = NodePath("../Player/HealthComponent")
 
 [editable path="Player"]
