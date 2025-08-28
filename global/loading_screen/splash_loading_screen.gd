@@ -29,7 +29,8 @@ extends CanvasLayer
 	"Boss2": "res://global/audio/background_music/Boss2.wav",
 	"FinalBossReal": "res://global/audio/background_music/FinalBossReal.wav",
 	"SomewhereInIdaho": "res://global/audio/background_music/SomewhereInIdaho.wav",
-	"SchoolDay": "res://global/audio/background_music/SchoolDay.wav"
+	"SchoolDay": "res://global/audio/background_music/SchoolDay.wav",
+	"ImAMagicalGirl": "res://global/audio/background_music/ImAMagicalGirl!.wav"
 }
 
 const SECOND: float = 1000.0

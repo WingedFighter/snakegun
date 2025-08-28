@@ -10,6 +10,7 @@ func _ready() -> void:
 	State.flags['transformation'] = true
 	Quests.complete_quest("Magical Gurl")
 	Quests.add_quest({"name": "Night Night", "contents": "Go to bed (Do you remember where you live?)"})
+	AudioManager.play_music("ImAMagicalGirl")
 
 
 func _input(event: InputEvent) -> void:

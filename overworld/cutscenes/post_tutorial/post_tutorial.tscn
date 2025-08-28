@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0n2c0jfd1nos"]
+[gd_scene load_steps=6 format=3 uid="uid://b0n2c0jfd1nos"]
 
+[ext_resource type="Script" uid="uid://clw57ta3iydfc" path="res://overworld/cutscenes/post_tutorial/post_tutorial.gd" id="1_nytcb"]
 [ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="1_tu4a2"]
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_nytcb"]
 [ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="3_u10ju"]
 [ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="4_8fwu5"]
 
 [node name="PostTutorial" type="Node2D"]
+script = ExtResource("1_nytcb")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 50
