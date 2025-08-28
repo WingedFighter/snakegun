@@ -27,8 +27,8 @@ func _ready() -> void:
 	animation_tree.set("parameters/Jump/blend_position", 1)
 	animation_tree.set("parameters/Fall/blend_position", 1)
 	animation_tree.set("parameters/Dash/blend_position", 1)
-	water_collider.area_entered.connect(enter_water)
-	water_collider.area_exited.connect(exit_water)
+	water_collider.body_entered.connect(enter_water)
+	water_collider.body_exited.connect(exit_water)
 
 func _physics_process(delta: float) -> void:
 	# Handle jump.
@@ -69,10 +69,11 @@ func _physics_process(delta: float) -> void:
 func hurt() -> void:
 	print_debug("player hurt", health_component.current_health)
 
-func enter_water() -> void:
-	force_dampening = 0.1
+func enter_water(_body: Node2D) -> void:
+	print_debug('water hit')
+	force_dampening = 0.92
 	water = true
 
-func exit_water() -> void:
+func exit_water(_body: Node2D) -> void:
 	force_dampening = 1.0
 	water = false
