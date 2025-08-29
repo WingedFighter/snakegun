@@ -21,7 +21,8 @@ extends CanvasLayer
 	"SecondSchool2": "res://overworld/cutscenes/second_steps/second_school_2.tscn",
 	"MagicalGurl": "res://overworld/cutscenes/magical_gurl/magical_gurl.tscn",
 	"Tutorial": "res://platformer/scenes/tutorial.tscn",
-	"PostTutorial": "res://overworld/cutscenes/post_tutorial/post_tutorial.tscn"
+	"PostTutorial": "res://overworld/cutscenes/post_tutorial/post_tutorial.tscn",
+	"PreBoss1": "res://overworld/cutscenes/pre_boss_1/pre_boss_1.tscn"
 }
 
 @export var music_dictionary: Dictionary[String, String] = {
