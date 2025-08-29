@@ -1,3 +1,4 @@
+class_name PlayerMegaman
 extends CharacterBody2D
 
 @export var velocity_component: VelocityComponent
@@ -6,6 +7,7 @@ extends CharacterBody2D
 @export var animation_tree: AnimationTree
 @export var arm: AnimatedSprite2D
 @export var water_collider: Area2D
+@export var pickup_collider: Area2D
 @export var horizontal_speed: float = 100
 @export var vertical_speed: float = 10
 @export var max_velocity: float = 1000
@@ -20,6 +22,8 @@ var water: bool = false
 # Player hitbox source is 1 for filtering, since hurt/hitboxes are shared between objects
 @export var hitbox_source_layer: int = 0
 
+signal gun_level_up(new: int)
+
 func _ready() -> void:
 	health_component.health_lost.connect(hurt)
 	animation_tree.set("parameters/Walk/blend_position", 1)
@@ -29,6 +33,8 @@ func _ready() -> void:
 	animation_tree.set("parameters/Dash/blend_position", 1)
 	water_collider.body_entered.connect(enter_water)
 	water_collider.body_exited.connect(exit_water)
+	pickup_collider.body_entered.connect(enter_pickup)
+	pickup_collider.body_exited.connect(enter_pickup)
 
 func _physics_process(delta: float) -> void:
 	# Handle jump.
@@ -56,7 +62,8 @@ func _physics_process(delta: float) -> void:
 	clamp(velocity.y, -max_velocity, max_velocity)
 	
 	if Input.is_action_just_pressed("normal_fire"):
-		arm.play('level' + str(gun_level) + 'shoot')
+		print_debug(str(posmod(gun_level, 5) + 1))
+		arm.play('level' + str(gun_level / 5 + 1) + 'shoot')
 		shoot_component.fire(facing * 1000, 1)
 
 	jumping = !is_on_floor()

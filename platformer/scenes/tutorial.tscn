@@ -413,13 +413,13 @@ texture_region_size = Vector2i(32, 32)
 9:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 10:12/0 = 0
 10:12/0/z_index = 100
-10:12/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, 0, 16, 0, 16, 16, -16, 16)
+10:12/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 11:12/0 = 0
 11:12/0/z_index = 100
-11:12/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, 0, 16, 0, 16, 16, -16, 16)
+11:12/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 12:12/0 = 0
 12:12/0/z_index = 100
-12:12/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, 0, 16, 0, 16, 16, -16, 16)
+12:12/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 0:13/0 = 0
 2:13/0 = 0
 5:13/0 = 0
@@ -699,6 +699,9 @@ position = Vector2(-502, -185.335)
 collision_layer = 1
 horizontal_speed = 800.0
 
+[node name="arm" parent="Player" index="8"]
+animation = &"level1shoot"
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
@@ -715,7 +718,6 @@ position = Vector2(-582.784, -329.945)
 position = Vector2(1381.04, 286.117)
 
 [node name="fox1" parent="." instance=ExtResource("9_italu")]
-visible = false
 position = Vector2(-199, -131.89)
 scale = Vector2(0.785, 0.785)
 
@@ -726,7 +728,6 @@ position = Vector2(-161, -1)
 position = Vector2(98, 6)
 
 [node name="bird1" parent="." instance=ExtResource("9_italu")]
-visible = false
 position = Vector2(405, -194)
 scale = Vector2(0.785, 0.785)
 enemy_type = "bird"
@@ -738,7 +739,6 @@ position = Vector2(-30, -159.236)
 position = Vector2(-30, 6.369)
 
 [node name="HUD" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("10_2ksu1")]
-visible = false
 health_component = NodePath("../Player/HealthComponent")
 
 [editable path="Player"]

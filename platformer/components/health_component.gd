@@ -11,6 +11,7 @@ signal health_changed(old, new)
 
 func _ready() -> void:
 	current_health = max_health
+	health_changed.emit(0, current_health)
 
 func hurt(damage: float) -> void:
 	current_health -= damage
@@ -21,7 +22,7 @@ func hurt(damage: float) -> void:
 		health_increased.emit()
 	if (current_health <= 0):
 		health_depleted.emit()
-	health_changed.emit(current_health, current_health + damage)
+	health_changed.emit(current_health + damage, current_health)
 
 func heal(health: float) -> void:
 	hurt(-health)

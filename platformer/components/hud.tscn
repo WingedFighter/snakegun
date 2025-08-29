@@ -1,15 +1,114 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwgke4uunwn6l"]
+[gd_scene load_steps=25 format=3 uid="uid://cwgke4uunwn6l"]
 
 [ext_resource type="Script" uid="uid://b6wuiaaxfnfnx" path="res://platformer/components/hud.gd" id="1_esfj8"]
 [ext_resource type="Texture2D" uid="uid://b2dcxta4v8sos" path="res://platformer/textures/ui/health.png" id="1_rjy54"]
+[ext_resource type="Texture2D" uid="uid://cjbcttncfearc" path="res://platformer/textures/ui/levels/Base.png" id="3_wehjt"]
+[ext_resource type="Texture2D" uid="uid://b5nde5s52fnla" path="res://platformer/textures/ui/levels/pw1.png" id="4_w16qe"]
+[ext_resource type="Texture2D" uid="uid://c2g3t5v5hihh0" path="res://platformer/textures/ui/levels/pw2.png" id="5_kv3u4"]
+[ext_resource type="Texture2D" uid="uid://c0qr3qrcqymq2" path="res://platformer/textures/ui/levels/pw3.png" id="6_fwpk7"]
+[ext_resource type="Texture2D" uid="uid://cagkti8mx404k" path="res://platformer/textures/ui/levels/pw4.png" id="7_ovreu"]
+[ext_resource type="Texture2D" uid="uid://bodihh1mu7ecf" path="res://platformer/textures/ui/levels/pw5.png" id="8_yuua2"]
+[ext_resource type="Texture2D" uid="uid://cwgc1swhkk0iy" path="res://platformer/textures/ui/levels/pw6.png" id="9_6l4na"]
+[ext_resource type="Texture2D" uid="uid://damfp1qx8yjbg" path="res://platformer/textures/ui/levels/pw7.png" id="10_hwpy3"]
+[ext_resource type="Texture2D" uid="uid://1y5eveg2445h" path="res://platformer/textures/ui/levels/pw8.png" id="11_dk8ir"]
+[ext_resource type="Texture2D" uid="uid://bcdrowxk7yrcd" path="res://platformer/textures/ui/levels/pw9.png" id="12_mdy6i"]
+[ext_resource type="Texture2D" uid="uid://rg6ry0pyrqff" path="res://platformer/textures/ui/levels/pw10.png" id="13_uwiub"]
+[ext_resource type="Texture2D" uid="uid://do6qm7jl172i1" path="res://platformer/textures/ui/levels/pw11.png" id="14_mtaws"]
+[ext_resource type="Texture2D" uid="uid://s3ygvebvgfu3" path="res://platformer/textures/ui/levels/pw12.png" id="15_sc2or"]
+[ext_resource type="Texture2D" uid="uid://ckeq5oxa1e3tb" path="res://platformer/textures/ui/levels/pw13.png" id="16_151aj"]
+[ext_resource type="Texture2D" uid="uid://dohda3rytypu1" path="res://platformer/textures/ui/levels/pw14.png" id="17_xn8c5"]
+[ext_resource type="Texture2D" uid="uid://c00mkvsk3qwg4" path="res://platformer/textures/ui/levels/pw15.png" id="18_xgsny"]
+[ext_resource type="Texture2D" uid="uid://d4kt1jb212iqb" path="res://platformer/textures/ui/guns/gunlvl1.png" id="19_e21uj"]
+[ext_resource type="Texture2D" uid="uid://b1k770rxjvawd" path="res://platformer/textures/ui/guns/gunlvl2.png" id="20_tib2t"]
+[ext_resource type="Texture2D" uid="uid://ppol1486ta75" path="res://platformer/textures/ui/guns/gunlvl3.png" id="21_sin1j"]
+[ext_resource type="Texture2D" uid="uid://t1o165j2vhx3" path="res://platformer/textures/ui/guns/gunlvlfinal.png" id="22_t70uv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6n44u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wehjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w16qe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kv3u4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fwpk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ovreu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yuua2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6l4na")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hwpy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dk8ir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mdy6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_uwiub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mtaws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_sc2or")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_151aj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_xn8c5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_xgsny")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vs78m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_e21uj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_tib2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_sin1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_t70uv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="HUD" type="CanvasLayer"]
 layer = 2
 script = ExtResource("1_esfj8")
 
 [node name="Health Container" type="HBoxContainer" parent="."]
-offset_right = 540.0
-offset_bottom = 64.0
+offset_left = 185.0
+offset_top = 6.0
+offset_right = 861.0
+offset_bottom = 70.0
+scale = Vector2(0.6, 0.6)
 
 [node name="Heart" type="TextureRect" parent="Health Container"]
 layout_mode = 2
@@ -62,9 +161,11 @@ texture = ExtResource("1_rjy54")
 stretch_mode = 1
 
 [node name="Health Container2" type="HBoxContainer" parent="."]
-offset_top = 64.0
-offset_right = 676.0
-offset_bottom = 128.0
+offset_left = 185.0
+offset_top = 45.0
+offset_right = 861.0
+offset_bottom = 109.0
+scale = Vector2(0.6, 0.6)
 
 [node name="Heart" type="TextureRect" parent="Health Container2"]
 layout_mode = 2
@@ -115,3 +216,13 @@ stretch_mode = 1
 layout_mode = 2
 texture = ExtResource("1_rjy54")
 stretch_mode = 1
+
+[node name="GunLevel" type="Node2D" parent="."]
+position = Vector2(90, 90)
+scale = Vector2(0.7, 0.7)
+
+[node name="ExpBar" type="AnimatedSprite2D" parent="GunLevel"]
+sprite_frames = SubResource("SpriteFrames_6n44u")
+
+[node name="GunSprite" type="AnimatedSprite2D" parent="GunLevel"]
+sprite_frames = SubResource("SpriteFrames_vs78m")
