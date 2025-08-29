@@ -127,7 +127,9 @@ shape = SubResource("RectangleShape2D_sgagr")
 [node name="Spawner" parent="." instance=ExtResource("5_y1udv")]
 spawns = Dictionary[String, NodePath]({
 "FirstSchool2": NodePath("FirstSchool2"),
-"OutsideTownMain": NodePath("OutsideTownMain")
+"OutsideTownMain": NodePath("OutsideTownMain"),
+"PostBoss1": NodePath("PostBoss1"),
+"SecondSchool2": NodePath("SecondSchool2")
 })
 
 [node name="OutsideTownMain" type="Marker2D" parent="Spawner"]
@@ -135,6 +137,12 @@ position = Vector2(-27, 276)
 
 [node name="FirstSchool2" type="Marker2D" parent="Spawner"]
 position = Vector2(-38, -204)
+
+[node name="SecondSchool2" type="Marker2D" parent="Spawner"]
+position = Vector2(-13, -217)
+
+[node name="PostBoss1" type="Marker2D" parent="Spawner"]
+position = Vector2(-520, 36)
 
 [node name="Interactables" type="Node2D" parent="."]
 
@@ -170,6 +178,18 @@ condition = "magical_gurl"
 position = Vector2(-570, 36.5)
 shape = SubResource("RectangleShape2D_1evcv")
 
+[node name="FatDump" parent="Interactables/Transitions" instance=ExtResource("4_nrcqd")]
+position = Vector2(570, 40)
+to_scene = "FatDump"
+immediate = true
+conditional = true
+condition = "fat_dump"
+
+[node name="CollisionShape2D" parent="Interactables/Transitions/FatDump" index="0"]
+position = Vector2(2, -4)
+scale = Vector2(1, 5.32)
+
 [editable path="Interactables/Transitions/Bottom"]
 [editable path="Interactables/Transitions/FirstSchool1"]
 [editable path="Interactables/Transitions/Transformation"]
+[editable path="Interactables/Transitions/FatDump"]
