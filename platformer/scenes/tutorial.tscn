@@ -738,8 +738,9 @@ position = Vector2(-30, -159.236)
 [node name="marker2" parent="bird1/MoveComponent" index="1"]
 position = Vector2(-30, 6.369)
 
-[node name="HUD" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("10_2ksu1")]
+[node name="HUD" parent="." node_paths=PackedStringArray("health_component", "player") instance=ExtResource("10_2ksu1")]
 health_component = NodePath("../Player/HealthComponent")
+player = NodePath("../Player")
 
 [editable path="Player"]
 [editable path="Player/HurtboxComponent"]

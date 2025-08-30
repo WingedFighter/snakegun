@@ -16,7 +16,7 @@ extends CharacterBody2D
 var facing: Vector2 = Vector2(1, 0)
 var jumping: bool = false
 var falling: bool = false
-var gun_level: int = 1
+var gun_level: int = 0
 var force_dampening: float = 1.0
 var water: bool = false
 # Player hitbox source is 1 for filtering, since hurt/hitboxes are shared between objects
@@ -33,8 +33,8 @@ func _ready() -> void:
 	animation_tree.set("parameters/Dash/blend_position", 1)
 	water_collider.body_entered.connect(enter_water)
 	water_collider.body_exited.connect(exit_water)
-	#pickup_collider.body_entered.connect(enter_pickup)
-	#pickup_collider.body_exited.connect(enter_pickup)
+	pickup_collider.area_entered.connect(enter_pickup)
+	pickup_collider.area_exited.connect(exit_pickup)
 
 func _physics_process(delta: float) -> void:
 	# Handle jump.
@@ -62,7 +62,7 @@ func _physics_process(delta: float) -> void:
 	clamp(velocity.y, -max_velocity, max_velocity)
 	
 	if Input.is_action_just_pressed("normal_fire"):
-		print_debug(str(posmod(gun_level, 5) + 1))
+		@warning_ignore("integer_division")
 		arm.play('level' + str(gun_level / 5 + 1) + 'shoot')
 		shoot_component.fire(facing * 1000, 1)
 
@@ -77,10 +77,18 @@ func hurt() -> void:
 	print_debug("player hurt", health_component.current_health)
 
 func enter_water(_body: Node2D) -> void:
-	print_debug('water hit')
 	force_dampening = 0.92
 	water = true
 
 func exit_water(_body: Node2D) -> void:
 	force_dampening = 1.0
 	water = false
+
+func enter_pickup(area: Area2D) -> void:
+	print_debug('pickup hit')
+	area.get_parent().queue_free()
+	gun_level = clamp(gun_level + 1, 0, 15)
+	gun_level_up.emit(gun_level)
+
+func exit_pickup(_area: Area2D) -> void:
+	pass

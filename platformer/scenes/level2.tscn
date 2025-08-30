@@ -583,11 +583,6 @@ tile_set = SubResource("TileSet_xxcd8")
 [node name="Player" parent="." instance=ExtResource("7_dxx3a")]
 collision_layer = 1
 horizontal_speed = 800.0
-vertical_speed = null
-max_velocity = null
-gravity = null
-jump_speed = null
-hitbox_source_layer = null
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
