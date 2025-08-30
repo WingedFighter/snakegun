@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://dympgn7pcqbdw"]
+
+[ext_resource type="Script" uid="uid://drcdgi04wxucj" path="res://overworld/cutscenes/third_steps/third_school_1.gd" id="1_uscb7"]
+[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="1_wy07w"]
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="2_8pcxd"]
+[ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="3_uscb7"]
+[ext_resource type="Texture2D" uid="uid://6agfqpargst6" path="res://overworld/maps/outside/town/school/classroom.png" id="4_58cdo"]
+[ext_resource type="PackedScene" uid="uid://cb3t6nm8lfxb4" path="res://overworld/characters/teacher/teacher.tscn" id="5_0fcxa"]
+[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="7_58cdo"]
+
+[node name="ThirdSchool1" type="Node2D"]
+script = ExtResource("1_uscb7")
+
+[node name="Player25D" parent="." instance=ExtResource("1_wy07w")]
+unique_name_in_owner = true
+position = Vector2(-44, -187)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player25D"]
+layer = 50
+
+[node name="SkipButton" type="Button" parent="Player25D/CanvasLayer"]
+z_index = 128
+offset_left = 946.0
+offset_top = 25.0
+offset_right = 1038.72
+offset_bottom = 72.3165
+scale = Vector2(2, 2)
+theme = ExtResource("2_8pcxd")
+text = "Skip"
+metadata/_edit_use_anchors_ = true
+
+[node name="Snek" parent="." instance=ExtResource("3_uscb7")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_58cdo")
+
+[node name="Teacher" parent="." instance=ExtResource("5_0fcxa")]
+
+[node name="Conversation" parent="." instance=ExtResource("7_58cdo")]
+position = Vector2(9.99998, 247)
+scale = Vector2(29.279, -19.2433)
+conditional = true
+condition = "start_conversation"
+
+[node name="TalkManager" parent="Conversation" index="0"]
+graph_data_save_location = "res://overworld/cutscenes/third_steps/graph_data.tres"
+talk_state_save_location = "res://overworld/cutscenes/third_steps/talk_state.tres"
+talk_state = null
+
+[editable path="Conversation"]

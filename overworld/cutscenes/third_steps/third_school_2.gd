@@ -33,9 +33,9 @@ func _process(_delta: float) -> void:
 
 func end_cutscene() -> void:
 	State.flags['in_cutscene'] = false
-	State.flags['second_steps'] = false
+	State.flags['third_steps'] = false
 	State.flags.erase('start_conversation')
-	Quests.complete_quest("Second Steps")
-	Quests.add_quest({"name": "Fat Dump", "contents": "Go to the dump (East of the school)"})
-	State.flags['fat_dump'] = true
+	Quests.complete_quest("Third Steps")
+	Quests.add_quest({"name": "Bright Lights", "contents": "Go to the big city (Take a car)"})
+	State.flags['bright_lights'] = true
 	SceneManager.change_scene(change_scene)

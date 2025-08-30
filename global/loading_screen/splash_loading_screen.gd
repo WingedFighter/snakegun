@@ -28,7 +28,9 @@ extends CanvasLayer
 	"PreBoss2": "res://overworld/cutscenes/pre_boss_2/pre_boss_2.tscn",
 	"Explosion": "res://overworld/cutscenes/pre_boss_2/explosion.tscn",
 	"PreBoss22": "res://overworld/cutscenes/pre_boss_2/pre_boss_22.tscn",
-	"PostBoss2": "res://overworld/cutscenes/post_boss_2/post_boss_2.tscn"
+	"PostBoss2": "res://overworld/cutscenes/post_boss_2/post_boss_2.tscn",
+	"ThirdSchool1": "res://overworld/cutscenes/third_steps/third_school_1.tscn",
+	"ThirdSchool2": "res://overworld/cutscenes/third_steps/third_school_2.tscn"
 }
 
 @export var music_dictionary: Dictionary[String, String] = {

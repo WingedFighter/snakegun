@@ -8,5 +8,8 @@ func _ready() -> void:
 	if State.flags.has('second_steps') && State.flags['second_steps']:
 		$Interactables/Transitions/FirstSchool1.condition = "second_steps"
 		$Interactables/Transitions/FirstSchool1.to_scene = "SecondSchool1"
+	elif State.flags.has('third_steps') && State.flags['third_steps']:
+		$Interactables/Transitions/FirstSchool1.condition = "third_steps"
+		$Interactables/Transitions/FirstSchool1.to_scene = "ThirdSchool1"
 	elif State.flags.has('transformation'):
 		$Interactables/Transitions/FirstSchool1.condition = "not_doable"

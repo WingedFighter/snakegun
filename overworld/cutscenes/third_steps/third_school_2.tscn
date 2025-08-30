@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://7vqkiyhcpymo"]
+
+[ext_resource type="Script" uid="uid://c1aub1s8srvda" path="res://overworld/cutscenes/third_steps/third_school_2.gd" id="1_4bqnx"]
+[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="1_kf3gw"]
+[ext_resource type="Texture2D" uid="uid://dxigokcyxb82k" path="res://overworld/maps/outside/town/school/lunch.png" id="2_1iuq0"]
+[ext_resource type="PackedScene" uid="uid://b0ap8du2c15jq" path="res://overworld/characters/leah/leah.tscn" id="3_4bqnx"]
+[ext_resource type="PackedScene" uid="uid://djniptanm3f68" path="res://overworld/characters/barb/barb.tscn" id="4_umt5o"]
+[ext_resource type="PackedScene" uid="uid://dcd5kkwk0ydij" path="res://overworld/characters/sarah/sarah.tscn" id="5_5w0sg"]
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="6_lp5ak"]
+[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="7_1iuq0"]
+
+[node name="ThirdSchool2" type="Node2D"]
+script = ExtResource("1_4bqnx")
+
+[node name="Player25D" parent="." instance=ExtResource("1_kf3gw")]
+unique_name_in_owner = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_1iuq0")
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="Leah" parent="Characters" instance=ExtResource("3_4bqnx")]
+
+[node name="Barb" parent="Characters" instance=ExtResource("4_umt5o")]
+
+[node name="Sarah" parent="Characters" instance=ExtResource("5_5w0sg")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="SkipButton" type="Button" parent="CanvasLayer"]
+offset_left = 945.0
+offset_top = 18.0
+offset_right = 1037.72
+offset_bottom = 65.3165
+scale = Vector2(2, 2)
+theme = ExtResource("6_lp5ak")
+text = "Skip"
+metadata/_edit_use_anchors_ = true
+
+[node name="Conversation" parent="." instance=ExtResource("7_1iuq0")]
+
+[node name="TalkManager" parent="Conversation" index="0"]
+graph_data_save_location = "res://overworld/cutscenes/third_steps/graph_data2.tres"
+talk_state_save_location = "res://overworld/cutscenes/third_steps/talk_state2.tres"
+talk_state = null
+
+[editable path="Conversation"]

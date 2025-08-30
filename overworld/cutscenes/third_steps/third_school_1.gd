@@ -1,26 +1,26 @@
 extends Node2D
 
-const VELOCITY = 10.0
+const VELOCITY: float = 100.0
 
-@export var change_scene: String = "OutsideTownSchool"
+@export var change_scene = "ThirdSchool2"
 
 @onready var player: Player25D = %Player25D
-@onready var skip_button: Button = $CanvasLayer/SkipButton
+@onready var skip_button: Button = %Player25D/CanvasLayer/SkipButton
 
 var start_conversation: bool = false
-var frame_count: int = 0
-var frame_limit: int = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	LoadingScreen.stop_load()
 	State.flags['in_cutscene'] = true
 	State.flags['start_conversation'] = false
+	AudioManager.play_music("SchoolDay")
 	player.is_paused = true
 	skip_button.pressed.connect(end_cutscene)
 
-func _process(_delta: float) -> void:
-	if frame_count < frame_limit:
-		frame_count += 1
+func _process(delta: float) -> void:
+	if player.position.y < 260.0:
+		player.position.y += VELOCITY * delta
 	elif !start_conversation:
 		State.flags['start_conversation'] = true
 		var interact_event = InputEventAction.new()
@@ -32,10 +32,4 @@ func _process(_delta: float) -> void:
 		end_cutscene()
 
 func end_cutscene() -> void:
-	State.flags['in_cutscene'] = false
-	State.flags['second_steps'] = false
-	State.flags.erase('start_conversation')
-	Quests.complete_quest("Second Steps")
-	Quests.add_quest({"name": "Fat Dump", "contents": "Go to the dump (East of the school)"})
-	State.flags['fat_dump'] = true
 	SceneManager.change_scene(change_scene)

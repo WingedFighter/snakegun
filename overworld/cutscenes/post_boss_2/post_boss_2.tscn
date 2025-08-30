@@ -41,5 +41,6 @@ position = Vector2(-268, 69)
 [node name="TalkManager" parent="Conversation" index="0"]
 graph_data_save_location = "res://overworld/cutscenes/post_boss_2/graph_data.tres"
 talk_state_save_location = "res://overworld/cutscenes/post_boss_2/talk_state.tres"
+talk_state = null
 
 [editable path="Conversation"]
