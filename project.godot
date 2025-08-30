@@ -33,9 +33,7 @@ enabled=PackedStringArray("res://addons/letstalkaboutit/plugin.cfg")
 
 folder_colors={
 "res://overworld/cutscenes/pokemon/": "red",
-"res://overworld/cutscenes/post_boss_2/": "red",
 "res://overworld/cutscenes/post_boss_3/": "red",
-"res://overworld/cutscenes/pre_boss_2/": "red",
 "res://overworld/cutscenes/pre_boss_3/": "red",
 "res://overworld/cutscenes/third_steps/": "red"
 }

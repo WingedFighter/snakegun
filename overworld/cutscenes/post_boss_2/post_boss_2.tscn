@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://ciebpd5yd0mp8"]
+
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="1_sal2w"]
+[ext_resource type="Script" uid="uid://3exd37ktraw4" path="res://overworld/cutscenes/post_boss_2/post_boss_2.gd" id="1_slamo"]
+[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_ixtvq"]
+[ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="3_slamo"]
+[ext_resource type="PackedScene" uid="uid://dcd5kkwk0ydij" path="res://overworld/characters/sarah/sarah.tscn" id="4_g0g1b"]
+[ext_resource type="PackedScene" uid="uid://dxp8mj5uwx6t5" path="res://overworld/characters/frecko/frecko.tscn" id="5_ixtvq"]
+[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="5_phsdn"]
+
+[node name="PostBoss2" type="Node2D"]
+script = ExtResource("1_slamo")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="SkipButton" type="Button" parent="CanvasLayer"]
+z_index = 128
+offset_left = 946.0
+offset_top = 25.0
+offset_right = 1038.72
+offset_bottom = 72.3165
+scale = Vector2(2, 2)
+theme = ExtResource("1_sal2w")
+text = "Skip"
+metadata/_edit_use_anchors_ = true
+
+[node name="Player25D" parent="." instance=ExtResource("2_ixtvq")]
+unique_name_in_owner = true
+position = Vector2(-267, 61)
+
+[node name="Snek" parent="." instance=ExtResource("3_slamo")]
+
+[node name="Sarah" parent="." instance=ExtResource("4_g0g1b")]
+
+[node name="Frecko" parent="." instance=ExtResource("5_ixtvq")]
+
+[node name="Conversation" parent="." instance=ExtResource("5_phsdn")]
+position = Vector2(-268, 69)
+
+[node name="TalkManager" parent="Conversation" index="0"]
+graph_data_save_location = "res://overworld/cutscenes/post_boss_2/graph_data.tres"
+talk_state_save_location = "res://overworld/cutscenes/post_boss_2/talk_state.tres"
+
+[editable path="Conversation"]

@@ -15,7 +15,6 @@ var frame_limit: int = 10
 func _ready() -> void:
 	State.flags['in_cutscene'] = true
 	State.flags['start_conversation'] = false
-	AudioManager.play_music("SchoolDay")
 	player.is_paused = true
 	skip_button.pressed.connect(end_cutscene)
 

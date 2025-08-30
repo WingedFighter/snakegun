@@ -1,0 +1,590 @@
+[gd_resource type="Resource" script_class="GraphData" load_steps=35 format=3 uid="uid://bseivaitox303"]
+
+[ext_resource type="Script" uid="uid://hvf8qm27oqm5" path="res://addons/letstalkaboutit/graph_data/node_data.gd" id="1_m6hd4"]
+[ext_resource type="Script" uid="uid://bhbyqwjh1ms64" path="res://addons/letstalkaboutit/graph_data/graph_data.gd" id="1_r8qra"]
+
+[sub_resource type="Resource" id="Resource_m6hd4"]
+script = ExtResource("1_m6hd4")
+name = "TalkStart"
+type = "TalkStart"
+position_offset = Vector2(428, 69)
+data = {
+&"id": "Start",
+&"next_id": "TalkBasic"
+}
+
+[sub_resource type="Resource" id="Resource_27567"]
+script = ExtResource("1_m6hd4")
+name = "TalkBasic"
+type = "TalkBasic"
+position_offset = Vector2(640, 80)
+data = {
+&"id": "TalkBasic",
+&"message_list": Array[String](["TalkMessage"]),
+&"next_id": "TalkBasic2"
+}
+
+[sub_resource type="Resource" id="Resource_lius8"]
+script = ExtResource("1_m6hd4")
+name = "TalkMessage"
+type = "TalkMessage"
+position_offset = Vector2(400, 340)
+data = {
+&"background": "none",
+&"character_id": "evil_sarah",
+&"id": "TalkMessage",
+&"line_id": "-1",
+&"lines": Array[String](["You may have won....again...", "but I am not giving up, froufrou mcpink.", ""]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_hmafx"]
+script = ExtResource("1_m6hd4")
+name = "TalkBasic2"
+type = "TalkBasic"
+position_offset = Vector2(900, 80)
+data = {
+&"id": "TalkBasic2",
+&"message_list": Array[String](["TalkMessage2"]),
+&"next_id": "TalkBasic3"
+}
+
+[sub_resource type="Resource" id="Resource_psa64"]
+script = ExtResource("1_m6hd4")
+name = "TalkMessage2"
+type = "TalkMessage"
+position_offset = Vector2(640, 340)
+data = {
+&"background": "none",
+&"character_id": "player_magic",
+&"id": "TalkMessage2",
+&"line_id": "-1",
+&"lines": Array[String](["Didn't you technically win? You did nuke the Taco Bell.", "", ""]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_7snse"]
+script = ExtResource("1_m6hd4")
+name = "TalkBasic3"
+type = "TalkBasic"
+position_offset = Vector2(1140, 80)
+data = {
+&"id": "TalkBasic3",
+&"message_list": Array[String](["TalkMessage3"]),
+&"next_id": "TalkBasic4"
+}
+
+[sub_resource type="Resource" id="Resource_7husb"]
+script = ExtResource("1_m6hd4")
+name = "TalkMessage3"
+type = "TalkMessage"
+position_offset = Vector2(900, 340)
+data = {
+&"background": "none",
+&"character_id": "evil_sarah",
+&"id": "TalkMessage3",
+&"line_id": "-1",
+&"lines": Array[String](["Right, I did do that!", "", ""]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_6jbr6"]
+script = ExtResource("1_m6hd4")
+name = "TalkMessage4"
+type = "TalkMessage"
+position_offset = Vector2(1140, 340)
+data = {
+&"background": "none",
+&"character_id": "player_magic",
+&"id": "TalkMessage4",
+&"line_id": "-1",
+&"lines": Array[String](["And now the entire area is destroyed!", "", ""]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_1pjja"]
+script = ExtResource("1_m6hd4")
+name = "TalkBasic4"
+type = "TalkBasic"
+position_offset = Vector2(1380, 80)
+data = {
+&"id": "TalkBasic4",
+&"message_list": Array[String](["TalkMessage4"]),
+&"next_id": "TalkBasic5"
+}
+
+[sub_resource type="Resource" id="Resource_hi3gm"]
+script = ExtResource("1_m6hd4")
+name = "TalkBasic5"
+type = "TalkBasic"
+position_offset = Vector2(1620, 80)
+data = {
+&"id": "TalkBasic5",
+&"message_list": Array[String](["TalkMessage5"]),
+&"next_id": "TalkBasic6"
+}
+
+[sub_resource type="Resource" id="Resource_ir5q4"]
+script = ExtResource("1_m6hd4")
+name = "TalkMessage5"
+type = "TalkMessage"
+position_offset = Vector2(1380, 340)
+data = {
+&"background": "none",
+&"character_id": "frecko",
+&"id": "TalkMessage5",
+&"line_id": "-1",
+&"lines": Array[String](["Hewwo.", "It's only the Taco Bell.", "My nukes are radiationless and they only destroy the target."]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_68r1c"]
+script = ExtResource("1_m6hd4")
+name = "TalkBasic6"
+type = "TalkBasic"
+position_offset = Vector2(1860, 80)
+data = {
+&"id": "TalkBasic6",
+&"message_list": Array[String](["TalkMessage6"]),
+&"next_id": "TalkBasic7"
+}
+
+[sub_resource type="Resource" id="Resource_ou4fh"]
+script = ExtResource("1_m6hd4")
+name = "TalkMessage6"
+type = "TalkMessage"
+position_offset = Vector2(1620, 340)
+data = {
+&"background": "none",
+&"character_id": "snek",
+&"id": "TalkMessage6",
+&"line_id": "-1",
+&"lines": Array[String](["That's scientifically not possible.", "", ""]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_40s6d"]
+script = ExtResource("1_m6hd4")
+name = "TalkBasic7"
+type = "TalkBasic"
+position_offset = Vector2(2100, 80)
+data = {
+&"id": "TalkBasic7",
+&"message_list": Array[String](["TalkMessage7"]),
+&"next_id": "TalkBasic8"
+}
+
+[sub_resource type="Resource" id="Resource_4uj7s"]
+script = ExtResource("1_m6hd4")
+name = "TalkMessage7"
+type = "TalkMessage"
+position_offset = Vector2(1860, 340)
+data = {
+&"background": "none",
+&"character_id": "frecko",
+&"id": "TalkMessage7",
+&"line_id": "-1",
+&"lines": Array[String](["Hewwo,", "I am magic", ""]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_wx68n"]
+script = ExtResource("1_m6hd4")
+name = "TalkBasic8"
+type = "TalkBasic"
+position_offset = Vector2(2340, 80)
+data = {
+&"id": "TalkBasic8",
+&"message_list": Array[String](["TalkMessage8"]),
+&"next_id": "TalkBasic9"
+}
+
+[sub_resource type="Resource" id="Resource_0l03y"]
+script = ExtResource("1_m6hd4")
+name = "TalkMessage8"
+type = "TalkMessage"
+position_offset = Vector2(2100, 340)
+data = {
+&"background": "none",
+&"character_id": "snek",
+&"id": "TalkMessage8",
+&"line_id": "-1",
+&"lines": Array[String](["I'M magical and I'M saying that is impossi-", "", ""]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_ox2yg"]
+script = ExtResource("1_m6hd4")
+name = "TalkBasic9"
+type = "TalkBasic"
+position_offset = Vector2(2580, 80)
+data = {
+&"id": "TalkBasic9",
+&"message_list": Array[String](["TalkMessage9"]),
+&"next_id": "TalkBasic10"
+}
+
+[sub_resource type="Resource" id="Resource_is0il"]
+script = ExtResource("1_m6hd4")
+name = "TalkMessage9"
+type = "TalkMessage"
+position_offset = Vector2(2340, 340)
+data = {
+&"background": "none",
+&"character_id": "frecko",
+&"id": "TalkMessage9",
+&"line_id": "-1",
+&"lines": Array[String](["Hewwo~", "Tomorrow you won't be so lucky. The target is the whole TOWN!", ""]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_o4w41"]
+script = ExtResource("1_m6hd4")
+name = "TalkMessage10"
+type = "TalkMessage"
+position_offset = Vector2(2580, 340)
+data = {
+&"background": "none",
+&"character_id": "evil_sarah",
+&"id": "TalkMessage10",
+&"line_id": "-1",
+&"lines": Array[String](["Yes, we will go to CITY tomorrow night to have a good,", "high, and faraway view of the town as it crumbles beneath us!", "He will PAY."]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_nslhr"]
+script = ExtResource("1_m6hd4")
+name = "TalkBasic10"
+type = "TalkBasic"
+position_offset = Vector2(2820, 80)
+data = {
+&"id": "TalkBasic10",
+&"message_list": Array[String](["TalkMessage10"]),
+&"next_id": "TalkBasic11"
+}
+
+[sub_resource type="Resource" id="Resource_m4jy6"]
+script = ExtResource("1_m6hd4")
+name = "TalkBasic11"
+type = "TalkBasic"
+position_offset = Vector2(3080, 80)
+data = {
+&"id": "TalkBasic11",
+&"message_list": Array[String](["TalkMessage11"]),
+&"next_id": "TalkBasic12"
+}
+
+[sub_resource type="Resource" id="Resource_ebow7"]
+script = ExtResource("1_m6hd4")
+name = "TalkMessage11"
+type = "TalkMessage"
+position_offset = Vector2(2820, 340)
+data = {
+&"background": "none",
+&"character_id": "player_magic",
+&"id": "TalkMessage11",
+&"line_id": "-1",
+&"lines": Array[String](["This whole thing is just one massive daddy issue?", "I have a few pals with daddy issues so maybe we can talk?", "I don't have a dad, but talking is still on the table."]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_1bd1d"]
+script = ExtResource("1_m6hd4")
+name = "TalkBasic12"
+type = "TalkBasic"
+position_offset = Vector2(3320, 80)
+data = {
+&"id": "TalkBasic12",
+&"message_list": Array[String](["TalkMessage12"]),
+&"next_id": "TalkBasic13"
+}
+
+[sub_resource type="Resource" id="Resource_cwfo2"]
+script = ExtResource("1_m6hd4")
+name = "TalkMessage12"
+type = "TalkMessage"
+position_offset = Vector2(3080, 340)
+data = {
+&"background": "none",
+&"character_id": "evil_sarah",
+&"id": "TalkMessage12",
+&"line_id": "-1",
+&"lines": Array[String](["You'd never understand.", "", ""]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_0juol"]
+script = ExtResource("1_m6hd4")
+name = "TalkBasic13"
+type = "TalkBasic"
+position_offset = Vector2(3560, 80)
+data = {
+&"id": "TalkBasic13",
+&"message_list": Array[String](["TalkMessage13"]),
+&"next_id": "TalkBasic14"
+}
+
+[sub_resource type="Resource" id="Resource_tek78"]
+script = ExtResource("1_m6hd4")
+name = "TalkMessage13"
+type = "TalkMessage"
+position_offset = Vector2(3320, 340)
+data = {
+&"background": "none",
+&"character_id": "player_magic",
+&"id": "TalkMessage13",
+&"line_id": "-1",
+&"lines": Array[String](["I guess thats understandable?", "I'm...I'm going home now. See you tomorrow.", ""]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_c35b1"]
+script = ExtResource("1_m6hd4")
+name = "TalkBasic14"
+type = "TalkBasic"
+position_offset = Vector2(3800, 80)
+data = {
+&"id": "TalkBasic14",
+&"message_list": Array[String](["TalkMessage14"]),
+&"next_id": "TalkBasic15"
+}
+
+[sub_resource type="Resource" id="Resource_rda0b"]
+script = ExtResource("1_m6hd4")
+name = "TalkMessage14"
+type = "TalkMessage"
+position_offset = Vector2(3560, 340)
+data = {
+&"background": "none",
+&"character_id": "evil_sarah",
+&"id": "TalkMessage14",
+&"line_id": "-1",
+&"lines": Array[String](["See you tomorrow.", "      ", "I love you."]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_rrv2l"]
+script = ExtResource("1_m6hd4")
+name = "TalkBasic15"
+type = "TalkBasic"
+position_offset = Vector2(4060, 80)
+data = {
+&"id": "TalkBasic15",
+&"message_list": Array[String](["TalkMessage15"]),
+&"next_id": "TalkEnd"
+}
+
+[sub_resource type="Resource" id="Resource_mg8dt"]
+script = ExtResource("1_m6hd4")
+name = "TalkMessage15"
+type = "TalkMessage"
+position_offset = Vector2(3800, 340)
+data = {
+&"background": "none",
+&"character_id": "player_magic",
+&"id": "TalkMessage15",
+&"line_id": "-1",
+&"lines": Array[String](["....love ya too.", "", ""]),
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_u3mqv"]
+script = ExtResource("1_m6hd4")
+name = "TalkEnd"
+type = "TalkEnd"
+position_offset = Vector2(4260, 80)
+data = {
+&"id": "TalkEnd",
+&"next_start": "Start"
+}
+
+[resource]
+script = ExtResource("1_r8qra")
+connections = Array[Dictionary]([{
+"from_node": &"TalkStart",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic2",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage2",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic2",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic2",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic3",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage3",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic3",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic3",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic4",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage4",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic4",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic4",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic5",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage5",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic5",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic5",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic6",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage6",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic6",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic6",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic7",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage7",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic7",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic7",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic8",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage8",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic8",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic8",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic9",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage9",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic9",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic9",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic10",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage10",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic10",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic10",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic11",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage11",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic11",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic11",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic12",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage12",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic12",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic12",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic13",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage13",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic13",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic13",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic14",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage14",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic14",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic14",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic15",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage15",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic15",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic15",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkEnd",
+"to_port": 0
+}])
+nodes = [SubResource("Resource_m6hd4"), SubResource("Resource_27567"), SubResource("Resource_lius8"), SubResource("Resource_hmafx"), SubResource("Resource_psa64"), SubResource("Resource_7snse"), SubResource("Resource_7husb"), SubResource("Resource_6jbr6"), SubResource("Resource_1pjja"), SubResource("Resource_hi3gm"), SubResource("Resource_ir5q4"), SubResource("Resource_68r1c"), SubResource("Resource_ou4fh"), SubResource("Resource_40s6d"), SubResource("Resource_4uj7s"), SubResource("Resource_wx68n"), SubResource("Resource_0l03y"), SubResource("Resource_ox2yg"), SubResource("Resource_is0il"), SubResource("Resource_o4w41"), SubResource("Resource_nslhr"), SubResource("Resource_m4jy6"), SubResource("Resource_ebow7"), SubResource("Resource_1bd1d"), SubResource("Resource_cwfo2"), SubResource("Resource_0juol"), SubResource("Resource_tek78"), SubResource("Resource_c35b1"), SubResource("Resource_rda0b"), SubResource("Resource_rrv2l"), SubResource("Resource_mg8dt"), SubResource("Resource_u3mqv")]

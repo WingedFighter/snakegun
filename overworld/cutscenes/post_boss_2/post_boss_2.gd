@@ -2,7 +2,7 @@ extends Node2D
 
 const VELOCITY = 10.0
 
-@export var change_scene: String = "PostBoss2"
+@export var change_scene: String = "OutsideTownSchool"
 
 @onready var player: Player25D = %Player25D
 @onready var skip_button: Button = $CanvasLayer/SkipButton
@@ -33,8 +33,5 @@ func _process(_delta: float) -> void:
 
 func end_cutscene() -> void:
 	State.flags['in_cutscene'] = false
-	State.flags['fat_dump'] = false
 	State.flags.erase('start_conversation')
-	Quests.complete_quest("Fat Dump")
-	Quests.add_quest({"name": "Night Night 2: Electric Boogaloo", "contents": "Go to bed"})
 	SceneManager.change_scene(change_scene)

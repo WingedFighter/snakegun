@@ -33,8 +33,8 @@ func _ready() -> void:
 	animation_tree.set("parameters/Dash/blend_position", 1)
 	water_collider.body_entered.connect(enter_water)
 	water_collider.body_exited.connect(exit_water)
-	pickup_collider.body_entered.connect(enter_pickup)
-	pickup_collider.body_exited.connect(enter_pickup)
+	#pickup_collider.body_entered.connect(enter_pickup)
+	#pickup_collider.body_exited.connect(enter_pickup)
 
 func _physics_process(delta: float) -> void:
 	# Handle jump.
