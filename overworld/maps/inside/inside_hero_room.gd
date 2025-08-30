@@ -14,6 +14,13 @@ func _ready() -> void:
 		State.flags['first_steps'] = true
 	
 	if State.flags.has("transformation"):
-		Quests.complete_quest("Night Night")
-		Quests.add_quest({"name": "Second Steps", "contents": "Go to school"})
-		State.flags['second_steps'] = true
+		if Quests.has_quest("Night Night"):
+			Quests.complete_quest("Night Night")
+			Quests.add_quest({"name": "Second Steps", "contents": "Go to school"})
+			State.flags['second_steps'] = true
+	
+	if State.flags.has("explosion"):
+		if Quests.has_quest("Night Night 2: Electric Boogaloo"):
+			Quests.complete_quest("Night Night 2: Electric Boogaloo")
+			Quests.add_quest({"name": "Third Steps", "contents": "Go to school"})
+			State.flags['third_steps'] = true

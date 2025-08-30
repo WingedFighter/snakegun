@@ -11,6 +11,12 @@ func _ready() -> void:
 func add_quest(quest: Dictionary[String, String]) -> void:
     list.append(quest)
 
+func has_quest(key: String) -> bool:
+    for quest in list:
+        if quest['name'] == key:
+            return true
+    return false
+
 func complete_quest(quest_name: String) -> void:
     var index := 0
     for quest in list:

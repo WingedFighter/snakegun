@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cars40o6a2jhq"]
+
+[ext_resource type="Script" uid="uid://cbq8fd3iohfbr" path="res://overworld/cutscenes/pre_boss_2/explosion.gd" id="1_wx74g"]
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="2_8pvdq"]
+
+[node name="Explosion" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wx74g")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="SkipButton" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 945.0
+offset_top = 18.0
+offset_right = 1037.72
+offset_bottom = 65.3165
+scale = Vector2(2, 2)
+theme = ExtResource("2_8pvdq")
+text = "Skip"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580, 326)
