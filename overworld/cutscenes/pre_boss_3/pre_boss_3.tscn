@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmmx3vy33haht"]
+
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="1_bdcis"]
+[ext_resource type="Script" uid="uid://b64v8eynypsy1" path="res://overworld/cutscenes/pre_boss_3/pre_boss_3.gd" id="1_rrxoa"]
+[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_rrxoa"]
+[ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="3_xjox3"]
+[ext_resource type="PackedScene" uid="uid://dcd5kkwk0ydij" path="res://overworld/characters/sarah/sarah.tscn" id="4_ox4jr"]
+[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="5_mqdi5"]
+
+[node name="PreBoss3" type="Node2D"]
+script = ExtResource("1_rrxoa")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="SkipButton" type="Button" parent="CanvasLayer"]
+z_index = 128
+offset_left = 946.0
+offset_top = 25.0
+offset_right = 1038.72
+offset_bottom = 72.3165
+scale = Vector2(2, 2)
+theme = ExtResource("1_bdcis")
+text = "Skip"
+metadata/_edit_use_anchors_ = true
+
+[node name="Player25D" parent="." instance=ExtResource("2_rrxoa")]
+unique_name_in_owner = true
+position = Vector2(-267, 61)
+
+[node name="Snek" parent="." instance=ExtResource("3_xjox3")]
+
+[node name="Sarah" parent="." instance=ExtResource("4_ox4jr")]
+
+[node name="Conversation" parent="." instance=ExtResource("5_mqdi5")]
+position = Vector2(-269, 71)
+
+[node name="TalkManager" parent="Conversation" index="0"]
+graph_data_save_location = "res://overworld/cutscenes/pre_boss_3/graph_data.tres"
+talk_state_save_location = "res://overworld/cutscenes/pre_boss_3/talk_state.tres"
+talk_state = null
+
+[editable path="Conversation"]

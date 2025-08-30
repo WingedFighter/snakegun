@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://bmofoiii7ijig"]
+
+[ext_resource type="Script" uid="uid://o1rfngb0pvg" path="res://overworld/cutscenes/post_boss_3/post_boss_3.gd" id="1_g552w"]
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="1_owx2y"]
+[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_orqfy"]
+[ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="3_g552w"]
+[ext_resource type="PackedScene" uid="uid://dcd5kkwk0ydij" path="res://overworld/characters/sarah/sarah.tscn" id="4_y3o0x"]
+[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="5_543ls"]
+[ext_resource type="PackedScene" uid="uid://dxp8mj5uwx6t5" path="res://overworld/characters/frecko/frecko.tscn" id="5_orqfy"]
+
+[node name="PostBoss3" type="Node2D"]
+script = ExtResource("1_g552w")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="SkipButton" type="Button" parent="CanvasLayer"]
+z_index = 128
+offset_left = 946.0
+offset_top = 25.0
+offset_right = 1038.72
+offset_bottom = 72.3165
+scale = Vector2(2, 2)
+theme = ExtResource("1_owx2y")
+text = "Skip"
+metadata/_edit_use_anchors_ = true
+
+[node name="Player25D" parent="." instance=ExtResource("2_orqfy")]
+unique_name_in_owner = true
+position = Vector2(-267, 61)
+
+[node name="Snek" parent="." instance=ExtResource("3_g552w")]
+
+[node name="Sarah" parent="." instance=ExtResource("4_y3o0x")]
+
+[node name="Frecko" parent="." instance=ExtResource("5_orqfy")]
+
+[node name="Conversation" parent="." instance=ExtResource("5_543ls")]
+
+[node name="TalkManager" parent="Conversation" index="0"]
+graph_data_save_location = "res://overworld/cutscenes/post_boss_3/graph_data.tres"
+talk_state_save_location = "res://overworld/cutscenes/post_boss_3/talk_state.tres"
+talk_state = null
+
+[node name="CollisionShape2D" parent="Conversation" index="2"]
+position = Vector2(-259, 71)
+
+[editable path="Conversation"]
