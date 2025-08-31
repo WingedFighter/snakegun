@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bm00hlx7o8dxn"]
+[gd_scene load_steps=9 format=3 uid="uid://bm00hlx7o8dxn"]
 
 [ext_resource type="Script" uid="uid://cel2n44s7tvfn" path="res://overworld/cutscenes/nuked/post_nuke.gd" id="1_cbmli"]
 [ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="1_y4lpw"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dcd5kkwk0ydij" path="res://overworld/characters/sarah/sarah.tscn" id="4_cbmli"]
 [ext_resource type="PackedScene" uid="uid://dxp8mj5uwx6t5" path="res://overworld/characters/frecko/frecko.tscn" id="5_o485n"]
 [ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="6_cbmli"]
+[ext_resource type="Texture2D" uid="uid://th64olds2b6h" path="res://overworld/cutscenes/bright_lights/town.png" id="8_r8cmg"]
 
 [node name="PostNuke" type="Node2D"]
 script = ExtResource("1_cbmli")
@@ -44,5 +45,10 @@ talk_state = null
 
 [node name="CollisionShape2D" parent="Conversation" index="2"]
 position = Vector2(-264, 71)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-212, 30)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_r8cmg")
 
 [editable path="Conversation"]

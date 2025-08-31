@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1hkd4ae1b8d7"]
+[gd_scene load_steps=7 format=3 uid="uid://b1hkd4ae1b8d7"]
 
 [ext_resource type="Script" uid="uid://c4t4t68dkgld3" path="res://overworld/cutscenes/fat_dump/fat_dump.gd" id="1_fv2ph"]
 [ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="1_vvj85"]
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_8sbsp"]
 [ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="3_gq2c1"]
 [ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="6_2r43w"]
+[ext_resource type="Texture2D" uid="uid://cmtdj4tkslb1v" path="res://overworld/cutscenes/fat_dump/trash.png" id="6_vvj85"]
 
 [node name="FatDump" type="Node2D"]
 script = ExtResource("1_fv2ph")
@@ -36,5 +37,10 @@ position = Vector2(-267, 69)
 graph_data_save_location = "res://overworld/cutscenes/fat_dump/graph_data.tres"
 talk_state_save_location = "res://overworld/cutscenes/fat_dump/talk_state.tres"
 talk_state = null
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-212, 30)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_vvj85")
 
 [editable path="Conversation"]

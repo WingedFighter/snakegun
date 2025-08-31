@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://67a7hcb810wj"]
+[gd_scene load_steps=7 format=3 uid="uid://67a7hcb810wj"]
 
 [ext_resource type="Script" uid="uid://pxneelbfed0a" path="res://overworld/cutscenes/bright_lights/bright_lights.gd" id="1_m3opl"]
 [ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="1_nijqj"]
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_m3opl"]
 [ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="3_txbxu"]
 [ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="4_7ihs4"]
+[ext_resource type="Texture2D" uid="uid://th64olds2b6h" path="res://overworld/cutscenes/bright_lights/town.png" id="7_gtx77"]
 
 [node name="BrightLights" type="Node2D"]
 script = ExtResource("1_m3opl")
@@ -38,5 +39,10 @@ talk_state = null
 
 [node name="CollisionShape2D" parent="Conversation" index="2"]
 position = Vector2(-269, 67)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-212, 30)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_gtx77")
 
 [editable path="Conversation"]

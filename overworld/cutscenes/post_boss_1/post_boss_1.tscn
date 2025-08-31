@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bn0qcbl6ex7os"]
+[gd_scene load_steps=9 format=3 uid="uid://bn0qcbl6ex7os"]
 
 [ext_resource type="Script" uid="uid://cnuwrbpjkp6gb" path="res://overworld/cutscenes/post_boss_1/post_boss_1.gd" id="1_psf0m"]
 [ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="1_rgv5x"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dcd5kkwk0ydij" path="res://overworld/characters/sarah/sarah.tscn" id="4_trqqh"]
 [ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="5_0per1"]
 [ext_resource type="PackedScene" uid="uid://dxp8mj5uwx6t5" path="res://overworld/characters/frecko/frecko.tscn" id="5_wurxj"]
+[ext_resource type="Texture2D" uid="uid://cx8fwtum6tef3" path="res://overworld/cutscenes/magical_gurl/magical_gurl.png" id="8_trqqh"]
 
 [node name="PostBoss1" type="Node2D"]
 script = ExtResource("1_psf0m")
@@ -42,5 +43,10 @@ position = Vector2(-272, 70)
 graph_data_save_location = "res://overworld/cutscenes/post_boss_1/graph_data.tres"
 talk_state_save_location = "res://overworld/cutscenes/post_boss_1/talk_state.tres"
 talk_state = null
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-212, 30)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_trqqh")
 
 [editable path="Conversation"]

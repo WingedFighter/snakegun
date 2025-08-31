@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ip0eqmts283a"
-path="res://.godot/imported/forest.png-a0972fa942e9f40d19b8d2c302c629e2.ctex"
+uid="uid://cx8fwtum6tef3"
+path="res://.godot/imported/magical_gurl.png-9906a0ab7bac80b0e920903aa960191f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://overworld/cutscenes/magical_gurl/forest.png"
-dest_files=["res://.godot/imported/forest.png-a0972fa942e9f40d19b8d2c302c629e2.ctex"]
+source_file="res://overworld/cutscenes/magical_gurl/magical_gurl.png"
+dest_files=["res://.godot/imported/magical_gurl.png-9906a0ab7bac80b0e920903aa960191f.ctex"]
 
 [params]
 
