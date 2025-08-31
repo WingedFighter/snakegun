@@ -16,8 +16,9 @@ func _ready() -> void:
 		hearts.append(child)
 	for child in layer2.get_children():
 		hearts.append(child)
+	@warning_ignore("narrowing_conversion")
 	update_healthbar(0, health_component.current_health)
-	update_gun_level(4)
+	player.gun_level_up.connect(update_gun_level)
 
 func update_healthbar(_old: int, new:int ) -> void:
 	var i: int = 0
@@ -30,5 +31,7 @@ func update_healthbar(_old: int, new:int ) -> void:
 	pass
 
 func update_gun_level(new: int) -> void:
+	print_debug(str(new))
 	exp_bar.frame = clampi(new, 0, 15)
-	gun_sprite.frame = new / 5 + 1
+	@warning_ignore("integer_division")
+	gun_sprite.frame = new / 5

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciyxo27de7wr1"]
+
+[ext_resource type="Texture2D" uid="uid://cjhonobh6d7em" path="res://platformer/textures/pickup.png" id="1_67o3s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_htv63"]
+radius = 32.95
+
+[node name="Pickup" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_67o3s")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_htv63")

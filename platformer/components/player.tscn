@@ -1282,7 +1282,7 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ob5i0"]
 size = Vector2(22.64, 72.055)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("shoot_component", "health_component", "animation_tree", "arm", "water_collider")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("shoot_component", "health_component", "animation_tree", "arm", "water_collider", "pickup_collider")]
 collision_layer = 2
 collision_mask = 2
 floor_constant_speed = true
@@ -1294,6 +1294,7 @@ health_component = NodePath("HealthComponent")
 animation_tree = NodePath("AnimationTree")
 arm = NodePath("arm")
 water_collider = NodePath("WaterCollider")
+pickup_collider = NodePath("PickupCollider")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4.70625)
@@ -1350,6 +1351,12 @@ libraries = {
 collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WaterCollider"]
+shape = SubResource("RectangleShape2D_ob5i0")
+
+[node name="PickupCollider" type="Area2D" parent="."]
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupCollider"]
 shape = SubResource("RectangleShape2D_ob5i0")
 
 [editable path="HurtboxComponent"]
