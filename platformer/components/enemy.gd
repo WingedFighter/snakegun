@@ -6,3 +6,4 @@ extends CharacterBody2D
 # Logic for actually using this comes in move component.. blah fuck reusability
 @export var enemy_type: String = 'fox'
 @export var damage: float = 1
+@export var enemy_level: int = 1
