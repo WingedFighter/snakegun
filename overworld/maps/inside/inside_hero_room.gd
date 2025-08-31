@@ -4,11 +4,14 @@ extends Node2D
 
 @onready var first_time: Control = $FirstTimePlaying
 
+var starting_quests: Dictionary[String, String]
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	AudioManager.play_music(background_music)
 
 	if SceneManager.get_previous_scene().contains("Intro"):
+		Quests.list = [starting_quests]
 		first_time.visible = true
 		Quests.add_quest({"name": "First Steps", "contents": "Go to school"})
 		State.flags['first_steps'] = true

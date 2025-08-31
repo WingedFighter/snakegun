@@ -37,10 +37,11 @@ func delete_quests() -> void:
 			child.queue_free()
 
 func display_quest(quest: Dictionary[String, String]) -> void:
-	var new_quest := Label.new()
+	if quest.has("name") && quest.has("contents"):
+		var new_quest := Label.new()
 
-	v_box.add_child(new_quest)
-	new_quest.label_settings = LabelSettings.new()
-	new_quest.label_settings.font = font
-	new_quest.label_settings.font_color = font_color
-	new_quest.text = str(quest['name']) + ": " + str(quest['contents'])
+		v_box.add_child(new_quest)
+		new_quest.label_settings = LabelSettings.new()
+		new_quest.label_settings.font = font
+		new_quest.label_settings.font_color = font_color
+		new_quest.text = str(quest['name']) + ": " + str(quest['contents'])
