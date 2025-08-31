@@ -209,7 +209,7 @@ data = {
 &"character_id": "evil_sarah",
 &"id": "TalkMessage",
 &"line_id": "-1",
-&"lines": Array[String](["You may have won this battle,", "but I was able to steal thousands of minsions from this forest-", "-before you even came along."]),
+&"lines": Array[String](["You may have won this battle,", "but I was able to steal thousands of minions from this forest-", "-before you even came along."]),
 &"mood": 1,
 &"overlay": "none"
 }
@@ -389,7 +389,7 @@ data = {
 &"character_id": "snek",
 &"id": "TalkMessage13",
 &"line_id": "-1",
-&"lines": Array[String](["This isn't god of war, bird brain.", "He can't turn into shit,", "but he does build extremly advanced nuclear weapons."]),
+&"lines": Array[String](["This isn't god of war, bird brain.", "He can't turn into shit,", "but he does build advanced nuclear weapons."]),
 &"mood": 2,
 &"overlay": "none"
 }

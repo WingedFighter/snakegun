@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cohqlrcb47uj4"]
+[gd_scene load_steps=9 format=4 uid="uid://cohqlrcb47uj4"]
 
 [ext_resource type="Texture2D" uid="uid://b026g0ndknv2c" path="res://overworld/maps/outside/town/main/ground_main.png" id="1_dwtre"]
 [ext_resource type="Script" uid="uid://cbc0e7a0rt4mi" path="res://overworld/maps/outside/town/main/outside_town_main.gd" id="1_vrrko"]
@@ -6,19 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="3_uqdsc"]
 [ext_resource type="PackedScene" uid="uid://cddigtumyuaal" path="res://overworld/interactables/transition/transition.tscn" id="4_gcnva"]
 [ext_resource type="PackedScene" uid="uid://co63qkxatewwp" path="res://overworld/maps/spawner/spawner.tscn" id="5_uqdsc"]
-[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="6_vhww8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwtre"]
 size = Vector2(649, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhww8"]
 size = Vector2(631, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_20i8i"]
-size = Vector2(42, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrrko"]
-size = Vector2(32, 20)
 
 [node name="OutsideTownMain" type="Node2D"]
 script = ExtResource("1_vrrko")
@@ -103,27 +96,4 @@ to_scene = "InsideHeroRoom"
 
 [node name="Conversations" type="Node2D" parent="Interactables"]
 
-[node name="Example" parent="Interactables/Conversations" instance=ExtResource("6_vhww8")]
-position = Vector2(149, 227)
-
-[node name="TalkManager" parent="Interactables/Conversations/Example" index="0"]
-graph_data_save_location = "res://overworld/maps/outside/town/main/conversations/example/graph_data.tres"
-talk_state_save_location = "res://overworld/maps/outside/town/main/conversations/example/talk_state.tres"
-
-[node name="CollisionShape2D" parent="Interactables/Conversations/Example" index="2"]
-position = Vector2(-2, 0)
-shape = SubResource("RectangleShape2D_20i8i")
-
-[node name="Test" parent="Interactables/Conversations" instance=ExtResource("6_vhww8")]
-
-[node name="TalkManager" parent="Interactables/Conversations/Test" index="0"]
-graph_data_save_location = "res://overworld/maps/outside/town/main/conversations/test/graph_data.tres"
-talk_state_save_location = "res://overworld/maps/outside/town/main/conversations/test/talk_state.tres"
-
-[node name="CollisionShape2D" parent="Interactables/Conversations/Test" index="2"]
-position = Vector2(-177, 222)
-shape = SubResource("RectangleShape2D_vrrko")
-
 [editable path="Interactables/Transitions/OutsideTownSchool"]
-[editable path="Interactables/Conversations/Example"]
-[editable path="Interactables/Conversations/Test"]

@@ -98,7 +98,7 @@ data = {
 &"character_id": "evil_sarah",
 &"id": "TalkMessage4",
 &"line_id": "-1",
-&"lines": Array[String](["What the fuck dadm that's really insensitive.", "", ""]),
+&"lines": Array[String](["What the fuck dad that's really insensitive.", "", ""]),
 &"overlay": "none"
 }
 

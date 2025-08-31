@@ -288,7 +288,7 @@ type = "TalkMessage"
 position_offset = Vector2(1440, 300)
 data = {
 &"background": "none",
-&"character_id": "player_magic",
+&"character_id": "evil_sarah",
 &"id": "TalkMessage5",
 &"line_id": "-1",
 &"lines": Array[String](["I'm not joking. You're Adeline.", "", ""]),
@@ -306,7 +306,7 @@ data = {
 &"character_id": "snek",
 &"id": "TalkMessage6",
 &"line_id": "-1",
-&"lines": Array[String](["!!!! You're secret identity !!!!", "", ""]),
+&"lines": Array[String](["!!!! Your secret identity !!!!", "", ""]),
 &"mood": 4,
 &"overlay": "none"
 }
@@ -381,7 +381,7 @@ data = {
 &"character_id": "evil_sarah",
 &"id": "TalkMessage11",
 &"line_id": "-1",
-&"lines": Array[String](["It's me, sarah", "", ""]),
+&"lines": Array[String](["It's me, Sarah", "", ""]),
 &"mood": 0,
 &"overlay": "none"
 }

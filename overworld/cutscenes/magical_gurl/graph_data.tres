@@ -144,7 +144,7 @@ data = {
 &"character_id": "snek",
 &"id": "TalkMessage4",
 &"line_id": "-1",
-&"lines": Array[String](["Take a second to breath.", "", ""]),
+&"lines": Array[String](["Take a second to breathe.", "", ""]),
 &"mood": 4,
 &"overlay": "none"
 }
@@ -189,7 +189,7 @@ data = {
 &"character_id": "snek",
 &"id": "TalkMessage5",
 &"line_id": "-1",
-&"lines": Array[String](["I told you that you have snake powers now.", "Snakes have no hair, and you are now more aerodynamic.", "Your welcome!"]),
+&"lines": Array[String](["I told you that you have snake powers now.", "Snakes have no hair, and you are now more aerodynamic.", "You're welcome!"]),
 &"mood": 1,
 &"overlay": "none"
 }

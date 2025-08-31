@@ -501,7 +501,7 @@ data = {
 &"id": "TalkMessage16",
 &"line_id": "-1",
 &"lines": Array[String](["Honestly though, might be better to not date at all.", "", ""]),
-&"mood": 0,
+&"mood": 2,
 &"overlay": "none"
 }
 
