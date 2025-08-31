@@ -67,7 +67,7 @@ data = {
 &"id": "TalkMessage",
 &"line_id": "-1",
 &"lines": Array[String](["You don't know how to shoot a gun AT ALL Adeline-chan-kun!", "The grip is wrong and eventually you will fuck up your thumb.", ""]),
-&"mood": 4,
+&"mood": 0,
 &"overlay": "none"
 }
 
@@ -97,7 +97,7 @@ data = {
 &"id": "TalkMessage3",
 &"line_id": "-1",
 &"lines": Array[String](["\"This thing\" is ME, hebi-CHAN,", "and you need to respect me as a weapon before you", "can shoot me accurately."]),
-&"mood": 4,
+&"mood": 2,
 &"overlay": "none"
 }
 

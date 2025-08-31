@@ -136,35 +136,20 @@ data = {
 
 [sub_resource type="Resource" id="Resource_2osu7"]
 script = ExtResource("1_mwd3y")
-name = "TalkMessage4"
+name = "TalkMessage6"
 type = "TalkMessage"
-position_offset = Vector2(780, 320)
+position_offset = Vector2(1060, 320)
 data = {
 &"background": "none",
-&"character_id": "snek",
-&"id": "TalkMessage4",
+&"character_id": "player_magic",
+&"id": "TalkMessage6",
 &"line_id": "-1",
-&"lines": Array[String](["Take a second to breathe.", "", ""]),
-&"mood": 4,
+&"lines": Array[String](["I do not like the way I look with NO HAIR!", "", ""]),
+&"mood": 2,
 &"overlay": "none"
 }
 
 [sub_resource type="Resource" id="Resource_3m20c"]
-script = ExtResource("1_mwd3y")
-name = "TalkMessage7"
-type = "TalkMessage"
-position_offset = Vector2(1320, 320)
-data = {
-&"background": "none",
-&"character_id": "snek",
-&"id": "TalkMessage7",
-&"line_id": "-1",
-&"lines": Array[String](["It's time to learn to love the weird, incredibly", "fucked up shape of your head!", ""]),
-&"mood": 5,
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_nqiy1"]
 script = ExtResource("1_mwd3y")
 name = "TalkMessage8"
 type = "TalkMessage"
@@ -175,6 +160,21 @@ data = {
 &"id": "TalkMessage8",
 &"line_id": "-1",
 &"lines": Array[String](["Everything is totally fine.", "I mean, you don't rock it and it's kinda ugly.", "But in a cool way!"]),
+&"mood": 1,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_nqiy1"]
+script = ExtResource("1_mwd3y")
+name = "TalkMessage4"
+type = "TalkMessage"
+position_offset = Vector2(780, 320)
+data = {
+&"background": "none",
+&"character_id": "snek",
+&"id": "TalkMessage4",
+&"line_id": "-1",
+&"lines": Array[String](["Take a second to breathe.", "", ""]),
 &"mood": 4,
 &"overlay": "none"
 }
@@ -196,16 +196,16 @@ data = {
 
 [sub_resource type="Resource" id="Resource_5gulw"]
 script = ExtResource("1_mwd3y")
-name = "TalkMessage6"
+name = "TalkMessage7"
 type = "TalkMessage"
-position_offset = Vector2(1060, 320)
+position_offset = Vector2(1320, 320)
 data = {
 &"background": "none",
-&"character_id": "player_magic",
-&"id": "TalkMessage6",
+&"character_id": "snek",
+&"id": "TalkMessage7",
 &"line_id": "-1",
-&"lines": Array[String](["I do not like the way I look with NO HAIR!", "", ""]),
-&"mood": 2,
+&"lines": Array[String](["It's time to learn to love the weird, incredibly", "fucked up shape of your head!", ""]),
+&"mood": 5,
 &"overlay": "none"
 }
 

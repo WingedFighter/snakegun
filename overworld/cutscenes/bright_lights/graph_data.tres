@@ -95,21 +95,6 @@ data = {
 
 [sub_resource type="Resource" id="Resource_k2xep"]
 script = ExtResource("1_mascm")
-name = "TalkMessage"
-type = "TalkMessage"
-position_offset = Vector2(580, 440)
-data = {
-&"background": "none",
-&"character_id": "snek",
-&"id": "TalkMessage",
-&"line_id": "-1",
-&"lines": Array[String](["Here we are! The final fight!", "You better get this right or whichever small town Purple", "wants to destroy will be....destroyed."]),
-&"mood": 4,
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_7vomx"]
-script = ExtResource("1_mascm")
 name = "TalkMessage3"
 type = "TalkMessage"
 position_offset = Vector2(1080, 440)
@@ -123,22 +108,22 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_vbswh"]
+[sub_resource type="Resource" id="Resource_7vomx"]
 script = ExtResource("1_mascm")
-name = "TalkMessage5"
+name = "TalkMessage"
 type = "TalkMessage"
-position_offset = Vector2(1580, 440)
+position_offset = Vector2(580, 440)
 data = {
 &"background": "none",
 &"character_id": "snek",
-&"id": "TalkMessage5",
+&"id": "TalkMessage",
 &"line_id": "-1",
-&"lines": Array[String](["Thats because you need to watch out, Sarah Connor.", "They're mostly robotic now, imbedded with a LOT of magic.", "I don't know what they're going to do..."]),
-&"mood": 5,
+&"lines": Array[String](["Here we are! The final fight!", "You better get this right or whichever small town Purple", "wants to destroy will be....destroyed."]),
+&"mood": 4,
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_5tjww"]
+[sub_resource type="Resource" id="Resource_vbswh"]
 script = ExtResource("1_mascm")
 name = "TalkMessage4"
 type = "TalkMessage"
@@ -150,6 +135,21 @@ data = {
 &"line_id": "-1",
 &"lines": Array[String](["Don't lie. Also the animals look really weird.", "", ""]),
 &"mood": 3,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_5tjww"]
+script = ExtResource("1_mascm")
+name = "TalkMessage5"
+type = "TalkMessage"
+position_offset = Vector2(1580, 440)
+data = {
+&"background": "none",
+&"character_id": "snek",
+&"id": "TalkMessage5",
+&"line_id": "-1",
+&"lines": Array[String](["They're mostly robotic now, imbedded with a LOT of magic.", "I don't know what they're going to do...", ""]),
+&"mood": 5,
 &"overlay": "none"
 }
 
