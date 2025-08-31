@@ -200,7 +200,7 @@ data = {
 
 [resource]
 script = ExtResource("1_dgft0")
-connections = Array[Dictionary]([{
+connections = [{
 "from_node": &"TalkStart",
 "from_port": 0,
 "keep_alive": false,
@@ -290,5 +290,5 @@ connections = Array[Dictionary]([{
 "keep_alive": false,
 "to_node": &"TalkEnd",
 "to_port": 0
-}])
+}]
 nodes = [SubResource("Resource_o87lx"), SubResource("Resource_0n6b2"), SubResource("Resource_n62p3"), SubResource("Resource_kj1jn"), SubResource("Resource_qcllw"), SubResource("Resource_r2arp"), SubResource("Resource_nb7i0"), SubResource("Resource_3b161"), SubResource("Resource_ekn4m"), SubResource("Resource_3pbhy"), SubResource("Resource_bhd6k"), SubResource("Resource_p85er"), SubResource("Resource_cm4b3"), SubResource("Resource_0l54o"), SubResource("Resource_sxh44"), SubResource("Resource_v3ou3")]

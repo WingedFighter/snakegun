@@ -247,6 +247,6 @@ metadata/_custom_type_script = "uid://b2flwfdlosxw"
 [node name="MagicCharacter" type="Node" parent="."]
 script = ExtResource("40_ykttd")
 character_id = "player_magic"
-character_name = "Frufru"
+character_name = "Mahou Adeline"
 character_base_panel = ExtResource("42_4mf73")
 metadata/_custom_type_script = "uid://b2flwfdlosxw"

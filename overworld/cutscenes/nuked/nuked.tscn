@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cukj2xk2iyfs1"]
+
+[ext_resource type="Script" uid="uid://bu4prtweeyw16" path="res://overworld/cutscenes/nuked/nuked.gd" id="1_1s8we"]
+[ext_resource type="VideoStream" uid="uid://bkwyxf3ti048x" path="res://overworld/cutscenes/nuked/explosionnukemocv.ogv" id="1_nvp0g"]
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="1_rw10p"]
+
+[node name="Nuked" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1s8we")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("1_nvp0g")
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="SkipButton" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 945.0
+offset_top = 18.0
+offset_right = 1037.72
+offset_bottom = 65.3165
+scale = Vector2(2, 2)
+theme = ExtResource("1_rw10p")
+text = "Skip"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580, 326)

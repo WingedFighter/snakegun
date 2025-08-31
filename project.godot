@@ -29,13 +29,6 @@ State="*res://global/state.gd"
 
 enabled=PackedStringArray("res://addons/letstalkaboutit/plugin.cfg")
 
-[file_customization]
-
-folder_colors={
-"res://overworld/cutscenes/killed/": "red",
-"res://overworld/cutscenes/nuked/": "red"
-}
-
 [gui]
 
 theme/default_font_multichannel_signed_distance_field=true

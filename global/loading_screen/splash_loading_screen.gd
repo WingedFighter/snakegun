@@ -34,8 +34,10 @@ extends CanvasLayer
 	"BrightLights": "res://overworld/cutscenes/bright_lights/bright_lights.tscn",
 	"PreBoss3": "res://overworld/cutscenes/pre_boss_3/pre_boss_3.tscn",
 	"PostBoss3": "res://overworld/cutscenes/post_boss_3/post_boss_3.tscn",
-	"Killed": "",
-	"Nuked": ""
+	"Killed": "res://overworld/cutscenes/killed/killed.tscn",
+	"Nuked": "res://overworld/cutscenes/nuked/nuked.tscn",
+	"PostNuke": "res://overworld/cutscenes/nuked/post_nuke.tscn",
+	"Credits": ""
 }
 
 @export var music_dictionary: Dictionary[String, String] = {

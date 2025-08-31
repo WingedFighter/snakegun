@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cars40o6a2jhq"]
+[gd_scene load_steps=4 format=3 uid="uid://cars40o6a2jhq"]
 
 [ext_resource type="Script" uid="uid://cbq8fd3iohfbr" path="res://overworld/cutscenes/pre_boss_2/explosion.gd" id="1_wx74g"]
 [ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="2_8pvdq"]
+[ext_resource type="VideoStream" uid="uid://c52l84wddwtig" path="res://overworld/cutscenes/pre_boss_2/tacobell.ogv" id="2_m4nd0"]
 
 [node name="Explosion" type="Control"]
 layout_mode = 3
@@ -9,8 +10,11 @@ anchors_preset = 0
 script = ExtResource("1_wx74g")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+stream = ExtResource("2_m4nd0")
+autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 50
