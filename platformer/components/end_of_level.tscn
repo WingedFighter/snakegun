@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://blcf2pwyu3saj"]
+
+[ext_resource type="Script" uid="uid://cf7luvbnglng0" path="res://platformer/components/end_of_level.gd" id="1_jqaab"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k00u5"]
+
+[node name="EndOfLevel" type="Area2D"]
+collision_layer = 4096
+script = ExtResource("1_jqaab")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(22, -0.999998)
+scale = Vector2(4.24356, 5.99728)
+shape = SubResource("RectangleShape2D_k00u5")

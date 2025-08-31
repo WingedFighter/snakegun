@@ -22,6 +22,7 @@ extends CanvasLayer
 	"MagicalGurl": "res://overworld/cutscenes/magical_gurl/magical_gurl.tscn",
 	"Tutorial": "res://platformer/scenes/tutorial.tscn",
 	"PostTutorial": "res://overworld/cutscenes/post_tutorial/post_tutorial.tscn",
+	"Level1": "res://platformer/scenes/level1.tscn",
 	"PreBoss1": "res://overworld/cutscenes/pre_boss_1/pre_boss_1.tscn",
 	"PostBoss1": "res://overworld/cutscenes/post_boss_1/post_boss_1.tscn",
 	"FatDump": "res://overworld/cutscenes/fat_dump/fat_dump.tscn",
