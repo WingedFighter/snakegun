@@ -26,6 +26,7 @@ extends CanvasLayer
 	"PreBoss1": "res://overworld/cutscenes/pre_boss_1/pre_boss_1.tscn",
 	"PostBoss1": "res://overworld/cutscenes/post_boss_1/post_boss_1.tscn",
 	"FatDump": "res://overworld/cutscenes/fat_dump/fat_dump.tscn",
+	"Level2": "res://platformer/scenes/level2.tscn",
 	"PreBoss2": "res://overworld/cutscenes/pre_boss_2/pre_boss_2.tscn",
 	"Explosion": "res://overworld/cutscenes/pre_boss_2/explosion.tscn",
 	"PreBoss22": "res://overworld/cutscenes/pre_boss_2/pre_boss_22.tscn",
