@@ -4,7 +4,7 @@ extends Node2D
 
 @onready var conversation: Conversation = $Conversation
 @onready var player: Player25D = $Player25D
-@onready var skip_button: Button = $SkipButton
+@onready var skip_button: Button = $CanvasLayer/SkipButton
 
 var started_interact: bool = false
 var finished_interact: bool = false

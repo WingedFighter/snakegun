@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://pmhl0wicvi0g"]
+[gd_scene load_steps=10 format=3 uid="uid://pmhl0wicvi0g"]
 
 [ext_resource type="Script" uid="uid://dmm2h71c2duxi" path="res://overworld/cutscenes/killed/killed.gd" id="1_vl052"]
 [ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="1_yuais"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dxp8mj5uwx6t5" path="res://overworld/characters/frecko/frecko.tscn" id="5_b30mj"]
 [ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="6_ci3cw"]
 [ext_resource type="PackedScene" uid="uid://bc6dd18mtisll" path="res://overworld/characters/dad/dad.tscn" id="7_b30mj"]
+[ext_resource type="Texture2D" uid="uid://b3p3ftanpv3ti" path="res://overworld/cutscenes/killed/Inside.png" id="9_b30mj"]
 
 [node name="Killed" type="Node2D"]
 script = ExtResource("1_vl052")
@@ -47,5 +48,10 @@ talk_state = null
 
 [node name="CollisionShape2D" parent="Conversation" index="2"]
 position = Vector2(-268, 69)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-266, 82)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_b30mj")
 
 [editable path="Conversation"]

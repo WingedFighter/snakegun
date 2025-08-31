@@ -484,21 +484,6 @@ data = {
 
 [sub_resource type="Resource" id="Resource_u1wpd"]
 script = ExtResource("1_tcqlw")
-name = "TalkMessage11"
-type = "TalkMessage"
-position_offset = Vector2(1620, 380)
-data = {
-&"background": "none",
-&"character_id": "player_normal",
-&"id": "TalkMessage11",
-&"line_id": "-1",
-&"lines": Array[String](["But...why me, weird snake demon hallucination thing?", "", ""]),
-&"mood": 3,
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_jnsx5"]
-script = ExtResource("1_tcqlw")
 name = "TalkMessage12"
 type = "TalkMessage"
 position_offset = Vector2(1860, 380)
@@ -512,7 +497,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_0ykhp"]
+[sub_resource type="Resource" id="Resource_jnsx5"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage13"
 type = "TalkMessage"
@@ -527,22 +512,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_wbm2o"]
-script = ExtResource("1_tcqlw")
-name = "TalkMessage15"
-type = "TalkMessage"
-position_offset = Vector2(1860, 820)
-data = {
-&"background": "none",
-&"character_id": "snek",
-&"id": "TalkMessage15",
-&"line_id": "-1",
-&"lines": Array[String](["It's all totally rancid!", "You have NO RIZZ. NO BITCHES.", ""]),
-&"mood": 1,
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_uwfwo"]
+[sub_resource type="Resource" id="Resource_0ykhp"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage16"
 type = "TalkMessage"
@@ -557,7 +527,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_xtyfp"]
+[sub_resource type="Resource" id="Resource_wbm2o"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage17"
 type = "TalkMessage"
@@ -572,7 +542,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_4swet"]
+[sub_resource type="Resource" id="Resource_uwfwo"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage14"
 type = "TalkMessage"
@@ -587,18 +557,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_wekmr"]
-script = ExtResource("1_tcqlw")
-name = "TalkBasic7"
-type = "TalkBasic"
-position_offset = Vector2(2100, 80)
-data = {
-&"id": "TalkBasic7",
-&"message_list": Array[String](["TalkMessage12", "TalkMessage13", "3322", "TalkMessage15", "TalkMessage16", "TalkMessage14", "TalkMessage17", "TalkMessage19"]),
-&"next_id": "TalkBasic8"
-}
-
-[sub_resource type="Resource" id="Resource_oowau"]
+[sub_resource type="Resource" id="Resource_xtyfp"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage19"
 type = "TalkMessage"
@@ -613,7 +572,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_w7smv"]
+[sub_resource type="Resource" id="Resource_4swet"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage20"
 type = "TalkMessage"
@@ -628,7 +587,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_5d5l2"]
+[sub_resource type="Resource" id="Resource_wekmr"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage22"
 type = "TalkMessage"
@@ -643,7 +602,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_f3xmc"]
+[sub_resource type="Resource" id="Resource_oowau"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage26"
 type = "TalkMessage"
@@ -658,7 +617,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_o8wid"]
+[sub_resource type="Resource" id="Resource_w7smv"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage27"
 type = "TalkMessage"
@@ -673,7 +632,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_85hfh"]
+[sub_resource type="Resource" id="Resource_5d5l2"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage25"
 type = "TalkMessage"
@@ -688,7 +647,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_hu25k"]
+[sub_resource type="Resource" id="Resource_f3xmc"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage34"
 type = "TalkMessage"
@@ -703,7 +662,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_1owsq"]
+[sub_resource type="Resource" id="Resource_o8wid"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage21"
 type = "TalkMessage"
@@ -718,7 +677,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_6io1l"]
+[sub_resource type="Resource" id="Resource_85hfh"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage24"
 type = "TalkMessage"
@@ -733,7 +692,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_d05w8"]
+[sub_resource type="Resource" id="Resource_hu25k"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage29"
 type = "TalkMessage"
@@ -748,7 +707,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_ck2a4"]
+[sub_resource type="Resource" id="Resource_1owsq"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage28"
 type = "TalkMessage"
@@ -763,7 +722,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_yl0q6"]
+[sub_resource type="Resource" id="Resource_6io1l"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage30"
 type = "TalkMessage"
@@ -778,7 +737,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_afkqx"]
+[sub_resource type="Resource" id="Resource_d05w8"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage31"
 type = "TalkMessage"
@@ -793,7 +752,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_geoqx"]
+[sub_resource type="Resource" id="Resource_ck2a4"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage33"
 type = "TalkMessage"
@@ -808,7 +767,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_dhcan"]
+[sub_resource type="Resource" id="Resource_yl0q6"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage32"
 type = "TalkMessage"
@@ -823,7 +782,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_64tkq"]
+[sub_resource type="Resource" id="Resource_afkqx"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage39"
 type = "TalkMessage"
@@ -838,7 +797,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_usm3g"]
+[sub_resource type="Resource" id="Resource_geoqx"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage42"
 type = "TalkMessage"
@@ -853,7 +812,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_ks7al"]
+[sub_resource type="Resource" id="Resource_dhcan"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage40"
 type = "TalkMessage"
@@ -868,7 +827,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_qmxb1"]
+[sub_resource type="Resource" id="Resource_64tkq"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage43"
 type = "TalkMessage"
@@ -883,7 +842,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_1l5gp"]
+[sub_resource type="Resource" id="Resource_usm3g"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage44"
 type = "TalkMessage"
@@ -898,7 +857,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_ahnba"]
+[sub_resource type="Resource" id="Resource_ks7al"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage18"
 type = "TalkMessage"
@@ -913,7 +872,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_npc2i"]
+[sub_resource type="Resource" id="Resource_qmxb1"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage35"
 type = "TalkMessage"
@@ -928,7 +887,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_1phey"]
+[sub_resource type="Resource" id="Resource_1l5gp"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage46"
 type = "TalkMessage"
@@ -943,7 +902,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_qfnkx"]
+[sub_resource type="Resource" id="Resource_ahnba"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage48"
 type = "TalkMessage"
@@ -958,7 +917,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_7y5f2"]
+[sub_resource type="Resource" id="Resource_npc2i"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage49"
 type = "TalkMessage"
@@ -973,7 +932,7 @@ data = {
 &"overlay": "none"
 }
 
-[sub_resource type="Resource" id="Resource_xv8ot"]
+[sub_resource type="Resource" id="Resource_1phey"]
 script = ExtResource("1_tcqlw")
 name = "TalkMessage51"
 type = "TalkMessage"
@@ -988,9 +947,50 @@ data = {
 &"overlay": "none"
 }
 
+[sub_resource type="Resource" id="Resource_qfnkx"]
+script = ExtResource("1_tcqlw")
+name = "TalkMessage11"
+type = "TalkMessage"
+position_offset = Vector2(1620, 380)
+data = {
+&"background": "none",
+&"character_id": "player_normal",
+&"id": "TalkMessage11",
+&"line_id": "-1",
+&"lines": Array[String](["But...why me, weird snake demon hallucination thing?", "", ""]),
+&"mood": 3,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_7y5f2"]
+script = ExtResource("1_tcqlw")
+name = "TalkBasic7"
+type = "TalkBasic"
+position_offset = Vector2(2100, 80)
+data = {
+&"id": "TalkBasic7",
+&"message_list": Array[String](["TalkMessage12", "TalkMessage13", "TalkMessage15", "TalkMessage16", "TalkMessage14", "TalkMessage17", "TalkMessage19"]),
+&"next_id": "TalkBasic8"
+}
+
+[sub_resource type="Resource" id="Resource_xv8ot"]
+script = ExtResource("1_tcqlw")
+name = "TalkMessage15"
+type = "TalkMessage"
+position_offset = Vector2(1860, 820)
+data = {
+&"background": "none",
+&"character_id": "snek",
+&"id": "TalkMessage15",
+&"line_id": "-1",
+&"lines": Array[String](["It's all totally rancid!", "You have NO RIZZ. NO BITCHES.", ""]),
+&"mood": 1,
+&"overlay": "none"
+}
+
 [resource]
 script = ExtResource("1_lo3cr")
-connections = [{
+connections = Array[Dictionary]([{
 "from_node": &"TalkStart",
 "from_port": 0,
 "keep_alive": false,
@@ -1363,6 +1363,12 @@ connections = [{
 "to_node": &"TalkEnd",
 "to_port": 0
 }, {
+"from_node": &"TalkMessage18",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic22",
+"to_port": 2
+}, {
 "from_node": &"TalkMessage12",
 "from_port": 0,
 "keep_alive": false,
@@ -1379,37 +1385,13 @@ connections = [{
 "from_port": 0,
 "keep_alive": false,
 "to_node": &"TalkBasic7",
-"to_port": 4
+"to_port": 3
 }, {
 "from_node": &"TalkMessage16",
 "from_port": 0,
 "keep_alive": false,
 "to_node": &"TalkBasic7",
-"to_port": 5
-}, {
-"from_node": &"TalkMessage14",
-"from_port": 0,
-"keep_alive": false,
-"to_node": &"TalkBasic7",
-"to_port": 6
-}, {
-"from_node": &"TalkMessage17",
-"from_port": 0,
-"keep_alive": false,
-"to_node": &"TalkBasic7",
-"to_port": 7
-}, {
-"from_node": &"TalkMessage19",
-"from_port": 0,
-"keep_alive": false,
-"to_node": &"TalkBasic7",
-"to_port": 8
-}, {
-"from_node": &"TalkBasic7",
-"from_port": 0,
-"keep_alive": false,
-"to_node": &"TalkBasic8",
-"to_port": 0
+"to_port": 4
 }, {
 "from_node": &"TalkBasic6",
 "from_port": 0,
@@ -1417,10 +1399,28 @@ connections = [{
 "to_node": &"TalkBasic7",
 "to_port": 0
 }, {
-"from_node": &"TalkMessage18",
+"from_node": &"TalkBasic7",
 "from_port": 0,
 "keep_alive": false,
-"to_node": &"TalkBasic22",
-"to_port": 2
-}]
+"to_node": &"TalkBasic8",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage14",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic7",
+"to_port": 5
+}, {
+"from_node": &"TalkMessage17",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic7",
+"to_port": 6
+}, {
+"from_node": &"TalkMessage19",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic7",
+"to_port": 7
+}])
 nodes = [SubResource("Resource_tcqlw"), SubResource("Resource_vuvux"), SubResource("Resource_nr0md"), SubResource("Resource_5fv3c"), SubResource("Resource_jsrpl"), SubResource("Resource_ysumg"), SubResource("Resource_6jggc"), SubResource("Resource_euw3c"), SubResource("Resource_lisps"), SubResource("Resource_3n2bt"), SubResource("Resource_qdobr"), SubResource("Resource_jwbid"), SubResource("Resource_jq4me"), SubResource("Resource_hiyve"), SubResource("Resource_qu2pm"), SubResource("Resource_1vxvj"), SubResource("Resource_1lrys"), SubResource("Resource_qs878"), SubResource("Resource_gx036"), SubResource("Resource_1b3py"), SubResource("Resource_fndvk"), SubResource("Resource_2n6o0"), SubResource("Resource_7mdlp"), SubResource("Resource_iyufa"), SubResource("Resource_wkxdm"), SubResource("Resource_mpcb2"), SubResource("Resource_icv4p"), SubResource("Resource_x14w6"), SubResource("Resource_wmcqq"), SubResource("Resource_8b6t2"), SubResource("Resource_eli7f"), SubResource("Resource_2bi1q"), SubResource("Resource_ql7yo"), SubResource("Resource_4w16i"), SubResource("Resource_gd3te"), SubResource("Resource_n3tfh"), SubResource("Resource_1csvt"), SubResource("Resource_cglid"), SubResource("Resource_u12uj"), SubResource("Resource_u1wpd"), SubResource("Resource_jnsx5"), SubResource("Resource_0ykhp"), SubResource("Resource_wbm2o"), SubResource("Resource_uwfwo"), SubResource("Resource_xtyfp"), SubResource("Resource_4swet"), SubResource("Resource_wekmr"), SubResource("Resource_oowau"), SubResource("Resource_w7smv"), SubResource("Resource_5d5l2"), SubResource("Resource_f3xmc"), SubResource("Resource_o8wid"), SubResource("Resource_85hfh"), SubResource("Resource_hu25k"), SubResource("Resource_1owsq"), SubResource("Resource_6io1l"), SubResource("Resource_d05w8"), SubResource("Resource_ck2a4"), SubResource("Resource_yl0q6"), SubResource("Resource_afkqx"), SubResource("Resource_geoqx"), SubResource("Resource_dhcan"), SubResource("Resource_64tkq"), SubResource("Resource_usm3g"), SubResource("Resource_ks7al"), SubResource("Resource_qmxb1"), SubResource("Resource_1l5gp"), SubResource("Resource_ahnba"), SubResource("Resource_npc2i"), SubResource("Resource_1phey"), SubResource("Resource_qfnkx"), SubResource("Resource_7y5f2"), SubResource("Resource_xv8ot")]

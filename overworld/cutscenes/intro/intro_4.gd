@@ -4,7 +4,7 @@ extends Node2D
 @onready var skip_button: Button = $Camera2D/SkipButton
 
 @export var change_scene: String = "Intro5"
-@export var final_skip: String = "InsideHeroRoom"
+@export var final_skip: String = "Intro6"
 
 var start_time: int = 0
 

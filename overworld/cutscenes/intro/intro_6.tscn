@@ -36,13 +36,19 @@ talk_state_save_location = "res://overworld/cutscenes/intro/talk_state.tres"
 
 [node name="Snek" parent="." instance=ExtResource("6_mtnol")]
 
-[node name="SkipButton" type="Button" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="SkipButton" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 176.0
-offset_top = -155.0
-offset_right = 277.718
-offset_bottom = -107.684
+z_index = 128
+offset_left = 946.0
+offset_top = 25.0
+offset_right = 1038.72
+offset_bottom = 72.3165
+scale = Vector2(2, 2)
 theme = ExtResource("7_to18j")
-text = "SKIP"
+text = "Skip"
+metadata/_edit_use_anchors_ = true
 
 [editable path="Conversation"]

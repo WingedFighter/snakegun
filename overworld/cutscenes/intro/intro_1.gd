@@ -4,7 +4,7 @@ extends Node2D
 @onready var skip_button: Button = $Camera2D/SkipButton
 
 @export var change_scene: String = "Intro2"
-@export var final_skip: String = "InsideHeroRoom"
+@export var final_skip: String = "Intro6"
 
 func _input(event: InputEvent) -> void:
 	if event.is_action("interact"):
