@@ -43,6 +43,6 @@ talk_state_save_location = "res://overworld/cutscenes/post_boss_3/talk_state.tre
 talk_state = null
 
 [node name="CollisionShape2D" parent="Conversation" index="2"]
-position = Vector2(-259, 71)
+position = Vector2(-267, 69)
 
 [editable path="Conversation"]

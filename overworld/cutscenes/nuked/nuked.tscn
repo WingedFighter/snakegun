@@ -10,6 +10,7 @@ anchors_preset = 0
 script = ExtResource("1_1s8we")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("1_nvp0g")
