@@ -48,62 +48,6 @@ data = {
 
 [sub_resource type="Resource" id="Resource_32qku"]
 script = ExtResource("1_p5v45")
-name = "TalkMessage2"
-type = "TalkMessage"
-position_offset = Vector2(220, 360)
-data = {
-&"background": "none",
-&"character_id": "snek",
-&"id": "TalkMessage2",
-&"line_id": "-1",
-&"lines": Array[String](["Shut up and PAY ATTENTION!", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_wpnps"]
-script = ExtResource("1_p5v45")
-name = "TalkMessage3"
-type = "TalkMessage"
-position_offset = Vector2(220, 540)
-data = {
-&"background": "none",
-&"character_id": "snek",
-&"id": "TalkMessage3",
-&"line_id": "-1",
-&"lines": Array[String](["Your bookbag smells like old socks and depression,", "Adeline-kun-chan! I can't handle a conversation", "in addition to all this!!!"]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_86nef"]
-script = ExtResource("1_p5v45")
-name = "TalkMessage4"
-type = "TalkMessage"
-position_offset = Vector2(220, 720)
-data = {
-&"background": "none",
-&"character_id": "snek",
-&"id": "TalkMessage4",
-&"line_id": "-1",
-&"lines": Array[String](["Also don't think about guns at school, its really weird.", "You don't even know how hard they are to handle.", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_ndoh5"]
-script = ExtResource("1_p5v45")
-name = "TalkMessage5"
-type = "TalkMessage"
-position_offset = Vector2(480, 420)
-data = {
-&"background": "none",
-&"character_id": "teacher",
-&"id": "TalkMessage5",
-&"line_id": "-1",
-&"lines": Array[String](["LUNCH TIME KIDDOS!", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_04r2s"]
-script = ExtResource("1_p5v45")
 name = "TalkStart"
 type = "TalkStart"
 position_offset = Vector2(-360, 80)
@@ -112,7 +56,7 @@ data = {
 &"next_id": "TalkBasic2"
 }
 
-[sub_resource type="Resource" id="Resource_1vxen"]
+[sub_resource type="Resource" id="Resource_wpnps"]
 script = ExtResource("1_p5v45")
 name = "TalkMessage"
 type = "TalkMessage"
@@ -123,6 +67,67 @@ data = {
 &"id": "TalkMessage",
 &"line_id": "-1",
 &"lines": Array[String](["So....", "When are we going to shoot things? It'll be just like COD.", "Blam blam blam blam!!!! Hahaha!!"]),
+&"mood": 4,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_86nef"]
+script = ExtResource("1_p5v45")
+name = "TalkMessage2"
+type = "TalkMessage"
+position_offset = Vector2(220, 360)
+data = {
+&"background": "none",
+&"character_id": "snek",
+&"id": "TalkMessage2",
+&"line_id": "-1",
+&"lines": Array[String](["Shut up and PAY ATTENTION!", "", ""]),
+&"mood": 2,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_ndoh5"]
+script = ExtResource("1_p5v45")
+name = "TalkMessage4"
+type = "TalkMessage"
+position_offset = Vector2(220, 800)
+data = {
+&"background": "none",
+&"character_id": "snek",
+&"id": "TalkMessage4",
+&"line_id": "-1",
+&"lines": Array[String](["Also don't think about guns at school, its really weird.", "You don't even know how hard they are to handle.", ""]),
+&"mood": 4,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_04r2s"]
+script = ExtResource("1_p5v45")
+name = "TalkMessage3"
+type = "TalkMessage"
+position_offset = Vector2(220, 580)
+data = {
+&"background": "none",
+&"character_id": "snek",
+&"id": "TalkMessage3",
+&"line_id": "-1",
+&"lines": Array[String](["Your bookbag smells like old socks and depression,", "Adeline-kun-chan! I can't handle a conversation", "in addition to all this!!!"]),
+&"mood": 5,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_1vxen"]
+script = ExtResource("1_p5v45")
+name = "TalkMessage5"
+type = "TalkMessage"
+position_offset = Vector2(480, 420)
+data = {
+&"background": "none",
+&"character_id": "teacher",
+&"id": "TalkMessage5",
+&"line_id": "-1",
+&"lines": Array[String](["LUNCH TIME KIDDOS!", "", ""]),
+&"mood": 1,
 &"overlay": "none"
 }
 

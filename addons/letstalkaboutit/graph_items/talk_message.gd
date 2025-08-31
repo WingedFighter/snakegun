@@ -13,6 +13,7 @@ class_name TalkMessage
 @export var character_id: String = "-1"
 @export var overlay: String = "none"
 @export var background: String = "none"
+@export var mood: TalkCharacter.MOOD = TalkCharacter.MOOD.NEUTRAL
 
 func _enter_tree() -> void:
 	id = name
@@ -22,6 +23,12 @@ func _enter_tree() -> void:
 	$Overlay/LineEdit.text = overlay
 	$Background/LineEdit.text_changed.connect(set_background)
 	$Background/LineEdit.text = background
+	for i  in range(0, $Mood/OptionButton.item_count):
+		$Mood/OptionButton.remove_item(0)
+	for m in TalkCharacter.MOOD:
+		$Mood/OptionButton.add_item(m)
+	$Mood/OptionButton.select(mood)
+	$Mood/OptionButton.item_selected.connect(set_mood)
 
 func get_graph_element_from_name(p_name: StringName) -> GraphNode:
 	var graph = get_parent()
@@ -55,3 +62,6 @@ func set_lines(p_lines: Array[String]) -> void:
 
 func set_background(p_background: String) -> void:
 	background = p_background
+
+func set_mood(p_mood: int) -> void:
+	mood = p_mood

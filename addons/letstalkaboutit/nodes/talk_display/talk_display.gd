@@ -213,7 +213,6 @@ func create_talk_container() -> PanelContainer:
 		t_texture.name = "TalkTexture"
 		t_texture.texture = default_texture
 		t_texture.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
-		t_texture.flip_h = true
 
 		var inner_right_spacer := HBoxContainer.new()
 		spacer.add_child(inner_right_spacer)
@@ -417,7 +416,27 @@ func display_message() -> void:
 	var character = get_character_from_id(current_message.character_id)
 
 	set_name_label(character.character_name)
-	set_talk_texture(character.character_base_panel)
+	var current_texture = character.character_base_panel
+	match current_message.mood:
+		TalkCharacter.MOOD.SAD:
+			if character.character_sad:
+				current_texture = character.character_sad
+		TalkCharacter.MOOD.HAPPY:
+			if character.character_happy:
+				current_texture = character.character_happy
+		TalkCharacter.MOOD.ANGRY:
+			if character.character_angry:
+				current_texture = character.character_angry
+		TalkCharacter.MOOD.SURPRISED:
+			if character.character_surprised:
+				current_texture = character.character_surprised
+		TalkCharacter.MOOD.SERIOUS:
+			if character.character_serious:
+				current_texture = character.character_serious
+		_:
+			if character.character_neutral:
+				current_texture = character.character_neutral
+	set_talk_texture(current_texture)
 	set_text_animation(current_message.lines)
 	set_background(current_message.background)
 	set_overlay(current_message.overlay)

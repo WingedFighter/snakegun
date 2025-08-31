@@ -35,7 +35,6 @@ slot/2/right_icon = null
 slot/2/draw_stylebox = true
 script = ExtResource("1_363hv")
 id = "TalkBasic"
-message_list = null
 
 [node name="TalkFlow" type="HBoxContainer" parent="."]
 layout_mode = 2

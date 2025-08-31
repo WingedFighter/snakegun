@@ -15,20 +15,6 @@ data = {
 
 [sub_resource type="Resource" id="Resource_ib57c"]
 script = ExtResource("1_qpoi7")
-name = "TalkMessage"
-type = "TalkMessage"
-position_offset = Vector2(380, 360)
-data = {
-&"background": "none",
-&"character_id": "evil_sarah",
-&"id": "TalkMessage",
-&"line_id": "-1",
-&"lines": Array[String](["Muwahahahahaha", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_6nurv"]
-script = ExtResource("1_qpoi7")
 name = "TalkBasic2"
 type = "TalkBasic"
 position_offset = Vector2(920, 120)
@@ -38,21 +24,7 @@ data = {
 &"next_id": "TalkBasic3"
 }
 
-[sub_resource type="Resource" id="Resource_c1mxx"]
-script = ExtResource("1_qpoi7")
-name = "TalkMessage2"
-type = "TalkMessage"
-position_offset = Vector2(640, 360)
-data = {
-&"background": "none",
-&"character_id": "player_magic",
-&"id": "TalkMessage2",
-&"line_id": "-1",
-&"lines": Array[String](["Who is that?", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_41q3b"]
+[sub_resource type="Resource" id="Resource_6nurv"]
 script = ExtResource("1_qpoi7")
 name = "TalkBasic3"
 type = "TalkBasic"
@@ -63,7 +35,7 @@ data = {
 &"next_id": "TalkBasic4"
 }
 
-[sub_resource type="Resource" id="Resource_g8gy1"]
+[sub_resource type="Resource" id="Resource_c1mxx"]
 script = ExtResource("1_qpoi7")
 name = "TalkBasic4"
 type = "TalkBasic"
@@ -74,35 +46,7 @@ data = {
 &"next_id": "TalkBasic5"
 }
 
-[sub_resource type="Resource" id="Resource_x7rwu"]
-script = ExtResource("1_qpoi7")
-name = "TalkMessage3"
-type = "TalkMessage"
-position_offset = Vector2(920, 360)
-data = {
-&"background": "none",
-&"character_id": "evil_sarah",
-&"id": "TalkMessage3",
-&"line_id": "-1",
-&"lines": Array[String](["You can call me....'The Nuclear Temptress'", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_4w02n"]
-script = ExtResource("1_qpoi7")
-name = "TalkMessage4"
-type = "TalkMessage"
-position_offset = Vector2(1160, 360)
-data = {
-&"background": "none",
-&"character_id": "snek",
-&"id": "TalkMessage4",
-&"line_id": "-1",
-&"lines": Array[String](["What a REPULSIVE talksprite.", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_2vydl"]
+[sub_resource type="Resource" id="Resource_41q3b"]
 script = ExtResource("1_qpoi7")
 name = "TalkBasic5"
 type = "TalkBasic"
@@ -113,21 +57,7 @@ data = {
 &"next_id": "TalkBasic6"
 }
 
-[sub_resource type="Resource" id="Resource_jm7uv"]
-script = ExtResource("1_qpoi7")
-name = "TalkMessage5"
-type = "TalkMessage"
-position_offset = Vector2(1400, 360)
-data = {
-&"background": "none",
-&"character_id": "player_magic",
-&"id": "TalkMessage5",
-&"line_id": "-1",
-&"lines": Array[String](["Okay I can see her now. I don't want to say that name.", "Any other options?", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_i2aig"]
+[sub_resource type="Resource" id="Resource_g8gy1"]
 script = ExtResource("1_qpoi7")
 name = "TalkBasic6"
 type = "TalkBasic"
@@ -138,49 +68,7 @@ data = {
 &"next_id": "TalkBasic7"
 }
 
-[sub_resource type="Resource" id="Resource_jrqm2"]
-script = ExtResource("1_qpoi7")
-name = "TalkMessage6"
-type = "TalkMessage"
-position_offset = Vector2(1660, 360)
-data = {
-&"background": "none",
-&"character_id": "evil_sarah",
-&"id": "TalkMessage6",
-&"line_id": "-1",
-&"lines": Array[String](["I spent 6 hours workshopping that one!", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_n0uio"]
-script = ExtResource("1_qpoi7")
-name = "TalkMessage7"
-type = "TalkMessage"
-position_offset = Vector2(1660, 540)
-data = {
-&"background": "none",
-&"character_id": "evil_sarah",
-&"id": "TalkMessage7",
-&"line_id": "-1",
-&"lines": Array[String](["...", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_p7chy"]
-script = ExtResource("1_qpoi7")
-name = "TalkMessage8"
-type = "TalkMessage"
-position_offset = Vector2(1660, 720)
-data = {
-&"background": "none",
-&"character_id": "-1",
-&"id": "TalkMessage8",
-&"line_id": "-1",
-&"lines": Array[String](["How about 'The destroyer of Idaho'?", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_eohkr"]
+[sub_resource type="Resource" id="Resource_x7rwu"]
 script = ExtResource("1_qpoi7")
 name = "TalkBasic7"
 type = "TalkBasic"
@@ -191,7 +79,7 @@ data = {
 &"next_id": "TalkBasic8"
 }
 
-[sub_resource type="Resource" id="Resource_rhkru"]
+[sub_resource type="Resource" id="Resource_4w02n"]
 script = ExtResource("1_qpoi7")
 name = "TalkBasic"
 type = "TalkBasic"
@@ -202,21 +90,7 @@ data = {
 &"next_id": "TalkBasic2"
 }
 
-[sub_resource type="Resource" id="Resource_cbsqu"]
-script = ExtResource("1_qpoi7")
-name = "TalkMessage9"
-type = "TalkMessage"
-position_offset = Vector2(1900, 360)
-data = {
-&"background": "none",
-&"character_id": "snek",
-&"id": "TalkMessage9",
-&"line_id": "-1",
-&"lines": Array[String](["You mean diabetes?", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_qsy30"]
+[sub_resource type="Resource" id="Resource_2vydl"]
 script = ExtResource("1_qpoi7")
 name = "TalkBasic8"
 type = "TalkBasic"
@@ -227,21 +101,7 @@ data = {
 &"next_id": "TalkBasic9"
 }
 
-[sub_resource type="Resource" id="Resource_jehqu"]
-script = ExtResource("1_qpoi7")
-name = "TalkMessage10"
-type = "TalkMessage"
-position_offset = Vector2(2140, 360)
-data = {
-&"background": "none",
-&"character_id": "player_magic",
-&"id": "TalkMessage10",
-&"line_id": "-1",
-&"lines": Array[String](["I'm just going to call you purple.", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_hqako"]
+[sub_resource type="Resource" id="Resource_jm7uv"]
 script = ExtResource("1_qpoi7")
 name = "TalkBasic9"
 type = "TalkBasic"
@@ -252,21 +112,7 @@ data = {
 &"next_id": "TalkBasic10"
 }
 
-[sub_resource type="Resource" id="Resource_em2sv"]
-script = ExtResource("1_qpoi7")
-name = "TalkMessage11"
-type = "TalkMessage"
-position_offset = Vector2(2400, 360)
-data = {
-&"background": "none",
-&"character_id": "evil_sarah",
-&"id": "TalkMessage11",
-&"line_id": "-1",
-&"lines": Array[String](["...because I'm purple-", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_03u7w"]
+[sub_resource type="Resource" id="Resource_i2aig"]
 script = ExtResource("1_qpoi7")
 name = "TalkBasic10"
 type = "TalkBasic"
@@ -277,21 +123,7 @@ data = {
 &"next_id": "TalkBasic11"
 }
 
-[sub_resource type="Resource" id="Resource_2637y"]
-script = ExtResource("1_qpoi7")
-name = "TalkMessage12"
-type = "TalkMessage"
-position_offset = Vector2(2640, 360)
-data = {
-&"background": "none",
-&"character_id": "player_magic",
-&"id": "TalkMessage12",
-&"line_id": "-1",
-&"lines": Array[String](["Because you're purple, yes.", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_o3w1p"]
+[sub_resource type="Resource" id="Resource_jrqm2"]
 script = ExtResource("1_qpoi7")
 name = "TalkBasic11"
 type = "TalkBasic"
@@ -302,21 +134,7 @@ data = {
 &"next_id": "TalkBasic12"
 }
 
-[sub_resource type="Resource" id="Resource_goy6v"]
-script = ExtResource("1_qpoi7")
-name = "TalkMessage13"
-type = "TalkMessage"
-position_offset = Vector2(2900, 360)
-data = {
-&"background": "none",
-&"character_id": "evil_sarah",
-&"id": "TalkMessage13",
-&"line_id": "-1",
-&"lines": Array[String](["Not cool. Who even are you? What am I looking at here?", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_w1t28"]
+[sub_resource type="Resource" id="Resource_n0uio"]
 script = ExtResource("1_qpoi7")
 name = "TalkBasic12"
 type = "TalkBasic"
@@ -327,21 +145,7 @@ data = {
 &"next_id": "TalkBasic13"
 }
 
-[sub_resource type="Resource" id="Resource_yg54c"]
-script = ExtResource("1_qpoi7")
-name = "TalkMessage14"
-type = "TalkMessage"
-position_offset = Vector2(3140, 360)
-data = {
-&"background": "none",
-&"character_id": "player_magic",
-&"id": "TalkMessage14",
-&"line_id": "-1",
-&"lines": Array[String](["Around these parts they call me 'The Phantom Viper'.", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_15ii3"]
+[sub_resource type="Resource" id="Resource_p7chy"]
 script = ExtResource("1_qpoi7")
 name = "TalkBasic13"
 type = "TalkBasic"
@@ -352,21 +156,7 @@ data = {
 &"next_id": "TalkBasic14"
 }
 
-[sub_resource type="Resource" id="Resource_6bg8e"]
-script = ExtResource("1_qpoi7")
-name = "TalkMessage15"
-type = "TalkMessage"
-position_offset = Vector2(3400, 360)
-data = {
-&"background": "none",
-&"character_id": "evil_sarah",
-&"id": "TalkMessage15",
-&"line_id": "-1",
-&"lines": Array[String](["Yeah I'm calling you Froufrou Mcpink.", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_stbyw"]
+[sub_resource type="Resource" id="Resource_eohkr"]
 script = ExtResource("1_qpoi7")
 name = "TalkBasic14"
 type = "TalkBasic"
@@ -377,21 +167,7 @@ data = {
 &"next_id": "TalkBasic15"
 }
 
-[sub_resource type="Resource" id="Resource_xoddx"]
-script = ExtResource("1_qpoi7")
-name = "TalkMessage16"
-type = "TalkMessage"
-position_offset = Vector2(3640, 360)
-data = {
-&"background": "none",
-&"character_id": "player_magic",
-&"id": "TalkMessage16",
-&"line_id": "-1",
-&"lines": Array[String](["Awwww man", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_dmadl"]
+[sub_resource type="Resource" id="Resource_rhkru"]
 script = ExtResource("1_qpoi7")
 name = "TalkEnd"
 type = "TalkEnd"
@@ -401,7 +177,7 @@ data = {
 &"next_start": "Start"
 }
 
-[sub_resource type="Resource" id="Resource_r37qb"]
+[sub_resource type="Resource" id="Resource_cbsqu"]
 script = ExtResource("1_qpoi7")
 name = "TalkBasic15"
 type = "TalkBasic"
@@ -412,6 +188,246 @@ data = {
 &"next_id": "TalkEnd"
 }
 
+[sub_resource type="Resource" id="Resource_qsy30"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage"
+type = "TalkMessage"
+position_offset = Vector2(380, 360)
+data = {
+&"background": "none",
+&"character_id": "evil_sarah",
+&"id": "TalkMessage",
+&"line_id": "-1",
+&"lines": Array[String](["Muwahahahahaha", "", ""]),
+&"mood": 2,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_jehqu"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage2"
+type = "TalkMessage"
+position_offset = Vector2(640, 360)
+data = {
+&"background": "none",
+&"character_id": "player_magic",
+&"id": "TalkMessage2",
+&"line_id": "-1",
+&"lines": Array[String](["Who is that?", "", ""]),
+&"mood": 3,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_hqako"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage3"
+type = "TalkMessage"
+position_offset = Vector2(920, 360)
+data = {
+&"background": "none",
+&"character_id": "evil_sarah",
+&"id": "TalkMessage3",
+&"line_id": "-1",
+&"lines": Array[String](["You can call me....'The Nuclear Temptress'", "", ""]),
+&"mood": 1,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_em2sv"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage4"
+type = "TalkMessage"
+position_offset = Vector2(1160, 360)
+data = {
+&"background": "none",
+&"character_id": "snek",
+&"id": "TalkMessage4",
+&"line_id": "-1",
+&"lines": Array[String](["What a REPULSIVE talksprite.", "", ""]),
+&"mood": 4,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_03u7w"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage5"
+type = "TalkMessage"
+position_offset = Vector2(1400, 360)
+data = {
+&"background": "none",
+&"character_id": "player_magic",
+&"id": "TalkMessage5",
+&"line_id": "-1",
+&"lines": Array[String](["Okay I can see her now. I don't want to say that name.", "Any other options?", ""]),
+&"mood": 4,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_2637y"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage6"
+type = "TalkMessage"
+position_offset = Vector2(1660, 360)
+data = {
+&"background": "none",
+&"character_id": "evil_sarah",
+&"id": "TalkMessage6",
+&"line_id": "-1",
+&"lines": Array[String](["I spent 6 hours workshopping that one!", "", ""]),
+&"mood": 0,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_o3w1p"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage7"
+type = "TalkMessage"
+position_offset = Vector2(1660, 580)
+data = {
+&"background": "none",
+&"character_id": "evil_sarah",
+&"id": "TalkMessage7",
+&"line_id": "-1",
+&"lines": Array[String](["...", "", ""]),
+&"mood": 4,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_goy6v"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage8"
+type = "TalkMessage"
+position_offset = Vector2(1660, 800)
+data = {
+&"background": "none",
+&"character_id": "evil_sarah",
+&"id": "TalkMessage8",
+&"line_id": "-1",
+&"lines": Array[String](["How about 'The destroyer of Idaho'?", "", ""]),
+&"mood": 4,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_w1t28"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage9"
+type = "TalkMessage"
+position_offset = Vector2(1900, 360)
+data = {
+&"background": "none",
+&"character_id": "snek",
+&"id": "TalkMessage9",
+&"line_id": "-1",
+&"lines": Array[String](["You mean diabetes?", "", ""]),
+&"mood": 5,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_yg54c"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage10"
+type = "TalkMessage"
+position_offset = Vector2(2140, 360)
+data = {
+&"background": "none",
+&"character_id": "player_magic",
+&"id": "TalkMessage10",
+&"line_id": "-1",
+&"lines": Array[String](["I'm just going to call you purple.", "", ""]),
+&"mood": 4,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_15ii3"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage11"
+type = "TalkMessage"
+position_offset = Vector2(2400, 360)
+data = {
+&"background": "none",
+&"character_id": "evil_sarah",
+&"id": "TalkMessage11",
+&"line_id": "-1",
+&"lines": Array[String](["...because I'm purple-", "", ""]),
+&"mood": 4,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_6bg8e"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage12"
+type = "TalkMessage"
+position_offset = Vector2(2640, 360)
+data = {
+&"background": "none",
+&"character_id": "player_magic",
+&"id": "TalkMessage12",
+&"line_id": "-1",
+&"lines": Array[String](["Because you're purple, yes.", "", ""]),
+&"mood": 4,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_stbyw"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage13"
+type = "TalkMessage"
+position_offset = Vector2(2900, 360)
+data = {
+&"background": "none",
+&"character_id": "evil_sarah",
+&"id": "TalkMessage13",
+&"line_id": "-1",
+&"lines": Array[String](["Not cool. Who even are you? What am I looking at here?", "", ""]),
+&"mood": 2,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_xoddx"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage14"
+type = "TalkMessage"
+position_offset = Vector2(3140, 360)
+data = {
+&"background": "none",
+&"character_id": "player_magic",
+&"id": "TalkMessage14",
+&"line_id": "-1",
+&"lines": Array[String](["Around these parts they call me 'The Phantom Viper'.", "", ""]),
+&"mood": 1,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_dmadl"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage15"
+type = "TalkMessage"
+position_offset = Vector2(3400, 360)
+data = {
+&"background": "none",
+&"character_id": "evil_sarah",
+&"id": "TalkMessage15",
+&"line_id": "-1",
+&"lines": Array[String](["Yeah I'm calling you Froufrou Mcpink.", "", ""]),
+&"mood": 4,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_r37qb"]
+script = ExtResource("1_qpoi7")
+name = "TalkMessage16"
+type = "TalkMessage"
+position_offset = Vector2(3640, 360)
+data = {
+&"background": "none",
+&"character_id": "player_magic",
+&"id": "TalkMessage16",
+&"line_id": "-1",
+&"lines": Array[String](["Awwww man", "", ""]),
+&"mood": 0,
+&"overlay": "none"
+}
+
 [sub_resource type="Resource" id="Resource_hpysr"]
 script = ExtResource("1_qpoi7")
 name = "TalkMessage17"
@@ -419,10 +435,11 @@ type = "TalkMessage"
 position_offset = Vector2(3900, 360)
 data = {
 &"background": "none",
-&"character_id": "evil_sara",
+&"character_id": "evil_sarah",
 &"id": "TalkMessage17",
 &"line_id": "-1",
 &"lines": Array[String](["It's only fair!", "", ""]),
+&"mood": 4,
 &"overlay": "none"
 }
 
@@ -430,13 +447,14 @@ data = {
 script = ExtResource("1_qpoi7")
 name = "TalkMessage18"
 type = "TalkMessage"
-position_offset = Vector2(3900, 540)
+position_offset = Vector2(3900, 580)
 data = {
 &"background": "none",
 &"character_id": "evil_sarah",
 &"id": "TalkMessage18",
 &"line_id": "-1",
 &"lines": Array[String](["Look, I was warned that you and your idiot snake would try", "and stop my plans to destroy the next town over.", "...But I need it gone."]),
+&"mood": 2,
 &"overlay": "none"
 }
 
@@ -444,13 +462,14 @@ data = {
 script = ExtResource("1_qpoi7")
 name = "TalkMessage19"
 type = "TalkMessage"
-position_offset = Vector2(3900, 720)
+position_offset = Vector2(3900, 800)
 data = {
 &"background": "none",
 &"character_id": "evil_sarah",
 &"id": "TalkMessage19",
 &"line_id": "-1",
 &"lines": Array[String](["Its imperative that this plan goes 100 percent right.", "Take a look at my Megamachine Version 1....", ""]),
+&"mood": 4,
 &"overlay": "none"
 }
 
@@ -458,13 +477,14 @@ data = {
 script = ExtResource("1_qpoi7")
 name = "TalkMessage20"
 type = "TalkMessage"
-position_offset = Vector2(3900, 900)
+position_offset = Vector2(3900, 1020)
 data = {
 &"background": "none",
 &"character_id": "evil_sarah",
 &"id": "TalkMessage20",
 &"line_id": "-1",
 &"lines": Array[String](["...and prepare to GET FUCKED, IDIOT", "", ""]),
+&"mood": 2,
 &"overlay": "none"
 }
 

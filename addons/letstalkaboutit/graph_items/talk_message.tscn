@@ -45,9 +45,19 @@ slot/3/right_type = 0
 slot/3/right_color = Color(1, 1, 1, 1)
 slot/3/right_icon = null
 slot/3/draw_stylebox = true
+slot/4/left_enabled = false
+slot/4/left_type = 0
+slot/4/left_color = Color(1, 1, 1, 1)
+slot/4/left_icon = null
+slot/4/right_enabled = false
+slot/4/right_type = 0
+slot/4/right_color = Color(1, 1, 1, 1)
+slot/4/right_icon = null
+slot/4/draw_stylebox = true
 script = ExtResource("1_skib8")
 id = "TalkMessage"
 line_resource = SubResource("Resource_orx1e")
+mood = 5
 
 [node name="Message" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -113,3 +123,31 @@ layout_mode = 2
 size_flags_horizontal = 10
 text = "none"
 expand_to_text_length = true
+
+[node name="Mood" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Mood"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Mood"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="Mood"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OptionButton" type="OptionButton" parent="Mood"]
+layout_mode = 2
+selected = 0
+item_count = 5
+popup/item_0/text = "SAD"
+popup/item_0/id = 0
+popup/item_1/text = "HAPPY"
+popup/item_1/id = 1
+popup/item_2/text = "ANGRY"
+popup/item_2/id = 2
+popup/item_3/text = "SURPRISED"
+popup/item_3/id = 3
+popup/item_4/text = "NEUTRAL"
+popup/item_4/id = 4

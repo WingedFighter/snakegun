@@ -10,4 +10,5 @@ script = ExtResource("1_2ny7b")
 character_id = "frecko"
 character_name = "Frecko"
 character_base_panel = ExtResource("2_fuv6f")
+character_neutral = ExtResource("2_fuv6f")
 metadata/_custom_type_script = "uid://b2flwfdlosxw"

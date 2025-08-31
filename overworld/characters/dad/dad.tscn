@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bc6dd18mtisll"]
+[gd_scene load_steps=6 format=3 uid="uid://bc6dd18mtisll"]
 
 [ext_resource type="Script" uid="uid://b2flwfdlosxw" path="res://addons/letstalkaboutit/nodes/talk_character.gd" id="1_ldnbt"]
 [ext_resource type="Texture2D" uid="uid://w3n3vsymxm7f" path="res://overworld/characters/dad/neutral.png" id="2_y8ci4"]
+[ext_resource type="Texture2D" uid="uid://d0anefxi8lva" path="res://overworld/characters/dad/sad.png" id="3_njl1k"]
+[ext_resource type="Texture2D" uid="uid://dvfsqoj0ij32a" path="res://overworld/characters/dad/angry.png" id="4_png83"]
+[ext_resource type="Texture2D" uid="uid://6y41f2ulnhma" path="res://overworld/characters/dad/sadder.png" id="5_sd21r"]
 
 [node name="Dad" type="Node2D"]
 
@@ -10,4 +13,8 @@ script = ExtResource("1_ldnbt")
 character_id = "dad"
 character_name = "Dad"
 character_base_panel = ExtResource("2_y8ci4")
+character_sad = ExtResource("3_njl1k")
+character_angry = ExtResource("4_png83")
+character_surprised = ExtResource("5_sd21r")
+character_neutral = ExtResource("2_y8ci4")
 metadata/_custom_type_script = "uid://b2flwfdlosxw"

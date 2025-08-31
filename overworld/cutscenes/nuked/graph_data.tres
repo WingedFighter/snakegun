@@ -26,20 +26,6 @@ data = {
 
 [sub_resource type="Resource" id="Resource_55lnv"]
 script = ExtResource("1_w81kq")
-name = "TalkMessage"
-type = "TalkMessage"
-position_offset = Vector2(360, 300)
-data = {
-&"background": "none",
-&"character_id": "evil_sarah",
-&"id": "TalkMessage",
-&"line_id": "-1",
-&"lines": Array[String](["It's done! Yay!!!", "Now I never have to hear from either of them again.", "This is the best day of my life, and I am glad I got share it!"]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_owje6"]
-script = ExtResource("1_w81kq")
 name = "TalkBasic2"
 type = "TalkBasic"
 position_offset = Vector2(860, 80)
@@ -49,21 +35,7 @@ data = {
 &"next_id": "TalkBasic3"
 }
 
-[sub_resource type="Resource" id="Resource_oo62x"]
-script = ExtResource("1_w81kq")
-name = "TalkMessage2"
-type = "TalkMessage"
-position_offset = Vector2(600, 300)
-data = {
-&"background": "none",
-&"character_id": "player_magic",
-&"id": "TalkMessage2",
-&"line_id": "-1",
-&"lines": Array[String](["Awww! I feel the same way.", "Do you want to get some ice cream on our way home?", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_a5gwv"]
+[sub_resource type="Resource" id="Resource_owje6"]
 script = ExtResource("1_w81kq")
 name = "TalkBasic3"
 type = "TalkBasic"
@@ -74,21 +46,7 @@ data = {
 &"next_id": "TalkBasic4"
 }
 
-[sub_resource type="Resource" id="Resource_nmfoc"]
-script = ExtResource("1_w81kq")
-name = "TalkMessage3"
-type = "TalkMessage"
-position_offset = Vector2(860, 300)
-data = {
-&"background": "none",
-&"character_id": "evil_sarah",
-&"id": "TalkMessage3",
-&"line_id": "-1",
-&"lines": Array[String](["You read my mind! We can get some for the little cuties too.", "", ""]),
-&"overlay": "none"
-}
-
-[sub_resource type="Resource" id="Resource_yqmum"]
+[sub_resource type="Resource" id="Resource_oo62x"]
 script = ExtResource("1_w81kq")
 name = "TalkBasic4"
 type = "TalkBasic"
@@ -99,7 +57,7 @@ data = {
 &"next_id": "TalkBasic5"
 }
 
-[sub_resource type="Resource" id="Resource_v1dcs"]
+[sub_resource type="Resource" id="Resource_a5gwv"]
 script = ExtResource("1_w81kq")
 name = "TalkBasic5"
 type = "TalkBasic"
@@ -110,7 +68,7 @@ data = {
 &"next_id": "TalkBasic6"
 }
 
-[sub_resource type="Resource" id="Resource_wv66n"]
+[sub_resource type="Resource" id="Resource_nmfoc"]
 script = ExtResource("1_w81kq")
 name = "TalkBasic6"
 type = "TalkBasic"
@@ -121,7 +79,7 @@ data = {
 &"next_id": "TalkBasic7"
 }
 
-[sub_resource type="Resource" id="Resource_84xn2"]
+[sub_resource type="Resource" id="Resource_yqmum"]
 script = ExtResource("1_w81kq")
 name = "TalkBasic7"
 type = "TalkBasic"
@@ -132,7 +90,7 @@ data = {
 &"next_id": "TalkEnd"
 }
 
-[sub_resource type="Resource" id="Resource_2q87j"]
+[sub_resource type="Resource" id="Resource_v1dcs"]
 script = ExtResource("1_w81kq")
 name = "TalkEnd"
 type = "TalkEnd"
@@ -140,6 +98,51 @@ position_offset = Vector2(2300, 80)
 data = {
 &"id": "TalkEnd",
 &"next_start": "Start"
+}
+
+[sub_resource type="Resource" id="Resource_wv66n"]
+script = ExtResource("1_w81kq")
+name = "TalkMessage"
+type = "TalkMessage"
+position_offset = Vector2(360, 300)
+data = {
+&"background": "none",
+&"character_id": "evil_sarah",
+&"id": "TalkMessage",
+&"line_id": "-1",
+&"lines": Array[String](["It's done! Yay!!!", "Now I never have to hear from either of them again.", "This is the best day of my life, and I am glad I got share it!"]),
+&"mood": 1,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_84xn2"]
+script = ExtResource("1_w81kq")
+name = "TalkMessage2"
+type = "TalkMessage"
+position_offset = Vector2(600, 300)
+data = {
+&"background": "none",
+&"character_id": "player_magic",
+&"id": "TalkMessage2",
+&"line_id": "-1",
+&"lines": Array[String](["Awww! I feel the same way.", "Do you want to get some ice cream on our way home?", ""]),
+&"mood": 1,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_2q87j"]
+script = ExtResource("1_w81kq")
+name = "TalkMessage3"
+type = "TalkMessage"
+position_offset = Vector2(860, 300)
+data = {
+&"background": "none",
+&"character_id": "evil_sarah",
+&"id": "TalkMessage3",
+&"line_id": "-1",
+&"lines": Array[String](["You read my mind! We can get some for the little cuties too.", "", ""]),
+&"mood": 5,
+&"overlay": "none"
 }
 
 [sub_resource type="Resource" id="Resource_lfa0a"]
@@ -153,6 +156,7 @@ data = {
 &"id": "TalkMessage4",
 &"line_id": "-1",
 &"lines": Array[String](["~Hewwo~", "Iced cream!", ""]),
+&"mood": 4,
 &"overlay": "none"
 }
 
@@ -167,6 +171,7 @@ data = {
 &"id": "TalkMessage5",
 &"line_id": "-1",
 &"lines": Array[String](["...", "", ""]),
+&"mood": 0,
 &"overlay": "none"
 }
 
@@ -181,6 +186,7 @@ data = {
 &"id": "TalkMessage6",
 &"line_id": "-1",
 &"lines": Array[String](["~Hewwo~", "Iced cream!", ""]),
+&"mood": 4,
 &"overlay": "none"
 }
 
@@ -195,6 +201,7 @@ data = {
 &"id": "TalkMessage7",
 &"line_id": "-1",
 &"lines": Array[String](["...iced cream.", "", ""]),
+&"mood": 0,
 &"overlay": "none"
 }
 

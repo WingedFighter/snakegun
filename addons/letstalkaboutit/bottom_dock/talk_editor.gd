@@ -244,6 +244,10 @@ func init_graph(graph_data: GraphData) -> void:
                 g_node.set_overlay(node.data.overlay)
                 g_node.set_lines(node.data.lines)
                 g_node.set_background(node.data.background)
+                if node.data.has('mood'):
+                    g_node.set_mood(node.data.mood)
+                else:
+                    g_node.set_mood(TalkCharacter.MOOD.NEUTRAL)
             "TalkChoice":
                 for choice in node.data.choice_list:
                     g_node.add_new_choice(choice)
@@ -307,6 +311,7 @@ func save_graph_data(nodes: Array, connections: Array) -> void:
                     node_data.data.overlay = node.overlay
                     node_data.data.lines = node.line_resource.lines
                     node_data.data.background = node.background
+                    node_data.data.mood = node.mood
                 "TalkChoice":
                     node_data.data.id = node.id
                     node_data.data.choice_list = node.choice_list
