@@ -23,10 +23,7 @@ func _physics_process(delta: float) -> void:
 		enemy.global_position += enemy.global_position.direction_to(pos1) * speed * delta
 		# If we haven't flipped the animation yet, flip it
 		if !flip:
-			if enemy.global_position.x > pos1.x:
-				animation_player.play(enemy.enemy_type)
-			else:
-				animation_player.play(enemy.enemy_type + '_right')
+			play_animation(enemy.global_position.x, pos1.x)
 			flip = true
 		if enemy.global_position.distance_to(pos1) < 10:
 			marker = 2
@@ -36,12 +33,21 @@ func _physics_process(delta: float) -> void:
 		enemy.global_position += enemy.global_position.direction_to(pos2) * speed * delta
 
 		if !flip:
-			if enemy.global_position.x > pos2.x:
-				animation_player.play(enemy.enemy_type)
-			else:
-				animation_player.play(enemy.enemy_type + '_right')
+			play_animation(enemy.global_position.x, pos2.x)
 			flip = true
 		if enemy.global_position.distance_to(pos2) < 10:
 			marker = 1
 			flip = false
 	
+
+func play_animation(x1, x2):
+	if x1 > x2:
+		if enemy.enemy_level < 2:
+				animation_player.play(enemy.enemy_type)
+		else:
+			animation_player.play(enemy.enemy_type + str(enemy.enemy_level))
+	else:
+		if enemy.enemy_level < 2:
+			animation_player.play(enemy.enemy_type + '_right')
+		else:
+			animation_player.play(enemy.enemy_type + '_right' + str(enemy.enemy_level))
