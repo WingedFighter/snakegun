@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxo5cwn4uputv"]
+
+[ext_resource type="FontFile" uid="uid://cc8ofyvm2lacj" path="res://ui/fonts/MasonicLodge.ttf" id="1_ydyd3"]
+
+[sub_resource type="Gradient" id="Gradient_2n5wy"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nnsry"]
+gradient = SubResource("Gradient_2n5wy")
+width = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_rqgi2"]
+font = ExtResource("1_ydyd3")
+font_size = 48
+
+[node name="Credits" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1502.95, 1380.62)
+texture = SubResource("GradientTexture1D_nnsry")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -316.5
+offset_top = -24.096
+offset_right = 316.5
+offset_bottom = 24.096
+grow_horizontal = 2
+grow_vertical = 2
+text = "Thanks for Playing!"
+label_settings = SubResource("LabelSettings_rqgi2")
+
+[node name="Camera2D" type="Camera2D" parent="."]

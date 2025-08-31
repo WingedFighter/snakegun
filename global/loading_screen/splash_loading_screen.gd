@@ -37,7 +37,7 @@ extends CanvasLayer
 	"Killed": "res://overworld/cutscenes/killed/killed.tscn",
 	"Nuked": "res://overworld/cutscenes/nuked/nuked.tscn",
 	"PostNuke": "res://overworld/cutscenes/nuked/post_nuke.tscn",
-	"Credits": ""
+	"Credits": "res://ui/credits/credits.tscn"
 }
 
 @export var music_dictionary: Dictionary[String, String] = {
