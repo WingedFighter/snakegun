@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dnd0evx5c2tdf" path="res://platformer/textures/explode/explode0008.png" id="8_2eab8"]
 [ext_resource type="Texture2D" uid="uid://1tp8ucicoky0" path="res://platformer/textures/explode/explode0009.png" id="9_fl2p4"]
 [ext_resource type="Texture2D" uid="uid://b2w7g01k85tkp" path="res://platformer/textures/explode/explode0010.png" id="10_bf0jc"]
-[ext_resource type="Script" uid="uid://mwqbqlylesu" path="res://explosion.gd" id="11_8pbxe"]
+[ext_resource type="Script" uid="uid://mwqbqlylesu" path="res://platformer/components/explosion.gd" id="11_8pbxe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wkurk"]
 animations = [{
