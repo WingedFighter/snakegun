@@ -14,18 +14,18 @@ func immediate_transition(body: Node2D) -> void:
 	if conditional:
 		if body is Player25D && State.flags.has(condition) && State.flags[condition]:
 			body.hud.last_interactable = self
-			call_deferred("change_scene")
+			change_scene()
 	elif !conditional && body is Player25D:
 		body.hud.last_interactable = self
-		call_deferred("change_scene")
+		change_scene()
 
 func interact() -> void:
 	if conditional && State.flags.has(condition) && State.flags[condition]:
 		LoadingScreen.start_load()
-		call_deferred("change_scene")
+		change_scene()
 	elif !conditional:
 		LoadingScreen.start_load()
-		call_deferred("change_scene")
+		change_scene()
 
 func change_scene() -> void:
 	SceneManager.change_scene(to_scene)

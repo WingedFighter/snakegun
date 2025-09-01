@@ -27,5 +27,8 @@ func get_current_scene() -> String:
 		return scene_history[0]
 	return ""
 
-func change_scene(scene: String) -> int:
-	return get_tree().change_scene_to_packed(scene_dictionary[scene])
+func change_scene(scene: String) -> void:
+	call_deferred("_on_change_scene", scene)
+
+func _on_change_scene(scene: String) -> void:
+	get_tree().change_scene_to_packed(scene_dictionary[scene])
