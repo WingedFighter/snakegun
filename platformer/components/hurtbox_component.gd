@@ -16,7 +16,8 @@ var iframe_time: float = 0.5
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	area_entered.connect(take_damage)
-	pass
+	if iframe_timer != null:
+		iframe_timer.timeout.connect(can_hurt)
 
 func take_damage(area: Area2D) -> void:
 	if area.get_parent() is Bullet:
@@ -37,6 +38,9 @@ func take_damage(area: Area2D) -> void:
 		if iframe_timer != null:
 			if iframe_timer.is_stopped:
 				healthComponent.hurt(enemy.damage)
+				iframe_timer.start(iframe_time)
 		else:
 			healthComponent.hurt(enemy.damage)
-		
+
+func can_hurt() -> void:
+	print_debug('iframe active')

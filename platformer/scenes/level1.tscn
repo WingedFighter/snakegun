@@ -817,6 +817,10 @@ position = Vector2(2724, -409)
 position = Vector2(369, -212)
 scale = Vector2(0.6, 0.6)
 
+[node name="bunny2" parent="." instance=ExtResource("13_0illr")]
+position = Vector2(1997, -83)
+scale = Vector2(0.6, 0.6)
+
 [editable path="Player"]
 [editable path="Player/HurtboxComponent"]
 [editable path="fox1"]

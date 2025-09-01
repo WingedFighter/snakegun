@@ -17,7 +17,7 @@ var facing: Vector2 = Vector2(1, 0)
 var jumping: bool = false
 var falling: bool = false
 var grounded: bool = true
-var gun_level: int = 5
+var gun_level: int = 0
 var force_dampening: float = 1.0
 var water: bool = false
 # Player hitbox source is 1 for filtering, since hurt/hitboxes are shared between objects
@@ -27,6 +27,7 @@ signal gun_level_up(new: int)
 
 func _ready() -> void:
 	health_component.health_lost.connect(hurt)
+	health_component.health_depleted.connect(on_death)
 	animation_tree.set("parameters/Walk/blend_position", 1)
 	animation_tree.set("parameters/Idle/blend_position", 1)
 	animation_tree.set("parameters/Jump/blend_position", 1)
@@ -94,3 +95,6 @@ func enter_pickup(area: Area2D) -> void:
 
 func exit_pickup(_area: Area2D) -> void:
 	pass
+
+func on_death() -> void:
+	SceneManager.change_scene(SceneManager.get_current_scene())
