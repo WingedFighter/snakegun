@@ -205,7 +205,7 @@ shape = SubResource("RectangleShape2D_36w85")
 
 [node name="Transition" parent="Interactables/Transitions" instance=ExtResource("4_nrcqd")]
 position = Vector2(135, -89)
-to_scene = "BrightLights"
+to_scene = "Driving"
 conditional = true
 condition = "bright_lights"
 

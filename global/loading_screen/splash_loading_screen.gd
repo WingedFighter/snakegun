@@ -33,6 +33,7 @@ extends CanvasLayer
 	"PostBoss2": "res://overworld/cutscenes/post_boss_2/post_boss_2.tscn",
 	"ThirdSchool1": "res://overworld/cutscenes/third_steps/third_school_1.tscn",
 	"ThirdSchool2": "res://overworld/cutscenes/third_steps/third_school_2.tscn",
+	"Driving": "res://overworld/cutscenes/driving/driving.tscn",
 	"BrightLights": "res://overworld/cutscenes/bright_lights/bright_lights.tscn",
 	"PreBoss3": "res://overworld/cutscenes/pre_boss_3/pre_boss_3.tscn",
 	"PostBoss3": "res://overworld/cutscenes/post_boss_3/post_boss_3.tscn",

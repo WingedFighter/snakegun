@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://be4fgt6rctwtq"]
+
+[ext_resource type="Script" uid="uid://bg11648rxplcx" path="res://overworld/cutscenes/driving/driving.gd" id="1_i13d6"]
+[ext_resource type="VideoStream" uid="uid://cljq7s5ci6vmq" path="res://overworld/cutscenes/driving/drive.ogv" id="2_cgwns"]
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="2_uag2a"]
+
+[node name="Driving" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_i13d6")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.9, 0.9)
+stream = ExtResource("2_cgwns")
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="SkipButton" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 945.0
+offset_top = 18.0
+offset_right = 1037.72
+offset_bottom = 65.3165
+scale = Vector2(2, 2)
+theme = ExtResource("2_uag2a")
+text = "Skip"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580, 326)
