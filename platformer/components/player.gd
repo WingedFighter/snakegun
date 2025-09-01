@@ -8,14 +8,15 @@ extends CharacterBody2D
 @export var arm: AnimatedSprite2D
 @export var water_collider: Area2D
 @export var pickup_collider: Area2D
-@export var horizontal_speed: float = 100
+@export var horizontal_speed: float = 500
 @export var vertical_speed: float = 10
-@export var max_velocity: float = 1000
+@export var max_velocity: float = 500
 @export var gravity: float = 980.0
 @export var jump_speed: float = -500
 var facing: Vector2 = Vector2(1, 0)
 var jumping: bool = false
 var falling: bool = false
+var grounded: bool = true
 var gun_level: int = 0
 var force_dampening: float = 1.0
 var water: bool = false
@@ -68,6 +69,7 @@ func _physics_process(delta: float) -> void:
 
 	jumping = !is_on_floor()
 	falling = !is_on_floor() && velocity.y > 0
+	grounded = is_on_floor()
 	
 	velocity *= force_dampening
 

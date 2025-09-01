@@ -655,7 +655,7 @@ centered = false
 
 [node name="Level1" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.4, 0.4)
-scroll_offset = Vector2(0, 300)
+scroll_offset = Vector2(1000, 300)
 
 [node name="Sprite2D" type="Sprite2D" parent="Level1"]
 z_index = -100
@@ -664,6 +664,7 @@ texture = ExtResource("2_p8uae")
 
 [node name="Level2" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.5, 0.5)
+scroll_offset = Vector2(1000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Level2"]
 z_index = -100
@@ -673,7 +674,7 @@ texture = ExtResource("3_mh1d2")
 
 [node name="Level3" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.6, 0.6)
-scroll_offset = Vector2(0, -350)
+scroll_offset = Vector2(1000, -350)
 
 [node name="Sprite2D" type="Sprite2D" parent="Level3"]
 z_index = -100
@@ -682,7 +683,7 @@ texture = ExtResource("4_0illr")
 
 [node name="Level4" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.7, 0.7)
-scroll_offset = Vector2(0, 350)
+scroll_offset = Vector2(1000, 350)
 
 [node name="Sprite2D" type="Sprite2D" parent="Level4"]
 z_index = -100
@@ -709,7 +710,6 @@ tile_set = SubResource("TileSet_xxcd8")
 [node name="Player" parent="." instance=ExtResource("7_pf7br")]
 position = Vector2(-502, -185.335)
 collision_layer = 1
-horizontal_speed = 800.0
 
 [node name="arm" parent="Player" index="8"]
 animation = &"level1shoot"
@@ -730,7 +730,7 @@ position = Vector2(-582.784, -329.945)
 position = Vector2(1381.04, 286.117)
 
 [node name="fox1" parent="." instance=ExtResource("9_upe3q")]
-position = Vector2(-199, -131.89)
+position = Vector2(1173, -135)
 scale = Vector2(0.785, 0.785)
 enemy_level = 2
 
@@ -741,7 +741,7 @@ position = Vector2(-161, -1)
 position = Vector2(98, 6)
 
 [node name="bird1" parent="." instance=ExtResource("9_upe3q")]
-position = Vector2(405, -194)
+position = Vector2(908, -385)
 scale = Vector2(0.785, 0.785)
 enemy_type = "bird"
 
@@ -811,11 +811,11 @@ health_component = NodePath("../Player/HealthComponent")
 player = NodePath("../Player")
 
 [node name="EndOfLevel" parent="." instance=ExtResource("11_p8uae")]
-position = Vector2(1286, -84)
+position = Vector2(2724, -409)
 
-[node name="Enemy" parent="." instance=ExtResource("13_0illr")]
-position = Vector2(174, -325)
-scale = Vector2(0.7, 0.7)
+[node name="bunny" parent="." instance=ExtResource("13_0illr")]
+position = Vector2(369, -212)
+scale = Vector2(0.6, 0.6)
 
 [editable path="Player"]
 [editable path="Player/HurtboxComponent"]

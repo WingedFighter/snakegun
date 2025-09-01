@@ -176,7 +176,7 @@ advance_expression = "!jumping && velocity"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sqehh"]
 advance_mode = 2
-advance_expression = "!jumping && velocity"
+advance_expression = "grounded"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_08fop"]
 states/Fall/node = SubResource("AnimationNodeBlendSpace1D_sxcjf")
