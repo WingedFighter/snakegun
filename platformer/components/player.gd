@@ -17,7 +17,7 @@ var facing: Vector2 = Vector2(1, 0)
 var jumping: bool = false
 var falling: bool = false
 var grounded: bool = true
-var gun_level: int = 0
+var gun_level: int = 5
 var force_dampening: float = 1.0
 var water: bool = false
 # Player hitbox source is 1 for filtering, since hurt/hitboxes are shared between objects
@@ -64,8 +64,9 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("normal_fire"):
 		@warning_ignore("integer_division")
-		arm.play('level' + str(gun_level / 5 + 1) + 'shoot')
-		shoot_component.fire(facing * 1000, 1)
+		var actual_level = gun_level / 5 + 1
+		arm.play('level' + str(actual_level) + 'shoot')
+		shoot_component.fire(facing * 1000, actual_level)
 
 	jumping = !is_on_floor()
 	falling = !is_on_floor() && velocity.y > 0
@@ -87,7 +88,6 @@ func exit_water(_body: Node2D) -> void:
 	water = false
 
 func enter_pickup(area: Area2D) -> void:
-	print_debug('pickup hit')
 	area.get_parent().queue_free()
 	gun_level = clamp(gun_level + 1, 0, 15)
 	gun_level_up.emit(gun_level)
