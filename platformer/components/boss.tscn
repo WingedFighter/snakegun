@@ -1,5 +1,6 @@
-[gd_scene load_steps=89 format=3 uid="uid://o3dikj7u6j5b"]
+[gd_scene load_steps=90 format=3 uid="uid://o3dikj7u6j5b"]
 
+[ext_resource type="Script" uid="uid://1t0prt00vihg" path="res://platformer/components/boss.gd" id="1_qmiwu"]
 [ext_resource type="PackedScene" uid="uid://bp5asil6iy16" path="res://platformer/components/health_component.tscn" id="2_d3tc2"]
 [ext_resource type="PackedScene" uid="uid://dxgmgcp48vsmr" path="res://platformer/components/hurtbox_component.tscn" id="3_hh7ty"]
 [ext_resource type="Texture2D" uid="uid://wf47x1o0mmcp" path="res://platformer/textures/enemies/boss/bot0031.png" id="4_bptmr"]
@@ -32,12 +33,12 @@
 [ext_resource type="Texture2D" uid="uid://bcyt54ng85yfr" path="res://platformer/textures/enemies/boss/bot0030.png" id="30_ycy31"]
 [ext_resource type="Texture2D" uid="uid://fxbkckmvupp0" path="res://platformer/textures/enemies/boss/bot0076.png" id="31_74oti"]
 [ext_resource type="Texture2D" uid="uid://ddvvswda3cy56" path="res://platformer/textures/enemies/boss/bot0001.png" id="31_sxyd4"]
+[ext_resource type="Texture2D" uid="uid://du78a71milyd3" path="res://platformer/textures/enemies/boss/bessdead1.png" id="31_ycy31"]
 [ext_resource type="Texture2D" uid="uid://bwxbfqes6mlqn" path="res://platformer/textures/enemies/boss/bot0002.png" id="32_4re05"]
 [ext_resource type="Texture2D" uid="uid://cn7vd4eb1olw5" path="res://platformer/textures/enemies/boss/bot0077.png" id="32_qmiwu"]
 [ext_resource type="Texture2D" uid="uid://ciuil25cxq0m5" path="res://platformer/textures/enemies/boss/bot0003.png" id="33_q7sjy"]
 [ext_resource type="Texture2D" uid="uid://5ce1efa04rr0" path="res://platformer/textures/enemies/boss/bot0078.png" id="33_ycy31"]
 [ext_resource type="Texture2D" uid="uid://5m3gh7sfolf6" path="res://platformer/textures/enemies/boss/bot0004.png" id="34_a3pss"]
-[ext_resource type="PackedScene" uid="uid://b5pauup6q8vi8" path="res://platformer/components/death_component.tscn" id="34_r34u7"]
 [ext_resource type="Texture2D" uid="uid://c0v6saatk2aoh" path="res://platformer/textures/enemies/boss/bot0079.png" id="34_sxyd4"]
 [ext_resource type="Texture2D" uid="uid://birysqnt7s4lm" path="res://platformer/textures/enemies/boss/bot0080.png" id="35_4re05"]
 [ext_resource type="PackedScene" uid="uid://grt1adc2f8b8" path="res://platformer/components/hitbox_component.tscn" id="35_un6wu"]
@@ -175,6 +176,14 @@ animations = [{
 "loop": true,
 "name": &"dash",
 "speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_ycy31")
+}],
+"loop": true,
+"name": &"death",
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -366,6 +375,7 @@ size = Vector2(427, 434)
 collision_layer = 32
 collision_mask = 2
 platform_floor_layers = 4294967042
+script = ExtResource("1_qmiwu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 29)
@@ -386,18 +396,18 @@ health_component = NodePath("../HealthComponent")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HitflashComponent"]
 sprite_frames = SubResource("SpriteFrames_gengn")
+animation = &"death"
 autoplay = "default"
-frame_progress = 0.557926
-
-[node name="DeathComponent" parent="." node_paths=PackedStringArray("to_delete", "health_component") instance=ExtResource("34_r34u7")]
-to_delete = NodePath("..")
-health_component = NodePath("../HealthComponent")
+frame_progress = 0.146074
 
 [node name="HitboxComponent" parent="." instance=ExtResource("35_un6wu")]
 
 [node name="CollisionShape2D" parent="HitboxComponent" index="0"]
 position = Vector2(13.5, -27)
 shape = SubResource("RectangleShape2D_qmiwu")
+
+[node name="DeathTimer" type="Timer" parent="."]
+one_shot = true
 
 [editable path="HurtboxComponent"]
 [editable path="HitboxComponent"]

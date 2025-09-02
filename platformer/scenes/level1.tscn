@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bixfuhp4yjqfb" path="res://platformer/components/enemy.tscn" id="9_upe3q"]
 [ext_resource type="PackedScene" uid="uid://cwgke4uunwn6l" path="res://platformer/components/hud.tscn" id="10_no060"]
 [ext_resource type="PackedScene" uid="uid://blcf2pwyu3saj" path="res://platformer/components/end_of_level.tscn" id="11_p8uae"]
-[ext_resource type="PackedScene" path="res://platformer/components/bunny.tscn" id="13_0illr"]
+[ext_resource type="PackedScene" uid="uid://dvvskrdgkul33" path="res://platformer/components/bunny.tscn" id="13_0illr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_a5smi"]
 
