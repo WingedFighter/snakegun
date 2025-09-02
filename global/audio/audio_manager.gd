@@ -2,7 +2,7 @@ extends Node2D
 
 var stopped: bool = false
 
-var music_dictionary: Dictionary[String, AudioStreamWAV]
+var music_dictionary: Dictionary[String, AudioStream]
 var background_music: AudioStreamPlayer
 var current_track: String
 

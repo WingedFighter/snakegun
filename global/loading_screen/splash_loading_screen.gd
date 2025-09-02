@@ -50,8 +50,9 @@ extends CanvasLayer
 	"Boss2": "res://global/audio/background_music/Boss2.wav",
 	"FinalBossReal": "res://global/audio/background_music/FinalBossReal.wav",
 	"SomewhereInIdaho": "res://global/audio/background_music/SomewhereInIdaho.wav",
-	"SchoolDay": "res://global/audio/background_music/SchoolDay.wav",
-	"ImAMagicalGirl": "res://global/audio/background_music/ImAMagicalGirl!.wav"
+	"SchoolDay": "res://global/audio/background_music/SchoolDay.mp3",
+	"ImAMagicalGirl": "res://global/audio/background_music/ImAMagicalGirl!.wav",
+	"DarkAndStormy": "res://global/audio/background_music/ADarkAndStormyNight.mp3"
 }
 
 const SECOND: float = 1000.0
@@ -85,15 +86,18 @@ func load_threaded() -> void:
 	var temp_scene_dict: Dictionary[String, PackedScene] = {}
 	for key in scene_dictionary:
 		temp_scene_dict[key] = ResourceLoader.load_threaded_get(scene_dictionary[key])
-	var temp_music_dict: Dictionary[String, AudioStreamWAV] = {}
+	var temp_music_dict: Dictionary[String, AudioStream] = {}
 	for key in music_dictionary:
 		temp_music_dict[key] = ResourceLoader.load_threaded_get(music_dictionary[key])
 	SceneManager.scene_dictionary = temp_scene_dict
 	AudioManager.music_dictionary = temp_music_dict
 
 	for key in AudioManager.music_dictionary:
-		AudioManager.music_dictionary[key].loop_mode = AudioStreamWAV.LOOP_FORWARD
-		AudioManager.music_dictionary[key].loop_end = int(AudioManager.music_dictionary[key].mix_rate * AudioManager.music_dictionary[key].get_length())
+		if AudioManager.music_dictionary[key] is AudioStreamWAV:
+			AudioManager.music_dictionary[key].loop_mode = AudioStreamWAV.LOOP_FORWARD
+			AudioManager.music_dictionary[key].loop_end = int(AudioManager.music_dictionary[key].mix_rate * AudioManager.music_dictionary[key].get_length())
+		elif AudioManager.music_dictionary[key] is AudioStreamMP3:
+			AudioManager.music_dictionary[key].loop = true
 
 	SceneManager.change_scene(to_scene)
 

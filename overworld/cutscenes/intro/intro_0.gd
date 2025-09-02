@@ -15,7 +15,7 @@ func _input(event: InputEvent) -> void:
 
 func _ready() -> void:
 	skip_button.pressed.connect(on_skip_pressed)
-	AudioManager.stop_music()
+	AudioManager.play_music("DarkAndStormy")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

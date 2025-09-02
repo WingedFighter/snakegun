@@ -18,6 +18,7 @@ func _input(event: InputEvent) -> void:
 func _ready() -> void:
 	conversation.on_body_entered(player)
 	skip_button.pressed.connect(on_skip_pressed)
+	AudioManager.play_music("SomewhereInIdaho")
 
 func _process(_delta: float) -> void:
 	if !started_interact && !finished_interact && !player.is_paused:
