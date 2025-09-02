@@ -382,7 +382,7 @@ position = Vector2(-3, 29)
 shape = SubResource("RectangleShape2D_uqkkh")
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_d3tc2")]
-max_health = 50.0
+max_health = 10.0
 
 [node name="HurtboxComponent" parent="." node_paths=PackedStringArray("healthComponent") instance=ExtResource("3_hh7ty")]
 healthComponent = NodePath("../HealthComponent")
