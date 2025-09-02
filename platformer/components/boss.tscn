@@ -396,9 +396,8 @@ health_component = NodePath("../HealthComponent")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HitflashComponent"]
 sprite_frames = SubResource("SpriteFrames_gengn")
-animation = &"death"
+animation = &"walk"
 autoplay = "default"
-frame_progress = 0.146074
 
 [node name="HitboxComponent" parent="." instance=ExtResource("35_un6wu")]
 

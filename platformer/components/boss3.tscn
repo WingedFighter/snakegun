@@ -1,0 +1,447 @@
+[gd_scene load_steps=99 format=3 uid="uid://cuf746xmvaff1"]
+
+[ext_resource type="Script" uid="uid://1t0prt00vihg" path="res://platformer/components/boss.gd" id="1_pepht"]
+[ext_resource type="PackedScene" uid="uid://bp5asil6iy16" path="res://platformer/components/health_component.tscn" id="2_jaug8"]
+[ext_resource type="PackedScene" uid="uid://dxgmgcp48vsmr" path="res://platformer/components/hurtbox_component.tscn" id="3_18exq"]
+[ext_resource type="PackedScene" uid="uid://cx8omu8t2w3i1" path="res://platformer/components/hitflash_component.tscn" id="4_jgjg1"]
+[ext_resource type="Texture2D" uid="uid://q2ln5viyg6ja" path="res://platformer/textures/enemies/finalboss/catboss0031.png" id="94_4hf06"]
+[ext_resource type="PackedScene" uid="uid://grt1adc2f8b8" path="res://platformer/components/hitbox_component.tscn" id="94_8p7e5"]
+[ext_resource type="Texture2D" uid="uid://bu65v4rs164mc" path="res://platformer/textures/enemies/finalboss/finalboss3dead.png" id="94_18exq"]
+[ext_resource type="Texture2D" uid="uid://cie1wxsc1vlow" path="res://platformer/textures/enemies/finalboss/catboss0001.png" id="94_jaug8"]
+[ext_resource type="Texture2D" uid="uid://dfb135adogqtm" path="res://platformer/textures/enemies/finalboss/catboss0032.png" id="95_dwd47"]
+[ext_resource type="Texture2D" uid="uid://bd6higkje4qqf" path="res://platformer/textures/enemies/finalboss/catboss0002.png" id="96_apxq8"]
+[ext_resource type="Texture2D" uid="uid://wskbwfkjofch" path="res://platformer/textures/enemies/finalboss/catboss0033.png" id="96_e7qv6"]
+[ext_resource type="Texture2D" uid="uid://bt2npmu237hb4" path="res://platformer/textures/enemies/finalboss/catboss0076.png" id="96_j7443"]
+[ext_resource type="Texture2D" uid="uid://ctp5uira33nrg" path="res://platformer/textures/enemies/finalboss/catboss0034.png" id="97_g4wxr"]
+[ext_resource type="Texture2D" uid="uid://4fs6vc0n3buj" path="res://platformer/textures/enemies/finalboss/catboss0077.png" id="97_sgnsv"]
+[ext_resource type="Texture2D" uid="uid://ewh15harbbuw" path="res://platformer/textures/enemies/finalboss/catboss0003.png" id="97_wpvk7"]
+[ext_resource type="Texture2D" uid="uid://e51su77lrop6" path="res://platformer/textures/enemies/finalboss/catboss0035.png" id="98_8p7e5"]
+[ext_resource type="Texture2D" uid="uid://6npydfx8ckcp" path="res://platformer/textures/enemies/finalboss/catboss0004.png" id="98_kwi66"]
+[ext_resource type="Texture2D" uid="uid://dapde64il5v2e" path="res://platformer/textures/enemies/finalboss/catboss0078.png" id="98_qln3t"]
+[ext_resource type="Texture2D" uid="uid://demb7qohrphue" path="res://platformer/textures/enemies/finalboss/catboss0005.png" id="99_0cnsm"]
+[ext_resource type="Texture2D" uid="uid://rlprf4ejrsir" path="res://platformer/textures/enemies/finalboss/catboss0079.png" id="99_651xi"]
+[ext_resource type="Texture2D" uid="uid://cye60wtj1538d" path="res://platformer/textures/enemies/finalboss/catboss0036.png" id="99_cy6pk"]
+[ext_resource type="Texture2D" uid="uid://bco7411rhajq6" path="res://platformer/textures/enemies/finalboss/catboss0080.png" id="100_50mbx"]
+[ext_resource type="Texture2D" uid="uid://eu3imgfsnj7r" path="res://platformer/textures/enemies/finalboss/catboss0006.png" id="100_n8rfn"]
+[ext_resource type="Texture2D" uid="uid://0uodg6nmnylv" path="res://platformer/textures/enemies/finalboss/catboss0037.png" id="100_px3q6"]
+[ext_resource type="Texture2D" uid="uid://ciat671fw5hnn" path="res://platformer/textures/enemies/finalboss/catboss0038.png" id="101_dc6hg"]
+[ext_resource type="Texture2D" uid="uid://ch65v2imoqs0i" path="res://platformer/textures/enemies/finalboss/catboss0081.png" id="101_etc3q"]
+[ext_resource type="Texture2D" uid="uid://b4238nk31fudx" path="res://platformer/textures/enemies/finalboss/catboss0007.png" id="101_gqakj"]
+[ext_resource type="Texture2D" uid="uid://boynp5e6xsevh" path="res://platformer/textures/enemies/finalboss/catboss0039.png" id="102_0iq8t"]
+[ext_resource type="Texture2D" uid="uid://b4jm1obthpu4i" path="res://platformer/textures/enemies/finalboss/catboss0082.png" id="102_igjkf"]
+[ext_resource type="Texture2D" uid="uid://bvjxhoynihud" path="res://platformer/textures/enemies/finalboss/catboss0008.png" id="102_ue13l"]
+[ext_resource type="Texture2D" uid="uid://bdf2e3rlma1fn" path="res://platformer/textures/enemies/finalboss/catboss0083.png" id="103_dobcf"]
+[ext_resource type="Texture2D" uid="uid://h56k324k74ro" path="res://platformer/textures/enemies/finalboss/catboss0009.png" id="103_mk0m0"]
+[ext_resource type="Texture2D" uid="uid://b6jb57wpfyiwh" path="res://platformer/textures/enemies/finalboss/catboss0040.png" id="103_n7ame"]
+[ext_resource type="Texture2D" uid="uid://dnby4j226vu1u" path="res://platformer/textures/enemies/finalboss/catboss0084.png" id="104_5ia0x"]
+[ext_resource type="Texture2D" uid="uid://cw6indqv8s8qc" path="res://platformer/textures/enemies/finalboss/catboss0010.png" id="104_glrp7"]
+[ext_resource type="Texture2D" uid="uid://j6m34xyj2k28" path="res://platformer/textures/enemies/finalboss/catboss0041.png" id="104_xuqmt"]
+[ext_resource type="Texture2D" uid="uid://cbqwhjwew5pwk" path="res://platformer/textures/enemies/finalboss/catboss0011.png" id="105_dss8u"]
+[ext_resource type="Texture2D" uid="uid://be0rndod0twrb" path="res://platformer/textures/enemies/finalboss/catboss0042.png" id="105_jo1gw"]
+[ext_resource type="Texture2D" uid="uid://dm4a3jnc4da76" path="res://platformer/textures/enemies/finalboss/catboss0085.png" id="105_oj5c2"]
+[ext_resource type="Texture2D" uid="uid://dyqmorhm6ej2y" path="res://platformer/textures/enemies/finalboss/catboss0043.png" id="106_31kv1"]
+[ext_resource type="Texture2D" uid="uid://cbc2vahl1545j" path="res://platformer/textures/enemies/finalboss/catboss0086.png" id="106_n26dl"]
+[ext_resource type="Texture2D" uid="uid://dljk52s8pxavy" path="res://platformer/textures/enemies/finalboss/catboss0012.png" id="106_qpbw1"]
+[ext_resource type="Texture2D" uid="uid://yxme2m70mhst" path="res://platformer/textures/enemies/finalboss/catboss0013.png" id="107_b8828"]
+[ext_resource type="Texture2D" uid="uid://dwlc8ndt8yk35" path="res://platformer/textures/enemies/finalboss/catboss0044.png" id="107_j72va"]
+[ext_resource type="Texture2D" uid="uid://ngqxkrn41j5i" path="res://platformer/textures/enemies/finalboss/catboss0087.png" id="107_l6fnn"]
+[ext_resource type="Texture2D" uid="uid://cgham1cvqr7kj" path="res://platformer/textures/enemies/finalboss/catboss0014.png" id="108_cuxbk"]
+[ext_resource type="Texture2D" uid="uid://8a1xkebrs8xa" path="res://platformer/textures/enemies/finalboss/catboss0045.png" id="108_fml41"]
+[ext_resource type="Texture2D" uid="uid://m75flajgd86s" path="res://platformer/textures/enemies/finalboss/catboss0088.png" id="108_xuhiy"]
+[ext_resource type="Texture2D" uid="uid://bxwp5yiae28ve" path="res://platformer/textures/enemies/finalboss/catboss0015.png" id="109_d1en0"]
+[ext_resource type="Texture2D" uid="uid://dae6trp7ag2os" path="res://platformer/textures/enemies/finalboss/catboss0089.png" id="109_gjisj"]
+[ext_resource type="Texture2D" uid="uid://cnev3dcxb1ts0" path="res://platformer/textures/enemies/finalboss/catboss0046.png" id="109_uyjii"]
+[ext_resource type="Texture2D" uid="uid://bcm6eldbqprdi" path="res://platformer/textures/enemies/finalboss/catboss0057.png" id="110_26pc0"]
+[ext_resource type="Texture2D" uid="uid://baq6wfln5caqd" path="res://platformer/textures/enemies/finalboss/catboss0016.png" id="110_fhpvp"]
+[ext_resource type="Texture2D" uid="uid://bcqfp1an3jmqr" path="res://platformer/textures/enemies/finalboss/catboss0047.png" id="110_vrice"]
+[ext_resource type="Texture2D" uid="uid://cgqf8shmay26t" path="res://platformer/textures/enemies/finalboss/catboss0017.png" id="111_6rfcr"]
+[ext_resource type="Texture2D" uid="uid://c8tdoraejsey2" path="res://platformer/textures/enemies/finalboss/catboss0048.png" id="111_lx6ea"]
+[ext_resource type="Texture2D" uid="uid://47c3dfmpo8c4" path="res://platformer/textures/enemies/finalboss/catboss0058.png" id="111_ypffy"]
+[ext_resource type="Texture2D" uid="uid://bn0oxcfkaxj2r" path="res://platformer/textures/enemies/finalboss/catboss0049.png" id="112_0wvcj"]
+[ext_resource type="Texture2D" uid="uid://cp4vajfgqclyh" path="res://platformer/textures/enemies/finalboss/catboss0018.png" id="112_cfct3"]
+[ext_resource type="Texture2D" uid="uid://bqxbrwpqkrmvu" path="res://platformer/textures/enemies/finalboss/catboss0059.png" id="112_oqilw"]
+[ext_resource type="Texture2D" uid="uid://dk3iv5glggei1" path="res://platformer/textures/enemies/finalboss/catboss0050.png" id="113_b48f7"]
+[ext_resource type="Texture2D" uid="uid://cwdhegk58qd8p" path="res://platformer/textures/enemies/finalboss/catboss0060.png" id="113_cixsf"]
+[ext_resource type="Texture2D" uid="uid://bd1tmmm28ql42" path="res://platformer/textures/enemies/finalboss/catboss0019.png" id="113_yb416"]
+[ext_resource type="Texture2D" uid="uid://dgiw7xwjvdfnm" path="res://platformer/textures/enemies/finalboss/catboss0061.png" id="114_an655"]
+[ext_resource type="Texture2D" uid="uid://d0k88531xgc84" path="res://platformer/textures/enemies/finalboss/catboss0051.png" id="114_qso5a"]
+[ext_resource type="Texture2D" uid="uid://dkwqyp3yycede" path="res://platformer/textures/enemies/finalboss/catboss0020.png" id="114_uk5p6"]
+[ext_resource type="Texture2D" uid="uid://bre1slsr4j1n8" path="res://platformer/textures/enemies/finalboss/catboss0052.png" id="115_bvb7i"]
+[ext_resource type="Texture2D" uid="uid://cuwajtiop570a" path="res://platformer/textures/enemies/finalboss/catboss0021.png" id="115_eiusm"]
+[ext_resource type="Texture2D" uid="uid://c73kg81htnq8j" path="res://platformer/textures/enemies/finalboss/catboss0062.png" id="115_y8g25"]
+[ext_resource type="Texture2D" uid="uid://dty836nd7nwq8" path="res://platformer/textures/enemies/finalboss/catboss0022.png" id="116_4ag8c"]
+[ext_resource type="Texture2D" uid="uid://cgk02i5qn5c5l" path="res://platformer/textures/enemies/finalboss/catboss0063.png" id="116_srpck"]
+[ext_resource type="Texture2D" uid="uid://b2gsfc1emine7" path="res://platformer/textures/enemies/finalboss/catboss0053.png" id="116_yclii"]
+[ext_resource type="Texture2D" uid="uid://cn22kb2v4oln8" path="res://platformer/textures/enemies/finalboss/catboss0054.png" id="117_6oba5"]
+[ext_resource type="Texture2D" uid="uid://oyy72xwr6iti" path="res://platformer/textures/enemies/finalboss/catboss0064.png" id="117_et0al"]
+[ext_resource type="Texture2D" uid="uid://chr3c5vxk82dw" path="res://platformer/textures/enemies/finalboss/catboss0023.png" id="117_jiyrg"]
+[ext_resource type="Texture2D" uid="uid://bture8dsflcrb" path="res://platformer/textures/enemies/finalboss/catboss0055.png" id="118_cns24"]
+[ext_resource type="Texture2D" uid="uid://dlf6wotkou2ks" path="res://platformer/textures/enemies/finalboss/catboss0024.png" id="118_gwdly"]
+[ext_resource type="Texture2D" uid="uid://cs0172qpnvsyd" path="res://platformer/textures/enemies/finalboss/catboss0065.png" id="118_gxa0x"]
+[ext_resource type="Texture2D" uid="uid://bxv00y2ukpiqq" path="res://platformer/textures/enemies/finalboss/catboss0066.png" id="119_651s1"]
+[ext_resource type="Texture2D" uid="uid://coqwp6ru8sndm" path="res://platformer/textures/enemies/finalboss/catboss0056.png" id="119_r6cro"]
+[ext_resource type="Texture2D" uid="uid://trdni5413rf1" path="res://platformer/textures/enemies/finalboss/catboss0025.png" id="119_ug8i7"]
+[ext_resource type="Texture2D" uid="uid://ddo1ue64i7vca" path="res://platformer/textures/enemies/finalboss/catboss0026.png" id="120_edvm0"]
+[ext_resource type="Texture2D" uid="uid://cmrdraqo6fyi" path="res://platformer/textures/enemies/finalboss/catboss0067.png" id="120_eewyv"]
+[ext_resource type="Texture2D" uid="uid://bcyvnm2wfmp2m" path="res://platformer/textures/enemies/finalboss/catboss0027.png" id="121_hlevy"]
+[ext_resource type="Texture2D" uid="uid://dmwmso3q562ns" path="res://platformer/textures/enemies/finalboss/catboss0068.png" id="121_q44x4"]
+[ext_resource type="Texture2D" uid="uid://bhoqdftus4mrh" path="res://platformer/textures/enemies/finalboss/catboss0069.png" id="122_4hf06"]
+[ext_resource type="Texture2D" uid="uid://off0jts0rwcl" path="res://platformer/textures/enemies/finalboss/catboss0028.png" id="122_osx2w"]
+[ext_resource type="Texture2D" uid="uid://dkuu1octko4ad" path="res://platformer/textures/enemies/finalboss/catboss0029.png" id="123_5i003"]
+[ext_resource type="Texture2D" uid="uid://bntmxd8ivvwh6" path="res://platformer/textures/enemies/finalboss/catboss0070.png" id="123_dwd47"]
+[ext_resource type="Texture2D" uid="uid://1vdjdka4nufy" path="res://platformer/textures/enemies/finalboss/catboss0030.png" id="124_a8bjo"]
+[ext_resource type="Texture2D" uid="uid://dwqa0fnvn5evj" path="res://platformer/textures/enemies/finalboss/catboss0071.png" id="124_e7qv6"]
+[ext_resource type="Texture2D" uid="uid://r4opmoo8ai2i" path="res://platformer/textures/enemies/finalboss/catboss0072.png" id="125_g4wxr"]
+[ext_resource type="Texture2D" uid="uid://ielb2rokx46m" path="res://platformer/textures/enemies/finalboss/catboss0073.png" id="126_8p7e5"]
+[ext_resource type="Texture2D" uid="uid://dcaxvay1al2ly" path="res://platformer/textures/enemies/finalboss/catboss0074.png" id="127_cy6pk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqkkh"]
+size = Vector2(142, 199)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74oti"]
+size = Vector2(421, 432)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_18exq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("94_4hf06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_dwd47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_e7qv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_g4wxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_8p7e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_cy6pk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_px3q6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_dc6hg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_0iq8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_n7ame")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_xuqmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_jo1gw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_31kv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_j72va")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_fml41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_uyjii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_vrice")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_lx6ea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_0wvcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_b48f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_qso5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_bvb7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_yclii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_6oba5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_cns24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_r6cro")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("94_18exq")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("94_jaug8")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("96_j7443")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_sgnsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_qln3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_651xi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_50mbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_etc3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_igjkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_dobcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_5ia0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_oj5c2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_n26dl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_l6fnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_xuhiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_gjisj")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("110_26pc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_ypffy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_oqilw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_cixsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_an655")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_y8g25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_srpck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_et0al")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_gxa0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_651s1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_eewyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_q44x4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_4hf06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_dwd47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_e7qv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_g4wxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_8p7e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_cy6pk")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("94_jaug8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_apxq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_wpvk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_kwi66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_0cnsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_n8rfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_gqakj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_ue13l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_mk0m0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_glrp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_dss8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_qpbw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_b8828")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_cuxbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_d1en0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_fhpvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_6rfcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_cfct3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_yb416")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_uk5p6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_eiusm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_4ag8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_jiyrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_gwdly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_ug8i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_edvm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_hlevy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_osx2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_5i003")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_a8bjo")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmiwu"]
+size = Vector2(427, 434)
+
+[node name="Boss" type="CharacterBody2D"]
+collision_layer = 32
+collision_mask = 2
+platform_floor_layers = 4294967042
+script = ExtResource("1_pepht")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 29)
+shape = SubResource("RectangleShape2D_uqkkh")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_jaug8")]
+max_health = 50.0
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("healthComponent") instance=ExtResource("3_18exq")]
+healthComponent = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" parent="HurtboxComponent" index="0"]
+position = Vector2(13.5, -28)
+shape = SubResource("RectangleShape2D_74oti")
+
+[node name="HitflashComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_jgjg1")]
+health_component = NodePath("../HealthComponent")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HitflashComponent"]
+sprite_frames = SubResource("SpriteFrames_18exq")
+autoplay = "default"
+
+[node name="HitboxComponent" parent="." instance=ExtResource("94_8p7e5")]
+
+[node name="CollisionShape2D" parent="HitboxComponent" index="0"]
+position = Vector2(13.5, -27)
+shape = SubResource("RectangleShape2D_qmiwu")
+
+[node name="DeathTimer" type="Timer" parent="."]
+one_shot = true
+
+[editable path="HurtboxComponent"]
+[editable path="HitboxComponent"]
