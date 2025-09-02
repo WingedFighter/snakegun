@@ -1,4 +1,4 @@
-[gd_scene load_steps=408 format=3 uid="uid://bixfuhp4yjqfb"]
+[gd_scene load_steps=604 format=3 uid="uid://bixfuhp4yjqfb"]
 
 [ext_resource type="Script" uid="uid://cf0p50mofqoaq" path="res://platformer/components/enemy.gd" id="1_gojrg"]
 [ext_resource type="Texture2D" uid="uid://die8mu7mduklf" path="res://platformer/textures/enemies/Fox/fox0001.png" id="1_qcy2m"]
@@ -151,55 +151,93 @@
 [ext_resource type="Texture2D" uid="uid://t7pvxtka4w48" path="res://platformer/textures/enemies/level2/bear2/bearlvl20038.png" id="80_ho3ue"]
 [ext_resource type="Texture2D" uid="uid://bsn7chk83s1ed" path="res://platformer/textures/enemies/bunny/bunny0012.png" id="80_huv1y"]
 [ext_resource type="Texture2D" uid="uid://cyn4qvh1uejuc" path="res://platformer/textures/enemies/bunny/bunny0013.png" id="81_kasa8"]
+[ext_resource type="Texture2D" uid="uid://wd7v556wresl" path="res://platformer/textures/enemies/level3/bear3/bear0001.png" id="81_sxa1c"]
 [ext_resource type="Texture2D" uid="uid://d3k06ccjvoa75" path="res://platformer/textures/enemies/bunny/bunny0014.png" id="82_t2uc3"]
+[ext_resource type="Texture2D" uid="uid://cdejrn203wxx6" path="res://platformer/textures/enemies/level3/bear3/bear0002.png" id="82_yxr3n"]
 [ext_resource type="Texture2D" uid="uid://tepm7a3f8dx" path="res://platformer/textures/enemies/bunny/bunny0015.png" id="83_shbn3"]
+[ext_resource type="Texture2D" uid="uid://cynq65bs6w3nf" path="res://platformer/textures/enemies/level3/bear3/bear0003.png" id="83_y50vk"]
+[ext_resource type="Texture2D" uid="uid://cwjp324sl23dj" path="res://platformer/textures/enemies/level3/bear3/bear0004.png" id="84_lxfbp"]
 [ext_resource type="Texture2D" uid="uid://diiyss3o6v4x7" path="res://platformer/textures/enemies/bunny/bunny0016.png" id="84_qv740"]
+[ext_resource type="Texture2D" uid="uid://jiu4r8qotavl" path="res://platformer/textures/enemies/level3/bear3/bear0005.png" id="85_55bx0"]
 [ext_resource type="Texture2D" uid="uid://drjgbalcujodn" path="res://platformer/textures/enemies/bunny/bunny0017.png" id="85_s2vsn"]
+[ext_resource type="Texture2D" uid="uid://bpv28v1fpjx72" path="res://platformer/textures/enemies/level3/bear3/bear0006.png" id="86_oxl8q"]
 [ext_resource type="Texture2D" uid="uid://cqkgq0n3rk1vn" path="res://platformer/textures/enemies/bunny/bunny0018.png" id="86_qpyc7"]
+[ext_resource type="Texture2D" uid="uid://cgtiwcdylxk8h" path="res://platformer/textures/enemies/level3/bear3/bear0007.png" id="87_6lyco"]
 [ext_resource type="Texture2D" uid="uid://bh3btnv1rq0nt" path="res://platformer/textures/enemies/bunny/bunny0019.png" id="87_8dy16"]
+[ext_resource type="Texture2D" uid="uid://bcn1mqid5i704" path="res://platformer/textures/enemies/level3/bear3/bear0008.png" id="88_41tik"]
 [ext_resource type="Texture2D" uid="uid://vahehispw8l4" path="res://platformer/textures/enemies/bunny/bunny0020.png" id="88_abyd2"]
+[ext_resource type="Texture2D" uid="uid://ob6frur3w5jo" path="res://platformer/textures/enemies/level3/bear3/bear0009.png" id="89_dt35d"]
 [ext_resource type="Texture2D" uid="uid://colbogasw4csy" path="res://platformer/textures/enemies/bunny/bunny0021.png" id="89_h7278"]
 [ext_resource type="Texture2D" uid="uid://b5tyjhvetxpa" path="res://platformer/textures/enemies/bunny/bunny0022.png" id="90_kypp0"]
+[ext_resource type="Texture2D" uid="uid://bd163iedip30c" path="res://platformer/textures/enemies/level3/bear3/bear0010.png" id="90_qw2va"]
+[ext_resource type="Texture2D" uid="uid://bx43ax2ejv03s" path="res://platformer/textures/enemies/level3/bear3/bear0011.png" id="91_tty6x"]
 [ext_resource type="Texture2D" uid="uid://cu8h84m5t8vlt" path="res://platformer/textures/enemies/bunny/bunny0023.png" id="91_v7c1h"]
 [ext_resource type="Texture2D" uid="uid://b55210q0ibd04" path="res://platformer/textures/enemies/bunny/bunny0024.png" id="92_5odvp"]
+[ext_resource type="Texture2D" uid="uid://bh73gf4sfq4d6" path="res://platformer/textures/enemies/level3/bear3/bear0012.png" id="92_8oahx"]
+[ext_resource type="Texture2D" uid="uid://deb5w8dwo17w7" path="res://platformer/textures/enemies/level3/bear3/bear0013.png" id="93_40p6t"]
 [ext_resource type="Texture2D" uid="uid://dqtpuvedbo5p4" path="res://platformer/textures/enemies/bunny/bunny0025.png" id="93_gtt8y"]
 [ext_resource type="Texture2D" uid="uid://cjmn68aw7arcn" path="res://platformer/textures/enemies/bunny/bunny0026.png" id="94_d6yyp"]
+[ext_resource type="Texture2D" uid="uid://cj7c4yt2gp6q5" path="res://platformer/textures/enemies/level3/bear3/bear0014.png" id="94_kfxk6"]
 [ext_resource type="Texture2D" uid="uid://dujkmxir786bf" path="res://platformer/textures/enemies/bunny/bunny0027.png" id="95_7q2no"]
+[ext_resource type="Texture2D" uid="uid://l5hxyy10cjpu" path="res://platformer/textures/enemies/level3/bear3/bear0015.png" id="95_voq3i"]
+[ext_resource type="Texture2D" uid="uid://cufv0auj0g2ak" path="res://platformer/textures/enemies/level3/bear3/bear0016.png" id="96_lwslj"]
 [ext_resource type="Texture2D" uid="uid://damobta15iguu" path="res://platformer/textures/enemies/bunny/bunny0028.png" id="96_xsxbj"]
+[ext_resource type="Texture2D" uid="uid://b7lhxeef4aeea" path="res://platformer/textures/enemies/level3/bear3/bear0017.png" id="97_j8ndo"]
 [ext_resource type="Texture2D" uid="uid://yns22am411s5" path="res://platformer/textures/enemies/bunny/bunny0029.png" id="97_q6m4g"]
+[ext_resource type="Texture2D" uid="uid://df20shrovbpeh" path="res://platformer/textures/enemies/level3/bear3/bear0018.png" id="98_ehbc2"]
 [ext_resource type="Texture2D" uid="uid://c34u616y68438" path="res://platformer/textures/enemies/bunny/bunny0030.png" id="98_hllfu"]
 [ext_resource type="Texture2D" uid="uid://b6nnkbd5u4wv0" path="res://platformer/textures/enemies/fish/fwish0001.png" id="99_g32lf"]
+[ext_resource type="Texture2D" uid="uid://c8ix73qpkccj8" path="res://platformer/textures/enemies/level3/bear3/bear0019.png" id="99_qgnno"]
+[ext_resource type="Texture2D" uid="uid://bvpom6piqvtw" path="res://platformer/textures/enemies/level3/bear3/bear0020.png" id="100_7xcer"]
 [ext_resource type="Texture2D" uid="uid://gbgj83ewklgj" path="res://platformer/textures/enemies/fish/fwish0002.png" id="100_pki7e"]
+[ext_resource type="Texture2D" uid="uid://cgiysvv1w1spi" path="res://platformer/textures/enemies/level3/bear3/bear0021.png" id="101_ok4wv"]
 [ext_resource type="Texture2D" uid="uid://b61ns3jo1sloa" path="res://platformer/textures/enemies/fish/fwish0003.png" id="101_wy226"]
+[ext_resource type="Texture2D" uid="uid://q0eh1s5wy17e" path="res://platformer/textures/enemies/level3/bear3/bear0022.png" id="102_vhf0t"]
 [ext_resource type="Texture2D" uid="uid://bt2o661o28gbh" path="res://platformer/textures/enemies/fish/fwish0004.png" id="102_wdllu"]
+[ext_resource type="Texture2D" uid="uid://bcf1g3hcclqcv" path="res://platformer/textures/enemies/level3/bear3/bear0023.png" id="103_rn7dg"]
 [ext_resource type="Texture2D" uid="uid://diejq3h3nveb8" path="res://platformer/textures/enemies/fish/fwish0005.png" id="103_uoo2n"]
+[ext_resource type="Texture2D" uid="uid://dssfp1pm1xlw6" path="res://platformer/textures/enemies/level3/bear3/bear0024.png" id="104_b2iys"]
 [ext_resource type="Texture2D" uid="uid://cmnsxl1spmbwo" path="res://platformer/textures/enemies/fish/fwish0006.png" id="104_qrxc5"]
 [ext_resource type="Texture2D" uid="uid://vta00keyvxp" path="res://platformer/textures/enemies/fish/fwish0007.png" id="105_cl0ny"]
+[ext_resource type="Texture2D" uid="uid://d1tacxak2868g" path="res://platformer/textures/enemies/level3/bear3/bear0025.png" id="105_tgmuj"]
 [ext_resource type="Texture2D" uid="uid://cginxio8031wq" path="res://platformer/textures/enemies/fish/fwish0008.png" id="106_e1g0q"]
+[ext_resource type="Texture2D" uid="uid://3pae57d4gyaj" path="res://platformer/textures/enemies/level3/bear3/bear0026.png" id="106_i1vgc"]
 [ext_resource type="Texture2D" uid="uid://dcj5mt6logc1u" path="res://platformer/textures/enemies/fish/fwish0009.png" id="107_00b06"]
 [ext_resource type="Texture2D" uid="uid://cu04kfjryq8wu" path="res://platformer/textures/enemies/level2/bird2/birdlvl20001.png" id="107_ktf82"]
+[ext_resource type="Texture2D" uid="uid://wyl0h86cft8v" path="res://platformer/textures/enemies/level3/bear3/bear0027.png" id="107_ojufg"]
+[ext_resource type="Texture2D" uid="uid://pb8fxobnc7mn" path="res://platformer/textures/enemies/level3/bear3/bear0028.png" id="108_a0qe7"]
 [ext_resource type="Texture2D" uid="uid://clfyv4i3puaw6" path="res://platformer/textures/enemies/fish/fwish0010.png" id="108_al1fx"]
 [ext_resource type="Texture2D" uid="uid://ccfqi6k2ap2xx" path="res://platformer/textures/enemies/level2/bird2/birdlvl20002.png" id="108_whrmg"]
 [ext_resource type="Texture2D" uid="uid://cga5fhkqqpcwr" path="res://platformer/textures/enemies/fish/fwish0011.png" id="109_50ew5"]
 [ext_resource type="Texture2D" uid="uid://y18vxdk7s4n1" path="res://platformer/textures/enemies/level2/bird2/birdlvl20003.png" id="109_bapdv"]
+[ext_resource type="Texture2D" uid="uid://bssl8veqwh3dg" path="res://platformer/textures/enemies/level3/bear3/bear0029.png" id="109_docds"]
+[ext_resource type="Texture2D" uid="uid://gsoh84kkgbyx" path="res://platformer/textures/enemies/level3/bear3/bear0030.png" id="110_2skbh"]
 [ext_resource type="Texture2D" uid="uid://gpb0fb5d5q61" path="res://platformer/textures/enemies/fish/fwish0012.png" id="110_7omcy"]
 [ext_resource type="Texture2D" uid="uid://bx5hfmox0iowy" path="res://platformer/textures/enemies/level2/bird2/birdlvl20004.png" id="110_11xjg"]
 [ext_resource type="Texture2D" uid="uid://dxwsorwwffxem" path="res://platformer/textures/enemies/level2/bird2/birdlvl20005.png" id="111_c5btk"]
 [ext_resource type="Texture2D" uid="uid://g6hvji404uiq" path="res://platformer/textures/enemies/fish/fwish0013.png" id="111_k37th"]
+[ext_resource type="Texture2D" uid="uid://bv7l42v44tjf4" path="res://platformer/textures/enemies/level3/bear3/bear0031.png" id="111_ra7lg"]
 [ext_resource type="Texture2D" uid="uid://bexdjv6lfi0jj" path="res://platformer/textures/enemies/level2/bird2/birdlvl20006.png" id="112_4vljv"]
 [ext_resource type="Texture2D" uid="uid://cmxc8ii316cn6" path="res://platformer/textures/enemies/fish/fwish0014.png" id="112_anve3"]
+[ext_resource type="Texture2D" uid="uid://twc3o5d2nfb0" path="res://platformer/textures/enemies/level3/bear3/bear0032.png" id="112_e748f"]
+[ext_resource type="Texture2D" uid="uid://b8wy1h42krh6b" path="res://platformer/textures/enemies/level3/bear3/bear0033.png" id="113_2j0vr"]
 [ext_resource type="Texture2D" uid="uid://b2d65d5s58tkl" path="res://platformer/textures/enemies/fish/fwish0015.png" id="113_fk185"]
 [ext_resource type="Texture2D" uid="uid://euqg1v4sq524" path="res://platformer/textures/enemies/level2/bird2/birdlvl20007.png" id="113_q6odv"]
+[ext_resource type="Texture2D" uid="uid://dijj1p4oohoph" path="res://platformer/textures/enemies/level3/bear3/bear0034.png" id="114_2c85j"]
 [ext_resource type="Texture2D" uid="uid://tcwd6lmw407x" path="res://platformer/textures/enemies/level2/bird2/birdlvl20008.png" id="114_aps2n"]
 [ext_resource type="Texture2D" uid="uid://bdffcnbgb1bhm" path="res://platformer/textures/enemies/fish/fwish0016.png" id="114_nxp0s"]
+[ext_resource type="Texture2D" uid="uid://cxbcbedodk4g3" path="res://platformer/textures/enemies/level3/bear3/bear0035.png" id="115_12tlh"]
 [ext_resource type="Texture2D" uid="uid://bs7qk8n8mu7nj" path="res://platformer/textures/enemies/fish/fwish0017.png" id="115_g22g7"]
 [ext_resource type="Texture2D" uid="uid://2phwq58bt3g" path="res://platformer/textures/enemies/level2/bird2/birdlvl20009.png" id="115_l7rbb"]
+[ext_resource type="Texture2D" uid="uid://bwsuumo7hrt0h" path="res://platformer/textures/enemies/level3/bear3/bear0036.png" id="116_10tfr"]
 [ext_resource type="Texture2D" uid="uid://dhnh5nlvxeyw3" path="res://platformer/textures/enemies/fish/fwish0018.png" id="116_brod1"]
 [ext_resource type="Texture2D" uid="uid://blow1eho0vgap" path="res://platformer/textures/enemies/level2/bird2/birdlvl20010.png" id="116_x6qfx"]
 [ext_resource type="Texture2D" uid="uid://cthp3pjrdf6ik" path="res://platformer/textures/enemies/fish/fwish0019.png" id="117_d0jhx"]
+[ext_resource type="Texture2D" uid="uid://dvp5krmiqclg4" path="res://platformer/textures/enemies/level3/bear3/bear0037.png" id="117_itbam"]
 [ext_resource type="Texture2D" uid="uid://ixe1epgvpnek" path="res://platformer/textures/enemies/level2/bird2/birdlvl20011.png" id="117_jla06"]
 [ext_resource type="Texture2D" uid="uid://cfut1tm73ebxo" path="res://platformer/textures/enemies/level2/bird2/birdlvl20012.png" id="118_ho3ue"]
 [ext_resource type="Texture2D" uid="uid://bllehr704badn" path="res://platformer/textures/enemies/fish/fwish0020.png" id="118_j65pj"]
+[ext_resource type="Texture2D" uid="uid://b7uo37k3l5vue" path="res://platformer/textures/enemies/level3/bear3/bear0038.png" id="118_of0cw"]
 [ext_resource type="Texture2D" uid="uid://dqvmrv73a8owy" path="res://platformer/textures/enemies/fish/fwish0021.png" id="119_26g4o"]
 [ext_resource type="Texture2D" uid="uid://b8rr1s8ss8omx" path="res://platformer/textures/enemies/level2/bird2/birdlvl20013.png" id="119_nuwo1"]
 [ext_resource type="Texture2D" uid="uid://dcqha1qjkan12" path="res://platformer/textures/enemies/level2/bird2/birdlvl20014.png" id="120_q2rak"]
@@ -264,27 +302,53 @@
 [ext_resource type="Texture2D" uid="uid://db1oitrklqpc8" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20007.png" id="169_llss8"]
 [ext_resource type="Texture2D" uid="uid://cjyhix5g04wj7" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20008.png" id="170_7yutk"]
 [ext_resource type="Texture2D" uid="uid://k3bs5wsbt7wb" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20009.png" id="171_esric"]
+[ext_resource type="Texture2D" uid="uid://c632nsoyo4f8h" path="res://platformer/textures/enemies/level3/bird3/bird30001.png" id="171_u8odx"]
+[ext_resource type="Texture2D" uid="uid://cuwypsbgxjpc4" path="res://platformer/textures/enemies/level3/bird3/bird30002.png" id="172_3eeh6"]
 [ext_resource type="Texture2D" uid="uid://cmr03ndyauosy" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20010.png" id="172_m60ir"]
+[ext_resource type="Texture2D" uid="uid://d0dfo8ppm1beh" path="res://platformer/textures/enemies/level3/bird3/bird30003.png" id="173_blqc6"]
 [ext_resource type="Texture2D" uid="uid://bvncklkfoq7db" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20011.png" id="173_xr74p"]
+[ext_resource type="Texture2D" uid="uid://c2qthf1dnpbgt" path="res://platformer/textures/enemies/level3/bird3/bird30004.png" id="174_6s48o"]
 [ext_resource type="Texture2D" uid="uid://bqbcan11h4pa7" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20012.png" id="174_jorg3"]
+[ext_resource type="Texture2D" uid="uid://cn5hgfkam2qv5" path="res://platformer/textures/enemies/level3/bird3/bird30005.png" id="175_dp58k"]
 [ext_resource type="Texture2D" uid="uid://bdcfrd1cu3g6a" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20013.png" id="175_qi671"]
 [ext_resource type="Texture2D" uid="uid://c773rx7vb7irs" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20014.png" id="176_f3y63"]
+[ext_resource type="Texture2D" uid="uid://c80fk5pa6sfhd" path="res://platformer/textures/enemies/level3/bird3/bird30006.png" id="176_tp64e"]
 [ext_resource type="Texture2D" uid="uid://c7ah7367qraal" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20015.png" id="177_64fso"]
+[ext_resource type="Texture2D" uid="uid://chhtxvq53bnsj" path="res://platformer/textures/enemies/level3/bird3/bird30007.png" id="177_j8a4l"]
+[ext_resource type="Texture2D" uid="uid://b5215un8fetfv" path="res://platformer/textures/enemies/level3/bird3/bird30008.png" id="178_ip2wr"]
 [ext_resource type="Texture2D" uid="uid://cqwvtsahkx7vr" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20016.png" id="178_vx50b"]
 [ext_resource type="Texture2D" uid="uid://c1v34xs84rqv8" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20017.png" id="179_4nso0"]
+[ext_resource type="Texture2D" uid="uid://dg01sisgfymlk" path="res://platformer/textures/enemies/level3/bird3/bird30009.png" id="179_q50xu"]
+[ext_resource type="Texture2D" uid="uid://cs8b3gkfmsf16" path="res://platformer/textures/enemies/level3/bird3/bird30010.png" id="180_imlus"]
 [ext_resource type="Texture2D" uid="uid://dkdskf2j440hu" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20018.png" id="180_os7qi"]
 [ext_resource type="Texture2D" uid="uid://csh6be21qgepo" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20019.png" id="181_ch1qr"]
+[ext_resource type="Texture2D" uid="uid://ctxen884n30gc" path="res://platformer/textures/enemies/level3/bird3/bird30011.png" id="181_mbtqf"]
+[ext_resource type="Texture2D" uid="uid://ctbxu1b6uwdyb" path="res://platformer/textures/enemies/level3/bird3/bird30012.png" id="182_es2on"]
 [ext_resource type="Texture2D" uid="uid://do1q02g7rvd0c" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20020.png" id="182_ew0w4"]
 [ext_resource type="Texture2D" uid="uid://cn4e2dq1kat2l" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20021.png" id="183_l5dm7"]
+[ext_resource type="Texture2D" uid="uid://b4hwfut5mnqqt" path="res://platformer/textures/enemies/level3/bird3/bird30013.png" id="183_nbbrr"]
 [ext_resource type="Texture2D" uid="uid://gybcd18i5r58" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20022.png" id="184_5u6jo"]
+[ext_resource type="Texture2D" uid="uid://7oycychh3j1a" path="res://platformer/textures/enemies/level3/bird3/bird30014.png" id="184_8sfer"]
+[ext_resource type="Texture2D" uid="uid://ct5560vqqt14w" path="res://platformer/textures/enemies/level3/bird3/bird30015.png" id="185_3h24j"]
 [ext_resource type="Texture2D" uid="uid://bciq6b54ayrgn" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20023.png" id="185_iix13"]
 [ext_resource type="Texture2D" uid="uid://bjfk6bpxx55fr" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20024.png" id="186_43ics"]
+[ext_resource type="Texture2D" uid="uid://bftdxtjuny6mu" path="res://platformer/textures/enemies/level3/bird3/bird30016.png" id="186_k7a0d"]
+[ext_resource type="Texture2D" uid="uid://3pnuxvkp8c7e" path="res://platformer/textures/enemies/level3/bird3/bird30017.png" id="187_v1ick"]
 [ext_resource type="Texture2D" uid="uid://bm3pg8r71ldge" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20025.png" id="187_xsn4m"]
 [ext_resource type="Texture2D" uid="uid://byt5kqgk1tcs0" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20026.png" id="188_igyta"]
+[ext_resource type="Texture2D" uid="uid://wx85wscwoiql" path="res://platformer/textures/enemies/level3/bird3/bird30018.png" id="188_q87vv"]
+[ext_resource type="Texture2D" uid="uid://qraxwv1362ta" path="res://platformer/textures/enemies/level3/bird3/bird30019.png" id="189_sseg4"]
 [ext_resource type="Texture2D" uid="uid://q77ju776mhhw" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20027.png" id="189_tpwrs"]
 [ext_resource type="Texture2D" uid="uid://81okojo2rv7y" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20028.png" id="190_c07fl"]
+[ext_resource type="Texture2D" uid="uid://bapdqoqg8b3t3" path="res://platformer/textures/enemies/level3/bird3/bird30020.png" id="190_nww15"]
 [ext_resource type="Texture2D" uid="uid://d1globly7o4d7" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20029.png" id="191_8dvaf"]
+[ext_resource type="Texture2D" uid="uid://xr1uqe6obp7o" path="res://platformer/textures/enemies/level3/bird3/bird30021.png" id="191_enlfm"]
+[ext_resource type="Texture2D" uid="uid://7oxtndwiw0i3" path="res://platformer/textures/enemies/level3/bird3/bird30022.png" id="192_mi032"]
 [ext_resource type="Texture2D" uid="uid://duuhxbe7eyax8" path="res://platformer/textures/enemies/level2/bunny2/bunnylvl20030.png" id="192_npc3a"]
+[ext_resource type="Texture2D" uid="uid://b1d2uugvfvvee" path="res://platformer/textures/enemies/level3/bird3/bird30023.png" id="193_x4f4v"]
+[ext_resource type="Texture2D" uid="uid://b2t6nm4svd4b7" path="res://platformer/textures/enemies/level3/bird3/bird30024.png" id="194_4ybfq"]
+[ext_resource type="Texture2D" uid="uid://dxpfev6rd7dsy" path="res://platformer/textures/enemies/level3/bird3/bird30025.png" id="195_ov684"]
+[ext_resource type="Texture2D" uid="uid://benpwo6xifjq" path="res://platformer/textures/enemies/level3/bird3/bird30026.png" id="196_ludra"]
 [ext_resource type="Texture2D" uid="uid://bx01he4w6qgse" path="res://platformer/textures/enemies/level2/fish2/lvl2fish0001.png" id="223_35k07"]
 [ext_resource type="Texture2D" uid="uid://uyawlv0arsy3" path="res://platformer/textures/enemies/level2/fish2/lvl2fish0002.png" id="224_eel3q"]
 [ext_resource type="Texture2D" uid="uid://61fflv4f8l57" path="res://platformer/textures/enemies/level2/fish2/lvl2fish0003.png" id="225_31hsx"]
@@ -315,10 +379,40 @@
 [ext_resource type="Texture2D" uid="uid://cbsidj8kflenb" path="res://platformer/textures/enemies/level2/fish2/lvl2fish0028.png" id="250_7f7ud"]
 [ext_resource type="Texture2D" uid="uid://csub4qcv1fsj1" path="res://platformer/textures/enemies/level2/fish2/lvl2fish0029.png" id="251_n141y"]
 [ext_resource type="Texture2D" uid="uid://dw8n34na6ulxn" path="res://platformer/textures/enemies/level2/fish2/lvl2fish0030.png" id="252_ouhkl"]
+[ext_resource type="Texture2D" uid="uid://drmuvyfwmj3lv" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30001.png" id="257_8w6h5"]
+[ext_resource type="Texture2D" uid="uid://cpwsylmidt8fr" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30002.png" id="258_0ubs0"]
+[ext_resource type="Texture2D" uid="uid://bvmbjgee6h0i4" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30003.png" id="259_jlx44"]
+[ext_resource type="Texture2D" uid="uid://lvxklovlft5b" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30004.png" id="260_loe2y"]
+[ext_resource type="Texture2D" uid="uid://dsurk1iqa0kim" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30005.png" id="261_3kqj5"]
+[ext_resource type="Texture2D" uid="uid://doaql8nhpagx6" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30006.png" id="262_abr1s"]
+[ext_resource type="Texture2D" uid="uid://c8cbvg00erifg" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30007.png" id="263_cas4g"]
+[ext_resource type="Texture2D" uid="uid://rs376gm6tj1o" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30008.png" id="264_3ufkg"]
+[ext_resource type="Texture2D" uid="uid://bcdao1xd4aue8" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30009.png" id="265_sfvnj"]
+[ext_resource type="Texture2D" uid="uid://ct0ybcoxnbnnk" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30010.png" id="266_o2sp3"]
+[ext_resource type="Texture2D" uid="uid://r85rlhynouxi" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30011.png" id="267_u48sx"]
+[ext_resource type="Texture2D" uid="uid://cuyru6asjafjm" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30012.png" id="268_ak8pw"]
+[ext_resource type="Texture2D" uid="uid://c26yos2b2b4bf" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30013.png" id="269_5t6hl"]
+[ext_resource type="Texture2D" uid="uid://cfkxvi787cky6" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30014.png" id="270_jagma"]
+[ext_resource type="Texture2D" uid="uid://dnidjds7ckm4q" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30015.png" id="271_7xaoc"]
+[ext_resource type="Texture2D" uid="uid://sen3y7jvqimi" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30016.png" id="272_fv16p"]
+[ext_resource type="Texture2D" uid="uid://d07qct38mdwi8" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30017.png" id="273_cb4ro"]
+[ext_resource type="Texture2D" uid="uid://drc6nw6x2oclh" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30018.png" id="274_o3rhp"]
+[ext_resource type="Texture2D" uid="uid://ph63nvt17h0g" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30019.png" id="275_rqkgr"]
+[ext_resource type="Texture2D" uid="uid://bm1rm3q2cfx3l" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30020.png" id="276_7d20g"]
+[ext_resource type="Texture2D" uid="uid://4mjmfi7fjorh" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30021.png" id="277_eodt8"]
+[ext_resource type="Texture2D" uid="uid://bawj2px0sdqov" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30022.png" id="278_psmge"]
+[ext_resource type="Texture2D" uid="uid://bfbqva25jadm2" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30023.png" id="279_8bewj"]
+[ext_resource type="Texture2D" uid="uid://5kyxgo3d7hwq" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30024.png" id="280_6c066"]
+[ext_resource type="Texture2D" uid="uid://6hnfnv2dunga" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30025.png" id="281_7oe7c"]
+[ext_resource type="Texture2D" uid="uid://do8jgdnfwjsuv" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30026.png" id="282_c5h3q"]
 [ext_resource type="Texture2D" uid="uid://cty1l5dmr3ilw" path="res://platformer/textures/enemies/level2/Fox2/lvl2fox0001.png" id="283_b87yx"]
+[ext_resource type="Texture2D" uid="uid://2aflg58pe16h" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30027.png" id="283_l2bev"]
+[ext_resource type="Texture2D" uid="uid://d2sqe61t3mnw5" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30028.png" id="284_1luia"]
 [ext_resource type="Texture2D" uid="uid://ce03y6qnrwdrf" path="res://platformer/textures/enemies/level2/Fox2/lvl2fox0002.png" id="284_mtyxj"]
 [ext_resource type="Texture2D" uid="uid://bm5xos1cswif5" path="res://platformer/textures/enemies/level2/Fox2/lvl2fox0003.png" id="285_1gjpr"]
+[ext_resource type="Texture2D" uid="uid://cliw2c3iswnd7" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30029.png" id="285_ff3gf"]
 [ext_resource type="Texture2D" uid="uid://473twuxhn57f" path="res://platformer/textures/enemies/level2/Fox2/lvl2fox0004.png" id="286_j8o80"]
+[ext_resource type="Texture2D" uid="uid://csf2o4xua1r1s" path="res://platformer/textures/enemies/level3/bunny3/bunnylvl30030.png" id="286_wtgrm"]
 [ext_resource type="Texture2D" uid="uid://bhrptt61dimk" path="res://platformer/textures/enemies/level2/Fox2/lvl2fox0005.png" id="287_smf5i"]
 [ext_resource type="Texture2D" uid="uid://dunv1yo6k5gu3" path="res://platformer/textures/enemies/level2/Fox2/lvl2fox0006.png" id="288_h1gsj"]
 [ext_resource type="Texture2D" uid="uid://b7og6nw7wr3xm" path="res://platformer/textures/enemies/level2/Fox2/lvl2fox0007.png" id="289_uqm5p"]
@@ -349,32 +443,122 @@
 [ext_resource type="Texture2D" uid="uid://cx65ftv48ebo3" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20002.png" id="344_mtyxj"]
 [ext_resource type="Texture2D" uid="uid://caovbrsca5ekq" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20003.png" id="345_1gjpr"]
 [ext_resource type="Texture2D" uid="uid://cp2edcffge8fo" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20004.png" id="346_j8o80"]
+[ext_resource type="Texture2D" uid="uid://clw4mw68b7cma" path="res://platformer/textures/enemies/level3/fishy3/fish30001.png" id="347_8deu0"]
 [ext_resource type="Texture2D" uid="uid://db34w6x10dflv" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20005.png" id="347_smf5i"]
 [ext_resource type="Texture2D" uid="uid://6db14cncwpr7" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20006.png" id="348_h1gsj"]
+[ext_resource type="Texture2D" uid="uid://dqi8nq6fn7fnb" path="res://platformer/textures/enemies/level3/fishy3/fish30002.png" id="348_qx6id"]
+[ext_resource type="Texture2D" uid="uid://pnclu4jgwgdw" path="res://platformer/textures/enemies/level3/fishy3/fish30003.png" id="349_3k6jc"]
 [ext_resource type="Texture2D" uid="uid://c0nfsmvm6gn8s" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20007.png" id="349_uqm5p"]
+[ext_resource type="Texture2D" uid="uid://bxegr36jvi3gi" path="res://platformer/textures/enemies/level3/fishy3/fish30004.png" id="350_tvdni"]
 [ext_resource type="Texture2D" uid="uid://bpxlkk5qgytwq" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20008.png" id="350_wxhh5"]
+[ext_resource type="Texture2D" uid="uid://c858jsfwllrhi" path="res://platformer/textures/enemies/level3/fishy3/fish30005.png" id="351_afdjn"]
 [ext_resource type="Texture2D" uid="uid://cu6khd15sjr3m" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20009.png" id="351_sa6c0"]
 [ext_resource type="Texture2D" uid="uid://dephwo0v61jkm" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20010.png" id="352_7hmec"]
+[ext_resource type="Texture2D" uid="uid://bwvia2jxjjkbk" path="res://platformer/textures/enemies/level3/fishy3/fish30006.png" id="352_078ty"]
+[ext_resource type="Texture2D" uid="uid://7tf0i7e14nvb" path="res://platformer/textures/enemies/level3/fishy3/fish30007.png" id="353_2esev"]
 [ext_resource type="Texture2D" uid="uid://xg2w6rd8vokl" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20011.png" id="353_b82vy"]
 [ext_resource type="Texture2D" uid="uid://dajfsb243lk71" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20012.png" id="354_23g0m"]
+[ext_resource type="Texture2D" uid="uid://0ihkosvduxns" path="res://platformer/textures/enemies/level3/fishy3/fish30008.png" id="354_tv4q3"]
+[ext_resource type="Texture2D" uid="uid://xkjqr4mhg3b6" path="res://platformer/textures/enemies/level3/fishy3/fish30009.png" id="355_1ss2j"]
 [ext_resource type="Texture2D" uid="uid://cmsxupsjy7c1d" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20013.png" id="355_2jp3m"]
 [ext_resource type="Texture2D" uid="uid://x2prcc7u5gn2" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20014.png" id="356_k5q6j"]
+[ext_resource type="Texture2D" uid="uid://ci26d8ysoeqjo" path="res://platformer/textures/enemies/level3/fishy3/fish30010.png" id="356_osied"]
 [ext_resource type="Texture2D" uid="uid://dcw2n0a0h2kk5" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20015.png" id="357_kcdyi"]
+[ext_resource type="Texture2D" uid="uid://brpqghkne3btb" path="res://platformer/textures/enemies/level3/fishy3/fish30011.png" id="357_m0pje"]
+[ext_resource type="Texture2D" uid="uid://bmsc273fdeqs5" path="res://platformer/textures/enemies/level3/fishy3/fish30012.png" id="358_dxnom"]
 [ext_resource type="Texture2D" uid="uid://l8os7oelwd6o" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20016.png" id="358_y8nmq"]
+[ext_resource type="Texture2D" uid="uid://clitio2rwwhfy" path="res://platformer/textures/enemies/level3/fishy3/fish30013.png" id="359_s4cvn"]
 [ext_resource type="Texture2D" uid="uid://skeqd4t4hs24" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20017.png" id="359_yy2n1"]
+[ext_resource type="Texture2D" uid="uid://4j2duxc8popb" path="res://platformer/textures/enemies/level3/fishy3/fish30014.png" id="360_4amkj"]
 [ext_resource type="Texture2D" uid="uid://btrr8j1diwh7v" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20018.png" id="360_13yk3"]
+[ext_resource type="Texture2D" uid="uid://bvycs4l5aua5c" path="res://platformer/textures/enemies/level3/fishy3/fish30015.png" id="361_htatw"]
 [ext_resource type="Texture2D" uid="uid://b0f4uo1m26t6t" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20019.png" id="361_sry7w"]
+[ext_resource type="Texture2D" uid="uid://bwrlqppamw2hk" path="res://platformer/textures/enemies/level3/fishy3/fish30016.png" id="362_ctmw5"]
 [ext_resource type="Texture2D" uid="uid://dxuop6vu4ot54" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20020.png" id="362_hi0v3"]
+[ext_resource type="Texture2D" uid="uid://drxuui1dc2ece" path="res://platformer/textures/enemies/level3/fishy3/fish30017.png" id="363_85w7i"]
 [ext_resource type="Texture2D" uid="uid://dcab8bdi8fpu" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20021.png" id="363_fy7e1"]
+[ext_resource type="Texture2D" uid="uid://b5ui7eiok0mul" path="res://platformer/textures/enemies/level3/fishy3/fish30018.png" id="364_3tfd1"]
 [ext_resource type="Texture2D" uid="uid://npopwei8h3kg" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20022.png" id="364_tohps"]
 [ext_resource type="Texture2D" uid="uid://8qe8nc85ql2t" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20023.png" id="365_kk0bf"]
+[ext_resource type="Texture2D" uid="uid://bslg24etx2y0y" path="res://platformer/textures/enemies/level3/fishy3/fish30019.png" id="365_ydcnh"]
 [ext_resource type="Texture2D" uid="uid://xhpj07edmop5" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20024.png" id="366_i1wjs"]
+[ext_resource type="Texture2D" uid="uid://b67c2woj5f10y" path="res://platformer/textures/enemies/level3/fishy3/fish30020.png" id="366_pbugk"]
 [ext_resource type="Texture2D" uid="uid://cix4ql41ykmcs" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20025.png" id="367_0eq72"]
+[ext_resource type="Texture2D" uid="uid://cl8buff8dvtb2" path="res://platformer/textures/enemies/level3/fishy3/fish30021.png" id="367_nsmpb"]
+[ext_resource type="Texture2D" uid="uid://cw4llafbltnr0" path="res://platformer/textures/enemies/level3/fishy3/fish30022.png" id="368_mxx7d"]
 [ext_resource type="Texture2D" uid="uid://cyfmdqt8qnxe5" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20026.png" id="368_tyefd"]
+[ext_resource type="Texture2D" uid="uid://4epvowr33xyw" path="res://platformer/textures/enemies/level3/fishy3/fish30023.png" id="369_2skir"]
 [ext_resource type="Texture2D" uid="uid://h7u8p5cgwjgv" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20027.png" id="369_lakys"]
 [ext_resource type="Texture2D" uid="uid://bexp4rgkjj47e" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20028.png" id="370_rh88g"]
+[ext_resource type="Texture2D" uid="uid://cijv3okpp80qr" path="res://platformer/textures/enemies/level3/fishy3/fish30024.png" id="370_tpn50"]
+[ext_resource type="Texture2D" uid="uid://g45hs6fmqjcd" path="res://platformer/textures/enemies/level3/fishy3/fish30025.png" id="371_dwfh2"]
 [ext_resource type="Texture2D" uid="uid://c4o6255171dq3" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20029.png" id="371_lsju4"]
+[ext_resource type="Texture2D" uid="uid://bn0u63lngs3n2" path="res://platformer/textures/enemies/level3/fishy3/fish30026.png" id="372_vcc4w"]
 [ext_resource type="Texture2D" uid="uid://14q77mwv0oet" path="res://platformer/textures/enemies/level2/wolf2/wolflvl20030.png" id="372_y5cu0"]
+[ext_resource type="Texture2D" uid="uid://cm4lqoodyakk2" path="res://platformer/textures/enemies/level3/fishy3/fish30027.png" id="373_njyxk"]
+[ext_resource type="Texture2D" uid="uid://cyhsniuujbfdw" path="res://platformer/textures/enemies/level3/fishy3/fish30028.png" id="374_w42n5"]
+[ext_resource type="Texture2D" uid="uid://b08t8h2kbig7s" path="res://platformer/textures/enemies/level3/fishy3/fish30029.png" id="375_uhx75"]
+[ext_resource type="Texture2D" uid="uid://dgxjnwpqwb7r3" path="res://platformer/textures/enemies/level3/fishy3/fish30030.png" id="376_6kx25"]
+[ext_resource type="Texture2D" uid="uid://bjiowhucw8iws" path="res://platformer/textures/enemies/level3/fox3/foxlvl30001.png" id="437_x4f4v"]
+[ext_resource type="Texture2D" uid="uid://bq6vk7ik2c03l" path="res://platformer/textures/enemies/level3/fox3/foxlvl30002.png" id="438_4ybfq"]
+[ext_resource type="Texture2D" uid="uid://fnbe6hk18w6j" path="res://platformer/textures/enemies/level3/fox3/foxlvl30003.png" id="439_ov684"]
+[ext_resource type="Texture2D" uid="uid://c6ue04lxpu1h7" path="res://platformer/textures/enemies/level3/fox3/foxlvl30004.png" id="440_ludra"]
+[ext_resource type="Texture2D" uid="uid://bcanumoaitu35" path="res://platformer/textures/enemies/level3/fox3/foxlvl30005.png" id="441_8w6h5"]
+[ext_resource type="Texture2D" uid="uid://b80tka6v46oy0" path="res://platformer/textures/enemies/level3/fox3/foxlvl30006.png" id="442_0ubs0"]
+[ext_resource type="Texture2D" uid="uid://bfl48qx7wvef1" path="res://platformer/textures/enemies/level3/fox3/foxlvl30007.png" id="443_jlx44"]
+[ext_resource type="Texture2D" uid="uid://bsoqisginc7gy" path="res://platformer/textures/enemies/level3/fox3/foxlvl30008.png" id="444_loe2y"]
+[ext_resource type="Texture2D" uid="uid://p2fs84x0ggsy" path="res://platformer/textures/enemies/level3/fox3/foxlvl30009.png" id="445_3kqj5"]
+[ext_resource type="Texture2D" uid="uid://cpalqx2obpvj1" path="res://platformer/textures/enemies/level3/fox3/foxlvl30010.png" id="446_abr1s"]
+[ext_resource type="Texture2D" uid="uid://d05a25rbmh7ot" path="res://platformer/textures/enemies/level3/fox3/foxlvl30011.png" id="447_cas4g"]
+[ext_resource type="Texture2D" uid="uid://da3lyf0ut8pfc" path="res://platformer/textures/enemies/level3/fox3/foxlvl30012.png" id="448_3ufkg"]
+[ext_resource type="Texture2D" uid="uid://beoy6dapica7k" path="res://platformer/textures/enemies/level3/fox3/foxlvl30013.png" id="449_sfvnj"]
+[ext_resource type="Texture2D" uid="uid://dh3kvtcidc3gi" path="res://platformer/textures/enemies/level3/fox3/foxlvl30014.png" id="450_o2sp3"]
+[ext_resource type="Texture2D" uid="uid://c1qdwxmb28kvj" path="res://platformer/textures/enemies/level3/fox3/foxlvl30015.png" id="451_u48sx"]
+[ext_resource type="Texture2D" uid="uid://8netm5hmxcer" path="res://platformer/textures/enemies/level3/fox3/foxlvl30016.png" id="452_ak8pw"]
+[ext_resource type="Texture2D" uid="uid://denx2fo8cft3i" path="res://platformer/textures/enemies/level3/fox3/foxlvl30017.png" id="453_5t6hl"]
+[ext_resource type="Texture2D" uid="uid://dklvw7b1qsmwp" path="res://platformer/textures/enemies/level3/fox3/foxlvl30018.png" id="454_jagma"]
+[ext_resource type="Texture2D" uid="uid://dsvkm82nxkjjr" path="res://platformer/textures/enemies/level3/fox3/foxlvl30019.png" id="455_7xaoc"]
+[ext_resource type="Texture2D" uid="uid://3mwbfaewc8lh" path="res://platformer/textures/enemies/level3/fox3/foxlvl30020.png" id="456_fv16p"]
+[ext_resource type="Texture2D" uid="uid://ceojm3b3an8bj" path="res://platformer/textures/enemies/level3/fox3/foxlvl30021.png" id="457_cb4ro"]
+[ext_resource type="Texture2D" uid="uid://cdvmd8n4b8nnl" path="res://platformer/textures/enemies/level3/fox3/foxlvl30022.png" id="458_o3rhp"]
+[ext_resource type="Texture2D" uid="uid://cid7xtmrqvcwp" path="res://platformer/textures/enemies/level3/fox3/foxlvl30023.png" id="459_rqkgr"]
+[ext_resource type="Texture2D" uid="uid://coos6kfnbrt3d" path="res://platformer/textures/enemies/level3/fox3/foxlvl30024.png" id="460_7d20g"]
+[ext_resource type="Texture2D" uid="uid://ccehqdv01mqa1" path="res://platformer/textures/enemies/level3/fox3/foxlvl30025.png" id="461_eodt8"]
+[ext_resource type="Texture2D" uid="uid://byyoj4f1npxmo" path="res://platformer/textures/enemies/level3/fox3/foxlvl30026.png" id="462_psmge"]
+[ext_resource type="Texture2D" uid="uid://dlh33cnw0xo0q" path="res://platformer/textures/enemies/level3/fox3/foxlvl30027.png" id="463_8bewj"]
+[ext_resource type="Texture2D" uid="uid://d3x077a5lh8ic" path="res://platformer/textures/enemies/level3/fox3/foxlvl30028.png" id="464_6c066"]
+[ext_resource type="Texture2D" uid="uid://c7wcslcw8q7vm" path="res://platformer/textures/enemies/level3/fox3/foxlvl30029.png" id="465_7oe7c"]
+[ext_resource type="Texture2D" uid="uid://b7h4pp8ddxxsq" path="res://platformer/textures/enemies/level3/fox3/foxlvl30030.png" id="466_c5h3q"]
+[ext_resource type="Texture2D" uid="uid://doke7p8drcby3" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30001.png" id="527_l2bev"]
+[ext_resource type="Texture2D" uid="uid://dd40x87aod1me" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30002.png" id="528_1luia"]
+[ext_resource type="Texture2D" uid="uid://dvo76jvn0wcy5" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30003.png" id="529_ff3gf"]
+[ext_resource type="Texture2D" uid="uid://batkibvdj2odi" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30004.png" id="530_wtgrm"]
+[ext_resource type="Texture2D" uid="uid://cphp3dtawyhpx" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30005.png" id="531_8deu0"]
+[ext_resource type="Texture2D" uid="uid://d0h0t5141isrb" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30006.png" id="532_qx6id"]
+[ext_resource type="Texture2D" uid="uid://bffwsaw20bot7" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30007.png" id="533_3k6jc"]
+[ext_resource type="Texture2D" uid="uid://rbpx6ttnwjfj" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30008.png" id="534_tvdni"]
+[ext_resource type="Texture2D" uid="uid://bc73pqe43ejx3" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30009.png" id="535_afdjn"]
+[ext_resource type="Texture2D" uid="uid://dm42v637tnk1p" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30010.png" id="536_078ty"]
+[ext_resource type="Texture2D" uid="uid://b7roqobajstgk" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30011.png" id="537_2esev"]
+[ext_resource type="Texture2D" uid="uid://c8gm6micef3he" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30012.png" id="538_tv4q3"]
+[ext_resource type="Texture2D" uid="uid://d34dkprhynf7o" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30013.png" id="539_1ss2j"]
+[ext_resource type="Texture2D" uid="uid://w84h3bwyksgc" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30014.png" id="540_osied"]
+[ext_resource type="Texture2D" uid="uid://blknnmdsohtou" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30015.png" id="541_m0pje"]
+[ext_resource type="Texture2D" uid="uid://c6vuq35tgxk7r" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30016.png" id="542_dxnom"]
+[ext_resource type="Texture2D" uid="uid://btdnvil8c3li0" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30017.png" id="543_s4cvn"]
+[ext_resource type="Texture2D" uid="uid://dgg1dio2hy2f4" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30018.png" id="544_4amkj"]
+[ext_resource type="Texture2D" uid="uid://bxs8gm7fyl6nm" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30019.png" id="545_htatw"]
+[ext_resource type="Texture2D" uid="uid://ctoo8k0rw4a5l" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30020.png" id="546_ctmw5"]
+[ext_resource type="Texture2D" uid="uid://3g1smiluqjjl" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30021.png" id="547_85w7i"]
+[ext_resource type="Texture2D" uid="uid://ddu0n004vfm8s" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30022.png" id="548_3tfd1"]
+[ext_resource type="Texture2D" uid="uid://cyli2pxyxbudw" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30023.png" id="549_ydcnh"]
+[ext_resource type="Texture2D" uid="uid://cxb0jfbir0rxi" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30024.png" id="550_pbugk"]
+[ext_resource type="Texture2D" uid="uid://btqv46niol18i" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30025.png" id="551_nsmpb"]
+[ext_resource type="Texture2D" uid="uid://byyxb4mowakbn" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30026.png" id="552_mxx7d"]
+[ext_resource type="Texture2D" uid="uid://bl3edruyio4fh" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30027.png" id="553_2skir"]
+[ext_resource type="Texture2D" uid="uid://dqhqoo0bdr1ou" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30028.png" id="554_tpn50"]
+[ext_resource type="Texture2D" uid="uid://c1s5dxuklcyv0" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30029.png" id="555_dwfh2"]
+[ext_resource type="Texture2D" uid="uid://wa56173i8mnh" path="res://platformer/textures/enemies/level3/wolf3/wolflevel30030.png" id="556_vcc4w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqkkh"]
 size = Vector2(142, 149)
@@ -624,6 +808,125 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("81_sxa1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_yxr3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_y50vk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_lxfbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_55bx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_oxl8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_6lyco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_41tik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_dt35d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_qw2va")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_tty6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_8oahx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_40p6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_kfxk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_voq3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_lwslj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_j8ndo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_ehbc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_qgnno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_7xcer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_ok4wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_vhf0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_rn7dg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_b2iys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_tgmuj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_i1vgc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_ojufg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_a0qe7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_docds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_2skbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_ra7lg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_e748f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_2j0vr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_2c85j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_12tlh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_10tfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_itbam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_of0cw")
+}],
+"loop": true,
+"name": &"bear3",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("43_e1g0q")
 }, {
 "duration": 1.0,
@@ -786,6 +1089,89 @@ animations = [{
 }],
 "loop": true,
 "name": &"bird2",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("171_u8odx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_3eeh6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_blqc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_6s48o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_dp58k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_tp64e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_j8a4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_ip2wr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_q50xu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_imlus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_mbtqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_es2on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_nbbrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_8sfer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_3h24j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_k7a0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_v1ick")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_q87vv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_sseg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_nww15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_enlfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_mi032")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_x4f4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_4ybfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_ov684")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_ludra")
+}],
+"loop": true,
+"name": &"bird3",
 "speed": 30.0
 }, {
 "frames": [{
@@ -980,6 +1366,101 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("257_8w6h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("258_0ubs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("259_jlx44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("260_loe2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("261_3kqj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("262_abr1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("263_cas4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("264_3ufkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("265_sfvnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("266_o2sp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("267_u48sx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("268_ak8pw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("269_5t6hl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("270_jagma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("271_7xaoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("272_fv16p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("273_cb4ro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("274_o3rhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("275_rqkgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("276_7d20g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("277_eodt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("278_psmge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("279_8bewj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("280_6c066")
+}, {
+"duration": 1.0,
+"texture": ExtResource("281_7oe7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("282_c5h3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("283_l2bev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("284_1luia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("285_ff3gf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("286_wtgrm")
+}],
+"loop": true,
+"name": &"bunny3",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("99_g32lf")
 }, {
 "duration": 1.0,
@@ -1166,6 +1647,101 @@ animations = [{
 }],
 "loop": true,
 "name": &"fish2",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("347_8deu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("348_qx6id")
+}, {
+"duration": 1.0,
+"texture": ExtResource("349_3k6jc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("350_tvdni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("351_afdjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("352_078ty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("353_2esev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("354_tv4q3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("355_1ss2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("356_osied")
+}, {
+"duration": 1.0,
+"texture": ExtResource("357_m0pje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("358_dxnom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("359_s4cvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("360_4amkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("361_htatw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_ctmw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("363_85w7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("364_3tfd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("365_ydcnh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("366_pbugk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("367_nsmpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("368_mxx7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("369_2skir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("370_tpn50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("371_dwfh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("372_vcc4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("373_njyxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("374_w42n5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("375_uhx75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("376_6kx25")
+}],
+"loop": true,
+"name": &"fish3",
 "speed": 30.0
 }, {
 "frames": [{
@@ -1360,6 +1936,101 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("437_x4f4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("438_4ybfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("439_ov684")
+}, {
+"duration": 1.0,
+"texture": ExtResource("440_ludra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("441_8w6h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("442_0ubs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("443_jlx44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("444_loe2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("445_3kqj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("446_abr1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("447_cas4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("448_3ufkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("449_sfvnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("450_o2sp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("451_u48sx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("452_ak8pw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("453_5t6hl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("454_jagma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("455_7xaoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("456_fv16p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("457_cb4ro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("458_o3rhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("459_rqkgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("460_7d20g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("461_eodt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("462_psmge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("463_8bewj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("464_6c066")
+}, {
+"duration": 1.0,
+"texture": ExtResource("465_7oe7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("466_c5h3q")
+}],
+"loop": true,
+"name": &"fox3",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("129_eet73")
 }, {
 "duration": 1.0,
@@ -1546,6 +2217,101 @@ animations = [{
 }],
 "loop": true,
 "name": &"wolf2",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("527_l2bev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("528_1luia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("529_ff3gf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("530_wtgrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("531_8deu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("532_qx6id")
+}, {
+"duration": 1.0,
+"texture": ExtResource("533_3k6jc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("534_tvdni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("535_afdjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("536_078ty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("537_2esev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("538_tv4q3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("539_1ss2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("540_osied")
+}, {
+"duration": 1.0,
+"texture": ExtResource("541_m0pje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("542_dxnom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("543_s4cvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("544_4amkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("545_htatw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("546_ctmw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("547_85w7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("548_3tfd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("549_ydcnh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("550_pbugk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("551_nsmpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("552_mxx7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("553_2skir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("554_tpn50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("555_dwfh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("556_vcc4w")
+}],
+"loop": true,
+"name": &"wolf3",
 "speed": 30.0
 }]
 
@@ -3733,33 +4499,1089 @@ tracks/6/keys = {
 "values": [Vector2(-160, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_x4f4v"]
+resource_name = "bear3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HitflashComponent/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"bear3"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HurtboxComponent/CollisionShape2D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_3xksg")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_ccock")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtboxComponent/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-6.603, 12.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitboxComponent/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5.21, 3.93)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitflashComponent/AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HitflashComponent/AnimatedSprite2D:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4ybfq"]
+resource_name = "bear_right3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HitflashComponent/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"bear3"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HurtboxComponent/CollisionShape2D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_3xksg")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_ccock")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtboxComponent/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-6.603, 12.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitboxComponent/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5.21, 3.93)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitflashComponent/AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HitflashComponent/AnimatedSprite2D:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ov684"]
+resource_name = "bird3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HitflashComponent/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"bird3"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HurtboxComponent/CollisionShape2D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_862uu")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_pryup")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtboxComponent/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(2.932, 12.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitboxComponent/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-1.315, 15.775)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitflashComponent/AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HitflashComponent/AnimatedSprite2D:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ludra"]
+resource_name = "bird_right3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HitflashComponent/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"bird3"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HurtboxComponent/CollisionShape2D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_862uu")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_pryup")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtboxComponent/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(2.932, 12.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitboxComponent/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-1.315, 15.775)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitflashComponent/AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HitflashComponent/AnimatedSprite2D:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8w6h5"]
+resource_name = "bunny3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HitflashComponent/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"bunny3"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HurtboxComponent/CollisionShape2D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_862uu")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_pryup")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtboxComponent/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0.397, 12.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitboxComponent/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-8.255, 15.775)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitflashComponent/AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HitflashComponent/AnimatedSprite2D:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0ubs0"]
+resource_name = "bunny_right3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HitflashComponent/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"bunny3"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HurtboxComponent/CollisionShape2D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_862uu")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_pryup")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtboxComponent/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0.397, 12.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitboxComponent/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-8.255, 15.775)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitflashComponent/AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HitflashComponent/AnimatedSprite2D:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jlx44"]
+resource_name = "fish3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HitflashComponent/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"fish3"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HurtboxComponent/CollisionShape2D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_862uu")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_pryup")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtboxComponent/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-43.478, 12.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitboxComponent/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-35.285, 15.775)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitflashComponent/AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HitflashComponent/AnimatedSprite2D:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_loe2y"]
+resource_name = "fish_right3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HitflashComponent/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"fish3"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HurtboxComponent/CollisionShape2D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_862uu")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_pryup")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtboxComponent/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(43, 12.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitboxComponent/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(43, 15.775)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitflashComponent/AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HitflashComponent/AnimatedSprite2D:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3kqj5"]
+resource_name = "fox3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HitflashComponent/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"fox3"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HurtboxComponent/CollisionShape2D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_862uu")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_pryup")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtboxComponent/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-43.0731, 12.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitboxComponent/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-42.825, 15.775)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitflashComponent/AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HitflashComponent/AnimatedSprite2D:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_abr1s"]
+resource_name = "fox_right3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HitflashComponent/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"fox3"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HurtboxComponent/CollisionShape2D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_862uu")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_pryup")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtboxComponent/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-43.0731, 12.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitboxComponent/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-42.825, 15.775)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitflashComponent/AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HitflashComponent/AnimatedSprite2D:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-145, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_cas4g"]
+resource_name = "wolf3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HitflashComponent/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"wolf3"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HurtboxComponent/CollisionShape2D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_862uu")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_pryup")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtboxComponent/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-43.0731, 12.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitboxComponent/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-42.825, 15.775)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitflashComponent/AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HitflashComponent/AnimatedSprite2D:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3ufkg"]
+resource_name = "wolf_right3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HitflashComponent/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"wolf3"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HurtboxComponent/CollisionShape2D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_862uu")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_pryup")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtboxComponent/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-43.0731, 12.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitboxComponent/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-42.825, 15.775)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitflashComponent/AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HitflashComponent/AnimatedSprite2D:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-160, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jwgmf"]
 _data = {
 &"RESET": SubResource("Animation_ccock"),
 &"bear": SubResource("Animation_jwgmf"),
 &"bear2": SubResource("Animation_nuwo1"),
+&"bear3": SubResource("Animation_x4f4v"),
 &"bear_right": SubResource("Animation_8r0mh"),
 &"bear_right2": SubResource("Animation_b87yx"),
+&"bear_right3": SubResource("Animation_4ybfq"),
 &"bird": SubResource("Animation_bgjh5"),
 &"bird2": SubResource("Animation_mtyxj"),
+&"bird3": SubResource("Animation_ov684"),
 &"bird_right": SubResource("Animation_6nxm3"),
 &"bird_right2": SubResource("Animation_1gjpr"),
+&"bird_right3": SubResource("Animation_ludra"),
 &"bunny": SubResource("Animation_jjiy6"),
 &"bunny2": SubResource("Animation_j8o80"),
+&"bunny3": SubResource("Animation_8w6h5"),
 &"bunny_right": SubResource("Animation_nej3d"),
 &"bunny_right2": SubResource("Animation_smf5i"),
+&"bunny_right3": SubResource("Animation_0ubs0"),
 &"fish": SubResource("Animation_8ixb2"),
 &"fish2": SubResource("Animation_h1gsj"),
+&"fish3": SubResource("Animation_jlx44"),
 &"fish_right": SubResource("Animation_4ungc"),
 &"fish_right2": SubResource("Animation_uqm5p"),
+&"fish_right3": SubResource("Animation_loe2y"),
 &"fox": SubResource("Animation_3xksg"),
 &"fox2": SubResource("Animation_wxhh5"),
+&"fox3": SubResource("Animation_3kqj5"),
 &"fox_right": SubResource("Animation_3vkab"),
 &"fox_right2": SubResource("Animation_sa6c0"),
+&"fox_right3": SubResource("Animation_abr1s"),
 &"wolf": SubResource("Animation_xbun0"),
 &"wolf2": SubResource("Animation_7hmec"),
+&"wolf3": SubResource("Animation_cas4g"),
 &"wolf_right": SubResource("Animation_aipur"),
-&"wolf_right2": SubResource("Animation_b82vy")
+&"wolf_right2": SubResource("Animation_b82vy"),
+&"wolf_right3": SubResource("Animation_3ufkg")
 }
 
 [node name="Enemy" type="CharacterBody2D"]
