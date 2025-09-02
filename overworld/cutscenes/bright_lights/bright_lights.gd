@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var change_scene: String = "PreBoss3"
+@export var change_scene: String = "Level3"
 
 @onready var player: Player25D = %Player25D
 @onready var skip_button: Button = $CanvasLayer/SkipButton
