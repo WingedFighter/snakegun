@@ -170,8 +170,8 @@ states/jump/node = SubResource("AnimationNodeAnimation_rb5g8")
 states/jump/position = Vector2(354, 104)
 transitions = ["Start", "jump", SubResource("AnimationNodeStateMachineTransition_skrb3"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_e0ywq"), "fall", "jump", SubResource("AnimationNodeStateMachineTransition_2dtal")]
 
-[sub_resource type="Animation" id="Animation_rb5g8"]
-resource_name = "jump"
+[sub_resource type="Animation" id="Animation_e0ywq"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -200,8 +200,8 @@ tracks/0/keys = {
 "values": [&"fall"]
 }
 
-[sub_resource type="Animation" id="Animation_e0ywq"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_rb5g8"]
+resource_name = "jump"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
