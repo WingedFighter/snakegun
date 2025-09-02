@@ -190,7 +190,7 @@ health_component = NodePath("../Player/HealthComponent")
 player = NodePath("../Player")
 
 [node name="EndOfLevel" parent="." instance=ExtResource("11_p8uae")]
-position = Vector2(2724, -409)
+position = Vector2(2198, -202)
 
 [node name="bunny" parent="." instance=ExtResource("13_0illr")]
 position = Vector2(369, -212)
