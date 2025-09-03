@@ -745,72 +745,59 @@ position = Vector2(1381.04, 286.117)
 health_component = NodePath("../Player/HealthComponent")
 player = NodePath("../Player")
 
-[node name="FirstTimePlaying" type="Control" parent="."]
-z_index = 500
-layout_mode = 3
-anchors_preset = 0
-offset_left = 263.0
-offset_top = 59.0
-offset_right = 263.0
-offset_bottom = 59.0
+[node name="FirstTimePlaying" type="CanvasLayer" parent="."]
+layer = 2
 
 [node name="A" type="TextureRect" parent="FirstTimePlaying"]
-layout_mode = 0
-offset_left = -498.0
-offset_top = -463.0
-offset_right = -434.0
-offset_bottom = -399.0
+offset_left = 231.0
+offset_top = 107.0
+offset_right = 295.0
+offset_bottom = 171.0
 texture = ExtResource("12_sak3x")
 
 [node name="D" type="TextureRect" parent="FirstTimePlaying"]
-layout_mode = 0
-offset_left = -446.0
-offset_top = -463.0
-offset_right = -382.0
-offset_bottom = -399.0
+offset_left = 283.0
+offset_top = 107.0
+offset_right = 347.0
+offset_bottom = 171.0
 texture = ExtResource("14_txih8")
 
 [node name="Space" type="TextureRect" parent="FirstTimePlaying"]
-layout_mode = 0
-offset_left = -502.0
-offset_top = -410.0
-offset_right = -438.0
-offset_bottom = -346.0
+offset_left = 227.0
+offset_top = 160.0
+offset_right = 291.0
+offset_bottom = 224.0
 scale = Vector2(1.84, 1.84)
 texture = ExtResource("13_ww0kq")
 
 [node name="TextureRect" type="TextureRect" parent="FirstTimePlaying"]
-layout_mode = 0
-offset_left = -163.0
-offset_top = -459.0
-offset_right = -99.0
-offset_bottom = -395.0
+offset_left = 566.0
+offset_top = 111.0
+offset_right = 630.0
+offset_bottom = 175.0
 texture = ExtResource("14_t248j")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="FirstTimePlaying"]
-layout_mode = 0
-offset_left = -373.0
-offset_top = -453.0
-offset_right = -308.0
-offset_bottom = -430.0
+offset_left = 356.0
+offset_top = 117.0
+offset_right = 421.0
+offset_bottom = 140.0
 scale = Vector2(2, 2)
 text = "Move"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="FirstTimePlaying"]
-layout_mode = 0
-offset_left = -373.0
-offset_top = -373.0
-offset_right = -308.0
-offset_bottom = -350.0
+offset_left = 356.0
+offset_top = 197.0
+offset_right = 421.0
+offset_bottom = 220.0
 scale = Vector2(2, 2)
 text = "Jump"
 
 [node name="ShootLabel" type="RichTextLabel" parent="FirstTimePlaying"]
-layout_mode = 0
-offset_left = -89.0
-offset_top = -452.0
-offset_right = 2.0
-offset_bottom = -429.0
+offset_left = 640.0
+offset_top = 118.0
+offset_right = 731.0
+offset_bottom = 141.0
 scale = Vector2(2, 2)
 text = "Shoot 0/5"
 
