@@ -1,5 +1,6 @@
-[gd_scene load_steps=22 format=4 uid="uid://hs2irgc7mquo"]
+[gd_scene load_steps=23 format=4 uid="uid://g5612t562smu"]
 
+[ext_resource type="Script" uid="uid://c26p5d65srcra" path="res://platformer/scenes/boss_2.gd" id="1_cy1xl"]
 [ext_resource type="Texture2D" uid="uid://5v4ve06466gy" path="res://platformer/textures/level2/dump/layer0.png" id="1_fpgkb"]
 [ext_resource type="Texture2D" uid="uid://3pdglt8f8lpt" path="res://platformer/textures/level2/dump/layer1.png" id="2_cy1xl"]
 [ext_resource type="Texture2D" uid="uid://b3gnnk6fu6vlu" path="res://platformer/textures/level2/dump/layer2.png" id="3_kmspu"]
@@ -9,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b3c5cqhw1jk4f" path="res://platformer/textures/level2/dump/layer5.png" id="6_xg15h"]
 [ext_resource type="PackedScene" uid="uid://bg2joonqnel4i" path="res://platformer/components/player.tscn" id="7_0o1s5"]
 [ext_resource type="Texture2D" uid="uid://l1agujwb7v0m" path="res://platformer/textures/level2/dump/layer6.png" id="7_gik32"]
-[ext_resource type="PackedScene" uid="uid://2oq7vuqqajoc" path="res://platformer/components/boss2.tscn" id="8_5m1jo"]
+[ext_resource type="PackedScene" path="res://platformer/components/boss2.tscn" id="8_5m1jo"]
 [ext_resource type="Texture2D" uid="uid://b1setxi4372f8" path="res://platformer/textures/level1/trees/layer5.png" id="8_tgxld"]
 [ext_resource type="PackedScene" uid="uid://cwgke4uunwn6l" path="res://platformer/components/hud.tscn" id="10_gik32"]
 
@@ -644,6 +645,7 @@ pattern_2 = SubResource("TileMapPattern_jtg2b")
 pattern_3 = SubResource("TileMapPattern_2ksu1")
 
 [node name="Boss2" type="Node2D"]
+script = ExtResource("1_cy1xl")
 
 [node name="Parallax" type="Node2D" parent="."]
 

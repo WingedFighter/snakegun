@@ -2,7 +2,7 @@ extends Node2D
 
 const VELOCITY = 10.0
 
-@export var change_scene: String = "PostBoss2"
+@export var change_scene: String = "Boss2"
 
 @onready var player: Player25D = %Player25D
 @onready var skip_button: Button = $CanvasLayer/SkipButton
