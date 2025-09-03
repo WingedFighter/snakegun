@@ -1,6 +1,6 @@
-[gd_scene load_steps=99 format=3 uid="uid://cuf746xmvaff1"]
+[gd_scene load_steps=100 format=3 uid="uid://cuf746xmvaff1"]
 
-[ext_resource type="Script" uid="uid://1t0prt00vihg" path="res://platformer/components/boss.gd" id="1_pepht"]
+[ext_resource type="Script" uid="uid://bb4geofawjpa7" path="res://platformer/components/boss2.gd" id="1_jaug8"]
 [ext_resource type="PackedScene" uid="uid://bp5asil6iy16" path="res://platformer/components/health_component.tscn" id="2_jaug8"]
 [ext_resource type="PackedScene" uid="uid://dxgmgcp48vsmr" path="res://platformer/components/hurtbox_component.tscn" id="3_18exq"]
 [ext_resource type="PackedScene" uid="uid://cx8omu8t2w3i1" path="res://platformer/components/hitflash_component.tscn" id="4_jgjg1"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bu65v4rs164mc" path="res://platformer/textures/enemies/finalboss/finalboss3dead.png" id="94_18exq"]
 [ext_resource type="Texture2D" uid="uid://cie1wxsc1vlow" path="res://platformer/textures/enemies/finalboss/catboss0001.png" id="94_jaug8"]
 [ext_resource type="Texture2D" uid="uid://dfb135adogqtm" path="res://platformer/textures/enemies/finalboss/catboss0032.png" id="95_dwd47"]
+[ext_resource type="PackedScene" uid="uid://cmjffup68s1hj" path="res://platformer/components/boss_explosion.tscn" id="95_jaug8"]
 [ext_resource type="Texture2D" uid="uid://bd6higkje4qqf" path="res://platformer/textures/enemies/finalboss/catboss0002.png" id="96_apxq8"]
 [ext_resource type="Texture2D" uid="uid://wskbwfkjofch" path="res://platformer/textures/enemies/finalboss/catboss0033.png" id="96_e7qv6"]
 [ext_resource type="Texture2D" uid="uid://bt2npmu237hb4" path="res://platformer/textures/enemies/finalboss/catboss0076.png" id="96_j7443"]
@@ -411,7 +412,7 @@ size = Vector2(427, 434)
 collision_layer = 32
 collision_mask = 2
 platform_floor_layers = 4294967042
-script = ExtResource("1_pepht")
+script = ExtResource("1_jaug8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 29)
@@ -442,6 +443,8 @@ shape = SubResource("RectangleShape2D_qmiwu")
 
 [node name="DeathTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="BossExplosion" parent="." instance=ExtResource("95_jaug8")]
 
 [editable path="HurtboxComponent"]
 [editable path="HitboxComponent"]

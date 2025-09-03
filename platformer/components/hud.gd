@@ -31,7 +31,6 @@ func update_healthbar(_old: int, new:int ) -> void:
 	pass
 
 func update_gun_level(new: int) -> void:
-	print_debug(str(new))
 	exp_bar.frame = clampi(new, 0, 15)
 	@warning_ignore("integer_division")
 	gun_sprite.frame = new / 5

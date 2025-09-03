@@ -1,6 +1,6 @@
 [gd_scene load_steps=50 format=3 uid="uid://dvvskrdgkul33"]
 
-[ext_resource type="Script" path="res://platformer/components/bunny.gd" id="1_j457e"]
+[ext_resource type="Script" uid="uid://c0cbxq6gb4j07" path="res://platformer/components/bunny.gd" id="1_j457e"]
 [ext_resource type="PackedScene" uid="uid://bp5asil6iy16" path="res://platformer/components/health_component.tscn" id="2_4ejhb"]
 [ext_resource type="PackedScene" uid="uid://dxgmgcp48vsmr" path="res://platformer/components/hurtbox_component.tscn" id="3_ig5sr"]
 [ext_resource type="PackedScene" uid="uid://cx8omu8t2w3i1" path="res://platformer/components/hitflash_component.tscn" id="4_7l5uo"]
@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://damobta15iguu" path="res://platformer/textures/enemies/bunny/bunny0028.png" id="160_dkvbn"]
 [ext_resource type="Texture2D" uid="uid://yns22am411s5" path="res://platformer/textures/enemies/bunny/bunny0029.png" id="161_35ndq"]
 [ext_resource type="Texture2D" uid="uid://c34u616y68438" path="res://platformer/textures/enemies/bunny/bunny0030.png" id="162_ldeys"]
-[ext_resource type="PackedScene" path="res://platformer/components/death_component.tscn" id="373_u3tn2"]
+[ext_resource type="PackedScene" uid="uid://b5pauup6q8vi8" path="res://platformer/components/death_component.tscn" id="373_u3tn2"]
 [ext_resource type="PackedScene" uid="uid://grt1adc2f8b8" path="res://platformer/components/hitbox_component.tscn" id="374_gbv3o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqkkh"]
@@ -184,6 +184,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [&"jump"]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HitflashComponent/AnimatedSprite2D2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_skrb3"]
 resource_name = "fall"
@@ -198,6 +210,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"fall"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HitflashComponent/AnimatedSprite2D2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_rb5g8"]
@@ -214,6 +238,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [&"jump"]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HitflashComponent/AnimatedSprite2D2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2dtal"]
 _data = {
@@ -227,7 +263,6 @@ collision_layer = 32
 collision_mask = 2
 platform_floor_layers = 4294967042
 script = ExtResource("1_j457e")
-hitbox_source_layer = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 29)

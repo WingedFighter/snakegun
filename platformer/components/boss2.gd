@@ -3,10 +3,11 @@ extends Enemy
 @onready var health_component: HealthComponent = $HealthComponent
 @onready var sprite: AnimatedSprite2D = $HitflashComponent/AnimatedSprite2D
 @onready var timer: Timer = $DeathTimer
-@export var boss_level: int = 1
 @onready var boss_explosion = $BossExplosion
 @onready var animation_player = $AnimationPlayer
 @onready var state_timer = $StateTimer
+@export var player: PlayerMegaman
+
 var direction: int = -1
 var h_speed: int = 100
 var gravity: float = 980.0
@@ -70,7 +71,10 @@ func state_change() -> void:
 		walk,
 		idle
 	]
-	direction = (randi() % 2) * 2 - 1
+	if player.position.x < position.x:
+		direction = -1
+	else:
+		direction = 1
 	transition_state(choices[randi() % choices.size()])
 
 
@@ -109,4 +113,4 @@ func on_death() -> void:
 	timer.paused = false
 
 func scene_transition() -> void:
-	SceneManager.change_scene("PostBoss" + str(boss_level))
+	SceneManager.change_scene("PostBoss2")
