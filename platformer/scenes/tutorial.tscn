@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://528a1cmoc4tt"]
+[gd_scene load_steps=24 format=4 uid="uid://528a1cmoc4tt"]
 
 [ext_resource type="Script" uid="uid://c1mdvgk11obs1" path="res://platformer/scenes/tutorial.gd" id="1_2ksu1"]
 [ext_resource type="Texture2D" uid="uid://cdhpgece3nv3d" path="res://platformer/textures/level1/trees/layer0.png" id="1_italu"]
@@ -10,6 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://l4gc7f5i7mbi" path="res://platformer/textures/terrain.png" id="6_italu"]
 [ext_resource type="Texture2D" uid="uid://b1setxi4372f8" path="res://platformer/textures/level1/trees/layer5.png" id="8_ww0kq"]
 [ext_resource type="PackedScene" uid="uid://cwgke4uunwn6l" path="res://platformer/components/hud.tscn" id="10_2ksu1"]
+[ext_resource type="Texture2D" uid="uid://bdq5r637yk3lb" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_a.png" id="12_sak3x"]
+[ext_resource type="Texture2D" uid="uid://dlot7o621lrlo" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_space.png" id="13_ww0kq"]
+[ext_resource type="Texture2D" uid="uid://b50y8sg4x13e7" path="res://ui/keybinding_panel/icons/keyboard_mouse/mouse_left.png" id="14_t248j"]
+[ext_resource type="Texture2D" uid="uid://c22dl84us3w7c" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_d.png" id="14_txih8"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_a5smi"]
 
@@ -740,6 +744,75 @@ position = Vector2(1381.04, 286.117)
 [node name="HUD" parent="." node_paths=PackedStringArray("health_component", "player") instance=ExtResource("10_2ksu1")]
 health_component = NodePath("../Player/HealthComponent")
 player = NodePath("../Player")
+
+[node name="FirstTimePlaying" type="Control" parent="."]
+z_index = 500
+layout_mode = 3
+anchors_preset = 0
+offset_left = 263.0
+offset_top = 59.0
+offset_right = 263.0
+offset_bottom = 59.0
+
+[node name="A" type="TextureRect" parent="FirstTimePlaying"]
+layout_mode = 0
+offset_left = -498.0
+offset_top = -463.0
+offset_right = -434.0
+offset_bottom = -399.0
+texture = ExtResource("12_sak3x")
+
+[node name="D" type="TextureRect" parent="FirstTimePlaying"]
+layout_mode = 0
+offset_left = -446.0
+offset_top = -463.0
+offset_right = -382.0
+offset_bottom = -399.0
+texture = ExtResource("14_txih8")
+
+[node name="Space" type="TextureRect" parent="FirstTimePlaying"]
+layout_mode = 0
+offset_left = -502.0
+offset_top = -410.0
+offset_right = -438.0
+offset_bottom = -346.0
+scale = Vector2(1.84, 1.84)
+texture = ExtResource("13_ww0kq")
+
+[node name="TextureRect" type="TextureRect" parent="FirstTimePlaying"]
+layout_mode = 0
+offset_left = -163.0
+offset_top = -459.0
+offset_right = -99.0
+offset_bottom = -395.0
+texture = ExtResource("14_t248j")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="FirstTimePlaying"]
+layout_mode = 0
+offset_left = -373.0
+offset_top = -453.0
+offset_right = -308.0
+offset_bottom = -430.0
+scale = Vector2(2, 2)
+text = "Move"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="FirstTimePlaying"]
+layout_mode = 0
+offset_left = -373.0
+offset_top = -373.0
+offset_right = -308.0
+offset_bottom = -350.0
+scale = Vector2(2, 2)
+text = "Jump"
+
+[node name="ShootLabel" type="RichTextLabel" parent="FirstTimePlaying"]
+layout_mode = 0
+offset_left = -89.0
+offset_top = -452.0
+offset_right = 2.0
+offset_bottom = -429.0
+scale = Vector2(2, 2)
+text = "Shoot 0/5"
 
 [editable path="Player"]
 [editable path="Player/HurtboxComponent"]
