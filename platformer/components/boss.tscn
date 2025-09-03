@@ -572,7 +572,7 @@ _data = {
 &"walk": SubResource("Animation_ycy31")
 }
 
-[node name="Boss" type="CharacterBody2D"]
+[node name="Boss2" type="CharacterBody2D"]
 collision_layer = 32
 collision_mask = 2
 platform_floor_layers = 4294967042

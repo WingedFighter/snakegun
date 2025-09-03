@@ -745,13 +745,9 @@ region_rect = Rect2(0, 0, 1200, 660)
 health_component = NodePath("../Player/HealthComponent")
 player = NodePath("../Player")
 
-[node name="Boss" parent="." node_paths=PackedStringArray("player") instance=ExtResource("9_sa1nt")]
-position = Vector2(365, -155)
-scale = Vector2(0.7, 0.7)
-player = NodePath("../Player")
+[node name="Boss" parent="." instance=ExtResource("9_sa1nt")]
+position = Vector2(365, -163)
+scale = Vector2(0.8, 0.8)
 
 [editable path="Player"]
 [editable path="Player/HurtboxComponent"]
-[editable path="Boss"]
-[editable path="Boss/HurtboxComponent"]
-[editable path="Boss/HitboxComponent"]

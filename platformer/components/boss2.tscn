@@ -692,7 +692,7 @@ _data = {
 &"walk": SubResource("Animation_ftm27")
 }
 
-[node name="Boss" type="CharacterBody2D"]
+[node name="Boss2" type="CharacterBody2D"]
 collision_layer = 32
 collision_mask = 2
 platform_floor_layers = 4294967042
@@ -703,7 +703,7 @@ position = Vector2(6.5, 2)
 shape = SubResource("RectangleShape2D_k0geq")
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_f2l1i")]
-max_health = 10.0
+max_health = 15.0
 
 [node name="HurtboxComponent" parent="." node_paths=PackedStringArray("healthComponent") instance=ExtResource("3_456ft")]
 healthComponent = NodePath("../HealthComponent")
