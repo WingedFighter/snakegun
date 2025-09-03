@@ -86,7 +86,7 @@ func transition_state(new_state) -> void:
 		dash:
 			animation_player.play("dash")
 			state = dash
-			state_timer.start(2)
+			state_timer.start(1)
 		death:
 			animation_player.play("death")
 			state = death
@@ -100,11 +100,11 @@ func transition_state(new_state) -> void:
 		walk:
 			animation_player.play("walk")
 			state = walk
-			state_timer.start(2)
+			state_timer.start(1)
 		idle:
 			animation_player.play("idle")
 			state = idle
-			state_timer.start(1)
+			state_timer.start(0.5)
 
 func on_death() -> void:
 	animation_player.play("death")

@@ -763,3 +763,6 @@ player = NodePath("../Player")
 
 [editable path="Player"]
 [editable path="Player/HurtboxComponent"]
+[editable path="Boss2"]
+[editable path="Boss2/HurtboxComponent"]
+[editable path="Boss2/HitboxComponent"]
