@@ -3,10 +3,6 @@ extends Node
 var save_data: SaveData
 
 func _ready() -> void:
-	save_data = SaveData.new()
-
-func load_data() -> bool:
-	print_debug(save_data.volume_slider)
 	if ResourceLoader.exists(save_data.save_location):
 		save_data = ResourceLoader.load(save_data.save_location, "", ResourceLoader.CacheMode.CACHE_MODE_IGNORE)
 		State.flags.merge(save_data.state_flags)
