@@ -13,14 +13,13 @@ func load_data() -> bool:
 	return false
 
 func save() -> void:
-	if get_tree().current_scene.name == "MainTitle":
-		return
-	save_data.save_scene = get_tree().current_scene.name
-	var player = get_tree().current_scene.get_node("%Player25D")
-	if player:
-		save_data.player_pos = player.position
-		save_data.quests_list = Quests.list
-		save_data.state_flags = State.flags
+	if get_tree().current_scene.has_node("%Player25D"):
+		save_data.save_scene = get_tree().current_scene.name
+		var player = get_tree().current_scene.get_node("%Player25D")
+		if player:
+			save_data.player_pos = player.position
+	save_data.quests_list = Quests.list
+	save_data.state_flags = State.flags
 	ResourceSaver.save(save_data, save_data.save_location)
 
 func save_volume(volume: float) -> void:
