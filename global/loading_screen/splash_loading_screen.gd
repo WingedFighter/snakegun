@@ -54,6 +54,7 @@ extends CanvasLayer
 	"FinalBossReal": "res://global/audio/background_music/ItWasNeverAboutFreckoFull.mp3",
 	"FinalBossGameMix": "res://global/audio/background_music/FinalBossGameMix.mp3",
 	"FinalBossDialogue": "res://global/audio/background_music/FinalBossDialogue.mp3",
+	"PreFinalBossInst": "res://global/audio/background_music/ItWasntReallyAboutFreckoInstLoop.mp3",
 	"SomewhereInIdaho": "res://global/audio/background_music/SomewhereInIdaho.mp3",
 	"SchoolDay": "res://global/audio/background_music/SchoolDay.mp3",
 	"ImAMagicalGirl": "res://global/audio/background_music/ImAMagicalGirl!.mp3",

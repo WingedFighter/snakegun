@@ -724,11 +724,11 @@ collision_layer = 2
 shape = SubResource("WorldBoundaryShape2D_j06yv")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Platforms/WorldBoundary"]
-position = Vector2(-566, -779.935)
+position = Vector2(-1205, -779.935)
 shape = SubResource("WorldBoundaryShape2D_fnpo5")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Platforms/WorldBoundary"]
-position = Vector2(608.05, -779.935)
+position = Vector2(1515, -779.935)
 shape = SubResource("WorldBoundaryShape2D_p7oja")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Platforms"]
