@@ -65,7 +65,7 @@
 [ext_resource type="Texture2D" uid="uid://dky4wgod8vuvb" path="res://platformer/textures/enemies/Bear/bear0029.png" id="33_u2l3n"]
 [ext_resource type="Texture2D" uid="uid://c4qd8xh5f1uxs" path="res://platformer/textures/enemies/Bear/bear0030.png" id="34_u4lh8"]
 [ext_resource type="PackedScene" uid="uid://grt1adc2f8b8" path="res://platformer/components/hitbox_component.tscn" id="35_gojrg"]
-[ext_resource type="PackedScene" uid="uid://b5pauup6q8vi8" path="res://platformer/components/death_component.tscn" id="35_q14sh"]
+[ext_resource type="PackedScene" path="res://platformer/components/death_component.tscn" id="35_q14sh"]
 [ext_resource type="Texture2D" uid="uid://cjy571w7inj6s" path="res://platformer/textures/enemies/Bear/bear0031.png" id="35_y2uhj"]
 [ext_resource type="Texture2D" uid="uid://xo1v22fuw2q" path="res://platformer/textures/enemies/Bear/bear0032.png" id="36_g32lf"]
 [ext_resource type="Texture2D" uid="uid://rh6fpagoco78" path="res://platformer/textures/enemies/Bear/bear0033.png" id="37_pki7e"]

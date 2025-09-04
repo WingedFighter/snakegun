@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://vh0v2x6yaegm"]
+
+[ext_resource type="Script" uid="uid://b8ur3j3lbr3of" path="res://platformer/components/spike_trap.gd" id="1_6ad2x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6kaj"]
+size = Vector2(392.916, 20)
+
+[node name="SpikeTrap" type="Area2D"]
+script = ExtResource("1_6ad2x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11.6736, -17)
+scale = Vector2(1.84429, -7.86709)
+shape = SubResource("RectangleShape2D_x6kaj")
