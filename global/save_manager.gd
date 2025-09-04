@@ -3,8 +3,8 @@ extends Node
 var save_data: SaveData
 
 func _ready() -> void:
-	if ResourceLoader.exists(save_data.save_location):
-		save_data = ResourceLoader.load(save_data.save_location, "", ResourceLoader.CacheMode.CACHE_MODE_IGNORE)
+	if ResourceLoader.exists("user://save_0.tres"):
+		save_data = ResourceLoader.load("user://save_0.tres", "", ResourceLoader.CacheMode.CACHE_MODE_IGNORE)
 		State.flags.merge(save_data.state_flags)
 	else:
 		save_data = SaveData.new()
