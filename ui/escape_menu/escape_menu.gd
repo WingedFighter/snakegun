@@ -25,7 +25,7 @@ var music_bus: int
 var sfx_bus: int
 
 func _ready() -> void:
-	SaveManager.load_data()
+	#SaveManager.load_data()
 
 	music_bus = AudioServer.get_bus_index("Music")
 	sfx_bus = AudioServer.get_bus_index("SFX")

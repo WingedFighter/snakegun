@@ -28,7 +28,7 @@ func new_game() -> void:
 	SceneManager.change_scene(new_game_scene)
 
 func continue_game() -> void:
-	if SaveManager.load_data():
+	if SaveManager.save_data.save_scene != "":
 		SceneManager.change_scene(SaveManager.save_data.save_scene)
 
 func settings() -> void:

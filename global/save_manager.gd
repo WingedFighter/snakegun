@@ -3,14 +3,11 @@ extends Node
 var save_data: SaveData
 
 func _ready() -> void:
-	save_data = SaveData.new()
-
-func load_data() -> bool:
 	if ResourceLoader.exists(save_data.save_location):
 		save_data = ResourceLoader.load(save_data.save_location, "", ResourceLoader.CacheMode.CACHE_MODE_IGNORE)
 		State.flags.merge(save_data.state_flags)
-		return true
-	return false
+	else:
+		save_data = SaveData.new()
 
 func save() -> void:
 	if get_tree().current_scene.has_node("%Player25D"):
