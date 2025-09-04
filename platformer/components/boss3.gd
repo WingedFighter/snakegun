@@ -47,7 +47,7 @@ func dash_state():
 	velocity.x = direction * h_speed * 2
 
 func death_state():
-	pass
+	velocity = Vector2.ZERO
 
 func fall_state(delta: float):
 	velocity.y += gravity * delta
@@ -109,6 +109,7 @@ func transition_state(new_state) -> void:
 			state_timer.start(0.5)
 
 func on_death() -> void:
+	state = death
 	animation_player.play("death")
 	boss_explosion.visible = true
 	state_timer.paused = true
