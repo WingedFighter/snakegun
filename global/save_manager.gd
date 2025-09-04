@@ -27,7 +27,7 @@ func save_volume(volume: float) -> void:
 	save_data.volume_slider = volume
 
 func save_sfx_volume(volume: float) -> void:
-	save_data.sfx_volume.slider = volume
+	save_data.sfx_volume_slider = volume
 
 func save_keybinding(action: StringName, event: InputEvent) -> void:
 	save_data.keybindings[action] = event
