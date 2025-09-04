@@ -49,12 +49,14 @@ extends CanvasLayer
 }
 
 @export var music_dictionary: Dictionary[String, String] = {
-	"Boss1": "res://global/audio/background_music/Boss1.wav",
-	"Boss2": "res://global/audio/background_music/Boss2.wav",
-	"FinalBossReal": "res://global/audio/background_music/FinalBossReal.wav",
-	"SomewhereInIdaho": "res://global/audio/background_music/SomewhereInIdaho.wav",
+	"Boss1": "res://global/audio/background_music/boss1.mp3",
+	"Boss2": "res://global/audio/background_music/boss2.mp3",
+	"FinalBossReal": "res://global/audio/background_music/ItWasNeverAboutFreckoFull.mp3",
+	"FinalBossGameMix": "res://global/audio/background_music/FinalBossGameMix.mp3",
+	"FinalBossDialogue": "res://global/audio/background_music/FinalBossDialogue.mp3",
+	"SomewhereInIdaho": "res://global/audio/background_music/SomewhereInIdaho.mp3",
 	"SchoolDay": "res://global/audio/background_music/SchoolDay.mp3",
-	"ImAMagicalGirl": "res://global/audio/background_music/ImAMagicalGirl!.wav",
+	"ImAMagicalGirl": "res://global/audio/background_music/ImAMagicalGirl!.mp3",
 	"DarkAndStormy": "res://global/audio/background_music/ADarkAndStormyNight.mp3",
 	"HuntingSeason": "res://global/audio/background_music/HuntingSeason.mp3",
 	"MySnakeIsAGun": "res://global/audio/background_music/MySnakeIsAGun.mp3",
