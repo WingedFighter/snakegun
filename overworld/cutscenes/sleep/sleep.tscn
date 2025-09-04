@@ -1,0 +1,88 @@
+[gd_scene load_steps=10 format=3 uid="uid://d4hee0nmb2og0"]
+
+[ext_resource type="Texture2D" uid="uid://bbbwdd4kyqrgl" path="res://overworld/cutscenes/intro/intro_6.png" id="1_b2yn0"]
+[ext_resource type="Script" uid="uid://dfsji55qu8r4v" path="res://overworld/cutscenes/sleep/sleep.gd" id="1_p3ypi"]
+[ext_resource type="Texture2D" uid="uid://dy5oglmapwog8" path="res://overworld/cutscenes/intro/intro_6(2).png" id="2_p3ypi"]
+[ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="3_wwrp0"]
+[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="4_s41m8"]
+[ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="5_gdx4d"]
+
+[sub_resource type="Animation" id="Animation_b2yn0"]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_p3ypi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wwrp0"]
+_data = {
+&"RESET": SubResource("Animation_p3ypi"),
+&"default": SubResource("Animation_b2yn0")
+}
+
+[node name="Sleep" type="Node2D"]
+script = ExtResource("1_p3ypi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1155.0
+offset_top = -661.0
+offset_right = 1150.0
+offset_bottom = 662.0
+color = Color(0, 0, 0, 1)
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_b2yn0")
+
+[node name="Objects" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_p3ypi")
+
+[node name="Player25D" parent="." instance=ExtResource("3_wwrp0")]
+position = Vector2(146, -54)
+
+[node name="Conversation" parent="." instance=ExtResource("4_s41m8")]
+
+[node name="TalkManager" parent="Conversation" index="0"]
+graph_data_save_location = "res://overworld/cutscenes/intro/graph_data.tres"
+talk_state_save_location = "res://overworld/cutscenes/intro/talk_state.tres"
+
+[node name="Snek" parent="." instance=ExtResource("5_gdx4d")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_wwrp0")
+}
+autoplay = "default"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -1155.0
+offset_top = -661.0
+offset_right = 1150.0
+offset_bottom = 662.0
+color = Color(0, 0, 0, 1)
+
+[editable path="Conversation"]

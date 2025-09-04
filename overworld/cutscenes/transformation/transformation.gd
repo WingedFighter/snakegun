@@ -8,6 +8,7 @@ extends Control
 func _ready() -> void:
 	skip_button.pressed.connect(on_skip_pressed)
 	State.flags['transformation'] = true
+	State.flags['can_sleep'] = true
 	Quests.complete_quest("Magical Gurl")
 	Quests.add_quest({"name": "Night Night", "contents": "Go to bed (Do you remember where you live?)"})
 	AudioManager.play_music("ImAMagicalGirl")

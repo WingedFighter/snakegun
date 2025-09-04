@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://bs4sw7h58f7b1"]
+[gd_scene load_steps=19 format=4 uid="uid://bs4sw7h58f7b1"]
 
 [ext_resource type="Script" uid="uid://blodgncbscjaj" path="res://overworld/maps/inside/inside_hero_room.gd" id="1_7grtv"]
 [ext_resource type="Texture2D" uid="uid://cjbgort6s7vho" path="res://overworld/maps/inside/ground_main.png" id="1_uq21d"]
@@ -27,6 +27,9 @@ size = Vector2(500, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5kw6"]
 size = Vector2(38, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dyel"]
+size = Vector2(96.5, 77)
 
 [node name="InsideHeroRoom" type="Node2D"]
 script = ExtResource("1_7grtv")
@@ -96,6 +99,17 @@ to_scene = "OutsideTownMain"
 [node name="CollisionShape2D" parent="Interactables/Transitions/OutsideTownMain" index="0"]
 position = Vector2(0, -84)
 shape = SubResource("RectangleShape2D_q5kw6")
+
+[node name="Transition" parent="Interactables/Transitions" instance=ExtResource("3_7grtv")]
+position = Vector2(170, -73)
+to_scene = "Sleep"
+immediate = true
+conditional = true
+condition = "can_sleep"
+
+[node name="CollisionShape2D" parent="Interactables/Transitions/Transition" index="0"]
+position = Vector2(29.75, 22.5)
+shape = SubResource("RectangleShape2D_8dyel")
 
 [node name="Spawner" parent="." instance=ExtResource("4_f7ndo")]
 spawns = Dictionary[String, NodePath]({
@@ -169,3 +183,4 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("12_8dyel")
 
 [editable path="Interactables/Transitions/OutsideTownMain"]
+[editable path="Interactables/Transitions/Transition"]

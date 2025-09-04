@@ -7,6 +7,7 @@ extends Control
 
 func _ready() -> void:
 	skip_button.pressed.connect(on_skip_pressed)
+	State.flags['can_sleep'] = true
 	State.flags['explosion'] = true
 	
 	# Which music to play?
