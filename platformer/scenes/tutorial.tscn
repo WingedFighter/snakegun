@@ -724,6 +724,9 @@ horizontal_speed = 800.0
 [node name="ShootComponent" parent="Player" index="6"]
 accuracy = 1000.0
 
+[node name="AnimationTree" parent="Player" index="7"]
+parameters/Dash/blend_position = 0
+
 [node name="arm" parent="Player" index="8"]
 animation = &"level1shoot"
 

@@ -132,6 +132,9 @@ horizontal_speed = 800.0
 [node name="Camera2D" parent="Player" index="3"]
 limit_top = -10000
 
+[node name="AnimationTree" parent="Player" index="7"]
+parameters/Dash/blend_position = 0
+
 [node name="Layer7" type="CanvasLayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Layer7"]

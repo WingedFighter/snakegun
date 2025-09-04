@@ -4,7 +4,7 @@ extends Node2D
 
 @onready var end_of_level: Area2D = $EndOfLevel
 
-func _ready():
+func _ready(): 
 	end_of_level.end_of_level.connect(on_level_end)
 
 func on_level_end() -> void:

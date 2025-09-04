@@ -51,12 +51,14 @@ func death_state():
 
 func fall_state(delta: float):
 	velocity.y += gravity * delta
+	@warning_ignore("integer_division")
 	velocity.x += direction * (h_speed / 2) * delta
 	if is_on_floor():
 		transition_state(idle)
 
 func jump_state(delta: float):
 	velocity.y += gravity * delta
+	@warning_ignore("integer_division")
 	velocity.x += direction * (h_speed / 2) * delta
 	if velocity.y > 0:
 		transition_state(fall)

@@ -716,6 +716,9 @@ tile_set = SubResource("TileSet_0wnq1")
 position = Vector2(-502, -185.335)
 collision_layer = 1
 
+[node name="AnimationTree" parent="Player" index="7"]
+parameters/Dash/blend_position = 0
+
 [node name="arm" parent="Player" index="8"]
 animation = &"level1shoot"
 

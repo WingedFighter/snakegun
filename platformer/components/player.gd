@@ -6,17 +6,21 @@ extends CharacterBody2D
 @export var health_component: HealthComponent
 @export var animation_tree: AnimationTree
 @export var arm: AnimatedSprite2D
+@export var body: AnimatedSprite2D
 @export var water_collider: Area2D
 @export var pickup_collider: Area2D
 @export var horizontal_speed: float = 500
+@export var dash_speed: float = 1500
 @export var vertical_speed: float = 10
 @export var max_velocity: float = 500
 @export var gravity: float = 980.0
 @export var jump_speed: float = -600
+@onready var dash_timer: Timer = $DashTimer
 var facing: Vector2 = Vector2(1, 0)
 var jumping: bool = false
 var falling: bool = false
 var grounded: bool = true
+var dashing: bool = false
 var gun_level: int = 0
 var force_dampening: float = 1.0
 var water: bool = false
@@ -37,6 +41,7 @@ func _ready() -> void:
 	water_collider.body_exited.connect(exit_water)
 	pickup_collider.area_entered.connect(enter_pickup)
 	pickup_collider.area_exited.connect(exit_pickup)
+	dash_timer.timeout.connect(on_dash_end)
 
 func _physics_process(delta: float) -> void:
 	# Handle jump.
@@ -45,17 +50,17 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	velocity.x = Input.get_axis("move_left", "move_right")
-	if (velocity.x != 0):
-		facing.x = velocity.x
-		shoot_component.transform.x = transform.x * facing.x
-		animation_tree.set("parameters/Walk/blend_position", facing.x)
-		animation_tree.set("parameters/Idle/blend_position", facing.x)
-		animation_tree.set("parameters/Jump/blend_position", facing.x)
-		animation_tree.set("parameters/Fall/blend_position", facing.x)
-		animation_tree.set("parameters/Dash/blend_position", facing.x)
-
-	velocity.x *= horizontal_speed
+	if !dashing:
+		velocity.x = Input.get_axis("move_left", "move_right")
+		if (velocity.x != 0):
+			facing.x = velocity.x
+			shoot_component.transform.x = transform.x * facing.x
+			animation_tree.set("parameters/Walk/blend_position", facing.x)
+			animation_tree.set("parameters/Idle/blend_position", facing.x)
+			animation_tree.set("parameters/Jump/blend_position", facing.x)
+			animation_tree.set("parameters/Fall/blend_position", facing.x)
+			animation_tree.set("parameters/Dash/blend_position", facing.x)
+		velocity.x *= horizontal_speed
 	
 	if !is_on_floor() and gravity != 0.0:
 		if velocity.y > 0:
@@ -72,6 +77,12 @@ func _physics_process(delta: float) -> void:
 		var actual_level = gun_level / 5 + 1
 		arm.play('level' + str(actual_level) + 'shoot')
 		shoot_component.fire(facing * 1000, actual_level)
+	
+	if Input.is_action_just_pressed("dash") && !dashing:
+		AudioManager.play_sfx("dash")
+		dashing = true
+		dash_timer.start(0.3)
+		velocity.x = dash_speed * facing.x
 
 	jumping = !is_on_floor()
 	falling = !is_on_floor() && velocity.y > 0
@@ -80,6 +91,9 @@ func _physics_process(delta: float) -> void:
 	velocity *= force_dampening
 
 	move_and_slide()
+
+func on_dash_end() -> void:
+	dashing = false
 
 func hurt() -> void:
 	print_debug("player hurt", health_component.current_health)

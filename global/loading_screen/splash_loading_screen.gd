@@ -62,6 +62,7 @@ extends CanvasLayer
 }
 
 @export var sfx_dictionary: Dictionary[String, String] = {
+	"dash": "res://platformer/sounds/dashshot.mp3",
 	"shot": "res://platformer/sounds/shot.mp3",
 	"explosion": "res://platformer/sounds/explosion.mp3"
 }
