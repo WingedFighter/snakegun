@@ -8,7 +8,7 @@ func _ready() -> void:
 func load_data() -> bool:
 	if ResourceLoader.exists(save_data.save_location):
 		save_data = ResourceLoader.load(save_data.save_location, "", ResourceLoader.CacheMode.CACHE_MODE_IGNORE)
-		State.flags = save_data.state_flags
+		State.flags.merge(save_data.state_flags)
 		return true
 	return false
 
@@ -25,12 +25,15 @@ func save() -> void:
 
 func save_volume(volume: float) -> void:
 	save_data.volume_slider = volume
+	ResourceSaver.save(save_data, save_data.save_location)
 
 func save_sfx_volume(volume: float) -> void:
 	save_data.sfx_volume_slider = volume
+	ResourceSaver.save(save_data, save_data.save_location)
 
 func save_keybinding(action: StringName, event: InputEvent) -> void:
 	save_data.keybindings[action] = event
+	ResourceSaver.save(save_data, save_data.save_location)
 
 func get_keybinding(action: StringName) -> InputEvent:
 	if save_data.keybindings.has(action):
