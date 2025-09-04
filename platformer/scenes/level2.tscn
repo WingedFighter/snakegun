@@ -122,7 +122,6 @@ position = Vector2(1621, -859)
 [node name="CollisionShape2D" parent="Platforms/SpikeTrap2" index="0"]
 position = Vector2(-17.9054, -100.377)
 rotation = -0.770394
-scale = Vector2(1.84429, -7.86709)
 shape = SubResource("RectangleShape2D_x6kaj")
 
 [node name="Player" parent="." instance=ExtResource("7_dxx3a")]

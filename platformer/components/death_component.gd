@@ -10,6 +10,7 @@ func _ready() -> void:
 	health_component.health_depleted.connect(on_death)
 
 func on_death() -> void:
+	AudioManager.play_sfx("explosion")
 	var ex = explosion.instantiate()
 	ex.position = to_delete.position
 	if drop_pickup:

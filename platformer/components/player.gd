@@ -67,6 +67,7 @@ func _physics_process(delta: float) -> void:
 	clamp(velocity.y, -max_velocity, max_velocity)
 	
 	if Input.is_action_just_pressed("normal_fire"):
+		AudioManager.play_sfx("shot")
 		@warning_ignore("integer_division")
 		var actual_level = gun_level / 5 + 1
 		arm.play('level' + str(actual_level) + 'shoot')

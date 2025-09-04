@@ -61,6 +61,11 @@ extends CanvasLayer
 	"YoureTrashKid": "res://global/audio/background_music/YoureTrashKid.mp3"
 }
 
+@export var sfx_dictionary: Dictionary[String, String] = {
+	"shot": "res://platformer/sounds/shot.mp3",
+	"explosion": "res://platformer/sounds/explosion.mp3"
+}
+
 const SECOND: float = 1000.0
 
 var first_frame: bool = true
@@ -77,6 +82,7 @@ func _process(delta: float) -> void:
 	elif first_frame:
 		call_deferred("start_loading_dictionary", scene_dictionary)
 		call_deferred("start_loading_dictionary", music_dictionary)
+		call_deferred("start_loading_dictionary", sfx_dictionary)
 		first_frame = false
 		return
 	else:
@@ -85,6 +91,8 @@ func _process(delta: float) -> void:
 	if !get_dictionary_progress(scene_dictionary):
 		return
 	if !get_dictionary_progress(music_dictionary):
+		return
+	if !get_dictionary_progress(sfx_dictionary):
 		return
 	call_deferred("load_threaded")
 
@@ -97,6 +105,11 @@ func load_threaded() -> void:
 		temp_music_dict[key] = ResourceLoader.load_threaded_get(music_dictionary[key])
 	SceneManager.scene_dictionary = temp_scene_dict
 	AudioManager.music_dictionary = temp_music_dict
+	
+	var temp_sfx_dict: Dictionary[String, AudioStream] = {}
+	for key in sfx_dictionary:
+		temp_sfx_dict[key] = ResourceLoader.load_threaded_get(sfx_dictionary[key])
+	AudioManager.sfx_dictionary = temp_sfx_dict
 
 	for key in AudioManager.music_dictionary:
 		if AudioManager.music_dictionary[key] is AudioStreamWAV:
