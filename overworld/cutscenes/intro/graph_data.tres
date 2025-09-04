@@ -837,7 +837,7 @@ data = {
 &"character_id": "snek",
 &"id": "TalkMessage43",
 &"line_id": "-1",
-&"lines": Array[String](["Do you like repeating yourself? Or are you just dense?", "", ""]),
+&"lines": Array[String](["Do you like repeating what I say? Or are you just dense?", "", ""]),
 &"mood": 2,
 &"overlay": "none"
 }

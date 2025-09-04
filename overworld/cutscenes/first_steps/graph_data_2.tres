@@ -299,7 +299,7 @@ data = {
 &"character_id": "player_normal",
 &"id": "TalkMessage5",
 &"line_id": "-1",
-&"lines": Array[String](["Like tweleve.", "", ""]),
+&"lines": Array[String](["Like twelve.", "", ""]),
 &"mood": 0,
 &"overlay": "none"
 }
