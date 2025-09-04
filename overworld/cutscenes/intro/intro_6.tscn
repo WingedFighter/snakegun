@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhehv4nki3dv3"]
+[gd_scene load_steps=10 format=3 uid="uid://bhehv4nki3dv3"]
 
 [ext_resource type="Texture2D" uid="uid://bbbwdd4kyqrgl" path="res://overworld/cutscenes/intro/intro_6.png" id="1_2ptq2"]
 [ext_resource type="Script" uid="uid://dh546p8ghdq85" path="res://overworld/cutscenes/intro/intro_6.gd" id="1_to18j"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="5_to18j"]
 [ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="6_mtnol"]
 [ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="7_to18j"]
+[ext_resource type="Texture2D" uid="uid://b5xjw0x03omq1" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_e.png" id="8_g05a8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jdao5"]
 
 [node name="Intro6" type="Node2D"]
 script = ExtResource("1_to18j")
@@ -40,7 +43,6 @@ talk_state_save_location = "res://overworld/cutscenes/intro/talk_state.tres"
 layer = 50
 
 [node name="SkipButton" type="Button" parent="CanvasLayer"]
-visible = false
 z_index = 128
 offset_left = 946.0
 offset_top = 25.0
@@ -50,5 +52,25 @@ scale = Vector2(2, 2)
 theme = ExtResource("7_to18j")
 text = "Skip"
 metadata/_edit_use_anchors_ = true
+
+[node name="Tutorial" type="CanvasLayer" parent="."]
+layer = 51
+
+[node name="ToContinue" type="Label" parent="Tutorial"]
+offset_left = 85.0001
+offset_top = 32.0
+offset_right = 208.0
+offset_bottom = 54.3334
+theme = ExtResource("7_to18j")
+text = "to continue"
+label_settings = SubResource("LabelSettings_jdao5")
+
+[node name="E" type="TextureRect" parent="Tutorial"]
+offset_left = 38.0001
+offset_top = 18.0
+offset_right = 102.0
+offset_bottom = 82.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("8_g05a8")
 
 [editable path="Conversation"]

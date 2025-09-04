@@ -54,7 +54,10 @@ extends CanvasLayer
 	"SomewhereInIdaho": "res://global/audio/background_music/SomewhereInIdaho.wav",
 	"SchoolDay": "res://global/audio/background_music/SchoolDay.mp3",
 	"ImAMagicalGirl": "res://global/audio/background_music/ImAMagicalGirl!.wav",
-	"DarkAndStormy": "res://global/audio/background_music/ADarkAndStormyNight.mp3"
+	"DarkAndStormy": "res://global/audio/background_music/ADarkAndStormyNight.mp3",
+	"HuntingSeason": "res://global/audio/background_music/HuntingSeason.mp3",
+	"MySnakeIsAGun": "res://global/audio/background_music/MySnakeIsAGun.mp3",
+	"YoureTrashKid": "res://global/audio/background_music/YoureTrashKid.mp3"
 }
 
 const SECOND: float = 1000.0

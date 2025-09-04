@@ -116,4 +116,4 @@ func on_death() -> void:
 	timer.paused = false
 
 func scene_transition() -> void:
-	SceneManager.change_scene("PostBoss2")
+	SceneManager.change_scene("PostBoss3")

@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://checla5k72hsk" path="res://platformer/textures/level3/layer4.png" id="5_pd561"]
 [ext_resource type="Texture2D" uid="uid://du75xd66n58i3" path="res://platformer/textures/level3/layer5.png" id="6_kquv6"]
 [ext_resource type="Texture2D" uid="uid://l4gc7f5i7mbi" path="res://platformer/textures/terrain.png" id="8_armkr"]
-[ext_resource type="PackedScene" uid="uid://cuf746xmvaff1" path="res://platformer/components/boss3.tscn" id="9_sa1nt"]
+[ext_resource type="PackedScene" path="res://platformer/components/boss3.tscn" id="9_sa1nt"]
 [ext_resource type="PackedScene" uid="uid://bg2joonqnel4i" path="res://platformer/components/player.tscn" id="9_so60p"]
 [ext_resource type="Texture2D" uid="uid://b1setxi4372f8" path="res://platformer/textures/level1/trees/layer5.png" id="11_l4lce"]
 [ext_resource type="PackedScene" uid="uid://cwgke4uunwn6l" path="res://platformer/components/hud.tscn" id="12_cyrx6"]

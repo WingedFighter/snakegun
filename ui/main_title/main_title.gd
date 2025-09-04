@@ -10,7 +10,7 @@ extends Control
 @onready var escape_menu: Control = $EscapeMenu
 
 func _ready() -> void:
-	AudioManager.play_music("Boss2")
+	AudioManager.play_music("MySnakeIsAGun")
 	LoadingScreen.stop_load()
 
 func _physics_process(_delta: float) -> void:

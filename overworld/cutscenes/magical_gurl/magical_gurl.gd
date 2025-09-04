@@ -15,7 +15,7 @@ func _ready() -> void:
 	State.flags['start_conversation'] = false
 	player.is_paused = true
 	skip_button.pressed.connect(end_cutscene)
-	AudioManager.play_music("SomewhereInIdaho")
+	AudioManager.play_music("HuntingSeason")
 
 func _process(_delta: float) -> void:
 	if frame_count < frame_limit:

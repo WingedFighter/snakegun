@@ -5,14 +5,15 @@ extends Node2D
 @onready var conversation: Conversation = $Conversation
 @onready var player: Player25D = $Player25D
 @onready var skip_button: Button = $CanvasLayer/SkipButton
+@onready var tutorial: CanvasLayer = $Tutorial
 
 var started_interact: bool = false
 var finished_interact: bool = false
 
 func _input(event: InputEvent) -> void:
-	if event.is_action("open_menu"):
-		if !skip_button.visible:
-			skip_button.visible = true
+	if started_interact && event.is_action("interact"):
+		if tutorial.visible:
+			tutorial.visible = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

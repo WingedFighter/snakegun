@@ -11,7 +11,6 @@ var num_shots = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	shoot_component.shot.connect(on_shot)
-	AudioManager.play_music("SchoolDay")
 
 func on_shot() -> void:
 	num_shots += 1

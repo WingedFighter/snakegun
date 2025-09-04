@@ -14,9 +14,11 @@ var is_paused: bool = false
 func _input(event: InputEvent) -> void:
 	if !is_paused && event.is_action_pressed("interact"):
 		if is_interacting:
-			if talk_display.can_transition:
+			if talk_display.is_choosing:
+				return
+			elif talk_display.can_transition:
 				talk_display.interaction(last_interactable)
-			elif !talk_display.is_choosing:
+			else:
 					talk_display.interaction(talk_display.current_interactable)
 		elif last_interactable is Transition:
 			last_interactable.interact()

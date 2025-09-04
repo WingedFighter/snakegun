@@ -11,6 +11,7 @@ var frame_limit: int = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	AudioManager.play_music("YoureTrashKid")
 	State.flags['in_cutscene'] = true
 	State.flags['start_conversation'] = false
 	player.is_paused = true
