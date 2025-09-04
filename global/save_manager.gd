@@ -7,7 +7,7 @@ func _ready() -> void:
 
 func load_data() -> bool:
 	if ResourceLoader.exists(save_data.save_location):
-		save_data = load(save_data.save_location)
+		save_data = ResourceLoader.load(save_data.save_location, "", ResourceLoader.CacheMode.CACHE_MODE_IGNORE)
 		State.flags = save_data.state_flags
 		return true
 	return false
