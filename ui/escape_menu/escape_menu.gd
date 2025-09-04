@@ -4,6 +4,7 @@ extends Control
 @onready var fullscreen_button: CheckBox = $Panel/MarginContainer/TabContainer/ItemList/VBoxContainer/Fullscreen/CheckBox
 @onready var keybindings_button: Button = $Panel/MarginContainer/TabContainer/ItemList/VBoxContainer/KeybindingsButton
 @onready var music_slider: HSlider = $Panel/MarginContainer/TabContainer/ItemList/VBoxContainer/MusicSFX/HSlider
+@onready var sfx_slider: HSlider = $Panel/MarginContainer/TabContainer/ItemList/VBoxContainer/SFXVolume/HSlider
 @onready var save_button: Button = $Panel/MarginContainer/TabContainer/ItemList/VBoxContainer/SaveButton
 @onready var return_button: Button = $Panel/MarginContainer/TabContainer/ItemList/VBoxContainer/ReturnButton
 @onready var close_button: Button = $Panel/MarginContainer/TabContainer/ItemList/VBoxContainer/CloseButton
@@ -21,11 +22,13 @@ extends Control
 
 var default_resolution = "1280x720"
 var music_bus: int
+var sfx_bus: int
 
 func _ready() -> void:
 	SaveManager.load_data()
 
 	music_bus = AudioServer.get_bus_index("Music")
+	sfx_bus = AudioServer.get_bus_index("SFX")
 	visible = false
 	add_resolutions()
 	find_and_set_current_window_size()
@@ -34,6 +37,7 @@ func _ready() -> void:
 	fullscreen_button.toggled.connect(on_fullscreen_pressed)
 	resolution_button.item_selected.connect(on_resolution_item_selected)
 	music_slider.value_changed.connect(on_h_slider_value_changed)
+	sfx_slider.value_changed.connect(on_sfx_value_changed)
 	keybindings_button.pressed.connect(on_keybindings_pressed)
 	save_button.pressed.connect(on_save_pressed)
 	return_button.pressed.connect(on_return_pressed)
@@ -41,6 +45,7 @@ func _ready() -> void:
 	exit_button.pressed.connect(on_exit_pressed)
 
 	music_slider.value = SaveManager.save_data.volume_slider
+	sfx_slider.value = SaveManager.save_data.sfx_volume_slider
 	
 	if main_menu:
 		save_button.visible = false
@@ -107,6 +112,9 @@ func set_volume(bus_index: int, volume: float) -> void:
 
 func on_h_slider_value_changed(value: float) -> void:
 	set_volume(music_bus, value)
+
+func on_sfx_value_changed(value: float) -> void:
+	set_volume(sfx_bus, value)
 
 func pause_if_player() -> void:
 	if get_tree().current_scene.find_child("Player25D"):

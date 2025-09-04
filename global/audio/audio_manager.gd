@@ -23,7 +23,7 @@ func play_music(song: String) -> void:
 func play_sfx(sound: String) -> void:
 	var sfx: AudioStreamPlayer = AudioStreamPlayer.new()
 	add_child(sfx)
-	sfx.bus = "Sfx"
+	sfx.bus = "SFX"
 	sfx.stream = sfx_dictionary[sound]
 	sfx.play()
 	sfx.finished.connect(on_sfx_finished.bind(sfx))
