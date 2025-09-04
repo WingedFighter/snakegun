@@ -110,11 +110,15 @@ func set_volume(bus_index: int, volume: float) -> void:
 	AudioServer.set_bus_volume_db(bus_index, linear_to_db(volume))
 	SaveManager.save_volume(volume)
 
+func set_sfx_volume(bus_index: int, volume: float) -> void:
+	AudioServer.set_bus_volume_db(bus_index, linear_to_db(volume))
+	SaveManager.save_sfx_volume(volume)
+
 func on_h_slider_value_changed(value: float) -> void:
 	set_volume(music_bus, value)
 
 func on_sfx_value_changed(value: float) -> void:
-	set_volume(sfx_bus, value)
+	set_sfx_volume(sfx_bus, value)
 
 func pause_if_player() -> void:
 	if get_tree().current_scene.find_child("Player25D"):

@@ -46,7 +46,7 @@ unique_name_in_owner = true
 
 [node name="Camera2D" parent="YSortable/Player25D" index="1"]
 limit_left = -576
-limit_top = -326
+limit_top = -323
 limit_right = 576
 limit_bottom = 326
 
