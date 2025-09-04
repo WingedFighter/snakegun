@@ -12,7 +12,7 @@ extends CharacterBody2D
 @export var vertical_speed: float = 10
 @export var max_velocity: float = 500
 @export var gravity: float = 980.0
-@export var jump_speed: float = -500
+@export var jump_speed: float = -600
 var facing: Vector2 = Vector2(1, 0)
 var jumping: bool = false
 var falling: bool = false
@@ -58,7 +58,10 @@ func _physics_process(delta: float) -> void:
 	velocity.x *= horizontal_speed
 	
 	if !is_on_floor() and gravity != 0.0:
-		velocity.y += gravity * delta
+		if velocity.y > 0:
+			velocity.y += gravity * delta * 1.5
+		else:
+			velocity.y += gravity * delta
 	
 	clamp(velocity.x, -max_velocity, max_velocity)
 	clamp(velocity.y, -max_velocity, max_velocity)
