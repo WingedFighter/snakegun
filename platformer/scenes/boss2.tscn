@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://g5612t562smu"]
+[gd_scene load_steps=29 format=4 uid="uid://g5612t562smu"]
 
 [ext_resource type="Script" uid="uid://c26p5d65srcra" path="res://platformer/scenes/boss_2.gd" id="1_cy1xl"]
 [ext_resource type="Texture2D" uid="uid://5v4ve06466gy" path="res://platformer/textures/level2/dump/layer0.png" id="1_fpgkb"]
@@ -12,7 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://l1agujwb7v0m" path="res://platformer/textures/level2/dump/layer6.png" id="7_gik32"]
 [ext_resource type="PackedScene" uid="uid://2oq7vuqqajoc" path="res://platformer/components/boss2.tscn" id="8_5m1jo"]
 [ext_resource type="Texture2D" uid="uid://b1setxi4372f8" path="res://platformer/textures/level1/trees/layer5.png" id="8_tgxld"]
+[ext_resource type="Texture2D" uid="uid://dgj0a0hli3x3d" path="res://platformer/textures/level2/lab/layer0.png" id="9_gik32"]
+[ext_resource type="Texture2D" uid="uid://cgsisi415cb78" path="res://platformer/textures/level2/lab/layer1.png" id="10_13u4u"]
 [ext_resource type="PackedScene" uid="uid://cwgke4uunwn6l" path="res://platformer/components/hud.tscn" id="10_gik32"]
+[ext_resource type="Texture2D" uid="uid://db1e6yav861lw" path="res://platformer/textures/level2/lab/layer2.png" id="11_phlec"]
+[ext_resource type="Texture2D" uid="uid://c5tit8j4nd1e6" path="res://platformer/textures/level2/lab/layer3.png" id="12_yicn4"]
+[ext_resource type="Texture2D" uid="uid://cfjv608r18hg3" path="res://platformer/textures/level2/lab/layer4.png" id="13_qi1j4"]
+[ext_resource type="Texture2D" uid="uid://b4j6d50xghnwq" path="res://platformer/textures/level2/lab/layer5.png" id="14_638ga"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_j06yv"]
 
@@ -648,6 +654,7 @@ pattern_3 = SubResource("TileMapPattern_2ksu1")
 script = ExtResource("1_cy1xl")
 
 [node name="Parallax" type="Node2D" parent="."]
+visible = false
 
 [node name="Layer0" type="CanvasLayer" parent="Parallax"]
 layer = -128
@@ -713,6 +720,66 @@ z_index = -100
 position = Vector2(24, 10)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("7_gik32")
+
+[node name="LabParallax" type="Node2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="LabParallax"]
+color = Color(0.140447, 0.140447, 0.140447, 1)
+polygon = PackedVector2Array(720, -741, 1423, -734, 1692, -985, 1815, -994, 1816, -1882, -488, -1892, -503, -927, 289, -921, 684, -897)
+
+[node name="layer0" type="Parallax2D" parent="LabParallax"]
+scroll_scale = Vector2(0.4, 0.4)
+scroll_offset = Vector2(600, 163.395)
+
+[node name="Sprite2D" type="Sprite2D" parent="LabParallax/layer0"]
+z_index = -100
+position = Vector2(118, -884)
+texture = ExtResource("9_gik32")
+
+[node name="layer1" type="Parallax2D" parent="LabParallax"]
+scroll_scale = Vector2(0.4, 0.4)
+scroll_offset = Vector2(600, -353.62)
+
+[node name="Sprite2D" type="Sprite2D" parent="LabParallax/layer1"]
+z_index = -100
+position = Vector2(10, -193)
+texture = ExtResource("10_13u4u")
+
+[node name="layer2" type="Parallax2D" parent="LabParallax"]
+scroll_scale = Vector2(0.5, 0.5)
+scroll_offset = Vector2(600, 391.1)
+
+[node name="Sprite2D" type="Sprite2D" parent="LabParallax/layer2"]
+z_index = -100
+position = Vector2(87, -556)
+texture = ExtResource("11_phlec")
+
+[node name="layer3" type="Parallax2D" parent="LabParallax"]
+scroll_scale = Vector2(0.5, 0.5)
+scroll_offset = Vector2(600, -464.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="LabParallax/layer3"]
+z_index = -100
+position = Vector2(55, -117)
+texture = ExtResource("12_yicn4")
+
+[node name="layer4" type="Parallax2D" parent="LabParallax"]
+scroll_scale = Vector2(0.6, 0.6)
+scroll_offset = Vector2(600, -559.245)
+
+[node name="Sprite2D" type="Sprite2D" parent="LabParallax/layer4"]
+z_index = -100
+position = Vector2(138, 408)
+texture = ExtResource("13_qi1j4")
+
+[node name="layer5" type="Parallax2D" parent="LabParallax"]
+scroll_scale = Vector2(0.7, 0.7)
+scroll_offset = Vector2(600, 279.1)
+
+[node name="Sprite2D" type="Sprite2D" parent="LabParallax/layer5"]
+z_index = -100
+position = Vector2(24, 10)
+texture = ExtResource("14_638ga")
 
 [node name="Platforms" type="Node2D" parent="."]
 
