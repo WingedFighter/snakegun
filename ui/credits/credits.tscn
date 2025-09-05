@@ -1,6 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxo5cwn4uputv"]
+[gd_scene load_steps=18 format=3 uid="uid://cxo5cwn4uputv"]
 
+[ext_resource type="Script" uid="uid://dep035kywxunx" path="res://ui/credits/credits.gd" id="1_2d0lf"]
 [ext_resource type="FontFile" uid="uid://cc8ofyvm2lacj" path="res://ui/fonts/MasonicLodge.ttf" id="1_ydyd3"]
+[ext_resource type="Texture2D" uid="uid://dsl3byg27wiav" path="res://ui/main_title/title.png" id="2_rqgi2"]
+[ext_resource type="Texture2D" uid="uid://cb35yjl10ji6r" path="res://ui/credits/ice_cream.jpg" id="3_sunqn"]
+[ext_resource type="Texture2D" uid="uid://ch5el2e8bpla7" path="res://ui/credits/1.jpg" id="4_cva3t"]
+[ext_resource type="Texture2D" uid="uid://ctkq22i4sufky" path="res://ui/credits/savior.jpg" id="4_xwmn8"]
+[ext_resource type="Texture2D" uid="uid://c3ugv76syuaef" path="res://ui/credits/4.jpg" id="5_2d0lf"]
+[ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="5_twsdw"]
+[ext_resource type="Texture2D" uid="uid://d3yavup3oweyn" path="res://ui/credits/2.jpg" id="6_twsdw"]
 
 [sub_resource type="Gradient" id="Gradient_2n5wy"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -13,25 +21,352 @@ width = 1
 font = ExtResource("1_ydyd3")
 font_size = 48
 
+[sub_resource type="LabelSettings" id="LabelSettings_hfqo3"]
+font = ExtResource("1_ydyd3")
+font_size = 48
+font_color = Color(1, 0.741176, 0.878431, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pdd3v"]
+font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_q8t8k"]
+font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_b6jqh"]
+font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_borvj"]
+font_size = 22
+
 [node name="Credits" type="Node2D"]
+script = ExtResource("1_2d0lf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1502.95, 1380.62)
+position = Vector2(-2, 2730.73)
+scale = Vector2(1170.1, 6134.54)
 texture = SubResource("GradientTexture1D_nnsry")
 
-[node name="Label" type="Label" parent="."]
+[node name="StudioName" type="Label" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -316.5
-offset_top = -24.096
-offset_right = 316.5
-offset_bottom = 24.096
+offset_left = -503.0
+offset_top = 363.0
+offset_right = 528.0
+offset_bottom = 411.192
 grow_horizontal = 2
 grow_vertical = 2
-text = "Thanks for Playing!"
+size_flags_horizontal = 4
+text = "A GC Ryuuman Team Production"
 label_settings = SubResource("LabelSettings_rqgi2")
 
+[node name="Logo" type="TextureRect" parent="StudioName"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -489.5
+offset_top = -624.096
+offset_right = 1430.5
+offset_bottom = 455.904
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+texture = ExtResource("2_rqgi2")
+
+[node name="AnnaValdezArt" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = 501.0
+offset_right = 494.0
+offset_bottom = 549.192
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "AnnaValdezArt"
+label_settings = SubResource("LabelSettings_rqgi2")
+horizontal_alignment = 1
+
+[node name="Role" type="Label" parent="AnnaValdezArt"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -229.0
+offset_top = 162.904
+offset_right = 246.0
+offset_bottom = 262.288
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Writer, Artist,
+Level Design"
+label_settings = SubResource("LabelSettings_hfqo3")
+horizontal_alignment = 1
+
+[node name="IceCream" type="TextureRect" parent="AnnaValdezArt"]
+offset_left = -491.0
+offset_top = -55.9999
+offset_right = 1557.0
+offset_bottom = 1992.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_sunqn")
+
+[node name="Label" type="Label" parent="AnnaValdezArt"]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 104.0
+offset_right = 414.0
+offset_bottom = 126.088
+theme = ExtResource("5_twsdw")
+text = "Some guy with a cintiq"
+label_settings = SubResource("LabelSettings_pdd3v")
+
+[node name="Geckode" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -524.0
+offset_top = 1034.0
+offset_right = -22.0
+offset_bottom = 1082.19
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Geckode"
+label_settings = SubResource("LabelSettings_rqgi2")
+horizontal_alignment = 1
+
+[node name="Role" type="Label" parent="Geckode"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.0
+offset_top = 161.904
+offset_right = 254.0
+offset_bottom = 312.48
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Coding,
+Level Design,
+Game Design"
+label_settings = SubResource("LabelSettings_hfqo3")
+horizontal_alignment = 1
+
+[node name="Murder" type="TextureRect" parent="Geckode"]
+offset_left = 610.0
+offset_top = -59.0
+offset_right = 2658.0
+offset_bottom = 1989.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_cva3t")
+
+[node name="Label" type="Label" parent="Geckode"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 110.0
+offset_right = 514.0
+offset_bottom = 132.333
+theme = ExtResource("5_twsdw")
+text = "Some guy who downloaded godot"
+label_settings = SubResource("LabelSettings_q8t8k")
+horizontal_alignment = 1
+
+[node name="Sheeptar" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = 1567.0
+offset_right = 494.0
+offset_bottom = 1615.19
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Sheeptar"
+label_settings = SubResource("LabelSettings_rqgi2")
+horizontal_alignment = 1
+
+[node name="Role" type="Label" parent="Sheeptar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.0
+offset_top = 195.904
+offset_right = 263.0
+offset_bottom = 295.288
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Game Design,
+Coding, Backend"
+label_settings = SubResource("LabelSettings_hfqo3")
+horizontal_alignment = 1
+
+[node name="SnekFrecko" type="TextureRect" parent="Sheeptar"]
+offset_left = -491.0
+offset_top = -55.9999
+offset_right = 1557.0
+offset_bottom = 1992.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_2d0lf")
+
+[node name="Label" type="Label" parent="Sheeptar"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 117.0
+offset_right = 485.0
+offset_bottom = 139.333
+theme = ExtResource("5_twsdw")
+text = "You want a quote about me?"
+label_settings = SubResource("LabelSettings_b6jqh")
+
+[node name="YuriO" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -524.0
+offset_top = 2136.0
+offset_right = -22.0
+offset_bottom = 2184.19
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Yuri O"
+label_settings = SubResource("LabelSettings_rqgi2")
+horizontal_alignment = 1
+
+[node name="Role" type="Label" parent="YuriO"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.0
+offset_top = 266.904
+offset_right = 111.0
+offset_bottom = 315.904
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Music"
+label_settings = SubResource("LabelSettings_hfqo3")
+
+[node name="TacoBell" type="TextureRect" parent="YuriO"]
+offset_left = 610.0
+offset_top = -59.0
+offset_right = 2658.0
+offset_bottom = 1989.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_twsdw")
+
+[node name="Label" type="Label" parent="YuriO"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 81.0
+offset_right = 413.0
+offset_bottom = 253.616
+theme = ExtResource("5_twsdw")
+text = "I was paid 2 paper clips and a hamburger to make a boss theme for this kid who wouldn't shut up about it"
+label_settings = SubResource("LabelSettings_borvj")
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Music" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -528.0
+offset_top = 2573.0
+offset_right = 505.0
+offset_bottom = 4257.42
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Music:
+
+Menu
+My- My Snake Is A GUN???
+
+Town
+Somewhere In Idaho
+
+School
+School Day
+
+Transformation
+I'm A Magical Girl!
+
+Stage 1
+Hunting Season
+
+Boss 1
+Frecko the Vicious
+
+Stage 2
+You're Trash, Kid
+
+Boss 2
+Frecko the Vile
+
+Stage 3
+It Was Never About Frecko It Was About Me (Instrumental)
+
+Boss 3 
+It Was Never About Frecko It Was About Me"
+label_settings = SubResource("LabelSettings_rqgi2")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="End" type="TextureRect" parent="."]
+offset_left = -300.0
+offset_top = 4361.0
+offset_right = 2700.0
+offset_bottom = 7361.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_xwmn8")
+
+[node name="Thanks" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = 5288.0
+offset_right = 318.0
+offset_bottom = 5336.19
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Thanks for Playing!"
+label_settings = SubResource("LabelSettings_rqgi2")
