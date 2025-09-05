@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="GraphData" load_steps=7 format=3 uid="uid://vhmbu4i1xbbt"]
+
+[ext_resource type="Script" uid="uid://hvf8qm27oqm5" path="res://addons/letstalkaboutit/graph_data/node_data.gd" id="1_vbdym"]
+[ext_resource type="Script" uid="uid://bhbyqwjh1ms64" path="res://addons/letstalkaboutit/graph_data/graph_data.gd" id="1_vrjeu"]
+
+[sub_resource type="Resource" id="Resource_vbdym"]
+script = ExtResource("1_vbdym")
+name = "TalkStart"
+type = "TalkStart"
+position_offset = Vector2(540, 100)
+data = {
+&"id": "Start",
+&"next_id": "TalkBasic"
+}
+
+[sub_resource type="Resource" id="Resource_p434d"]
+script = ExtResource("1_vbdym")
+name = "TalkBasic"
+type = "TalkBasic"
+position_offset = Vector2(760, 100)
+data = {
+&"id": "TalkBasic",
+&"message_list": Array[String](["TalkMessage"]),
+&"next_id": "TalkEnd"
+}
+
+[sub_resource type="Resource" id="Resource_tmtkn"]
+script = ExtResource("1_vbdym")
+name = "TalkEnd"
+type = "TalkEnd"
+position_offset = Vector2(989, 150)
+data = {
+&"id": "TalkEnd",
+&"next_start": "Start"
+}
+
+[sub_resource type="Resource" id="Resource_liyjn"]
+script = ExtResource("1_vbdym")
+name = "TalkMessage"
+type = "TalkMessage"
+position_offset = Vector2(540, 240)
+data = {
+&"background": "none",
+&"character_id": "narrator",
+&"id": "TalkMessage",
+&"line_id": "-1",
+&"lines": Array[String](["Sorry, I can't come to the door right now.", "I am in the middle of a massive shit.", "It's unbelievable how big the shit I'm taking is!"]),
+&"mood": 5,
+&"overlay": "none"
+}
+
+[resource]
+script = ExtResource("1_vrjeu")
+connections = Array[Dictionary]([{
+"from_node": &"TalkStart",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 0
+}, {
+"from_node": &"TalkBasic",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkEnd",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 1
+}])
+nodes = [SubResource("Resource_vbdym"), SubResource("Resource_p434d"), SubResource("Resource_tmtkn"), SubResource("Resource_liyjn")]

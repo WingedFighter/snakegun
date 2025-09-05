@@ -1,0 +1,94 @@
+[gd_resource type="Resource" script_class="GraphData" load_steps=8 format=3 uid="uid://ckn6p1d2kaki8"]
+
+[ext_resource type="Script" uid="uid://hvf8qm27oqm5" path="res://addons/letstalkaboutit/graph_data/node_data.gd" id="1_gj8qt"]
+[ext_resource type="Script" uid="uid://bhbyqwjh1ms64" path="res://addons/letstalkaboutit/graph_data/graph_data.gd" id="1_utjgb"]
+
+[sub_resource type="Resource" id="Resource_gj8qt"]
+script = ExtResource("1_gj8qt")
+name = "TalkBasic"
+type = "TalkBasic"
+position_offset = Vector2(1207, 214)
+data = {
+&"id": "TalkBasic",
+&"message_list": Array[String](["TalkMessage", "TalkMessage2"]),
+&"next_id": "TalkEnd"
+}
+
+[sub_resource type="Resource" id="Resource_hi2bd"]
+script = ExtResource("1_gj8qt")
+name = "TalkStart"
+type = "TalkStart"
+position_offset = Vector2(880, 220)
+data = {
+&"id": "Fox",
+&"next_id": "TalkBasic"
+}
+
+[sub_resource type="Resource" id="Resource_j1okk"]
+script = ExtResource("1_gj8qt")
+name = "TalkEnd"
+type = "TalkEnd"
+position_offset = Vector2(1629, 223)
+data = {
+&"id": "TalkEnd",
+&"next_start": "Fox"
+}
+
+[sub_resource type="Resource" id="Resource_snq1d"]
+script = ExtResource("1_gj8qt")
+name = "TalkMessage"
+type = "TalkMessage"
+position_offset = Vector2(840, 320)
+data = {
+&"background": "none",
+&"character_id": "narrator",
+&"id": "TalkMessage",
+&"line_id": "-1",
+&"lines": Array[String](["One of your fox ballerinas! Look at her go!", "She's so full of whimsy, dancing around without a care in the world.", ""]),
+&"mood": 5,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_oedsy"]
+script = ExtResource("1_gj8qt")
+name = "TalkMessage2"
+type = "TalkMessage"
+position_offset = Vector2(840, 540)
+data = {
+&"background": "none",
+&"character_id": "narrator",
+&"id": "TalkMessage2",
+&"line_id": "-1",
+&"lines": Array[String](["You've made 12 of these and they're a set.", "The scene is coming together!!", ""]),
+&"mood": 5,
+&"overlay": "none"
+}
+
+[resource]
+script = ExtResource("1_utjgb")
+connections = Array[Dictionary]([{
+"from_node": &"TalkStart",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 1
+}, {
+"from_node": &"TalkMessage2",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 2
+}, {
+"from_node": &"TalkBasic",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkEnd",
+"to_port": 0
+}])
+nodes = [SubResource("Resource_gj8qt"), SubResource("Resource_hi2bd"), SubResource("Resource_j1okk"), SubResource("Resource_snq1d"), SubResource("Resource_oedsy")]

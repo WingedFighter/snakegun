@@ -1,0 +1,179 @@
+[gd_resource type="Resource" script_class="GraphData" load_steps=12 format=3 uid="uid://cmruxxfaue7gd"]
+
+[ext_resource type="Script" uid="uid://hvf8qm27oqm5" path="res://addons/letstalkaboutit/graph_data/node_data.gd" id="1_g5jk4"]
+[ext_resource type="Script" uid="uid://bhbyqwjh1ms64" path="res://addons/letstalkaboutit/graph_data/graph_data.gd" id="1_vbmu5"]
+
+[sub_resource type="Resource" id="Resource_g5jk4"]
+script = ExtResource("1_g5jk4")
+name = "TalkBasic"
+type = "TalkBasic"
+position_offset = Vector2(555, 150)
+data = {
+&"id": "TalkBasic",
+&"message_list": Array[String](["TalkMessage"]),
+&"next_id": "TalkChoice"
+}
+
+[sub_resource type="Resource" id="Resource_w3bn8"]
+script = ExtResource("1_g5jk4")
+name = "TalkStart"
+type = "TalkStart"
+position_offset = Vector2(200, 160)
+data = {
+&"id": "Wardrobe",
+&"next_id": "TalkBasic"
+}
+
+[sub_resource type="Resource" id="Resource_redi6"]
+script = ExtResource("1_g5jk4")
+name = "TalkMessage"
+type = "TalkMessage"
+position_offset = Vector2(320, 320)
+data = {
+&"background": "none",
+&"character_id": "narrator",
+&"id": "TalkMessage",
+&"line_id": "-1",
+&"lines": Array[String](["Your dresser is filled to the brim with bullshit!", "Look at the drawing you've left on the desser?", ""]),
+&"mood": 5,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_el8hd"]
+script = ExtResource("1_g5jk4")
+name = "TalkChoice"
+type = "TalkChoice"
+position_offset = Vector2(900, 160)
+data = {
+&"choice_list": Array[String](["3592", "3884"]),
+&"id": "TalkChoice",
+&"line_list": {
+"3592": "Hell Yeah",
+"3884": "God No"
+},
+&"next_id_list": {
+"3592": "TalkBasic2",
+"3884": "TalkBasic3"
+}
+}
+
+[sub_resource type="Resource" id="Resource_a3pkg"]
+script = ExtResource("1_g5jk4")
+name = "TalkBasic3"
+type = "TalkBasic"
+position_offset = Vector2(1160, 480)
+data = {
+&"id": "TalkBasic3",
+&"message_list": Array[String](["TalkMessage3"]),
+&"next_id": "TalkEnd"
+}
+
+[sub_resource type="Resource" id="Resource_pfg8u"]
+script = ExtResource("1_g5jk4")
+name = "TalkBasic2"
+type = "TalkBasic"
+position_offset = Vector2(1160, 220)
+data = {
+&"id": "TalkBasic2",
+&"message_list": Array[String](["TalkMessage2"]),
+&"next_id": "TalkEnd"
+}
+
+[sub_resource type="Resource" id="Resource_6s2na"]
+script = ExtResource("1_g5jk4")
+name = "TalkMessage2"
+type = "TalkMessage"
+position_offset = Vector2(860, 340)
+data = {
+&"background": "none",
+&"character_id": "drawing",
+&"id": "TalkMessage2",
+&"line_id": "-1",
+&"lines": Array[String](["You ROCK at art.", "", ""]),
+&"mood": 5,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_e41e2"]
+script = ExtResource("1_g5jk4")
+name = "TalkMessage3"
+type = "TalkMessage"
+position_offset = Vector2(860, 560)
+data = {
+&"background": "none",
+&"character_id": "narrator",
+&"id": "TalkMessage3",
+&"line_id": "-1",
+&"lines": Array[String](["Nah you know its awesome", "", ""]),
+&"mood": 5,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_e18no"]
+script = ExtResource("1_g5jk4")
+name = "TalkEnd"
+type = "TalkEnd"
+position_offset = Vector2(1457, 256)
+data = {
+&"id": "TalkEnd",
+&"next_start": "Wardrobe"
+}
+
+[resource]
+script = ExtResource("1_vbmu5")
+connections = Array[Dictionary]([{
+"from_node": &"TalkStart",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkChoice",
+"to_port": 0
+}, {
+"from_node": &"TalkChoice",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic2",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage2",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic2",
+"to_port": 1
+}, {
+"from_node": &"TalkChoice",
+"from_port": 1,
+"keep_alive": false,
+"to_node": &"TalkBasic3",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage3",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic3",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic2",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkEnd",
+"to_port": 0
+}, {
+"from_node": &"TalkBasic3",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkEnd",
+"to_port": 0
+}])
+nodes = [SubResource("Resource_g5jk4"), SubResource("Resource_w3bn8"), SubResource("Resource_redi6"), SubResource("Resource_el8hd"), SubResource("Resource_a3pkg"), SubResource("Resource_pfg8u"), SubResource("Resource_6s2na"), SubResource("Resource_e41e2"), SubResource("Resource_e18no")]

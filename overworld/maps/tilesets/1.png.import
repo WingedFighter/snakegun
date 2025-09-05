@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8fepxii0xlle"
-path="res://.godot/imported/cars.png-6e8e6790dfba731c90e4c3282d987060.ctex"
+uid="uid://ril0kw0asc2i"
+path="res://.godot/imported/1.png-ad492e633425da12909c970d1959b649.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://overworld/maps/tilesets/placeholder/cars.png"
-dest_files=["res://.godot/imported/cars.png-6e8e6790dfba731c90e4c3282d987060.ctex"]
+source_file="res://overworld/maps/tilesets/1.png"
+dest_files=["res://.godot/imported/1.png-ad492e633425da12909c970d1959b649.ctex"]
 
 [params]
 

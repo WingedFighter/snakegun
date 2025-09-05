@@ -131,7 +131,7 @@ func create_name_container() -> PanelContainer:
 	n_label.text = "Default Name"
 	n_label.label_settings = LabelSettings.new()
 	n_label.label_settings.font = default_font
-	n_label.label_settings.font_size = 16
+	n_label.label_settings.font_size = 20
 	n_label.label_settings.font_color = override_font_color
 	n_label.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	n_label.size_flags_vertical = Control.SIZE_SHRINK_BEGIN

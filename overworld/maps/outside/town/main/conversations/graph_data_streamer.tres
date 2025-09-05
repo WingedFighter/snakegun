@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="GraphData" load_steps=7 format=3 uid="uid://di5eklllx2yid"]
+
+[ext_resource type="Script" uid="uid://bhbyqwjh1ms64" path="res://addons/letstalkaboutit/graph_data/graph_data.gd" id="1_oonap"]
+[ext_resource type="Script" uid="uid://hvf8qm27oqm5" path="res://addons/letstalkaboutit/graph_data/node_data.gd" id="1_x7tof"]
+
+[sub_resource type="Resource" id="Resource_x7tof"]
+script = ExtResource("1_x7tof")
+name = "TalkStart"
+type = "TalkStart"
+position_offset = Vector2(340, 140)
+data = {
+&"id": "Start",
+&"next_id": "TalkBasic"
+}
+
+[sub_resource type="Resource" id="Resource_ummli"]
+script = ExtResource("1_x7tof")
+name = "TalkBasic"
+type = "TalkBasic"
+position_offset = Vector2(660, 80)
+data = {
+&"id": "TalkBasic",
+&"message_list": Array[String](["TalkMessage"]),
+&"next_id": "TalkEnd"
+}
+
+[sub_resource type="Resource" id="Resource_14j8h"]
+script = ExtResource("1_x7tof")
+name = "TalkMessage"
+type = "TalkMessage"
+position_offset = Vector2(380, 300)
+data = {
+&"background": "none",
+&"character_id": "narrator",
+&"id": "TalkMessage",
+&"line_id": "-1",
+&"lines": Array[String](["Through the window, you can see your neighbor at a screen.", "It looks like they're watching someone write a game on stream.", "Weird."]),
+&"mood": 5,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_q8q7g"]
+script = ExtResource("1_x7tof")
+name = "TalkEnd"
+type = "TalkEnd"
+position_offset = Vector2(987, 143)
+data = {
+&"id": "TalkEnd",
+&"next_start": "Start"
+}
+
+[resource]
+script = ExtResource("1_oonap")
+connections = Array[Dictionary]([{
+"from_node": &"TalkStart",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 1
+}, {
+"from_node": &"TalkBasic",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkEnd",
+"to_port": 0
+}])
+nodes = [SubResource("Resource_x7tof"), SubResource("Resource_ummli"), SubResource("Resource_14j8h"), SubResource("Resource_q8q7g")]

@@ -1,10 +1,12 @@
-[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://c6cu6yj2kvibq"]
+[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://c6cu6yj2kvibq"]
 
 [ext_resource type="Texture2D" uid="uid://bgba6dmhdb46y" path="res://overworld/maps/outside/town/main/houses_main.png" id="1_vd6hd"]
 [ext_resource type="Texture2D" uid="uid://7qdbdbl5rtim" path="res://overworld/maps/outside/town/main/boundary_main.png" id="2_vd6hd"]
 [ext_resource type="Texture2D" uid="uid://dxx2f3fxhm4oa" path="res://overworld/maps/outside/town/school/houses_school.png" id="3_yq2mv"]
 [ext_resource type="Texture2D" uid="uid://c6tq63tfj4so8" path="res://overworld/maps/outside/town/school/boundary_school.png" id="4_ibvqa"]
 [ext_resource type="Texture2D" uid="uid://biarueysanfwq" path="res://overworld/placeables/car/car.png" id="5_ibvqa"]
+[ext_resource type="Texture2D" uid="uid://ril0kw0asc2i" path="res://overworld/maps/tilesets/1.png" id="6_wgfkx"]
+[ext_resource type="Texture2D" uid="uid://bddw01nlflrkq" path="res://overworld/maps/tilesets/flower.png" id="7_401j6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mb44b"]
 texture = ExtResource("1_vd6hd")
@@ -29293,6 +29295,27 @@ texture = ExtResource("5_ibvqa")
 30:26/0 = 0
 30:26/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pd6xg"]
+texture = ExtResource("6_wgfkx")
+texture_region_size = Vector2i(480, 480)
+0:0/animation_columns = 2
+0:0/animation_speed = 24.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-221.445, 50.4895, -217.902, -16.8298, -182.471, -84.1491, -106.294, -131.981, 3.54312, -147.925, 83.2634, -133.753, 148.811, -108.951, 193.1, -62.8904, 217.902, -13.2867, 221.445, 43.4033, 205.501, 93.007, 164.755, 133.753, 95.6643, 172.727, 19.4872, 186.9, -70.8624, 178.042, -155.897, 142.611, -198.415, 101.865)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mrtd6"]
+texture = ExtResource("7_401j6")
+texture_region_size = Vector2i(36, 36)
+0:0/animation_columns = 4
+0:0/animation_speed = 6.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 16
@@ -29301,3 +29324,5 @@ sources/1 = SubResource("TileSetAtlasSource_hrqst")
 sources/2 = SubResource("TileSetAtlasSource_wgfkx")
 sources/3 = SubResource("TileSetAtlasSource_401j6")
 sources/4 = SubResource("TileSetAtlasSource_2fupw")
+sources/7 = SubResource("TileSetAtlasSource_pd6xg")
+sources/9 = SubResource("TileSetAtlasSource_mrtd6")

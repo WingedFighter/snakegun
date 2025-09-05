@@ -1,0 +1,136 @@
+[gd_resource type="Resource" script_class="GraphData" load_steps=10 format=3 uid="uid://bi2yusw54lygq"]
+
+[ext_resource type="Script" uid="uid://bhbyqwjh1ms64" path="res://addons/letstalkaboutit/graph_data/graph_data.gd" id="1_68wvq"]
+[ext_resource type="Script" uid="uid://hvf8qm27oqm5" path="res://addons/letstalkaboutit/graph_data/node_data.gd" id="1_gvd0y"]
+
+[sub_resource type="Resource" id="Resource_gvd0y"]
+script = ExtResource("1_gvd0y")
+name = "TalkStart"
+type = "TalkStart"
+position_offset = Vector2(439, 201)
+data = {
+&"id": "Start",
+&"next_id": "TalkBasic"
+}
+
+[sub_resource type="Resource" id="Resource_bggqe"]
+script = ExtResource("1_gvd0y")
+name = "TalkEnd"
+type = "TalkEnd"
+position_offset = Vector2(1019, 175)
+data = {
+&"id": "TalkEnd",
+&"next_start": "Start"
+}
+
+[sub_resource type="Resource" id="Resource_ekb7o"]
+script = ExtResource("1_gvd0y")
+name = "TalkMessage4"
+type = "TalkMessage"
+position_offset = Vector2(400, 900)
+data = {
+&"background": "none",
+&"character_id": "narrator",
+&"id": "TalkMessage4",
+&"line_id": "-1",
+&"lines": Array[String](["I guess we just wait and hope they go away...", "", ""]),
+&"mood": 5,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_yb8q4"]
+script = ExtResource("1_gvd0y")
+name = "TalkMessage3"
+type = "TalkMessage"
+position_offset = Vector2(400, 700)
+data = {
+&"background": "none",
+&"character_id": "narrator",
+&"id": "TalkMessage3",
+&"line_id": "-1",
+&"lines": Array[String](["Goddamn it, what do we do?", "", ""]),
+&"mood": 5,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_l8f2n"]
+script = ExtResource("1_gvd0y")
+name = "TalkMessage"
+type = "TalkMessage"
+position_offset = Vector2(400, 300)
+data = {
+&"background": "none",
+&"character_id": "narrator",
+&"id": "TalkMessage",
+&"line_id": "-1",
+&"lines": Array[String](["You hear some muffled voices.", "", ""]),
+&"mood": 5,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_hksbd"]
+script = ExtResource("1_gvd0y")
+name = "TalkMessage2"
+type = "TalkMessage"
+position_offset = Vector2(400, 500)
+data = {
+&"background": "none",
+&"character_id": "narrator",
+&"id": "TalkMessage2",
+&"line_id": "-1",
+&"lines": Array[String](["Honey, I think it's the Mormons again.", "", ""]),
+&"mood": 5,
+&"overlay": "none"
+}
+
+[sub_resource type="Resource" id="Resource_53q8o"]
+script = ExtResource("1_gvd0y")
+name = "TalkBasic"
+type = "TalkBasic"
+position_offset = Vector2(731, 188)
+data = {
+&"id": "TalkBasic",
+&"message_list": Array[String](["TalkMessage", "TalkMessage2", "TalkMessage3", "TalkMessage4"]),
+&"next_id": "TalkEnd"
+}
+
+[resource]
+script = ExtResource("1_68wvq")
+connections = Array[Dictionary]([{
+"from_node": &"TalkStart",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 0
+}, {
+"from_node": &"TalkBasic",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkEnd",
+"to_port": 0
+}, {
+"from_node": &"TalkMessage",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 1
+}, {
+"from_node": &"TalkMessage2",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 2
+}, {
+"from_node": &"TalkMessage3",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 3
+}, {
+"from_node": &"TalkMessage4",
+"from_port": 0,
+"keep_alive": false,
+"to_node": &"TalkBasic",
+"to_port": 4
+}])
+nodes = [SubResource("Resource_gvd0y"), SubResource("Resource_bggqe"), SubResource("Resource_ekb7o"), SubResource("Resource_yb8q4"), SubResource("Resource_l8f2n"), SubResource("Resource_hksbd"), SubResource("Resource_53q8o")]
