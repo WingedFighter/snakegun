@@ -107,7 +107,7 @@ type = "TalkMessage"
 position_offset = Vector2(300, 360)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage",
 &"line_id": "-1",
 &"lines": Array[String](["Yessssssss! The test worked!", "", ""]),
@@ -137,7 +137,7 @@ type = "TalkMessage"
 position_offset = Vector2(820, 360)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage3",
 &"line_id": "-1",
 &"lines": Array[String](["Nah I asked Frecko to make the nuclear bombs without radiation.", "I don't know why world powers don't do that already?", ""]),
@@ -197,7 +197,7 @@ type = "TalkMessage"
 position_offset = Vector2(1800, 360)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage7",
 &"line_id": "-1",
 &"lines": Array[String](["NOW LEAVE ME ALONE TO DESTROY CHEATERS WITH MY MINIONS,", "DIE TO MY ROBOT!", ""]),

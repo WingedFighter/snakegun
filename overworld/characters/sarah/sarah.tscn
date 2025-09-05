@@ -35,3 +35,23 @@ character_angry = ExtResource("4_ogmey")
 character_surprised = ExtResource("5_83xqm")
 character_neutral = ExtResource("3_gj657")
 metadata/_custom_type_script = "uid://b2flwfdlosxw"
+
+[node name="EvilSarah2" type="Node" parent="."]
+script = ExtResource("1_26vj7")
+character_id = "unknown"
+character_name = "???"
+character_base_panel = ExtResource("3_gj657")
+character_angry = ExtResource("4_ogmey")
+character_surprised = ExtResource("5_83xqm")
+character_neutral = ExtResource("3_gj657")
+metadata/_custom_type_script = "uid://b2flwfdlosxw"
+
+[node name="EvilSarah3" type="Node" parent="."]
+script = ExtResource("1_26vj7")
+character_id = "purple"
+character_name = "Purple"
+character_base_panel = ExtResource("3_gj657")
+character_angry = ExtResource("4_ogmey")
+character_surprised = ExtResource("5_83xqm")
+character_neutral = ExtResource("3_gj657")
+metadata/_custom_type_script = "uid://b2flwfdlosxw"

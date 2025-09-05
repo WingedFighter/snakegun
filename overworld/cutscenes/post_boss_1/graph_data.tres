@@ -206,7 +206,7 @@ type = "TalkMessage"
 position_offset = Vector2(400, 400)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage",
 &"line_id": "-1",
 &"lines": Array[String](["You may have won this battle,", "but I was able to steal thousands of minions from this forest-", "-before you even came along."]),
@@ -221,7 +221,7 @@ type = "TalkMessage"
 position_offset = Vector2(400, 620)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage2",
 &"line_id": "-1",
 &"lines": Array[String](["Their organic matter will be perfect for fuel.", "Soon I will enhance them to locate the right materials", "to build the nuke of my DREAMS!"]),
@@ -236,7 +236,7 @@ type = "TalkMessage"
 position_offset = Vector2(400, 840)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage3",
 &"line_id": "-1",
 &"lines": Array[String](["I shall wreck DESTRUCTION upon every person", "who makes anyone feel the way I feel right now.", ""]),
@@ -251,7 +251,7 @@ type = "TalkMessage"
 position_offset = Vector2(400, 1060)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage4",
 &"line_id": "-1",
 &"lines": Array[String](["The one who hurt me will SUFFER my revenge.", "Nuclear winter for that town is all but ensured.", "After that...well...after than...."]),
@@ -281,7 +281,7 @@ type = "TalkMessage"
 position_offset = Vector2(920, 400)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage6",
 &"line_id": "-1",
 &"lines": Array[String](["....That's very personal.", "I'm a bit offended that you asked, Ms. Nosey.", ""]),
@@ -461,7 +461,7 @@ type = "TalkMessage"
 position_offset = Vector2(3880, 400)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage18",
 &"line_id": "-1",
 &"lines": Array[String](["SILENCE!", "I tire of this idle chatter.", "Leave this place and do not look for us again."]),
@@ -476,7 +476,7 @@ type = "TalkMessage"
 position_offset = Vector2(3880, 620)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage19",
 &"line_id": "-1",
 &"lines": Array[String](["We will NOT be at the abandoned dump tomorrow at 5pm.", "You should NOT go looking for us there.", "Get out of my face, and leave me alone to my ultimate revenge!"]),
@@ -501,7 +501,7 @@ data = {
 
 [resource]
 script = ExtResource("1_1tseu")
-connections = Array[Dictionary]([{
+connections = [{
 "from_node": &"TalkStart",
 "from_port": 0,
 "keep_alive": false,
@@ -723,5 +723,5 @@ connections = Array[Dictionary]([{
 "keep_alive": false,
 "to_node": &"TalkEnd",
 "to_port": 0
-}])
+}]
 nodes = [SubResource("Resource_obe6p"), SubResource("Resource_vaqxa"), SubResource("Resource_5tte8"), SubResource("Resource_tfyen"), SubResource("Resource_3m8c1"), SubResource("Resource_i2h62"), SubResource("Resource_gs6v3"), SubResource("Resource_pii4f"), SubResource("Resource_pi4th"), SubResource("Resource_w0cns"), SubResource("Resource_dk4ag"), SubResource("Resource_rs61a"), SubResource("Resource_wgjaf"), SubResource("Resource_m8kf2"), SubResource("Resource_cufl8"), SubResource("Resource_8pga7"), SubResource("Resource_k0y2n"), SubResource("Resource_s3jfd"), SubResource("Resource_bod8q"), SubResource("Resource_rrnm4"), SubResource("Resource_jrkj4"), SubResource("Resource_d2lya"), SubResource("Resource_kjhnm"), SubResource("Resource_d743t"), SubResource("Resource_tx7pn"), SubResource("Resource_iphp6"), SubResource("Resource_j2lfs"), SubResource("Resource_43cy0"), SubResource("Resource_nyedo"), SubResource("Resource_fwor0"), SubResource("Resource_h1byw"), SubResource("Resource_v4bra"), SubResource("Resource_t260j"), SubResource("Resource_fs1k5"), SubResource("Resource_vemrw"), SubResource("Resource_jtgf5"), SubResource("Resource_fxydk"), SubResource("Resource_cgedl")]

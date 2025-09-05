@@ -184,7 +184,7 @@ type = "TalkMessage"
 position_offset = Vector2(240, 520)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage",
 &"line_id": "-1",
 &"lines": Array[String](["....", "You blatantly disobeyed my orders and came here, to the dump.", ""]),
@@ -199,7 +199,7 @@ type = "TalkMessage"
 position_offset = Vector2(240, 740)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage2",
 &"line_id": "-1",
 &"lines": Array[String](["It's too bad you're just a little too late.", "I've upgraded my Mega Machine....", "and I've already built my test nuke."]),
@@ -214,7 +214,7 @@ type = "TalkMessage"
 position_offset = Vector2(240, 960)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage3",
 &"line_id": "-1",
 &"lines": Array[String](["In fact, you are just in time to watch me launch a test.", "", ""]),
@@ -244,7 +244,7 @@ type = "TalkMessage"
 position_offset = Vector2(760, 520)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage5",
 &"line_id": "-1",
 &"lines": Array[String](["OF COURSE I LIED!", "I was trying to fool you into not coming here.", "I was going to be here ALL along."]),
@@ -289,7 +289,7 @@ type = "TalkMessage"
 position_offset = Vector2(1500, 520)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage8",
 &"line_id": "-1",
 &"lines": Array[String](["Why thank you. That I am.", "", ""]),
@@ -304,7 +304,7 @@ type = "TalkMessage"
 position_offset = Vector2(1500, 740)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage9",
 &"line_id": "-1",
 &"lines": Array[String](["Now watch and weep as I nuke my first revenge target,", "One of the most important sites of my childhood,", ""]),
@@ -334,7 +334,7 @@ type = "TalkMessage"
 position_offset = Vector2(2000, 520)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage11",
 &"line_id": "-1",
 &"lines": Array[String](["At first I was wondering what area would be best for a nuking.", "Should I do the courthouse, where my parents got married?", ""]),
@@ -349,7 +349,7 @@ type = "TalkMessage"
 position_offset = Vector2(2000, 740)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage12",
 &"line_id": "-1",
 &"lines": Array[String](["No. I wasn't alive for that. I missed my own parent's wedding.", "", ""]),
@@ -364,7 +364,7 @@ type = "TalkMessage"
 position_offset = Vector2(2000, 960)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage13",
 &"line_id": "-1",
 &"lines": Array[String](["Should I nuke the store that sold my dad his SQUEAKERS?", "Those annoyingly squeaky shoes that everyone in town wears?", ""]),
@@ -379,7 +379,7 @@ type = "TalkMessage"
 position_offset = Vector2(2000, 1180)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage14",
 &"line_id": "-1",
 &"lines": Array[String](["Every time I hear those god forsaken squeaks,", "I think my dad has come to take me away from all my friends.", ""]),
@@ -394,7 +394,7 @@ type = "TalkMessage"
 position_offset = Vector2(2000, 1400)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage15",
 &"line_id": "-1",
 &"lines": Array[String](["No...", "Then I thought about the divorce court.", ""]),
@@ -409,7 +409,7 @@ type = "TalkMessage"
 position_offset = Vector2(2000, 1620)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage16",
 &"line_id": "-1",
 &"lines": Array[String](["The same courthouse that my parents got married in, but alas no.", "I hate the divorce, but separation is better mom staying with HIM.", ""]),
@@ -424,7 +424,7 @@ type = "TalkMessage"
 position_offset = Vector2(2000, 1840)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage17",
 &"line_id": "-1",
 &"lines": Array[String](["And then it struck me.", "The place he took me every weekend as a child.", "The place where we made the most memories."]),
@@ -439,7 +439,7 @@ type = "TalkMessage"
 position_offset = Vector2(2000, 2060)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage18",
 &"line_id": "-1",
 &"lines": Array[String](["Taco Bell.", "My dad loves it, but I. HATE. IT!", ""]),
@@ -469,7 +469,7 @@ type = "TalkMessage"
 position_offset = Vector2(2540, 520)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage20",
 &"line_id": "-1",
 &"lines": Array[String](["There's a combination KFC and Taco Bell?", "But no, this one is just Taco Bell.", ""]),
@@ -499,7 +499,7 @@ type = "TalkMessage"
 position_offset = Vector2(3040, 520)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage22",
 &"line_id": "-1",
 &"lines": Array[String](["No, no.", "That one opened only last week.", "I'm talking about to one off Winding Foot Road."]),
@@ -529,7 +529,7 @@ type = "TalkMessage"
 position_offset = Vector2(3520, 520)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage24",
 &"line_id": "-1",
 &"lines": Array[String](["Hasta la vista, TACO BELL-", "", ""]),

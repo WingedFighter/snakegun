@@ -25,6 +25,7 @@ func _physics_process(_delta: float) -> void:
 	set_physics_process(false)
 
 func new_game() -> void:
+	State.flags = {}
 	SceneManager.change_scene(new_game_scene)
 
 func continue_game() -> void:

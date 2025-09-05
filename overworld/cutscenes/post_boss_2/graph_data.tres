@@ -195,7 +195,7 @@ type = "TalkMessage"
 position_offset = Vector2(400, 340)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage",
 &"line_id": "-1",
 &"lines": Array[String](["You may have won....again...", "but I am not giving up, froufrou mcpink.", ""]),
@@ -225,7 +225,7 @@ type = "TalkMessage"
 position_offset = Vector2(900, 340)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage3",
 &"line_id": "-1",
 &"lines": Array[String](["Right, I did do that!", "", ""]),
@@ -330,7 +330,7 @@ type = "TalkMessage"
 position_offset = Vector2(2580, 340)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage10",
 &"line_id": "-1",
 &"lines": Array[String](["Yes, we will go to CITY tomorrow night to have a good,", "high, and faraway view of the town as it crumbles beneath us!", "He will PAY."]),
@@ -360,7 +360,7 @@ type = "TalkMessage"
 position_offset = Vector2(3080, 340)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage12",
 &"line_id": "-1",
 &"lines": Array[String](["You'd never understand.", "", ""]),
@@ -390,7 +390,7 @@ type = "TalkMessage"
 position_offset = Vector2(3560, 340)
 data = {
 &"background": "none",
-&"character_id": "evil_sarah",
+&"character_id": "purple",
 &"id": "TalkMessage14",
 &"line_id": "-1",
 &"lines": Array[String](["See you tomorrow.", "      ", "I love you."]),
