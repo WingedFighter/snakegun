@@ -25,6 +25,10 @@ AudioManager="*res://global/audio/audio_manager.gd"
 Quests="*res://global/quests.gd"
 State="*res://global/state.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/letstalkaboutit/plugin.cfg")
