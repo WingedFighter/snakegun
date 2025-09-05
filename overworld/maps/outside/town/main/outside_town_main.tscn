@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://cohqlrcb47uj4"]
+[gd_scene load_steps=14 format=4 uid="uid://cohqlrcb47uj4"]
 
 [ext_resource type="Texture2D" uid="uid://b026g0ndknv2c" path="res://overworld/maps/outside/town/main/ground_main.png" id="1_dwtre"]
 [ext_resource type="Script" uid="uid://cbc0e7a0rt4mi" path="res://overworld/maps/outside/town/main/outside_town_main.gd" id="1_vrrko"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cddigtumyuaal" path="res://overworld/interactables/transition/transition.tscn" id="4_gcnva"]
 [ext_resource type="PackedScene" uid="uid://co63qkxatewwp" path="res://overworld/maps/spawner/spawner.tscn" id="5_uqdsc"]
 [ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="7_vrrko"]
+[ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="8_limia"]
 [ext_resource type="PackedScene" uid="uid://bk11f7h6ejwpk" path="res://overworld/characters/narrator/narrator.tscn" id="8_x88j8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwtre"]
@@ -220,6 +221,8 @@ talk_state = null
 [node name="CollisionShape2D" parent="Interactables/Conversations/Fountain" index="2"]
 position = Vector2(17.5, -2.5)
 shape = SubResource("RectangleShape2D_x88j8")
+
+[node name="Snek" parent="Interactables" instance=ExtResource("8_limia")]
 
 [node name="Narrator" parent="Interactables" instance=ExtResource("8_x88j8")]
 

@@ -35,4 +35,5 @@ func _process(_delta: float) -> void:
 func end_cutscene() -> void:
 	State.flags['in_cutscene'] = false
 	State.flags.erase('start_conversation')
+	LoadingScreen.start_load()
 	SceneManager.change_scene(change_scene)
