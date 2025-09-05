@@ -36,4 +36,5 @@ func settings() -> void:
 	escape_menu.open()
 
 func quit_game() -> void:
-	get_tree().quit()
+	#get_tree().quit()
+	pass

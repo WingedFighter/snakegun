@@ -103,8 +103,9 @@ func on_close_pressed() -> void:
 	unpause_if_player()
 
 func on_exit_pressed() -> void:
-	unpause_if_player()
-	get_tree().quit()
+	#unpause_if_player()
+	#get_tree().quit()
+	pass
 
 func set_volume(bus_index: int, volume: float) -> void:
 	AudioServer.set_bus_volume_db(bus_index, linear_to_db(volume))
