@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c434tigk4kovk"]
 
 [ext_resource type="Script" uid="uid://coltlp1oafxta" path="res://overworld/cutscenes/intro/intro_3.gd" id="1_4dg1j"]
-[ext_resource type="Texture2D" uid="uid://bhd50uavvpnsn" path="res://overworld/cutscenes/intro/intro_3.png" id="1_q0edy"]
+[ext_resource type="Texture2D" uid="uid://bhd50uavvpnsn" path="res://overworld/cutscenes/intro/pictures/intro_3.png" id="1_q0edy"]
 [ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="3_dsqfi"]
 
 [sub_resource type="Animation" id="Animation_dsqfi"]

@@ -13,6 +13,8 @@ var is_escape_pause: bool = false
 func _ready() -> void:
 	hud.interact_start.connect(pause)
 	hud.interact_end.connect(resume)
+	Dialogic.timeline_started.connect(pause)
+	Dialogic.timeline_ended.connect(resume)
 
 func _physics_process(delta: float) -> void:
 	var horizontal = Input.get_axis("move_left", "move_right")

@@ -12,6 +12,8 @@ var frame_count: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Dialogic.timeline_started.connect(pause)
+	Dialogic.timeline_ended.connect(resume)
 	if SceneManager.get_previous_scene().contains("Intro"):
 		visible = false
 	
@@ -45,3 +47,9 @@ func display_quest(quest: Dictionary[String, String]) -> void:
 		new_quest.label_settings.font = font
 		new_quest.label_settings.font_color = font_color
 		new_quest.text = str(quest['name']) + ": " + str(quest['contents'])
+
+func pause() -> void:
+	v_box.visible = false
+
+func resume () -> void:
+	v_box.visible = true

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c68t7l1jp0erq"]
 
 [ext_resource type="Script" uid="uid://b1s35dhjh2vds" path="res://overworld/cutscenes/intro/intro_5.gd" id="1_3pham"]
-[ext_resource type="VideoStream" path="res://overworld/cutscenes/intro/snakecrash.ogv" id="1_of45a"]
+[ext_resource type="VideoStream" uid="uid://bvbuum0oeeq7l" path="res://overworld/cutscenes/intro/snakecrash.ogv" id="1_of45a"]
 
 [node name="Intro5" type="Node2D"]
 script = ExtResource("1_3pham")

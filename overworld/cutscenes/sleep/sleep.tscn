@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://d4hee0nmb2og0"]
 
-[ext_resource type="Texture2D" uid="uid://bbbwdd4kyqrgl" path="res://overworld/cutscenes/intro/intro_6.png" id="1_b2yn0"]
+[ext_resource type="Texture2D" uid="uid://bbbwdd4kyqrgl" path="res://overworld/cutscenes/intro/pictures/intro_6.png" id="1_b2yn0"]
 [ext_resource type="Script" uid="uid://dfsji55qu8r4v" path="res://overworld/cutscenes/sleep/sleep.gd" id="1_p3ypi"]
-[ext_resource type="Texture2D" uid="uid://dy5oglmapwog8" path="res://overworld/cutscenes/intro/intro_6(2).png" id="2_p3ypi"]
+[ext_resource type="Texture2D" uid="uid://dy5oglmapwog8" path="res://overworld/cutscenes/intro/pictures/intro_6(2).png" id="2_p3ypi"]
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="3_wwrp0"]
 [ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="4_s41m8"]
 [ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="5_gdx4d"]

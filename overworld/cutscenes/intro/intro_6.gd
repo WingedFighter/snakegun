@@ -11,15 +11,18 @@ var started_interact: bool = false
 var finished_interact: bool = false
 
 func _input(event: InputEvent) -> void:
-	if started_interact && event.is_action("interact"):
-		if tutorial.visible:
-			tutorial.visible = false
+	if Dialogic.current_timeline != null:
+		return
+
+	if event.is_action("interact"):
+		Dialogic.start('introduction_timeline')
+		get_viewport().set_input_as_handled()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	conversation.on_body_entered(player)
-	skip_button.pressed.connect(on_skip_pressed)
-	AudioManager.play_music("SomewhereInIdaho")
+	Dialogic.timeline_ended.connect(on_timeline_ended)
+	if len(AudioManager.music_dictionary) > 0:
+		AudioManager.play_music("SomewhereInIdaho")
 
 func _process(_delta: float) -> void:
 	if !started_interact && !finished_interact && !player.is_paused:
@@ -27,12 +30,6 @@ func _process(_delta: float) -> void:
 		interact_event.action = "interact"
 		interact_event.pressed = true
 		Input.parse_input_event(interact_event)
-	elif !started_interact && !finished_interact && player.is_paused:
-		started_interact = true
-	elif started_interact && !finished_interact && !player.is_paused:
-		finished_interact = true
-	elif started_interact && finished_interact:
-		SceneManager.change_scene(change_scene)
 
-func on_skip_pressed() -> void:
+func on_timeline_ended() -> void:
 	SceneManager.change_scene(change_scene)
