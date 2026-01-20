@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://bs4sw7h58f7b1"]
+[gd_scene load_steps=21 format=4 uid="uid://bs4sw7h58f7b1"]
 
 [ext_resource type="Script" uid="uid://blodgncbscjaj" path="res://overworld/maps/inside/inside_hero_room.gd" id="1_7grtv"]
 [ext_resource type="Texture2D" uid="uid://cjbgort6s7vho" path="res://overworld/maps/inside/ground_main.png" id="1_uq21d"]
@@ -6,16 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_jqtw0"]
 [ext_resource type="PackedScene" uid="uid://cddigtumyuaal" path="res://overworld/interactables/transition/transition.tscn" id="3_7grtv"]
 [ext_resource type="PackedScene" uid="uid://co63qkxatewwp" path="res://overworld/maps/spawner/spawner.tscn" id="4_f7ndo"]
-[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="6_j1ijo"]
-[ext_resource type="PackedScene" uid="uid://bk11f7h6ejwpk" path="res://overworld/characters/narrator/narrator.tscn" id="7_mvkbf"]
 [ext_resource type="Texture2D" uid="uid://d0x417t2wi0kk" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_w.png" id="7_t0qw7"]
 [ext_resource type="Texture2D" uid="uid://bdq5r637yk3lb" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_a.png" id="8_8dyel"]
-[ext_resource type="Script" uid="uid://b2flwfdlosxw" path="res://addons/letstalkaboutit/nodes/talk_character.gd" id="8_8tdl1"]
 [ext_resource type="Texture2D" uid="uid://2d2x7qr5s4m2" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_s.png" id="9_j1ijo"]
-[ext_resource type="Texture2D" uid="uid://cy5x72lxrfv4k" path="res://overworld/maps/inside/charlie.webp" id="9_xp6o6"]
 [ext_resource type="Texture2D" uid="uid://c22dl84us3w7c" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_d.png" id="10_mvkbf"]
 [ext_resource type="Texture2D" uid="uid://b5xjw0x03omq1" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_e.png" id="11_kpscl"]
 [ext_resource type="Texture2D" uid="uid://4ncgt7sfwxic" path="res://ui/keybinding_panel/icons/keyboard_mouse/keyboard_escape.png" id="12_8dyel"]
+[ext_resource type="Script" uid="uid://bhhhlbh4rt7ff" path="res://overworld/interactables/talk/talk.gd" id="13_j1ijo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hj8x8"]
 size = Vector2(20, 290)
@@ -35,14 +32,8 @@ size = Vector2(38, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8dyel"]
 size = Vector2(96.5, 77)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvkbf"]
-size = Vector2(72, 60)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpscl"]
-size = Vector2(140, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tdl1"]
-size = Vector2(109, 60)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j1ijo"]
+size = Vector2(81, 34.90077)
 
 [node name="InsideHeroRoom" type="Node2D"]
 script = ExtResource("1_7grtv")
@@ -124,68 +115,6 @@ condition = "can_sleep"
 position = Vector2(29.75, 22.5)
 shape = SubResource("RectangleShape2D_8dyel")
 
-[node name="Conversations" type="Node2D" parent="Interactables"]
-
-[node name="Cauldron" parent="Interactables/Conversations" instance=ExtResource("6_j1ijo")]
-position = Vector2(-212, 112)
-
-[node name="TalkManager" parent="Interactables/Conversations/Cauldron" index="0"]
-graph_data_save_location = "res://overworld/maps/inside/graph_data.tres"
-talk_state_save_location = "res://overworld/maps/inside/talk_state.tres"
-starting_conversation = "Cauldron"
-talk_state = null
-
-[node name="CollisionShape2D" parent="Interactables/Conversations/Cauldron" index="2"]
-position = Vector2(-7, -6)
-shape = SubResource("RectangleShape2D_mvkbf")
-
-[node name="Narrator" parent="Interactables/Conversations" instance=ExtResource("7_mvkbf")]
-
-[node name="Fox" parent="Interactables/Conversations" instance=ExtResource("6_j1ijo")]
-position = Vector2(-207, -53)
-
-[node name="TalkManager" parent="Interactables/Conversations/Fox" index="0"]
-graph_data_save_location = "res://overworld/maps/inside/graph_data_fox.tres"
-talk_state_save_location = "res://overworld/maps/inside/talk_state_fox.tres"
-starting_conversation = "Fox"
-talk_state = null
-
-[node name="CollisionShape2D" parent="Interactables/Conversations/Fox" index="2"]
-position = Vector2(27, -4)
-shape = SubResource("RectangleShape2D_kpscl")
-
-[node name="Wardrobe" parent="Interactables/Conversations" instance=ExtResource("6_j1ijo")]
-position = Vector2(94, -79)
-
-[node name="TalkManager" parent="Interactables/Conversations/Wardrobe" index="0"]
-graph_data_save_location = "res://overworld/maps/inside/graph_data_war.tres"
-talk_state_save_location = "res://overworld/maps/inside/talk_state_war.tres"
-starting_conversation = "Wardrobe"
-talk_state = null
-
-[node name="CollisionShape2D" parent="Interactables/Conversations/Wardrobe" index="2"]
-position = Vector2(-7, -6)
-shape = SubResource("RectangleShape2D_mvkbf")
-
-[node name="TalkCharacter" type="Node" parent="Interactables/Conversations"]
-script = ExtResource("8_8tdl1")
-character_id = "drawing"
-character_name = "Your Art"
-character_base_panel = ExtResource("9_xp6o6")
-metadata/_custom_type_script = "uid://b2flwfdlosxw"
-
-[node name="Hole" parent="Interactables/Conversations" instance=ExtResource("6_j1ijo")]
-position = Vector2(188, 129)
-
-[node name="TalkManager" parent="Interactables/Conversations/Hole" index="0"]
-graph_data_save_location = "res://overworld/maps/inside/graph_data_hole.tres"
-talk_state_save_location = "res://overworld/maps/inside/talk_state_hole.tres"
-talk_state = null
-
-[node name="CollisionShape2D" parent="Interactables/Conversations/Hole" index="2"]
-position = Vector2(8, -8)
-shape = SubResource("RectangleShape2D_8tdl1")
-
 [node name="Spawner" parent="." instance=ExtResource("4_f7ndo")]
 spawns = Dictionary[String, NodePath]({
 "MainTitle": NodePath("MainTitle"),
@@ -264,9 +193,19 @@ scale = Vector2(0.5, 0.5)
 mouse_filter = 2
 texture = ExtResource("12_8dyel")
 
+[node name="Conversations" type="Node2D" parent="."]
+
+[node name="Hole" type="Area2D" parent="Conversations"]
+position = Vector2(167, 111)
+script = ExtResource("13_j1ijo")
+timeline = "hole"
+metadata/_custom_type_script = "uid://p22yx7tik2ob"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conversations/Hole"]
+position = Vector2(38, 10)
+rotation = -3.1415925
+scale = Vector2(1.7089217, -1.5384223)
+shape = SubResource("RectangleShape2D_j1ijo")
+
 [editable path="Interactables/Transitions/OutsideTownMain"]
 [editable path="Interactables/Transitions/Transition"]
-[editable path="Interactables/Conversations/Cauldron"]
-[editable path="Interactables/Conversations/Fox"]
-[editable path="Interactables/Conversations/Wardrobe"]
-[editable path="Interactables/Conversations/Hole"]

@@ -33,9 +33,13 @@ directories/dch_directory={
 "Hebi": "res://overworld/characters/snek/Hebi.dch"
 }
 directories/dtl_directory={
-"introduction_timeline": "res://overworld/cutscenes/intro/introduction_timeline.dtl"
+"hole": "res://overworld/maps/inside/timelines/hole.dtl",
+"introduction": "res://overworld/cutscenes/intro/introduction.dtl"
 }
-layout/style_directory={}
+layout/style_directory={
+"": "res://ui/dialogic_styles/default.tres",
+"default": "res://ui/dialogic_styles/default.tres"
+}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -70,8 +74,8 @@ audio/channel_defaults={
 }
 }
 variables={}
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://ui/dialogic_styles/default.tres"]
+layout/default_style="res://ui/dialogic_styles/default.tres"
 glossary/default_case_sensitive=true
 text/input_action="dialogic_default_action"
 

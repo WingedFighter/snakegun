@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://cohqlrcb47uj4"]
+[gd_scene load_steps=9 format=4 uid="uid://cohqlrcb47uj4"]
 
 [ext_resource type="Texture2D" uid="uid://b026g0ndknv2c" path="res://overworld/maps/outside/town/main/ground_main.png" id="1_dwtre"]
 [ext_resource type="Script" uid="uid://cbc0e7a0rt4mi" path="res://overworld/maps/outside/town/main/outside_town_main.gd" id="1_vrrko"]
@@ -6,21 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="3_uqdsc"]
 [ext_resource type="PackedScene" uid="uid://cddigtumyuaal" path="res://overworld/interactables/transition/transition.tscn" id="4_gcnva"]
 [ext_resource type="PackedScene" uid="uid://co63qkxatewwp" path="res://overworld/maps/spawner/spawner.tscn" id="5_uqdsc"]
-[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="7_vrrko"]
-[ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="8_limia"]
-[ext_resource type="PackedScene" uid="uid://bk11f7h6ejwpk" path="res://overworld/characters/narrator/narrator.tscn" id="8_x88j8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwtre"]
 size = Vector2(649, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhww8"]
 size = Vector2(631, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrrko"]
-size = Vector2(48, 19)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x88j8"]
-size = Vector2(147, 133)
 
 [node name="OutsideTownMain" type="Node2D"]
 script = ExtResource("1_vrrko")
@@ -112,128 +103,5 @@ shape = SubResource("RectangleShape2D_vhww8")
 position = Vector2(425, -21)
 to_scene = "InsideHeroRoom"
 
-[node name="Conversations" type="Node2D" parent="Interactables"]
-
-[node name="Streamer" parent="Interactables/Conversations" instance=ExtResource("7_vrrko")]
-position = Vector2(445, 229)
-
-[node name="TalkManager" parent="Interactables/Conversations/Streamer" index="0"]
-graph_data_save_location = "res://overworld/maps/outside/town/main/conversations/graph_data_streamer.tres"
-talk_state_save_location = "res://overworld/maps/outside/town/main/conversations/talk_state_streamer.tres"
-talk_state = null
-
-[node name="CollisionShape2D" parent="Interactables/Conversations/Streamer" index="2"]
-position = Vector2(18, -7)
-shape = SubResource("RectangleShape2D_vrrko")
-
-[node name="Every" parent="Interactables/Conversations" instance=ExtResource("7_vrrko")]
-position = Vector2(-196, 226)
-
-[node name="TalkManager" parent="Interactables/Conversations/Every" index="0"]
-graph_data_save_location = "res://overworld/maps/outside/town/main/conversations/graph_data_e.tres"
-talk_state_save_location = "res://overworld/maps/outside/town/main/conversations/talk_state_e.tres"
-talk_state = null
-
-[node name="CollisionShape2D" parent="Interactables/Conversations/Every" index="2"]
-position = Vector2(18, -7)
-shape = SubResource("RectangleShape2D_vrrko")
-
-[node name="Knock" parent="Interactables/Conversations" instance=ExtResource("7_vrrko")]
-position = Vector2(-326, 212)
-
-[node name="TalkManager" parent="Interactables/Conversations/Knock" index="0"]
-graph_data_save_location = "res://overworld/maps/outside/town/main/conversations/graph_data_k.tres"
-talk_state_save_location = "res://overworld/maps/outside/town/main/conversations/talk_state_k.tres"
-talk_state = null
-
-[node name="CollisionShape2D" parent="Interactables/Conversations/Knock" index="2"]
-position = Vector2(18, -7)
-shape = SubResource("RectangleShape2D_vrrko")
-
-[node name="Forgot" parent="Interactables/Conversations" instance=ExtResource("7_vrrko")]
-position = Vector2(-459, 222)
-
-[node name="TalkManager" parent="Interactables/Conversations/Forgot" index="0"]
-graph_data_save_location = "res://overworld/maps/outside/town/main/conversations/graph_data_forgot.tres"
-talk_state_save_location = "res://overworld/maps/outside/town/main/conversations/talk_state_forgot.tres"
-talk_state = null
-
-[node name="CollisionShape2D" parent="Interactables/Conversations/Forgot" index="2"]
-position = Vector2(18, -7)
-shape = SubResource("RectangleShape2D_vrrko")
-
-[node name="Shop" parent="Interactables/Conversations" instance=ExtResource("7_vrrko")]
-position = Vector2(-395, -101)
-
-[node name="TalkManager" parent="Interactables/Conversations/Shop" index="0"]
-graph_data_save_location = "res://overworld/maps/outside/town/main/conversations/graph_data_shop.tres"
-talk_state_save_location = "res://overworld/maps/outside/town/main/conversations/talk_state_shop.tres"
-talk_state = null
-
-[node name="CollisionShape2D" parent="Interactables/Conversations/Shop" index="2"]
-position = Vector2(18, -7)
-shape = SubResource("RectangleShape2D_vrrko")
-
-[node name="GirlScouts" parent="Interactables/Conversations" instance=ExtResource("7_vrrko")]
-position = Vector2(218, -141)
-
-[node name="TalkManager" parent="Interactables/Conversations/GirlScouts" index="0"]
-graph_data_save_location = "res://overworld/maps/outside/town/main/conversations/graph_data_g.tres"
-talk_state_save_location = "res://overworld/maps/outside/town/main/conversations/talk_state_g.tres"
-talk_state = null
-
-[node name="CollisionShape2D" parent="Interactables/Conversations/GirlScouts" index="2"]
-position = Vector2(18, -7)
-shape = SubResource("RectangleShape2D_vrrko")
-
-[node name="Stupid" parent="Interactables/Conversations" instance=ExtResource("7_vrrko")]
-position = Vector2(130, 234)
-
-[node name="TalkManager" parent="Interactables/Conversations/Stupid" index="0"]
-graph_data_save_location = "res://overworld/maps/outside/town/main/conversations/graph_data_s.tres"
-talk_state_save_location = "res://overworld/maps/outside/town/main/conversations/talk_state_s.tres"
-talk_state = null
-
-[node name="CollisionShape2D" parent="Interactables/Conversations/Stupid" index="2"]
-position = Vector2(18, -7)
-shape = SubResource("RectangleShape2D_vrrko")
-
-[node name="Shit" parent="Interactables/Conversations" instance=ExtResource("7_vrrko")]
-position = Vector2(294, 226)
-
-[node name="TalkManager" parent="Interactables/Conversations/Shit" index="0"]
-graph_data_save_location = "res://overworld/maps/outside/town/main/conversations/graph_data_shit.tres"
-talk_state_save_location = "res://overworld/maps/outside/town/main/conversations/talk_state_shit.tres"
-talk_state = null
-
-[node name="CollisionShape2D" parent="Interactables/Conversations/Shit" index="2"]
-position = Vector2(18, -7)
-shape = SubResource("RectangleShape2D_vrrko")
-
-[node name="Fountain" parent="Interactables/Conversations" instance=ExtResource("7_vrrko")]
-position = Vector2(-67, -20)
-
-[node name="TalkManager" parent="Interactables/Conversations/Fountain" index="0"]
-graph_data_save_location = "res://overworld/maps/outside/town/main/conversations/graph_data_fountain.tres"
-talk_state_save_location = "res://overworld/maps/outside/town/main/conversations/talk_state_fountain.tres"
-talk_state = null
-
-[node name="CollisionShape2D" parent="Interactables/Conversations/Fountain" index="2"]
-position = Vector2(17.5, -2.5)
-shape = SubResource("RectangleShape2D_x88j8")
-
-[node name="Snek" parent="Interactables" instance=ExtResource("8_limia")]
-
-[node name="Narrator" parent="Interactables" instance=ExtResource("8_x88j8")]
-
 [editable path="YSortable/Player25D"]
 [editable path="Interactables/Transitions/OutsideTownSchool"]
-[editable path="Interactables/Conversations/Streamer"]
-[editable path="Interactables/Conversations/Every"]
-[editable path="Interactables/Conversations/Knock"]
-[editable path="Interactables/Conversations/Forgot"]
-[editable path="Interactables/Conversations/Shop"]
-[editable path="Interactables/Conversations/GirlScouts"]
-[editable path="Interactables/Conversations/Stupid"]
-[editable path="Interactables/Conversations/Shit"]
-[editable path="Interactables/Conversations/Fountain"]

@@ -1,0 +1,6 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://blgtumx7s5qfr"]
+
+[ext_resource type="Texture2D" uid="uid://h8fmkhryngns" path="res://ui/hud/talkboxBASE.png" id="1_gbd6o"]
+
+[resource]
+texture = ExtResource("1_gbd6o")

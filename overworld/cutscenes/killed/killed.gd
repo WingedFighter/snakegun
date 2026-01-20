@@ -6,7 +6,6 @@ const VELOCITY = 10.0
 
 @onready var player: Player25D = %Player25D
 @onready var skip_button: Button = $CanvasLayer/SkipButton
-@onready var talk_manager: TalkManager = $Conversation/TalkManager
 
 var start_conversation: bool = false
 var frame_count: int = 0

@@ -7,7 +7,6 @@ const VELOCITY = 10.0
 
 @onready var player: Player25D = %Player25D
 @onready var skip_button: Button = $CanvasLayer/SkipButton
-@onready var talk_manager: TalkManager = $Conversation/TalkManager
 
 var start_conversation: bool = false
 var frame_count: int = 0
@@ -37,7 +36,7 @@ func _process(_delta: float) -> void:
 func end_cutscene() -> void:
 	State.flags['in_cutscene'] = false
 	State.flags.erase('start_conversation')
-	if len(talk_manager.talk_state.flags) == 0 || talk_manager.talk_state.flags['did_it'] == 'true':
-		SceneManager.change_scene(change_scene_2)
-	else:
-		SceneManager.change_scene(change_scene_1)
+	# if len(talk_manager.talk_state.flags) == 0 || talk_manager.talk_state.flags['did_it'] == 'true':
+	# 	SceneManager.change_scene(change_scene_2)
+	# else:
+	# 	SceneManager.change_scene(change_scene_1)

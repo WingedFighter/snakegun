@@ -13,7 +13,14 @@ func _ready() -> void:
 
 	background_music.bus = "Music"
 
+func is_ready() -> bool:
+	if len(music_dictionary) > 0 and len(sfx_dictionary) > 0:
+		return true
+	return false
+
 func play_music(song: String) -> void:
+	if !is_ready():
+		return
 	if background_music && current_track != song:
 		stopped = false
 		current_track = song
@@ -21,6 +28,8 @@ func play_music(song: String) -> void:
 		background_music.play()
 
 func play_sfx(sound: String) -> void:
+	if !is_ready():
+		return
 	var sfx: AudioStreamPlayer = AudioStreamPlayer.new()
 	add_child(sfx)
 	sfx.bus = "SFX"
@@ -29,6 +38,8 @@ func play_sfx(sound: String) -> void:
 	sfx.finished.connect(on_sfx_finished.bind(sfx))
 
 func stop_music() -> void:
+	if !is_ready():
+		return
 	if background_music:
 		stopped = true
 		background_music.stop()

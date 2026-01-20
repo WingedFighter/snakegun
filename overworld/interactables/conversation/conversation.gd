@@ -1,2 +1,0 @@
-extends Interactable
-class_name Conversation

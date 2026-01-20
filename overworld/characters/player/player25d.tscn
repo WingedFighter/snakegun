@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://c8gr5wrb6dvjt"]
+[gd_scene load_steps=43 format=3 uid="uid://c8gr5wrb6dvjt"]
 
 [ext_resource type="Script" uid="uid://cdnik1c5uy1nx" path="res://overworld/characters/player/player25d.gd" id="1_mu2yp"]
 [ext_resource type="Texture2D" uid="uid://b6ppd1413fbju" path="res://overworld/characters/player/sprites/down/mcfrontwalk1.png" id="2_0c41b"]
@@ -39,16 +39,6 @@
 [ext_resource type="Texture2D" uid="uid://oou0j5uyfguf" path="res://overworld/characters/player/sprites/interact/star0011.png" id="36_in8j7"]
 [ext_resource type="Texture2D" uid="uid://cdqpapds6qbf2" path="res://overworld/characters/player/sprites/interact/star0012.png" id="37_xvj1o"]
 [ext_resource type="Texture2D" uid="uid://whs10wkyk6l6" path="res://overworld/characters/player/sprites/interact/star0013.png" id="38_o8jkt"]
-[ext_resource type="Script" uid="uid://b2flwfdlosxw" path="res://addons/letstalkaboutit/nodes/talk_character.gd" id="40_ykttd"]
-[ext_resource type="Texture2D" uid="uid://50eirk6fhlat" path="res://overworld/characters/player/sprites/talk/normal/neutral.png" id="41_kp0ao"]
-[ext_resource type="Texture2D" uid="uid://s2faxpl5ie7t" path="res://overworld/characters/player/sprites/talk/magic/neutral.png" id="42_4mf73"]
-[ext_resource type="Texture2D" uid="uid://diw05eijfu4jg" path="res://overworld/characters/player/sprites/talk/normal/happy.png" id="42_rhs6a"]
-[ext_resource type="Texture2D" uid="uid://cckljovl6iwrh" path="res://overworld/characters/player/sprites/talk/normal/angry.png" id="43_fsa5s"]
-[ext_resource type="Texture2D" uid="uid://cifyblvs6bt1p" path="res://overworld/characters/player/sprites/talk/normal/confused.png" id="44_w4hdm"]
-[ext_resource type="Texture2D" uid="uid://cv3w24khnleqa" path="res://overworld/characters/player/sprites/talk/magic/mellow.png" id="46_06dgf"]
-[ext_resource type="Texture2D" uid="uid://c6dvm6q7odn0v" path="res://overworld/characters/player/sprites/talk/magic/happy.png" id="47_2p53s"]
-[ext_resource type="Texture2D" uid="uid://c0fbhvhcj6udm" path="res://overworld/characters/player/sprites/talk/magic/angry.png" id="48_rl8ep"]
-[ext_resource type="Texture2D" uid="uid://ydj8llyfirdf" path="res://overworld/characters/player/sprites/talk/magic/confused.png" id="49_3al6e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bnbyf"]
 animations = [{
@@ -243,26 +233,3 @@ autoplay = "default"
 frame_progress = 0.770321
 
 [node name="HUD" parent="." instance=ExtResource("22_i1fnb")]
-
-[node name="NormalCharacter" type="Node" parent="."]
-script = ExtResource("40_ykttd")
-character_id = "player_normal"
-character_name = "Adeline"
-character_base_panel = ExtResource("41_kp0ao")
-character_happy = ExtResource("42_rhs6a")
-character_angry = ExtResource("43_fsa5s")
-character_surprised = ExtResource("44_w4hdm")
-character_neutral = ExtResource("41_kp0ao")
-metadata/_custom_type_script = "uid://b2flwfdlosxw"
-
-[node name="MagicCharacter" type="Node" parent="."]
-script = ExtResource("40_ykttd")
-character_id = "player_magic"
-character_name = "Mahou Adeline"
-character_base_panel = ExtResource("42_4mf73")
-character_sad = ExtResource("46_06dgf")
-character_happy = ExtResource("47_2p53s")
-character_angry = ExtResource("48_rl8ep")
-character_surprised = ExtResource("49_3al6e")
-character_neutral = ExtResource("42_4mf73")
-metadata/_custom_type_script = "uid://b2flwfdlosxw"

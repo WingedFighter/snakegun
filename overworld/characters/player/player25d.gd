@@ -11,8 +11,6 @@ var is_paused: bool = false
 var is_escape_pause: bool = false
 
 func _ready() -> void:
-	hud.interact_start.connect(pause)
-	hud.interact_end.connect(resume)
 	Dialogic.timeline_started.connect(pause)
 	Dialogic.timeline_ended.connect(resume)
 
@@ -59,9 +57,11 @@ func update_animations(movement: Vector2) -> void:
 
 func pause() -> void:
 	is_paused = true
+	hud.pause()
 
 func resume() -> void:
 	is_paused = false
+	hud.unpause()
 
 func escape_pause() -> void:
 	is_escape_pause = true

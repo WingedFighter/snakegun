@@ -31,4 +31,5 @@ func change_scene(scene: String) -> void:
 	call_deferred("_on_change_scene", scene)
 
 func _on_change_scene(scene: String) -> void:
-	get_tree().change_scene_to_packed(scene_dictionary[scene])
+	if len(scene_dictionary) > 0 and scene_dictionary.has(scene):
+		get_tree().change_scene_to_packed(scene_dictionary[scene])

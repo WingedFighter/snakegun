@@ -1,11 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b00evj58128q1"]
+[gd_scene load_steps=5 format=3 uid="uid://b00evj58128q1"]
 
 [ext_resource type="Script" uid="uid://q1rny22jfq82" path="res://overworld/cutscenes/pre_boss_2/pre_boss_22.gd" id="1_20fg0"]
 [ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="1_oqqml"]
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_20fg0"]
-[ext_resource type="PackedScene" uid="uid://5bjuhtbtuiuc" path="res://overworld/characters/snek/snek.tscn" id="3_h2grb"]
-[ext_resource type="PackedScene" uid="uid://dcd5kkwk0ydij" path="res://overworld/characters/sarah/sarah.tscn" id="4_ialw7"]
-[ext_resource type="PackedScene" uid="uid://dk51gcow3cn8c" path="res://overworld/interactables/conversation/conversation.tscn" id="5_hy5tp"]
 [ext_resource type="Texture2D" uid="uid://cmtdj4tkslb1v" path="res://overworld/cutscenes/fat_dump/trash.png" id="7_h2grb"]
 
 [node name="PreBoss22" type="Node2D"]
@@ -29,21 +26,7 @@ metadata/_edit_use_anchors_ = true
 unique_name_in_owner = true
 position = Vector2(-267, 61)
 
-[node name="Snek" parent="." instance=ExtResource("3_h2grb")]
-
-[node name="Sarah" parent="." instance=ExtResource("4_ialw7")]
-
-[node name="Conversation" parent="." instance=ExtResource("5_hy5tp")]
-position = Vector2(-268, 72)
-
-[node name="TalkManager" parent="Conversation" index="0"]
-graph_data_save_location = "res://overworld/cutscenes/pre_boss_2/graph_data2.tres"
-talk_state_save_location = "res://overworld/cutscenes/pre_boss_2/talk_state2.tres"
-talk_state = null
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-212, 30)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("7_h2grb")
-
-[editable path="Conversation"]
