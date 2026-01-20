@@ -35,10 +35,22 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "ballerina": "res://overworld/maps/inside/timelines/ballerina.dtl",
+"carpile": "res://overworld/maps/outside/town/school/timelines/carpile.dtl",
 "cauldron": "res://overworld/maps/inside/timelines/cauldron.dtl",
 "dresser": "res://overworld/maps/inside/timelines/dresser.dtl",
+"fountain": "res://overworld/maps/outside/town/main/timelines/fountain.dtl",
 "hole": "res://overworld/maps/inside/timelines/hole.dtl",
-"introduction": "res://overworld/cutscenes/intro/introduction.dtl"
+"house1": "res://overworld/maps/outside/town/main/timelines/house1.dtl",
+"house2": "res://overworld/maps/outside/town/main/timelines/house2.dtl",
+"house3": "res://overworld/maps/outside/town/main/timelines/house3.dtl",
+"house4": "res://overworld/maps/outside/town/main/timelines/house4.dtl",
+"house5": "res://overworld/maps/outside/town/main/timelines/house5.dtl",
+"house6": "res://overworld/maps/outside/town/main/timelines/house6.dtl",
+"house7": "res://overworld/maps/outside/town/main/timelines/house7.dtl",
+"house8": "res://overworld/maps/outside/town/school/timelines/house8.dtl",
+"house9": "res://overworld/maps/outside/town/school/timelines/house9.dtl",
+"introduction": "res://overworld/cutscenes/intro/introduction.dtl",
+"shop": "res://overworld/maps/outside/town/main/timelines/shop.dtl"
 }
 layout/style_directory={
 "": "res://ui/dialogic_styles/default.tres",
