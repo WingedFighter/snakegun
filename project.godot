@@ -30,9 +30,13 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "Adeline": "res://overworld/characters/player/Adeline.dch",
-"Hebi": "res://overworld/characters/snek/Hebi.dch"
+"Hebi": "res://overworld/characters/snek/Hebi.dch",
+"art": "res://overworld/maps/inside/characters/art.dch"
 }
 directories/dtl_directory={
+"ballerina": "res://overworld/maps/inside/timelines/ballerina.dtl",
+"cauldron": "res://overworld/maps/inside/timelines/cauldron.dtl",
+"dresser": "res://overworld/maps/inside/timelines/dresser.dtl",
 "hole": "res://overworld/maps/inside/timelines/hole.dtl",
 "introduction": "res://overworld/cutscenes/intro/introduction.dtl"
 }
@@ -51,7 +55,7 @@ animations/join_default_length=0.5
 animations/join_default_wait=true
 animations/leave_default_length=0.5
 animations/leave_default_wait=true
-animations/cross_fade_default_length=0.5
+animations/cross_fade_default_length=0.0
 choices/autofocus_first=true
 choices/delay=0.2
 choices/reveal_delay=0
@@ -78,6 +82,7 @@ layout/style_list=["res://ui/dialogic_styles/default.tres"]
 layout/default_style="res://ui/dialogic_styles/default.tres"
 glossary/default_case_sensitive=true
 text/input_action="dialogic_default_action"
+animations/cross_fade_default="Fade Cross"
 
 [display]
 

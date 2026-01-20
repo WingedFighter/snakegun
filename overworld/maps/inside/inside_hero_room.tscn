@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://bs4sw7h58f7b1"]
+[gd_scene load_steps=24 format=4 uid="uid://bs4sw7h58f7b1"]
 
 [ext_resource type="Script" uid="uid://blodgncbscjaj" path="res://overworld/maps/inside/inside_hero_room.gd" id="1_7grtv"]
 [ext_resource type="Texture2D" uid="uid://cjbgort6s7vho" path="res://overworld/maps/inside/ground_main.png" id="1_uq21d"]
@@ -34,6 +34,15 @@ size = Vector2(96.5, 77)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j1ijo"]
 size = Vector2(81, 34.90077)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvkbf"]
+size = Vector2(21.839092, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpscl"]
+size = Vector2(61, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tdl1"]
+size = Vector2(148.5, 61)
 
 [node name="InsideHeroRoom" type="Node2D"]
 script = ExtResource("1_7grtv")
@@ -206,6 +215,38 @@ position = Vector2(38, 10)
 rotation = -3.1415925
 scale = Vector2(1.7089217, -1.5384223)
 shape = SubResource("RectangleShape2D_j1ijo")
+
+[node name="Dresser" type="Area2D" parent="Conversations"]
+position = Vector2(88.00001, -79)
+scale = Vector2(3.479998, 1)
+script = ExtResource("13_j1ijo")
+timeline = "dresser"
+metadata/_custom_type_script = "uid://p22yx7tik2ob"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conversations/Dresser"]
+position = Vector2(-0.28735542, 1)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_mvkbf")
+
+[node name="Cauldron" type="Area2D" parent="Conversations"]
+position = Vector2(-242, 131)
+script = ExtResource("13_j1ijo")
+timeline = "cauldron"
+metadata/_custom_type_script = "uid://p22yx7tik2ob"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conversations/Cauldron"]
+position = Vector2(20.5, -23)
+shape = SubResource("RectangleShape2D_kpscl")
+
+[node name="Ballerina" type="Area2D" parent="Conversations"]
+position = Vector2(-235, -76)
+script = ExtResource("13_j1ijo")
+timeline = "ballerina"
+metadata/_custom_type_script = "uid://p22yx7tik2ob"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conversations/Ballerina"]
+position = Vector2(58.75, 17.5)
+shape = SubResource("RectangleShape2D_8tdl1")
 
 [editable path="Interactables/Transitions/OutsideTownMain"]
 [editable path="Interactables/Transitions/Transition"]
