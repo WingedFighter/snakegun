@@ -1,0 +1,30 @@
+join MagicSarah (neutral) right
+MagicSarah: Muahahahahahahaha
+join MagicAdeline (confused) left
+join Hebi leftmost [mirrored="true"]
+MagicAdeline: Who is that?
+set {sarah_name} = "The Nuclear Temptress"
+MagicSarah: You can call me...'The Nuclear Temptress'
+Hebi (angry): What a REPULSIVE talk sprite.
+MagicAdeline (neutral): Okay I can see her now. I don’t want to say that name. Any other options?
+MagicSarah (angry): I spent 6 hours workshopping that one!
+MagicSarah (neutral): ...
+set {sarah_name} = "The Destoyer of Idaho"
+MagicSarah: How about ‘The Destroyer of Idaho’?
+Hebi (serious): You mean diabetes?
+set {sarah_name} = "Diabetes"
+MagicSarah (angry): NO!
+MagicAdeline (neutral): I'm just going to call you purple.
+set {sarah_name} = "Purple"
+MagicSarah (confused): ...because I'm purple-
+MagicAdeline: Because you're purple, yes.
+MagicSarah (neutral): Not cool. Who even are you? What am I looking at here?
+MagicAdeline (happy): Around these parts they call me ‘The Phantom Viper’.
+MagicSarah: YUeah I'm calling you Froufrou Mcpink
+MagicAdeline (neutral): Awwwww man.
+MagicSarah: It's only fair!
+MagicSarah: Look, I was warned that you and your idiot snake would try and stop my plans to destory the next town over....But I need it gone.
+MagicSarah: It’s imperative that this plan goes 100 percent right. Take a look at my Megamachine Version 1...
+MagicSarah (angry): ...and Prepare to GET FUCKED, IDIOT!
+leave --All-- 
+[end_timeline]

@@ -1,0 +1,16 @@
+join Hebi (neutral) right 
+join Adeline (neutral) left
+Hebi: So after school today, we need to go to the abandoned garbage dump.
+Adeline (confused): Why? She said she wouldn’t be there so don’t look for her there.
+Adeline (happy): It was very nice of her to tell us that straight up. We won’t waste any time there!
+Hebi (sad): ...
+Hebi (neutral): I want to know how your brain works and why you are the way you are.
+Adeline (confused): Huh?
+Hebi: We are going to the dump.
+Adeline (neutral): Okay.
+Adeline: Fine.
+Adeline: Whatever.
+join Teacher (neutral) center
+Adeline please stop talking to your bookbag.
+leave --All-- 
+[end_timeline]

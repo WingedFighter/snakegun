@@ -1,0 +1,30 @@
+join MagicSarah (angry) right
+join MagicAdeline (happy) left
+join Hebi (happy) leftmost [mirrored="true"]
+set {sarah_name} = "Purple"
+MagicSarah: You may have won this battle, but I was able to steal thousands of minions from this forest--before you even came along.
+MagicSarah (neutral): Their organic matter will be perfect for fuel. Soon I will enhance them to locate the right materials to build the nuke of my DREAMS!
+MagicSarah: I shall wreck DESTRUCTION upon every person who makes anyone feel the way I feel right now.
+MagicSarah: The one who hurt me will SUFFER my revenge. Nuclear winter for that town is all but ensured. After that...well...after that...
+MagicAdeline (confused): Why? What happened to you?
+MagicSarah (angry): ...That's very personal. I’m a bit offended that you asked, Ms. Nosey.
+Hebi (neutral): That smell…! Frecko, my mortal enemy, show yourself!
+join Frecko rightmost
+Frecko: Hewwo.
+MagicAdeline (confused): What is THAT?
+Hebi (sad): That is FRECKO, bane of worlds and destroyer of hope.
+Frecko: ~Hewwo~!
+MagicAdeline: THIS is the destroyer of worlds? Does he turn into a giant snake that swallows the world?
+Hebi (serious): This isn’t god of war, bird brain. He can’t turn into shit but he does build advanced nuclear weapons
+Frecko: ~~Hewwo~~~! Yes that is me~
+MagicAdeline (neutral): And why is he a weird amalgamation of multiple animals?
+Hebi (neutral): Genetics. His mom was a dragonfly frog and his dad was an antelope leopard gecko.
+MagicAdeline (confused): Wha-
+MagicSarah (neutral): SILENCE! I tire of this idle chatter. Leave this place and do not look for us again.
+MagicSarah: We will NOT be at the abandoned dump tomorrow at 5pm. You should NOT go looking for us there.
+MagicSarah (angry): Get out of my face, and leave me alone to my ultimate revenge!
+leave MagicSarah 
+leave Frecko 
+MagicAdeline (confused): ...
+leave --All-- 
+[end_timeline]

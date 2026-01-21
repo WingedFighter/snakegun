@@ -1,15 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://b58gss82vsdvi"]
+[gd_scene load_steps=7 format=3 uid="uid://b58gss82vsdvi"]
 
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="1_guou0"]
 [ext_resource type="Script" uid="uid://c1e36xcqiq01c" path="res://overworld/cutscenes/first_steps/first_school_1.gd" id="1_j0uxl"]
 [ext_resource type="Texture2D" uid="uid://6agfqpargst6" path="res://overworld/maps/outside/town/school/classroom.png" id="2_j0uxl"]
 [ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="3_2owxc"]
+[ext_resource type="Script" uid="uid://bhhhlbh4rt7ff" path="res://overworld/interactables/talk/talk.gd" id="5_0efgu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6q5xu"]
+size = Vector2(786, 301)
 
 [node name="FirstSchool1" type="Node2D"]
 script = ExtResource("1_j0uxl")
 
 [node name="Player25D" parent="." instance=ExtResource("1_guou0")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(-44, -187)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player25D"]
@@ -28,3 +33,12 @@ text = "Skip"
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_j0uxl")
+
+[node name="Talk" type="Area2D" parent="."]
+script = ExtResource("5_0efgu")
+timeline = "first_school_1"
+metadata/_custom_type_script = "uid://p22yx7tik2ob"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Talk"]
+position = Vector2(2, 293.5)
+shape = SubResource("RectangleShape2D_6q5xu")

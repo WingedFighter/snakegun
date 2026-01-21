@@ -1,0 +1,76 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "neutral",
+&"description": "",
+&"display_name": "Sarah",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"angry": {
+"export_overrides": {
+"image": "\"res://overworld/characters/sarah/angry.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"confused": {
+"export_overrides": {
+"image": "\"res://overworld/characters/sarah/confused.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"cute": {
+"export_overrides": {
+"image": "\"res://overworld/characters/sarah/cute.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"happy": {
+"export_overrides": {
+"image": "\"res://overworld/characters/sarah/happy.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"neutral": {
+"export_overrides": {
+"image": "\"res://overworld/characters/sarah/neutral.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"sangry": {
+"export_overrides": {
+"image": "\"res://overworld/characters/sarah/sangry.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

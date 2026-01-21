@@ -29,8 +29,16 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"Adeline": "res://overworld/characters/player/Adeline.dch",
+"Adeline": "res://overworld/characters/player/adeline.dch",
+"Barb": "res://overworld/characters/barb/barb.dch",
+"Dad": "res://overworld/characters/dad/dad.dch",
+"Frecko": "res://overworld/characters/frecko/frecko.dch",
 "Hebi": "res://overworld/characters/snek/Hebi.dch",
+"Leah": "res://overworld/characters/leah/leah.dch",
+"MagicAdeline": "res://overworld/characters/player/magicadeline.dch",
+"MagicSarah": "res://overworld/characters/sarah/magicsarah.dch",
+"Sarah": "res://overworld/characters/sarah/sarah.dch",
+"Teacher": "res://overworld/characters/teacher/teacher.dch",
 "art": "res://overworld/maps/inside/characters/art.dch"
 }
 directories/dtl_directory={
@@ -38,6 +46,8 @@ directories/dtl_directory={
 "carpile": "res://overworld/maps/outside/town/school/timelines/carpile.dtl",
 "cauldron": "res://overworld/maps/inside/timelines/cauldron.dtl",
 "dresser": "res://overworld/maps/inside/timelines/dresser.dtl",
+"first_school_1": "res://overworld/cutscenes/first_steps/timelines/first_school_1.dtl",
+"first_school_2": "res://overworld/cutscenes/first_steps/timelines/first_school_2.dtl",
 "fountain": "res://overworld/maps/outside/town/main/timelines/fountain.dtl",
 "hole": "res://overworld/maps/inside/timelines/hole.dtl",
 "house1": "res://overworld/maps/outside/town/main/timelines/house1.dtl",
@@ -50,6 +60,12 @@ directories/dtl_directory={
 "house8": "res://overworld/maps/outside/town/school/timelines/house8.dtl",
 "house9": "res://overworld/maps/outside/town/school/timelines/house9.dtl",
 "introduction": "res://overworld/cutscenes/intro/introduction.dtl",
+"magical_gurl": "res://overworld/cutscenes/magical_gurl/timelines/magical_gurl.dtl",
+"post_boss_1": "res://overworld/cutscenes/post_boss_1/timelines/post_boss_1.dtl",
+"post_tutorial": "res://overworld/cutscenes/post_tutorial/timelines/post_tutorial.dtl",
+"pre_boss_1": "res://overworld/cutscenes/pre_boss_1/timelines/pre_boss_1.dtl",
+"second_school_1": "res://overworld/cutscenes/second_steps/timelines/second_school_1.dtl",
+"second_school_2": "res://overworld/cutscenes/second_steps/timelines/second_school_2.dtl",
 "shop": "res://overworld/maps/outside/town/main/timelines/shop.dtl"
 }
 layout/style_directory={
@@ -89,7 +105,9 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
-variables={}
+variables={
+"sarah_name": "????"
+}
 layout/style_list=["res://ui/dialogic_styles/default.tres"]
 layout/default_style="res://ui/dialogic_styles/default.tres"
 glossary/default_case_sensitive=true
