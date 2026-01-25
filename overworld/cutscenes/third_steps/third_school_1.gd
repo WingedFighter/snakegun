@@ -16,20 +16,25 @@ func _ready() -> void:
 	State.flags['start_conversation'] = false
 	AudioManager.play_music("SchoolDay")
 	player.is_paused = true
-	skip_button.pressed.connect(end_cutscene)
+	Dialogic.timeline_ended.connect(on_timeline_ended)
+	skip_button.pressed.connect(on_skip_pressed)
+	skip_button.visible = false
 
 func _process(delta: float) -> void:
 	if player.position.y < 260.0:
 		player.position.y += VELOCITY * delta
 	elif !start_conversation:
+		skip_button.visible = true
 		State.flags['start_conversation'] = true
 		var interact_event = InputEventAction.new()
 		interact_event.action = "interact"
 		interact_event.pressed = true
 		Input.parse_input_event(interact_event)
 		start_conversation = true
-	elif !player.is_paused:
-		end_cutscene()
 
-func end_cutscene() -> void:
+func on_timeline_ended() -> void:
+	Dialogic.Inputs.auto_skip.enabled = false
 	SceneManager.change_scene(change_scene)
+
+func on_skip_pressed() -> void:
+	Dialogic.Inputs.auto_skip.enabled = !Dialogic.Inputs.auto_skip.enabled

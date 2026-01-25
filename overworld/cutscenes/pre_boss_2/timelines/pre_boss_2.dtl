@@ -25,4 +25,6 @@ MagicAdeline (neutral): The one on Steven's Place Road?
 MagicSarah (neutral): No, No. That one opened like last week. I'm talking about the one off of Winding Foot Road.
 MagicAdeline: Oh! That one? Okay.
 MagicSarah: Hasta la Vista, TACO BELL-
+do State.flags['in_cutscene'] = false
+do State.flags.erase('start_conversation')
 do SceneManager.change_scene("Explosion")

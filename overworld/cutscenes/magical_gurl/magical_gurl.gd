@@ -14,8 +14,9 @@ func _ready() -> void:
 	State.flags['in_cutscene'] = true
 	State.flags['start_conversation'] = false
 	player.is_paused = true
-	skip_button.pressed.connect(end_cutscene)
 	AudioManager.play_music("HuntingSeason")
+	Dialogic.timeline_ended.connect(on_timeline_ended)
+	skip_button.pressed.connect(on_skip_pressed)
 
 func _process(_delta: float) -> void:
 	if frame_count < frame_limit:
@@ -27,11 +28,13 @@ func _process(_delta: float) -> void:
 		interact_event.pressed = true
 		Input.parse_input_event(interact_event)
 		start_conversation = true
-	elif !player.is_paused:
-		end_cutscene()
 
-func end_cutscene() -> void:
+func on_timeline_ended() -> void:
+	Dialogic.Inputs.auto_skip.enabled = false
 	State.flags['in_cutscene'] = false
 	State.flags.erase('start_conversation')
 	State.flags['magical_gurl'] = false
 	SceneManager.change_scene(change_scene)
+
+func on_skip_pressed() -> void:
+	Dialogic.Inputs.auto_skip.enabled = !Dialogic.Inputs.auto_skip.enabled

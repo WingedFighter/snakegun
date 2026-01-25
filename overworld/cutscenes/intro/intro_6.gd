@@ -18,7 +18,6 @@ func _ready() -> void:
 	Dialogic.start(timeline)
 	get_viewport().set_input_as_handled()
 
-
 func on_timeline_ended() -> void:
 	Dialogic.Inputs.auto_skip.enabled = false
 	SceneManager.change_scene(change_scene)
