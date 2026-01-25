@@ -9,7 +9,7 @@ var is_paused: bool = false
 
 func _input(event: InputEvent) -> void:
 	if !is_paused && event.is_action_pressed("interact"):
-		if last_interactable is Talk:
+		if is_valid_interactable():
 			last_interactable.interact()
 	
 	if event.is_action_pressed("open_menu"):
