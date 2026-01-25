@@ -46,6 +46,7 @@ directories/dtl_directory={
 "carpile": "res://overworld/maps/outside/town/school/timelines/carpile.dtl",
 "cauldron": "res://overworld/maps/inside/timelines/cauldron.dtl",
 "dresser": "res://overworld/maps/inside/timelines/dresser.dtl",
+"fat_dump": "res://overworld/cutscenes/fat_dump/timelines/fat_dump.dtl",
 "first_school_1": "res://overworld/cutscenes/first_steps/timelines/first_school_1.dtl",
 "first_school_2": "res://overworld/cutscenes/first_steps/timelines/first_school_2.dtl",
 "fountain": "res://overworld/maps/outside/town/main/timelines/fountain.dtl",
@@ -64,6 +65,7 @@ directories/dtl_directory={
 "post_boss_1": "res://overworld/cutscenes/post_boss_1/timelines/post_boss_1.dtl",
 "post_tutorial": "res://overworld/cutscenes/post_tutorial/timelines/post_tutorial.dtl",
 "pre_boss_1": "res://overworld/cutscenes/pre_boss_1/timelines/pre_boss_1.dtl",
+"pre_boss_2": "res://overworld/cutscenes/pre_boss_2/timelines/pre_boss_2.dtl",
 "second_school_1": "res://overworld/cutscenes/second_steps/timelines/second_school_1.dtl",
 "second_school_2": "res://overworld/cutscenes/second_steps/timelines/second_school_2.dtl",
 "shop": "res://overworld/maps/outside/town/main/timelines/shop.dtl"

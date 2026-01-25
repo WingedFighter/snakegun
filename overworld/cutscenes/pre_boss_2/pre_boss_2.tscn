@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4863m022v6by"]
+[gd_scene load_steps=7 format=3 uid="uid://b4863m022v6by"]
 
 [ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="1_6a760"]
 [ext_resource type="Script" uid="uid://bke66acctn10g" path="res://overworld/cutscenes/pre_boss_2/pre_boss_2.gd" id="1_oirsh"]
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_ihrr8"]
+[ext_resource type="Script" uid="uid://bhhhlbh4rt7ff" path="res://overworld/interactables/talk/talk.gd" id="5_ihrr8"]
 [ext_resource type="Texture2D" uid="uid://cmtdj4tkslb1v" path="res://overworld/cutscenes/fat_dump/trash.png" id="7_pbavx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oirsh"]
+size = Vector2(650, 330)
 
 [node name="PreBoss2" type="Node2D"]
 script = ExtResource("1_oirsh")
@@ -24,9 +28,19 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Player25D" parent="." instance=ExtResource("2_ihrr8")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(-267, 61)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-212, 30)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("7_pbavx")
+
+[node name="Talk" type="Area2D" parent="."]
+script = ExtResource("5_ihrr8")
+timeline = "pre_boss_2"
+metadata/_custom_type_script = "uid://p22yx7tik2ob"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Talk"]
+position = Vector2(-315, 155)
+shape = SubResource("RectangleShape2D_oirsh")

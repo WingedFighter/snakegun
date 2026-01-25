@@ -1,0 +1,28 @@
+join MagicSarah (angry) right 
+MagicSarah: ...You blatantly disobeyed my orders and you came here, to the dump.
+MagicSarah (neutral): It’s too bad you’re just a little too late. I’ve upgraded my MegaMachine…and I’ve already built my test nuke.
+MagicSarah: In fact, you are just in time to watch me launch a test.
+join MagicAdeline (angry) left 
+join Hebi (neutral) leftmost [mirrored="true"]
+MagicAdeline: PURPLE!  Why did you lie and say you weren’t going to be here?
+MagicSarah: OF COURSE I LIED! I was trying to fool you into not coming here. I was going to be here ALL along.
+MagicAdeline (confused): What?? Dude, that's so frustrating! You’re a really good liar...
+Hebi: ...
+MagicSarah: Why thank you.That I am.
+MagicSarah: Now watch and weep as I nuke my first revenge target, one of the most important sites of my childhood.
+MagicAdeline: ...Where?
+MagicSarah: At first I was wondering what area would be best for a nuking. Should I do the courthouse, where my parents got married?
+MagicSarah: No. I wasn’t alive for that. I missed my own parent’s wedding.
+MagicSarah: Should I nuke the store that sold my dad his SQUEAKERS? Those annoyingly squeaky shoes that everyone in town wears?
+MagicSarah (angry): Everytime I hear those god forsaken squeaks, I think my dad has come to take me away from all my friends.
+MagicSarah (neutral): No...Then I thought about the divorce court.
+MagicSarah: The same courthouse that my parents got married in, but alas no. I hat the divorce, but separation is better than mom staying with HIM.
+MagicSarah: And then it struck me. The place he took me every weekend as a child. The place where we made the most memories.
+MagicSarah (angry): Taco Bell. My dad loves it, but I. HATE. IT.
+MagicAdeline (confused): ...Taco Bell? Like the combo KFC Taco Bell?
+MagicSarah (confused): There’s a combination KFC and Taco Bell? No, this one is just taco bell.
+MagicAdeline (neutral): The one on Steven's Place Road?
+MagicSarah (neutral): No, No. That one opened like last week. I'm talking about the one off of Winding Foot Road.
+MagicAdeline: Oh! That one? Okay.
+MagicSarah: Hasta la Vista, TACO BELL-
+do SceneManager.change_scene("Explosion")
