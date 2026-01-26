@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://ciebpd5yd0mp8"]
+[gd_scene load_steps=7 format=3 uid="uid://ciebpd5yd0mp8"]
 
 [ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="1_sal2w"]
 [ext_resource type="Script" uid="uid://3exd37ktraw4" path="res://overworld/cutscenes/post_boss_2/post_boss_2.gd" id="1_slamo"]
 [ext_resource type="PackedScene" uid="uid://c8gr5wrb6dvjt" path="res://overworld/characters/player/player25d.tscn" id="2_ixtvq"]
+[ext_resource type="Script" uid="uid://bhhhlbh4rt7ff" path="res://overworld/interactables/talk/talk.gd" id="5_sal2w"]
 [ext_resource type="Texture2D" uid="uid://cmtdj4tkslb1v" path="res://overworld/cutscenes/fat_dump/trash.png" id="8_g0g1b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixtvq"]
+size = Vector2(518, 363)
 
 [node name="PostBoss2" type="Node2D"]
 script = ExtResource("1_slamo")
@@ -24,9 +28,19 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Player25D" parent="." instance=ExtResource("2_ixtvq")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(-267, 61)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-212, 30)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("8_g0g1b")
+
+[node name="Talk" type="Area2D" parent="."]
+script = ExtResource("5_sal2w")
+timeline = "post_boss_2"
+metadata/_custom_type_script = "uid://p22yx7tik2ob"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Talk"]
+position = Vector2(-249, 171.5)
+shape = SubResource("RectangleShape2D_ixtvq")

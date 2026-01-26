@@ -63,9 +63,11 @@ directories/dtl_directory={
 "introduction": "res://overworld/cutscenes/intro/introduction.dtl",
 "magical_gurl": "res://overworld/cutscenes/magical_gurl/timelines/magical_gurl.dtl",
 "post_boss_1": "res://overworld/cutscenes/post_boss_1/timelines/post_boss_1.dtl",
+"post_boss_2": "res://overworld/cutscenes/post_boss_2/timelines/post_boss_2.dtl",
 "post_tutorial": "res://overworld/cutscenes/post_tutorial/timelines/post_tutorial.dtl",
 "pre_boss_1": "res://overworld/cutscenes/pre_boss_1/timelines/pre_boss_1.dtl",
 "pre_boss_2": "res://overworld/cutscenes/pre_boss_2/timelines/pre_boss_2.dtl",
+"pre_boss_22": "res://overworld/cutscenes/pre_boss_2/timelines/pre_boss_22.dtl",
 "second_school_1": "res://overworld/cutscenes/second_steps/timelines/second_school_1.dtl",
 "second_school_2": "res://overworld/cutscenes/second_steps/timelines/second_school_2.dtl",
 "shop": "res://overworld/maps/outside/town/main/timelines/shop.dtl"
