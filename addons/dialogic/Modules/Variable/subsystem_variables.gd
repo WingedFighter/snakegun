@@ -184,7 +184,7 @@ func _get(property):
 			return VariableFolder.new(dialogic.current_state_info['variables'][property], property, self)
 		else:
 			return DialogicUtil.logical_convert(dialogic.current_state_info['variables'][property])
-	
+	return
 
 
 func folders() -> Array:
