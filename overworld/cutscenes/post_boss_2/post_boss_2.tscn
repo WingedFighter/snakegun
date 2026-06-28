@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ciebpd5yd0mp8"]
+[gd_scene format=3 uid="uid://ciebpd5yd0mp8"]
 
 [ext_resource type="Theme" uid="uid://dolvw3g0eshd6" path="res://ui/themes/shoujo_ui.tres" id="1_sal2w"]
 [ext_resource type="Script" uid="uid://3exd37ktraw4" path="res://overworld/cutscenes/post_boss_2/post_boss_2.gd" id="1_slamo"]
@@ -9,13 +9,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ixtvq"]
 size = Vector2(518, 363)
 
-[node name="PostBoss2" type="Node2D"]
+[node name="PostBoss2" type="Node2D" unique_id=1682568141]
 script = ExtResource("1_slamo")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=657289569]
 layer = 50
 
-[node name="SkipButton" type="Button" parent="CanvasLayer"]
+[node name="SkipButton" type="Button" parent="CanvasLayer" unique_id=754919066]
 z_index = 128
 offset_left = 946.0
 offset_top = 25.0
@@ -26,21 +26,21 @@ theme = ExtResource("1_sal2w")
 text = "Skip"
 metadata/_edit_use_anchors_ = true
 
-[node name="Player25D" parent="." instance=ExtResource("2_ixtvq")]
+[node name="Player25D" parent="." unique_id=2109026034 instance=ExtResource("2_ixtvq")]
 unique_name_in_owner = true
 visible = false
 position = Vector2(-267, 61)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1669918994]
 position = Vector2(-212, 30)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("8_g0g1b")
 
-[node name="Talk" type="Area2D" parent="."]
+[node name="Talk" type="Area2D" parent="." unique_id=2096941439]
 script = ExtResource("5_sal2w")
 timeline = "post_boss_2"
 metadata/_custom_type_script = "uid://p22yx7tik2ob"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Talk"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Talk" unique_id=1826646683]
 position = Vector2(-249, 171.5)
 shape = SubResource("RectangleShape2D_ixtvq")
